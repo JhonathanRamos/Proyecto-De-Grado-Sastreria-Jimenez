@@ -32,7 +32,17 @@
 
 <div class="container mt-4">
     <h1>Clientes</h1>
-    <table class="table table-light">
+
+    --
+    <div class="input-group mb-3">
+        <input type="text" id="search" class="form-control" placeholder="Buscar clientes...">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="btn-search">Buscar</button>
+        </div>
+    </div>
+    -- Es el filtro para buscar a los clientes
+    
+    <table class="table table-light" id="clientesTable"> -- agregamos id para buscar en la tabla con el filtro
         <thead class="thead-light">
             <tr>
                 <th>#</th>
@@ -59,7 +69,7 @@
                     <td><?=$Cliente['fechaActualizacion'];?></td>
                     <td>
                         <div class="btn-group">
-                            <!-- <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a> -->
+                            <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a> 
                             <a href="<?= base_url('borrar/' . $Cliente['id']); ?>" class="btn btn-outline-danger" style="margin-right: 2px;">Borrar</a>
                         </div>
                     </td>
@@ -70,3 +80,33 @@
 </div>
 
 <?=$pie?>
+
+<script>
+document.getElementById('btn-search').addEventListener('click', function() {
+    var input = document.getElementById('search');
+    var filter = input.value.toLowerCase();
+    var table = document.getElementById('clientesTable');
+    var tr = table.getElementsByTagName('tr');
+    
+    for (var i = 1; i < tr.length; i++) {  // Empieza desde 1 para omitir el encabezado
+        var td = tr[i].getElementsByTagName('td');
+        var found = false;
+        
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                var txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    found = true;
+                    break;  // Salir del bucle si encuentra coincidencia
+                }
+            }
+        }
+        
+        if (found) {
+            tr[i].style.display = '';
+        } else {
+            tr[i].style.display = 'none';
+        }
+    }
+});
+</script>
