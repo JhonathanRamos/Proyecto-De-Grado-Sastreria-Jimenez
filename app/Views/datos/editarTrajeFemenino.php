@@ -63,6 +63,7 @@ echo session('mensaje')
 
 
                 <button class="btn btn-success" type="submit">Guardar</button>
+                <a href="<?=site_url('/datosTrajeFemenino')?>" class="btn btn-danger">Cancelar</a>
             </form>
 
         </p>

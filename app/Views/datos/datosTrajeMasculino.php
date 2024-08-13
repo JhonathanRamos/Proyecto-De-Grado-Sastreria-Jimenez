@@ -1,48 +1,108 @@
 <?=$cabecera?>
 
 
-<header class="header">
-		<div class="container">
-		<div class="btn-menu">
-			<label for="btn-menu">☰</label>
-		</div>
-			<nav class="menu">
-			
-            <a class="btn btn-dark" href="<?=base_url('cliente')?>">Cliente</a> 
- 
-            <a class="btn btn-dark" href="<?=base_url('datosFalda')?>">Falda</a> 
+<div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
 
-            <a class="btn btn-dark" href="<?=base_url('datosTrajeMasculino')?>">Traje Masculino</a> 
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+            <ion-icon  id="cloud" name="close-circle-sharp"></ion-icon>
+                <span>Sastreria.J</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('crear')?>">
+                <ion-icon name="people-outline"></ion-icon>
+                        <span>Crear Clientes</span>
+                </a>
+                </li>
 
-            <a class="btn btn-dark" href="<?=base_url('datosTrajeFemenino')?>">Traje Femenino</a> 
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('trajeMasculino')?>">
+                <ion-icon name="add-outline"></ion-icon>
+                        <span>Traje Masculino</span>
+                </a>
+                </li>
 
-            <a class="btn btn-dark" href="<?=base_url('datosPantalon')?>">Pantalon</a> 
-			</nav>
-		</div>
-	</header>
-	<div class="capa"></div>
-<!--	--------------->
-<input type="checkbox" id="btn-menu">
-<div class="container-menu">
-	<div class="cont-menu">
-		<nav>
-        <a class="btn btn-success" href="<?=base_url('crear')?>">Crear Clientes</a> 
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('trajeFemenino')?>">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Traje Femenino</span>
+                </a>
+                </li>
 
-<a class="btn btn-dark" href="<?=base_url('trajeMasculino')?>">Traje Masculino</a> 
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('pantalon')?>">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Pantalon</span>
+                </a>
+                </li>
 
-<a class="btn btn-dark" href="<?=base_url('trajeFemenino')?>">Traje Femenino</a> 
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('falda')?>">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Falda</span>
+                </a>
+                </li>
 
-<a class="btn btn-dark" href="<?=base_url('pantalon')?>">Pantalon</a> 
+                <li>
+                <a class="btn btn-dark" href="<?=base_url('producto')?>">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Subir Traje</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
 
-<a class="btn btn-dark" href="<?=base_url('falda')?>">Falda</a> 
+        <div>
+            <div class="linea"></div>
 
-<a class="btn btn-dark" href="<?=base_url('producto')?>">Subir Traje</a> 
-		</nav>
-		<label for="btn-menu">✖️</label>
-	</div>
-</div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Drak Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="usuario">
+            <img src="<?= base_url('img/Jhampier.jpg') ?>" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">Jhampier</span>
+                        <span class="email">jhampier@gmail.com</span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 <br>
-<br>
+<main>
+<nav >
+            <a class="btn btn-dark" href="<?=base_url('cliente')?>">Cliente</a>
+            <a class="btn btn-dark" href="<?=base_url('datosFalda')?>">Falda</a>
+            <a class="btn btn-dark" href="<?=base_url('datosTrajeMasculino')?>">Traje Masculino</a>
+            <a class="btn btn-dark" href="<?=base_url('datosTrajeFemenino')?>">Traje Femenino</a>
+            <a class="btn btn-dark" href="<?=base_url('datosPantalon')?>">Pantalon</a>
+</nav>
+
+
+
+
 <table class="table table-light">
     <thead class="thead-light">
         <h1>Traje Masculino</h1>
@@ -82,6 +142,7 @@
     </tbody>
 </table>
 
+</main>
 
 
 <?=$pie?>

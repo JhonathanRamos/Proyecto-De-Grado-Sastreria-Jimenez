@@ -1,0 +1,18 @@
+CRITICAL - 2024-06-06 06:40:33 --> Invalid file: "sastreria/sacoMasculino.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/sacoMasculino.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/sacoMasculino.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(61): view('sastreria/sacoMasculino.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->sacoMasculino()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-06 06:41:16 --> Invalid file: "sastreria/sacoMasculino.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/sacoMasculino.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/sacoMasculino.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(61): view('sastreria/sacoMasculino.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->sacoMasculino()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

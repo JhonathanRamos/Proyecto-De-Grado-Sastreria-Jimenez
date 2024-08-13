@@ -45,6 +45,7 @@
                     <input id="cadera" value="<?= old('cadera') ?>" class="form-control" type="text" name="cadera" required>
                 </div>
                 <button class="btn btn-success" type="submit">Guardar</button>
+                <a href="<?=site_url('/cliente')?>" class="btn btn-danger">Cancelar</a>
             </form>
         </p>
     </div>
