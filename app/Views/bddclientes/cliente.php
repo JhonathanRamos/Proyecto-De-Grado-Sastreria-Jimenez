@@ -8,9 +8,11 @@
     <div>
         <div class="nombre-pagina">
             <ion-icon id="cloud" name="grid-outline"></ion-icon>
-            <span>Sastreria.</span>
+            <span>Sastreria <br>
+                Jimenez</span>
         </div>
     </div>
+    <br>
     <nav class="navegacion">
         <ul>
             <li>
@@ -57,7 +59,7 @@
         <div class="modo-oscuro">
             <div class="info">
                 <ion-icon name="moon-outline"></ion-icon>
-                <span>Dark Mode</span>
+                <span></span>
             </div>
             <div class="switch">
                 <div class="base">
@@ -122,7 +124,8 @@
                         <td>
                             <div class="btn-group">
                                 <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
-                                <a href="<?= base_url('borrar/' . $Cliente['id']); ?>" class="btn btn-outline-danger" style="margin-right: 2px;">Borrar</a>
+                                <a href="<?= base_url('borrar/' . $Cliente['id']); ?>" class="btn btn-outline-danger" style="margin-right: 2px;" onclick="confirmDelete(event, '<?= $Cliente['id']; ?>');">Borrar</a>
+
                             </div>
                         </td>
                     </tr>

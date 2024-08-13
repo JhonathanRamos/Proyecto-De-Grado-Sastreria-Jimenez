@@ -211,3 +211,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
+
+    // sweetalert2
+
+    function confirmDelete(event, id) {
+        event.preventDefault(); // Previene la acción por defecto del enlace
+
+        Swal.fire({
+            title: '¿Estás seguro en eliminar al usuario?',
+            text: "No podrás revertir esta acción",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, bórralo',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= base_url('borrar/') ?>" + id;
+            }
+        });
+    }
