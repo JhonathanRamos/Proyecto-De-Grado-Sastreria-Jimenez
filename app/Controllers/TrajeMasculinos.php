@@ -11,8 +11,9 @@ class TrajeMasculinos extends Controller {
     public function trajeMasculino(){
 
         $clienteModel = new Cliente();
-        $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo')
+        $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo ')
             ->where('estado', 1)
+            ->where('sexo', 'M') 
             ->findAll();
     
         $datos['cabecera'] = view('template/cabecera');
