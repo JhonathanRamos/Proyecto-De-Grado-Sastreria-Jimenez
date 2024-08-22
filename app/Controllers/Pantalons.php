@@ -52,7 +52,6 @@ class Pantalons extends Controller{
         return view('datos/datosPantalon', $datos);
     }
     
-
     public function guardarPantalon() {
 
         $pantalonModel = new Pantalon();
@@ -98,9 +97,11 @@ class Pantalons extends Controller{
      public function editarPantalon($cliente_id = null)
      {
          $pantalonModel = new Pantalon();
+         $clienteModel = new Cliente();//Mostrar el nombre del cliente a la hora de editar
      
          // Busca la falda asociada al cliente_id
          $pantalon = $pantalonModel->where('cliente_id', $cliente_id)->first();
+         $cliente = $clienteModel->where('id', $cliente_id)->first();//Mostrar el nombre del cliente a la hora de editar
      
          if (!$pantalon) {
              // Manejar la situación si no se encuentra la falda asociada al cliente
@@ -108,9 +109,14 @@ class Pantalons extends Controller{
          }
      
          $datos['pantalon'] = $pantalon;
+         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
          $datos['cabecera'] = view('template/cabecera');
          $datos['pie'] = view('template/piepagina');
          return view('datos/editarPantalon', $datos);
+
+      
+      
+    
      }
      
  

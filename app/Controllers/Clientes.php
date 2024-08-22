@@ -79,38 +79,75 @@ class Clientes extends Controller{
 
     //Se esta Guardando los datos 
     public function guardar()
-    {
-        $cliente = new Cliente();
+{
+    $cliente = new Cliente();
     
-        $validacion = $this->validate([
-            'nombre' => 'required|min_length[3]',
-            'apellido' => 'required|min_length[3]',
-            'celular' => 'required|numeric|min_length[8]', // Agregamos la validación para números
+    $validacion = $this->validate([
+        'nombre' => 'required|min_length[3]',
+        'apellido' => 'required|min_length[3]',
+        'celular' => 'required|numeric|min_length[8]',
+    ]);
+
+    if (!$validacion) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Revise la información',
         ]);
-    
-        if (!$validacion) {
-            $session= session();
-            $session->setFlashdata('mensaje','Revise la informacion ');
-
-
-            return redirect()->back()->withInput();
-            // return $this->response->redirect(site_url('/cliente'));
-        }
-    
-
-        $datos = [
-            'nombre' => $this->request->getVar('nombre'),
-            'apellido' => $this->request->getVar('apellido'),
-            'sexo' => $this->request->getVar('sexo'),
-            'celular' => $this->request->getVar('celular'),
-            'pago' => $this->request->getVar('pago'),
-            'fechaRegistro' => date('Y-m-d'),
-            'estado' => 1, // Estado activo
-        ];
-    
-        $cliente->insert($datos);
-        return redirect()->to(site_url('/cliente'));
     }
+
+    $datos = [
+        'nombre' => $this->request->getVar('nombre'),
+        'apellido' => $this->request->getVar('apellido'),
+        'sexo' => $this->request->getVar('sexo'),
+        'celular' => $this->request->getVar('celular'),
+        'pago' => $this->request->getVar('pago'),
+        'fechaRegistro' => date('Y-m-d H:i:s'),
+        'estado' => 1,
+    ];
+
+    $cliente->insert($datos);
+
+    return $this->response->setJSON([
+        'success' => true,
+        'message' => 'Cliente creado exitosamente',
+        'redirectUrl' => site_url('/cliente')
+    ]);
+}
+
+
+    // public function guardar()
+    // {
+    //     $cliente = new Cliente();
+    
+    //     $validacion = $this->validate([
+    //         'nombre' => 'required|min_length[3]',
+    //         'apellido' => 'required|min_length[3]',
+    //         'celular' => 'required|numeric|min_length[8]', // Agregamos la validación para números
+    //     ]);
+    
+    //     if (!$validacion) {
+    //         $session= session();
+    //         $session->setFlashdata('mensaje','Revise la informacion ');
+
+
+    //         return redirect()->back()->withInput();
+    //         // return $this->response->redirect(site_url('/cliente'));
+    //     }
+    
+
+    //     $datos = [
+    //         'nombre' => $this->request->getVar('nombre'),
+    //         'apellido' => $this->request->getVar('apellido'),
+    //         'sexo' => $this->request->getVar('sexo'),
+    //         'celular' => $this->request->getVar('celular'),
+    //         'pago' => $this->request->getVar('pago'),
+    //         'fechaRegistro' => date('Y-m-d'),
+    //         'estado' => 1, // Estado activo
+    //     ];
+    
+    //     $cliente->insert($datos);
+    //     return redirect()->to(site_url('/cliente'));
+    // }
     
 
  
@@ -155,7 +192,7 @@ class Clientes extends Controller{
             'sexo' => $this->request->getVar('sexo'),
             'celular'=>$this->request->getVar('celular'),
             'pago'=>$this->request->getVar('pago'),
-            'fechaActualizacion' => date('Y-m-d'),
+            'fechaActualizacion' => date('Y-m-d H:i:s'),
             'estado' => 1, // Estado activo
         ];
         $id= $this->request->getVar('id');

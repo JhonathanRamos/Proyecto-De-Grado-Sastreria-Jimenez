@@ -172,54 +172,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //FECHA DE REGISTRO ORDEN 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const table = document.querySelector('#clientesTable');
-        const idHeader = table.querySelector('th:nth-child(1)'); // Assumes ID is the first column
+document.addEventListener('DOMContentLoaded', function() {
+    const table = document.querySelector('#clientesTable');
+    if (table) {
+        const idHeader = table.querySelector('th:nth-child(1)'); // Asume que el ID está en la primera columna
         const dateHeader = table.querySelector('#fechaRegistro');
-        let ascendingDate = false;
+        if (dateHeader) {
+            let ascendingDate = false;
 
-        function sortTable(col, ascending) {
-            const rows = Array.from(table.querySelectorAll('tbody tr'));
-            const sortedRows = rows.sort((a, b) => {
-                const aText = a.children[col].textContent.trim();
-                const bText = b.children[col].textContent.trim();
+            function sortTable(col, ascending) {
+                const rows = Array.from(table.querySelectorAll('tbody tr'));
+                const sortedRows = rows.sort((a, b) => {
+                    const aText = a.children[col].textContent.trim();
+                    const bText = b.children[col].textContent.trim();
+                    
+                    return ascending 
+                        ? aText.localeCompare(bText, undefined, { numeric: true })
+                        : bText.localeCompare(aText, undefined, { numeric: true });
+                });
                 
-                return ascending 
-                    ? aText.localeCompare(bText, undefined, { numeric: true })
-                    : bText.localeCompare(aText, undefined, { numeric: true });
-            });
-            
-            sortedRows.forEach(row => table.querySelector('tbody').appendChild(row));
+                sortedRows.forEach(row => table.querySelector('tbody').appendChild(row));
+            }
+
+            function setInitialSort() {
+                // Ordena por ID inicialmente
+                sortTable(0, false); // 0 es el índice para la columna ID
+            }
+
+            function toggleDateSort() {
+                ascendingDate = !ascendingDate;
+                sortTable(6, ascendingDate); // 6 es el índice para la columna "Fecha Registro"
+                dateHeader.classList.toggle('asc', ascendingDate);
+                dateHeader.classList.toggle('desc', !ascendingDate);
+            }
+
+            dateHeader.addEventListener('click', toggleDateSort);
+
+            // Establece el orden inicial por ID
+            setInitialSort();
         }
-
-        function setInitialSort() {
-            // Sort by ID initially
-            sortTable(0, false); // 0 is the index for the ID column
-        }
-
-        function toggleDateSort() {
-            ascendingDate = !ascendingDate;
-            sortTable(6, ascendingDate); // 6 is the index for the "Fecha Registro" column
-            dateHeader.classList.toggle('asc', ascendingDate);
-            dateHeader.classList.toggle('desc', !ascendingDate);
-        }
-
-        dateHeader.addEventListener('click', toggleDateSort);
-
-        // Set initial sort by ID
-        setInitialSort();
-    });
+    }
+});
 
 
 
 
-    // sweetalert2
 
-    function confirmDelete(event, id) {
+    // sweetalert2 PARA CLIENTES
+    function confirmDelete(event, deleteUrl) {
         event.preventDefault(); // Previene la acción por defecto del enlace
-
+    
         Swal.fire({
-            title: '¿Estás seguro en eliminar al usuario?',
+            title: '¿Estás seguro de eliminar al usuario?',
             text: "No podrás revertir esta acción",
             icon: 'warning',
             showCancelButton: true,
@@ -229,7 +233,277 @@ document.addEventListener("DOMContentLoaded", () => {
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "<?= base_url('borrar/') ?>" + id;
+                window.location.href = deleteUrl;
             }
         });
     }
+
+    // BORRAR PERO PARA LOS DEMAS CON SWWETALERT2
+    function confirmDeleteDatos(event, deleteUrl) {
+        event.preventDefault(); // Previene la acción por defecto del enlace
+    
+        Swal.fire({
+            title: '¿Estás seguro de eliminar esta falda?',
+            text: "No podrás revertir esta acción",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, bórrala',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = deleteUrl;
+            }
+        });
+    }
+
+
+    //PARA GUARDAR CON SWETALERT2
+    // document.getElementById('guardarBtn').addEventListener('click', function() {
+    //     Swal.fire({
+    //         title: '¿Estás seguro?',
+    //         text: "¡Asegúrate de que todos los datos son correctos antes de guardar!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Guardar',
+    //         cancelButtonText: 'Cancelar'
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             // Envía el formulario si el usuario confirma
+    //             document.getElementById('miFormulario').submit();
+    //         }
+    //     });
+    // });
+    
+    //GUARDAR EDITANDO
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén la URL actual
+        var urlActual = window.location.href;
+    
+        // Verifica si la URL contiene alguna de las cadenas especificadas
+        if (urlActual.includes('editar') || 
+            urlActual.includes('editarFalda') || 
+            urlActual.includes('editarPantalon') || 
+            urlActual.includes('editarTrajeFemenino') || 
+            urlActual.includes('editarTrajeMasculino')) {
+    
+            // Solo añade el event listener si la URL es válida
+            var guardarBtn = document.getElementById('guardarBtn');
+            var form = document.querySelector('form');
+    
+            if (guardarBtn) {
+                guardarBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene el comportamiento por defecto del botón
+                    Swal.fire({
+                        title: '¿Estás seguro?',
+                        text: "¿Deseas guardar los cambios?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, guardar',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Muestra mensaje de carga
+                            Swal.fire({
+                                title: 'Guardando...',
+                                text: 'Por favor, espera mientras se guardan los cambios.',
+                                icon: 'info',
+                                allowOutsideClick: false,
+                                showConfirmButton: false
+                            });
+    
+                            // Envía el formulario mediante una solicitud fetch
+                            fetch(form.action, {
+                                method: 'POST',
+                                body: new FormData(form)
+                            }).then(response => {
+                                if (response.ok) {
+                                    Swal.fire({
+                                        title: '¡Éxito!',
+                                        text: 'Los cambios se han guardado correctamente.',
+                                        icon: 'success',
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Aceptar'
+                                    }).then(() => {
+                                        // Redirige a una página específica o recarga la página actual
+                                        window.location.href = '/pagina-correcta'; // Cambia esto a la URL deseada
+                                        // o
+                                        // window.location.reload(); // Recarga la página actual
+                                    });
+                                } else {
+                                    Swal.fire({
+                                        title: 'Error',
+                                        text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
+                                        icon: 'error',
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Aceptar'
+                                    });
+                                }
+                            }).catch(() => {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
+                                    icon: 'error',
+                                    confirmButtonColor: '#3085d6',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            });
+                        }
+                    });
+                });
+            }
+    
+            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+            form.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    // Si el foco está en el botón "Guardar"
+                    if (document.activeElement === guardarBtn) {
+                        guardarBtn.click(); // Simula un clic en el botón
+                        event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                    } else {
+                        // Deja que 'Enter' funcione normalmente para campos de formulario
+                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                        const currentIndex = focusableElements.indexOf(event.target);
+                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                            focusableElements[currentIndex + 1].focus();
+                            event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                        }
+                    }
+                }
+            });
+        }
+    });
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén la URL actual
+        var urlActual = window.location.href;
+    
+        // Verifica si la URL contiene 'crear'
+        if (urlActual.includes('crear')) {
+            const form = document.querySelector('form');
+            const guardarBtn = document.getElementById('guardarBtnUsuario');
+    
+            if (guardarBtn) {
+                guardarBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene el comportamiento por defecto del botón
+    
+                    Swal.fire({
+                        title: '¿Estás seguro?',
+                        text: "¿Deseas guardar los datos del cliente?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, guardar',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            const formData = new FormData(form);
+    
+                            fetch(form.action, {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    Swal.fire({
+                                        title: '¡Cliente creado!',
+                                        text: data.message,
+                                        icon: 'success',
+                                        confirmButtonText: 'Aceptar'
+                                    }).then(() => {
+                                        window.location.href = data.redirectUrl; // Redirige a la página deseada
+                                    });
+                                } else {
+                                    Swal.fire({
+                                        title: 'Error',
+                                        text: data.message,
+                                        icon: 'error',
+                                        confirmButtonText: 'Aceptar'
+                                    });
+                                }
+                            })
+                            .catch(error => {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: 'Hubo un problema con la solicitud.',
+                                    icon: 'error',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            });
+                        }
+                    });
+                });
+            }
+        }
+    });
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén la URL actual
+        var urlActual = window.location.href;
+    
+        // Verifica si la URL contiene alguna de las cadenas especificadas
+        if (urlActual.includes('falda') || 
+            urlActual.includes('pantalon') || 
+            urlActual.includes('trajeFemenino') || 
+            urlActual.includes('trajeMasculino')) {
+    
+            // Solo añade el event listener si la URL es válida
+            var BtnSuccess = document.getElementById('BtnSuccess');
+            var form = document.querySelector('form');
+    
+            if (BtnSuccess) {
+                // Maneja el clic en el botón "Guardar"
+                BtnSuccess.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene el comportamiento por defecto del botón
+                    Swal.fire({
+                        title: '¡Éxito!',
+                        text: "Los cambios se han guardado correctamente.",
+                        icon: 'success',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'Aceptar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Envía el formulario si el usuario confirma
+                            form.submit();
+                        }
+                    });
+                });
+            }
+    
+            if (form) {
+                // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+                form.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        // Si el foco está en el botón "Guardar"
+                        if (document.activeElement === BtnSuccess) {
+                            BtnSuccess.click(); // Simula un clic en el botón
+                            event.preventDefault(); // Previene el envío del formulario
+                        } else {
+                            // Deja que 'Enter' funcione normalmente para campos de formulario
+                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                            const currentIndex = focusableElements.indexOf(event.target);
+                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                                focusableElements[currentIndex + 1].focus();
+                                event.preventDefault(); // Previene el envío del formulario
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    });
+    
+    
+    
+    

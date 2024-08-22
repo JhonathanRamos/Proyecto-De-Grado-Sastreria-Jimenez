@@ -124,7 +124,8 @@
                         <td>
                             <div class="btn-group">
                                 <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
-                                <a href="<?= base_url('borrar/' . $Cliente['id']); ?>" class="btn btn-outline-danger" style="margin-right: 2px;" onclick="confirmDelete(event, '<?= $Cliente['id']; ?>');">Borrar</a>
+                                <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;" onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
+
 
                             </div>
                         </td>

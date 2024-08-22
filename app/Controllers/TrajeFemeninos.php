@@ -102,9 +102,11 @@ class TrajeFemeninos extends Controller{
      public function editartrajeFemenino($cliente_id = null)
      {
          $trajeFemeninoModel = new TrajeFemenino();
+         $clienteModel = new Cliente();//Mostrar el nombre del cliente a la hora de editar
      
          // Busca la falda asociada al cliente_id
          $trajeFemenino = $trajeFemeninoModel->where('cliente_id', $cliente_id)->first();
+         $cliente = $clienteModel->where('id', $cliente_id)->first();//Mostrar el nombre del cliente a la hora de editar
      
          if (!$trajeFemenino) {
              // Manejar la situación si no se encuentra la falda asociada al cliente
@@ -112,9 +114,15 @@ class TrajeFemeninos extends Controller{
          }
      
          $datos['trajeFemeninos'] = $trajeFemenino;
+         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
          $datos['cabecera'] = view('template/cabecera');
          $datos['pie'] = view('template/piepagina');
          return view('datos/editarTrajeFemenino', $datos);
+
+ 
+        
+      
+      
      }
      
  

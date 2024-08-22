@@ -12,7 +12,7 @@ echo session('mensaje')
 
 <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Ingresar Datos del Cliente</h5>
+            <h2 class="card-title">Modificar Datos del Cliente</h2>
             <p class="card-text">
 
             <form method="post" action="<?=site_url('/actualizar')?>" enctype="multipart/form-data">
@@ -51,12 +51,12 @@ echo session('mensaje')
 
         <div class="form-group">
                     <label for="fechaActualizacion">Fecha de Actualizacion:</label>
-                    <input id="fechaActualizacion" class="form-control" type="text" name="fechaRegistro" value="<?= date('Y-m-d'); ?>" disabled>
+                    <input id="fechaActualizacion" class="form-control" type="text" name="fechaRegistro" value="<?= date('Y-m-d H:i:s'); ?>" disabled>
                 </div>
 
 
     
-        <button class="btn btn-success" type="submit">Guardar</button>
+        <button id="guardarBtn" class="btn btn-success" type="button">Guardar</button>
         <a href="<?=site_url('/cliente')?>" class="btn btn-danger">Cancelar</a>
         </form>
 

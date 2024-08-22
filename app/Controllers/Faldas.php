@@ -75,7 +75,6 @@ class Faldas extends Controller{
     
         return view('datos/datosFalda', $datos);
     }
-    
     public function guardarFalda() {
         $faldaModel = new Falda();
         $clienteModel = new Cliente(); // Asegúrate de importar el modelo de Cliente
@@ -95,6 +94,8 @@ class Faldas extends Controller{
     
         return redirect()->to(site_url('datosFalda'));
     }
+    
+    
     
     //SE PRUEBA DESDE AQUI EL EDITAR Y BORRAR AGREGASTE ESTADO EN MYSQL --> EL PROBLEMA ES CON EL ID A LO QUE VEO AGREGA EL GIT PTM XD WEY
     
@@ -119,9 +120,12 @@ class Faldas extends Controller{
     public function editarFalda($cliente_id = null)
     {
         $faldaModel = new Falda();
+        $clienteModel = new Cliente();
     
         // Busca la falda asociada al cliente_id
         $falda = $faldaModel->where('cliente_id', $cliente_id)->first();
+        $cliente = $clienteModel->where('id', $cliente_id)->first();
+        
     
         if (!$falda) {
             // Manejar la situación si no se encuentra la falda asociada al cliente
@@ -129,6 +133,7 @@ class Faldas extends Controller{
         }
     
         $datos['falda'] = $falda;
+        $datos['cliente'] = $cliente;
         $datos['cabecera'] = view('template/cabecera');
         $datos['pie'] = view('template/piepagina');
         return view('datos/editarFalda', $datos);

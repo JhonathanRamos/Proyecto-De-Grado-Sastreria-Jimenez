@@ -7,10 +7,12 @@
 
     <div class="barra-lateral">
         <div>
-            <div class="nombre-pagina">
-            <ion-icon  id="cloud" name="close-circle-sharp"></ion-icon>
-                <span>Sastreria.J</span>
-            </div>
+        <div class="nombre-pagina">
+            <ion-icon id="cloud" name="grid-outline"></ion-icon>
+            <span>Sastreria <br>
+                Jimenez</span>
+        </div>
+        <br>
         </div>
         <nav class="navegacion">
             <ul>
@@ -96,11 +98,15 @@
             <a class="btn btn-dark" href="<?=base_url('datosPantalon')?>">Pantalon</a>
 </nav>
 
-
-
-<table class="table table-light">
-    <thead class="thead-light">
+<div class="container mt-4">
         <h1>Pantalon</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="search" class="form-control" placeholder="Buscar clientes...">
+        </div>
+
+<table class="table table-light" id="clientesTable">
+    <thead class="thead-light">
+     
         <tr>
             <th>#</th>
             <th>Nombre Cliente</th>
@@ -129,7 +135,7 @@
     <td>
         <div class="btn-group">
             <a href="<?= base_url('editarPantalon/' . $Pantalon['cliente_id']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
-            <a href="<?= base_url('borrarPantalon/' . $Pantalon['cliente_id']); ?>" class="btn btn-outline-danger" style="margin-right: 2px;">Borrar</a>
+            <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;" onclick="confirmDeleteDatos(event, '<?= base_url('borrarPantalon/' . $Pantalon['cliente_id']); ?>');">Borrar</a>
         </div>
     </td>
 </tr>
@@ -137,6 +143,7 @@
 
     </tbody>
 </table>
+</div>
 </main>
 
 <?=$pie?>
