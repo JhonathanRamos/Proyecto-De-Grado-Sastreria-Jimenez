@@ -1,0 +1,72 @@
+ERROR - 2024-08-28 01:22:49 --> Credenciales inválidas para el usuario: perro@gmail.com
+ERROR - 2024-08-28 01:32:51 --> Credenciales inválidas para el usuario: perro@gmail.com
+ERROR - 2024-08-28 01:33:18 --> Credenciales inválidas para el usuario: perro@gmail.com
+ERROR - 2024-08-28 01:36:31 --> Credenciales inválidas para el usuario: perro@gmail.com
+ERROR - 2024-08-28 01:48:49 --> Credenciales inválidas para el usuario: lopez@gmail.com
+ERROR - 2024-08-28 01:51:53 --> Credenciales inválidas para el usuario: lopez@gmail.com
+ERROR - 2024-08-28 02:04:05 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:17:06 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:26:59 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:27:14 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:27:38 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:27:42 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:28:44 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:28:44 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:31:31 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:31:31 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:32:06 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:32:06 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:32:31 --> Contraseña incorrecta para el email: ana.gomez@example.com
+ERROR - 2024-08-28 02:32:31 --> Credenciales inválidas para el usuario: ana.gomez@example.com
+ERROR - 2024-08-28 02:33:17 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:34:49 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:34:52 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:34:56 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:36:22 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:36:31 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:37:26 --> Contraseña incorrecta para el email: rubick1717@gmail.com
+ERROR - 2024-08-28 02:37:48 --> Usuario no encontrado para el email: rubi@gmail.com
+CRITICAL - 2024-08-28 02:39:30 --> Class "App\Controllers\Validation" not found
+in APPPATH\Controllers\Auth.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-28 02:39:44 --> Usuario no encontrado para el email: rubi@gmail.com
+ERROR - 2024-08-28 02:39:44 --> Credenciales inválidas para el usuario: rubi@gmail.com
+ERROR - 2024-08-28 02:43:29 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:43:33 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 02:46:05 --> Credenciales inválidas para el usuario: rubi@gmail.com
+ERROR - 2024-08-28 02:50:55 --> Inicio de sesión exitoso para el usuario: rubia@gmail.com
+CRITICAL - 2024-08-28 02:52:27 --> require(C:\xampp\htdocs\code4\app\Controllers/../../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-28 02:53:50 --> Credenciales inválidas para el usuario: ramos@gmail.com
+ERROR - 2024-08-28 02:54:06 --> Credenciales inválidas para el usuario: ramos@gmail.com
+ERROR - 2024-08-28 02:55:18 --> Credenciales inválidas para el usuario: ramos@gmail.com
+ERROR - 2024-08-28 02:55:23 --> Credenciales inválidas para el usuario: ramos@gmail.com
+ERROR - 2024-08-28 02:55:56 --> Credenciales inválidas para el usuario: ramoss@gmail.com
+ERROR - 2024-08-28 02:56:10 --> Credenciales inválidas para el usuario: ramoss@gmail.com
+ERROR - 2024-08-28 02:56:16 --> Credenciales inválidas para el usuario: ramoss@gmail.com
+ERROR - 2024-08-28 03:03:11 --> Credenciales inválidas para el usuario: yato@gmail.com
+ERROR - 2024-08-28 03:03:34 --> Credenciales inválidas para el usuario: yato@gmail.com
+ERROR - 2024-08-28 03:04:08 --> Credenciales inválidas para el usuario: yato@gmail.com
+ERROR - 2024-08-28 03:08:23 --> Credenciales inválidas para el usuario: yatoo@gmail.com
+ERROR - 2024-08-28 03:11:01 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-28 03:11:27 --> Credenciales inválidas para el usuario: juan@gmail.com
+CRITICAL - 2024-08-28 03:13:29 --> Call to undefined function App\Models\sha2()
+in APPPATH\Models\Login.php on line 57.
+ 1 APPPATH\Controllers\Auth.php(68): App\Models\Login->verifyUser('rubick171777@gmail.com', '000000')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-28 03:14:48 --> Credenciales inválidas para el usuario: rubick171777@gmail.com
+ERROR - 2024-08-28 03:16:34 --> Credenciales inválidas para el usuario: yato@gmail.com
+ERROR - 2024-08-28 03:17:35 --> Credenciales inválidas para el usuario: yato@gmail.com
+ERROR - 2024-08-28 03:19:20 --> Credenciales inválidas para el usuario: rubick1717@gmail.com

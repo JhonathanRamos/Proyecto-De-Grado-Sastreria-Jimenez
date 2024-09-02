@@ -33,8 +33,8 @@ echo session('mensaje')
         <div class="form-group">
                     <label for="sexo">Sexo:</label>
                     <select id="sexo" class="form-control" name="sexo" required>
-                        <option value="M" <?= (old('sexo') === 'M') ? 'selected' : '' ?>>Masculino</option>
-                        <option value="F" <?= (old('sexo') === 'F') ? 'selected' : '' ?>>Femenino</option>
+                    <option value="M" <?= ($cliente['sexo'] === 'M') ? 'selected' : '' ?>>Masculino</option>
+                    <option value="F" <?= ($cliente['sexo'] === 'F') ? 'selected' : '' ?>>Femenino</option>
                     </select>
         </div>
         

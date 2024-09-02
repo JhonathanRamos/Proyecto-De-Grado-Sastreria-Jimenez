@@ -36,6 +36,7 @@ class Faldas extends Controller{
         $clienteModel = new Cliente();
         $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo')
             ->where('estado', 1)
+            ->where('sexo', 'F') 
             ->findAll();
     
         $datos['cabecera'] = view('template/cabecera');

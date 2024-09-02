@@ -29,7 +29,7 @@ class Database extends Config
         'hostname'     => 'localhost',
         'username'     => 'root',
         'password'     => '77448360',
-        'database'     => 'bddsastreria01',
+        'database'     => 'bddsastreria',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -71,15 +71,15 @@ class Database extends Config
         'busyTimeout' => 1000,
     ];
 
-    public function __construct()
-    {
-        parent::__construct();
+    // public function __construct()
+    // {
+    //     parent::__construct();
 
-        // Ensure that we always set the database group to 'tests' if
-        // we are currently running an automated test suite, so that
-        // we don't overwrite live data on accident.
-        if (ENVIRONMENT === 'testing') {
-            $this->defaultGroup = 'tests';
-        }
-    }
+    //     // Ensure that we always set the database group to 'tests' if
+    //     // we are currently running an automated test suite, so that
+    //     // we don't overwrite live data on accident.
+    //     if (ENVIRONMENT === 'testing') {
+    //         $this->defaultGroup = 'tests';
+    //     }
+    // }
 }

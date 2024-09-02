@@ -50,7 +50,7 @@ echo session('mensaje')
 
                 <div class="form-group">
                     <label for="fechaRegistro">Fecha de Registro:</label>
-                    <input id="fechaRegistro" class="form-control" type="text" name="fechaRegistro" value="<?= date('Y-m-d'); ?>" disabled>
+                    <input id="fechaRegistro" class="form-control" type="text" name="fechaRegistro" value="<?= date('Y-m-d H:i:s'); ?>" disabled>
                 </div>
 
 

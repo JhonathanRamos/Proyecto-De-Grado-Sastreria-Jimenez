@@ -83,6 +83,16 @@ $routes->get('tienda', 'Clientes::tienda');
 
 
 
+//Login
+
+$routes->get('/login', 'Auth::login');
+$routes->post('/auth/login', 'Auth::login'); // Asegúrate de que el formulario apunte a esta ruta
+$routes->post('/auth/register', 'Auth::register');
+
+
+
+
+
 
 
 

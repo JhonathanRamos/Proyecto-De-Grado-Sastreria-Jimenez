@@ -16,11 +16,15 @@ class Cliente extends Model{
     }
 
     public function pantalon() {
-        return $this->hasMany(Falda::class, 'cliente_id');
+        return $this->hasMany(Pantalon::class, 'cliente_id');
     }
 
     public function trajeFemenino() {
-        return $this->hasMany(Falda::class, 'cliente_id');
+        return $this->hasMany(TrajeFemenino::class, 'cliente_id');
+    }
+
+    public function trajeMasculino() {
+        return $this->hasMany(TrajeMasculino::class, 'cliente_id');
     }
 }
 

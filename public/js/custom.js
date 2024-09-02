@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    
+
 
     //PARA GUARDAR CON SWETALERT2
     // document.getElementById('guardarBtn').addEventListener('click', function() {
@@ -279,106 +281,117 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
     
     //GUARDAR EDITANDO
-
     document.addEventListener('DOMContentLoaded', function() {
         // Obtén la URL actual
         var urlActual = window.location.href;
+        console.log(urlActual);
     
-        // Verifica si la URL contiene alguna de las cadenas especificadas
+        var guardarBtn = document.getElementById('guardarBtn');
+        var form = document.querySelector('form');
+    
+        if (guardarBtn) {
+            guardarBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Previene el comportamiento por defecto del botón
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¿Deseas guardar los cambios?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, guardar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Muestra mensaje de carga
+                        Swal.fire({
+                            title: 'Guardando...',
+                            text: 'Por favor, espera mientras se guardan los cambios.',
+                            icon: 'info',
+                            allowOutsideClick: false,
+                            showConfirmButton: false
+                        });
+    
+                        // Envía el formulario mediante una solicitud fetch
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form)
+                        }).then(response => {
+                            if (response.ok) {
+                                Swal.fire({
+                                    title: '¡Éxito!',
+                                    text: 'Los cambios se han guardado correctamente.',
+                                    icon: 'success',
+                                    confirmButtonColor: '#3085d6',
+                                    confirmButtonText: 'Aceptar'
+                                }).then(() => {
+                                    // Redirige según la URL actual
+                                    if (urlActual.includes('editartrajeFemenino')) {
+                                        window.location.href = 'http://localhost/code4/public/datosTrajeFemenino'; // URL para editar traje femenino
+                                    } else if (urlActual.includes('editartrajeMasculino')) {
+                                        window.location.href = 'http://localhost/code4/public/datosTrajeMasculino'; // URL para editar traje masculino
+                                    } else if (urlActual.includes('editarFalda')) {
+                                        window.location.href = 'http://localhost/code4/public/datosFalda'; // URL para editar falda
+                                    } else if (urlActual.includes('editarPantalon')) {
+                                        window.location.href = 'http://localhost/code4/public/datosPantalon'; // URL para editar pantalón
+                                    } else {
+                                        window.location.href = 'http://localhost/code4/public/cliente'; // URL para editar cliente
+                                    }
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
+                                    icon: 'error',
+                                    confirmButtonColor: '#3085d6',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            }
+                        }).catch(() => {
+                            Swal.fire({
+                                title: 'Error',
+                                text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
+                                icon: 'error',
+                                confirmButtonColor: '#3085d6',
+                                confirmButtonText: 'Aceptar'
+                            });
+                        });
+                    }
+                });
+            });
+        }
+    
+        // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
         if (urlActual.includes('editar') || 
             urlActual.includes('editarFalda') || 
             urlActual.includes('editarPantalon') || 
             urlActual.includes('editarTrajeFemenino') || 
             urlActual.includes('editarTrajeMasculino')) {
     
-            // Solo añade el event listener si la URL es válida
-            var guardarBtn = document.getElementById('guardarBtn');
-            var form = document.querySelector('form');
-    
-            if (guardarBtn) {
-                guardarBtn.addEventListener('click', function(event) {
-                    event.preventDefault(); // Previene el comportamiento por defecto del botón
-                    Swal.fire({
-                        title: '¿Estás seguro?',
-                        text: "¿Deseas guardar los cambios?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Sí, guardar',
-                        cancelButtonText: 'Cancelar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Muestra mensaje de carga
-                            Swal.fire({
-                                title: 'Guardando...',
-                                text: 'Por favor, espera mientras se guardan los cambios.',
-                                icon: 'info',
-                                allowOutsideClick: false,
-                                showConfirmButton: false
-                            });
-    
-                            // Envía el formulario mediante una solicitud fetch
-                            fetch(form.action, {
-                                method: 'POST',
-                                body: new FormData(form)
-                            }).then(response => {
-                                if (response.ok) {
-                                    Swal.fire({
-                                        title: '¡Éxito!',
-                                        text: 'Los cambios se han guardado correctamente.',
-                                        icon: 'success',
-                                        confirmButtonColor: '#3085d6',
-                                        confirmButtonText: 'Aceptar'
-                                    }).then(() => {
-                                        // Redirige a una página específica o recarga la página actual
-                                        window.location.href = '/pagina-correcta'; // Cambia esto a la URL deseada
-                                        // o
-                                        // window.location.reload(); // Recarga la página actual
-                                    });
-                                } else {
-                                    Swal.fire({
-                                        title: 'Error',
-                                        text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
-                                        icon: 'error',
-                                        confirmButtonColor: '#3085d6',
-                                        confirmButtonText: 'Aceptar'
-                                    });
-                                }
-                            }).catch(() => {
-                                Swal.fire({
-                                    title: 'Error',
-                                    text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
-                                    icon: 'error',
-                                    confirmButtonColor: '#3085d6',
-                                    confirmButtonText: 'Aceptar'
-                                });
-                            });
-                        }
-                    });
-                });
-            }
-    
-            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-            form.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    // Si el foco está en el botón "Guardar"
-                    if (document.activeElement === guardarBtn) {
-                        guardarBtn.click(); // Simula un clic en el botón
-                        event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
-                    } else {
-                        // Deja que 'Enter' funcione normalmente para campos de formulario
-                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                        const currentIndex = focusableElements.indexOf(event.target);
-                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                            focusableElements[currentIndex + 1].focus();
+            if (form) {
+                form.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        // Si el foco está en el botón "Guardar"
+                        if (document.activeElement === guardarBtn) {
+                            guardarBtn.click(); // Simula un clic en el botón
                             event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                        } else {
+                            // Deja que 'Enter' funcione normalmente para campos de formulario
+                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                            const currentIndex = focusableElements.indexOf(event.target);
+                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                                focusableElements[currentIndex + 1].focus();
+                                event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
         }
     });
+
+    
+    
     
     
     
@@ -443,11 +456,32 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     });
                 });
+    
+                // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+                form.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        // Si el foco está en el botón "Guardar"
+                        if (document.activeElement === guardarBtn) {
+                            guardarBtn.click(); // Simula un clic en el botón
+                            event.preventDefault(); // Previene el envío del formulario
+                        } else {
+                            // Deja que 'Enter' funcione normalmente para campos de formulario
+                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                            const currentIndex = focusableElements.indexOf(event.target);
+                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                                focusableElements[currentIndex + 1].focus();
+                                event.preventDefault(); // Previene el envío del formulario
+                            }
+                        }
+                    }
+                });
             }
         }
     });
     
     
+    
+    //Crear falda , pantalon , trajeFemenino , TrajeMasculino
     document.addEventListener('DOMContentLoaded', function() {
         // Obtén la URL actual
         var urlActual = window.location.href;
@@ -468,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     event.preventDefault(); // Previene el comportamiento por defecto del botón
                     Swal.fire({
                         title: '¡Éxito!',
-                        text: "Los cambios se han guardado correctamente.",
+                        text: "Medidas guardadas con éxito.",
                         icon: 'success',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Aceptar'

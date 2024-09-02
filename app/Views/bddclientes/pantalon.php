@@ -74,7 +74,7 @@ echo session('mensaje')
                 </div>
 
 
-                <button class="btn btn-success" type="submit">Guardar</button>
+                <button id="BtnSuccess" class="btn btn-success" type="submit">Guardar</button>
                 <a href="<?=site_url('/cliente')?>" class="btn btn-danger">Cancelar</a>
             </form>
 

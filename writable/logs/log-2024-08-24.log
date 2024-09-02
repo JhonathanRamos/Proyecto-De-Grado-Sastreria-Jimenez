@@ -1,0 +1,133 @@
+CRITICAL - 2024-08-24 01:06:20 --> Invalid file: "loginUsuario/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('loginUsuario/login.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/login', [], true)
+ 3 APPPATH\Controllers\Auth.php(43): view('loginUsuario/login')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->register()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-24 01:33:54 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:35:35 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:37:58 --> Usuario no encontrado: a@gmai.com
+ERROR - 2024-08-24 01:40:55 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:44:57 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:45:35 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:45:49 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:48:56 --> Credenciales inválidas para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:50:29 --> Credenciales inválidas para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:50:40 --> Credenciales inválidas para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:53:28 --> Contraseña incorrecta para el usuario: a@gmail.com
+ERROR - 2024-08-24 01:54:17 --> Contraseña incorrecta para el usuario: a@gmail.com
+CRITICAL - 2024-08-24 02:11:10 --> Call to undefined method App\Models\Login::checkPassword
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Auth.php(55): CodeIgniter\Model->__call('checkPassword', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:12:27 --> Call to undefined method App\Models\Login::checkPassword
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Auth.php(55): CodeIgniter\Model->__call('checkPassword', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:12:37 --> Call to undefined method App\Models\Login::checkPassword
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Auth.php(55): CodeIgniter\Model->__call('checkPassword', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-24 02:13:43 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-24 02:13:56 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-24 02:34:02 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-24 02:34:31 --> Credenciales inválidas para el usuario: da@da
+ERROR - 2024-08-24 02:37:36 --> Contraseña incorrecta para el usuario: da@da
+ERROR - 2024-08-24 02:37:36 --> Credenciales inválidas para el usuario: da@da
+CRITICAL - 2024-08-24 02:38:07 --> require(C:\xampp\htdocs\code4\app\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:08 --> require(C:\xampp\htdocs\code4\app\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:09 --> require(C:\xampp\htdocs\code4\app\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:10 --> require(C:\xampp\htdocs\code4\app\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:10 --> require(C:\xampp\htdocs\code4\app\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers../../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:43 --> require(C:\xampp\htdocs\code4\app\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:44 --> require(C:\xampp\htdocs\code4\app\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:45 --> require(C:\xampp\htdocs\code4\app\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-24 02:39:45 --> require(C:\xampp\htdocs\code4\app\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\code4\\app\\Controllers/../vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 13)
+ 2 APPPATH\Controllers\Auth.php(13): require()
+ 3 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-24 02:41:12 --> Contraseña incorrecta para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-24 02:41:12 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-08-24 02:41:19 --> Contraseña incorrecta para el usuario: da@da
+ERROR - 2024-08-24 02:41:19 --> Credenciales inválidas para el usuario: da@da
+CRITICAL - 2024-08-24 02:43:31 --> Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Auth.php(70): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
