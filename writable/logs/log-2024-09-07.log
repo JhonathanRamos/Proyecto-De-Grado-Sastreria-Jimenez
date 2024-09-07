@@ -1,0 +1,91 @@
+CRITICAL - 2024-09-07 00:08:12 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:08:13 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:08:31 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:11:27 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:11:27 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:11:30 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:11:52 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:11:53 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 00:12:03 --> Class "App\Filters\AuthFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('cliente', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-07 00:13:05 --> Credenciales inválidas para el usuario: ramos.jhonathan.951@gmail.com
+CRITICAL - 2024-09-07 03:04:51 --> Invalid file: "error404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error404', [], true)
+ 3 APPPATH\Controllers\ErrorController.php(9): view('error404')
+ 4 APPPATH\Config\Routes.php(77): App\Controllers\ErrorController->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(939): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'get: clientes\'.')
+ 6 SYSTEMPATH\CodeIgniter.php(362): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 03:05:29 --> Invalid file: "error404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error404', [], true)
+ 3 APPPATH\Controllers\ErrorController.php(9): view('error404')
+ 4 APPPATH\Config\Routes.php(77): App\Controllers\ErrorController->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(939): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'get: clientes\'.')
+ 6 SYSTEMPATH\CodeIgniter.php(362): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 03:05:30 --> Invalid file: "error404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error404', [], true)
+ 3 APPPATH\Controllers\ErrorController.php(9): view('error404')
+ 4 APPPATH\Config\Routes.php(77): App\Controllers\ErrorController->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(939): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'get: clientes\'.')
+ 6 SYSTEMPATH\CodeIgniter.php(362): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 03:05:30 --> Invalid file: "error404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error404', [], true)
+ 3 APPPATH\Controllers\ErrorController.php(9): view('error404')
+ 4 APPPATH\Config\Routes.php(77): App\Controllers\ErrorController->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(939): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'get: clientes\'.')
+ 6 SYSTEMPATH\CodeIgniter.php(362): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-07 03:05:31 --> Invalid file: "error404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error404', [], true)
+ 3 APPPATH\Controllers\ErrorController.php(9): view('error404')
+ 4 APPPATH\Config\Routes.php(77): App\Controllers\ErrorController->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(939): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'get: clientes\'.')
+ 6 SYSTEMPATH\CodeIgniter.php(362): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

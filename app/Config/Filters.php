@@ -18,13 +18,24 @@ class Filters extends BaseConfig
      * @var array<string, string>
      * @phpstan-var array<string, class-string>
      */
+
+    //  AGREGAMOS EL AUTH PARA EL FILTRAR LAS PAGINAS Y DEJAR ENTRAR AL ADMINISTRADOR
     public array $aliases = [
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'auth'          => \App\Filters\AuthFilter::class, // Añade esta línea
     ];
+    
+    // Aplica el filtro a todas las rutas bajo 'clientes'
+    public array $filters = [
+        'auth' => [
+            'before' => ['clientes/*'], // Modifica según tus rutas
+        ],
+    ];
+    
 
     /**
      * List of filter aliases that are always
@@ -35,6 +46,8 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
+            // Puedes añadir 'auth' aquí si deseas aplicar el filtro globalmente
+            // 'auth', 
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
@@ -66,5 +79,5 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+  
 }

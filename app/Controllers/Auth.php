@@ -10,16 +10,11 @@ class Auth extends BaseController
 
     public function __construct()
     {
-        // require __DIR__ . '/../../vendor/autoload.php'; // Ajustar la ruta al autoload de Composer
-
         $this->loginModel = new Login();
     }
 
     public function register()
-  
     {
-
-        
         if ($this->request->getMethod() === 'post') {
             $nombres = $this->request->getPost('nombres');
             $apellidos = $this->request->getPost('apellidos');
@@ -47,9 +42,6 @@ class Auth extends BaseController
             }
         }
 
-        
-     
-
         return view('loginUsuario/login');
     }
 
@@ -67,6 +59,7 @@ class Auth extends BaseController
     
             if ($user) {
                 // Si el usuario existe y la contraseña es válida
+                session()->set('isLoggedIn', true); // Establecer la sesión de inicio de sesión
                 session()->set('user_id', $user['id']);
                 session()->set('user_name', $user['nombres']);
                 session()->set('user_email', $user['email']);  // Guardar email en la sesión
@@ -87,8 +80,4 @@ class Auth extends BaseController
     
         return view('loginUsuario/login');
     }
-    
-    
-
-    
 }

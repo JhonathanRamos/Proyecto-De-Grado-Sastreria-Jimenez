@@ -55,4 +55,7 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+    // app/Controllers/BaseController.php (o el controlador que maneje los errores)
+    
+
 }

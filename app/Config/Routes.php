@@ -8,6 +8,9 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 
+//ruta FILTER CREADOR para filtrar y mostrar el sistema al administrador
+
+$routes->group('', ['filter' => 'auth'], function($routes) {
 /* Tablas  */
 //Vista Cliente
 $routes->get('cliente', 'Clientes::index');
@@ -68,6 +71,12 @@ $routes->get('editartrajeMasculino/(:num)', 'TrajeMasculinos::editartrajeMasculi
 $routes->post('actualizartrajeMasculino', 'TrajeMasculinos::actualizartrajeMasculino');
 
 /* ______________________________________________________________________ */
+});
+
+$routes->set404Override(function () {
+    return (new \App\Controllers\ErrorController())->show404();
+});
+
 
 
 //HTML SASTRERIA
@@ -80,6 +89,7 @@ $routes->get('sacoMasculino.html', 'Clientes::sacoMasculino');
 $routes->get('index.html', 'Clientes::index1');
 $routes->get('nosotros.html', 'Clientes::nosotros');
 $routes->get('tienda', 'Clientes::tienda');
+
 
 
 
