@@ -18,7 +18,7 @@ echo session('mensaje')
         <p class="card-text">
             <form method="post" action="<?=site_url('/actualizarPantalon')?>" enctype="multipart/form-data">
 
-            <input type="hidden" name="cliente_id" value="<?=$pantalon['cliente_id']?>">
+            <input type="hidden" name="idCliente" value="<?=$pantalon['idCliente']?>">
 
                 <div class="form-group">
                     <label for="largo">Largo:</label>

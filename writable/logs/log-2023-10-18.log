@@ -1,4 +1,4 @@
-ERROR - 2023-10-18 14:56:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 14:56:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -13,7 +13,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 14:56:28 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 14:56:28 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -24,7 +24,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 14:56:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 14:56:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -39,7 +39,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 14:56:42 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 14:56:42 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -50,7 +50,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 14:59:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 14:59:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -65,7 +65,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 14:59:38 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 14:59:38 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -76,7 +76,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 14:59:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 14:59:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -91,7 +91,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 14:59:45 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 14:59:45 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -102,7 +102,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:07:48 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:07:48 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -117,7 +117,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:07:48 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 15:07:48 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -128,7 +128,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:07:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:07:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -143,7 +143,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:07:52 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 15:07:52 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -154,7 +154,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:16:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:16:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -169,7 +169,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:16:39 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 15:16:39 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -180,7 +180,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:16:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:16:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -195,7 +195,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:16:45 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 15:16:45 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`falda`, CONSTRAINT `fk_falda_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`) VALUES (:largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -206,7 +206,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:18:22 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:18:22 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -221,9 +221,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:18:22 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:18:22 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -232,7 +232,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:18:26 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:18:26 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -247,9 +247,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:18:26 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:18:26 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -258,7 +258,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:20:45 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:20:45 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -273,9 +273,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:20:45 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:20:45 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -284,7 +284,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:20:52 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:20:52 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -299,9 +299,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:20:52 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:20:52 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -322,7 +322,7 @@ in APPPATH\Controllers\Faldas.php on line 23.
  2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:24:32 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:24:32 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -337,9 +337,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:24:32 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:24:32 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -396,7 +396,7 @@ in APPPATH\Controllers\Faldas.php on line 23.
  2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 15:36:37 --> mysqli_sql_exception: Column 'cliente_id' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 15:36:37 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
@@ -411,9 +411,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 15:36:37 --> Column 'cliente_id' cannot be null
+CRITICAL - 2023-10-18 15:36:37 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `cliente_id`) VALUES (:largo:, :cintura:, :cadera:, :cliente_id:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`largo`, `cintura`, `cadera`, `idCliente`) VALUES (:largo:, :cintura:, :cadera:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -439,7 +439,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-18 15:44:33 --> Duplicate entry '71' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -465,7 +465,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-18 18:04:15 --> Duplicate entry '72' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -491,7 +491,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-18 18:04:25 --> Duplicate entry '72' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -517,7 +517,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-18 18:22:40 --> Duplicate entry '71' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -543,7 +543,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-18 18:26:31 --> Duplicate entry '72' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -552,7 +552,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:49:14 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:49:14 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
@@ -567,7 +567,7 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:49:14 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:49:14 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`) VALUES (:largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
@@ -578,7 +578,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:49:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:49:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
@@ -593,9 +593,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:49:49 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:49:49 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`pantalon`, CONSTRAINT `fk_pantalon_cliente` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`cliente_id`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`) VALUES (:cliente_id:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`idCliente`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`) VALUES (:idCliente:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -604,7 +604,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:51:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:51:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
@@ -619,9 +619,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:51:42 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:51:42 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -630,7 +630,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:51:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:51:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
@@ -645,9 +645,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:51:49 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:51:49 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -656,7 +656,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:52:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:52:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
@@ -671,9 +671,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:52:46 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:52:46 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_femenino`, CONSTRAINT `fk_traje_femenino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_femenino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `cintura`, `cadera`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :cintura:, :cadera:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -682,7 +682,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:53:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:53:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
@@ -697,9 +697,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:53:22 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:53:22 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -708,7 +708,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-18 18:53:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-18 18:53:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
@@ -723,9 +723,9 @@ Stack trace:
 #10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 {main}
-CRITICAL - 2023-10-18 18:53:26 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`))
+CRITICAL - 2023-10-18 18:53:26 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`traje_masculino`, CONSTRAINT `fk_traje_masculino_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

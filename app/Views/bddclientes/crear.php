@@ -44,8 +44,8 @@ echo session('mensaje')
 
 
                 <div class="form-group">
-                    <label for="pago">Monto Pagado:</label>
-                    <input id="pago" value="<?=old('pago')?>"  class="form-control" type="text" name="pago">
+                    <label for="adelanto">Monto adelanto:</label>
+                    <input id="adelanto" value="<?=old('adelanto')?>"  class="form-control" type="text" name="adelanto">
                 </div>
 
                 <div class="form-group">

@@ -100,7 +100,7 @@ class Clientes extends Controller{
         'apellido' => $this->request->getVar('apellido'),
         'sexo' => $this->request->getVar('sexo'),
         'celular' => $this->request->getVar('celular'),
-        'pago' => $this->request->getVar('pago'),
+        'adelanto' => $this->request->getVar('adelanto'),
         'fechaRegistro' => date('Y-m-d H:i:s'),
         'estado' => 1,
     ];
@@ -140,7 +140,7 @@ class Clientes extends Controller{
     //         'apellido' => $this->request->getVar('apellido'),
     //         'sexo' => $this->request->getVar('sexo'),
     //         'celular' => $this->request->getVar('celular'),
-    //         'pago' => $this->request->getVar('pago'),
+    //         'adelanto' => $this->request->getVar('adelanto'),
     //         'fechaRegistro' => date('Y-m-d'),
     //         'estado' => 1, // Estado activo
     //     ];
@@ -191,7 +191,7 @@ class Clientes extends Controller{
             'apellido'=>$this->request->getVar('apellido'),
             'sexo' => $this->request->getVar('sexo'),
             'celular'=>$this->request->getVar('celular'),
-            'pago'=>$this->request->getVar('pago'),
+            'adelanto'=>$this->request->getVar('adelanto'),
             'fechaActualizacion' => date('Y-m-d H:i:s'),
             'estado' => 1, // Estado activo
         ];

@@ -33,8 +33,5 @@ class Login extends Model
             }
         }
         return null; // Retornar null si no coincide
-    }
-    
-    
-    
+    }  
 }

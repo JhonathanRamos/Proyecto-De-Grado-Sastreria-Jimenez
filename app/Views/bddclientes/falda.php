@@ -12,20 +12,20 @@
         <p class="card-text">
             <form method="post" action="<?= site_url('/guardarFalda') ?>" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="cliente_id">Cliente:</label>
-                    <select id="cliente_id" class="form-control" name="cliente_id" required>
+                    <label for="idCliente">Cliente:</label>
+                    <select id="idCliente" class="form-control" name="idCliente" required>
                         <?php foreach ($clientes as $Cliente): ?>
                             <?php
                             $clienteTieneFalda = false;
                             foreach ($faldas as $falda) {
-                                if ($falda['cliente_id'] === $Cliente['cliente_id']) {
+                                if ($falda['idCliente'] === $Cliente['idCliente']) {
                                     $clienteTieneFalda = true;
                                     break;
                                 }
                             }
                             ?>
                             <?php if (!$clienteTieneFalda): ?>
-                                <option value="<?= $Cliente['cliente_id'] ?>">
+                                <option value="<?= $Cliente['idCliente'] ?>">
                                     <?= $Cliente['nombre_completo'] ?>
                                 </option>
                             <?php endif; ?>

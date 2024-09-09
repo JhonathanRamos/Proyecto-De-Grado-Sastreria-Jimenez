@@ -151,15 +151,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// /*Habilita la opcion de poner cuanto pago el cliente
+// /*Habilita la opcion de poner cuanto adelanto el cliente
 // REVISAR*/
 // document.addEventListener("DOMContentLoaded", function() {
-//     var pagoSelect = document.getElementById("pago");
+//     var adelantoSelect = document.getElementById("adelanto");
 //     var montoDiv = document.getElementById("montoDiv");
 //     var montoInput = document.getElementById("monto");
 
-//     pagoSelect.addEventListener("change", function() {
-//         if (pagoSelect.value === "1") {
+//     adelantoSelect.addEventListener("change", function() {
+//         if (adelantoSelect.value === "1") {
 //             montoDiv.style.display = "block";
 //             montoInput.setAttribute("required", "required");
 //         } else {

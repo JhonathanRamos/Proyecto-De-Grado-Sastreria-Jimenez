@@ -123,7 +123,7 @@
             <tbody>
                 <?php foreach ($trajeMasculinos as $TrajeMasculino): ?>
                     <tr>
-                        <td><?= $TrajeMasculino['cliente_id']; ?></td>
+                        <td><?= $TrajeMasculino['idCliente']; ?></td>
                         <td><?= $TrajeMasculino['nombre_completo']; ?></td>
                         <!-- Acceder al nombre del cliente relacionado -->
                         <td><?= $TrajeMasculino['talle']; ?></td>
@@ -135,10 +135,10 @@
                         <td><?= $TrajeMasculino['largoManga']; ?></td>
                         <td>
                             <div class="btn-group">
-                                <a href="<?= base_url('editartrajeMasculino/' . $TrajeMasculino['cliente_id']); ?>"
+                                <a href="<?= base_url('editartrajeMasculino/' . $TrajeMasculino['idCliente']); ?>"
                                     class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
                                 <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
-                                    onclick="confirmDeleteDatos(event, '<?= base_url('borrartrajeMasculino/' . $TrajeMasculino['cliente_id']); ?>');">Borrar</a>
+                                    onclick="confirmDeleteDatos(event, '<?= base_url('borrartrajeMasculino/' . $TrajeMasculino['idCliente']); ?>');">Borrar</a>
                             </div>
                         </td>
                     </tr>

@@ -105,7 +105,7 @@
                     <th>Apellido</th>
                     <th>Sexo</th>
                     <th>Celular</th>
-                    <th>Pagado</th>
+                    <th>adelanto</th>
                     <th id="fechaRegistro" class="sortable" data-sort="fechaRegistro">Fecha Registro<span
                             class="sort-icon"></span></th>
                     <th>Fecha Actualizacion</th>
@@ -120,8 +120,8 @@
                         <td><?= $Cliente['apellido']; ?></td>
                         <td><?= ($Cliente['sexo'] === 'M') ? 'Masculino' : 'Femenino'; ?></td>
                         <td><?= $Cliente['celular']; ?></td>
-                        <td id="pagoCell">
-                            <?= ($Cliente['pago'] === null || $Cliente['pago'] === '0') ? '<span style="color: red;">Falta pagar</span>' : $Cliente['pago'] . ' Bs'; ?>
+                        <td id="adelantoCell">
+                            <?= ($Cliente['adelanto'] === null || $Cliente['adelanto'] === '0') ? '<span style="color: red;">Falta pagar</span>' : $Cliente['adelanto'] . ' Bs'; ?>
                         </td>
                         <td><?= $Cliente['fechaRegistro']; ?></td>
                         <td><?= $Cliente['fechaActualizacion']; ?></td>

@@ -95,11 +95,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:17:04 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -123,11 +123,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:17:12 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_masculino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_masculino`.`talle`, `traje_masculino`.`largo`, `traje_masculino`.`hombro`, `traje_masculino`.`ancho`, `traje_masculino`.`pecho`, `traje_masculino`.`estomago`, `traje_masculino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_masculino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_masculino`.`talle`, `traje_masculino`.`largo`, `traje_masculino`.`hombro`, `traje_masculino`.`ancho`, `traje_masculino`.`pecho`, `traje_masculino`.`estomago`, `traje_masculino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeMasculinos.php(44): CodeIgniter\BaseModel->findAll()
@@ -151,11 +151,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:17:16 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_femenino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(45): CodeIgniter\BaseModel->findAll()
@@ -179,11 +179,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:17:19 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -207,11 +207,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:18:38 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -235,11 +235,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:18:40 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -263,11 +263,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:18:40 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -291,11 +291,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:19:34 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -319,9 +319,9 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:19:54 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`
 FROM `traje_femenino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(28): CodeIgniter\BaseModel->findAll()
@@ -345,9 +345,9 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:22:50 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`
 FROM `traje_femenino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(28): CodeIgniter\BaseModel->findAll()
@@ -371,9 +371,9 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:22:51 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`
 FROM `traje_femenino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(28): CodeIgniter\BaseModel->findAll()
@@ -397,11 +397,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:23:07 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -452,11 +452,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:30:30 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -480,11 +480,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:32:49 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -508,11 +508,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:32:49 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -536,11 +536,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:36 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -564,11 +564,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:37 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -592,11 +592,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:38 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -620,11 +620,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:39 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -648,11 +648,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:40 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -676,11 +676,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:33:41 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Faldas.php(70): CodeIgniter\BaseModel->findAll()
@@ -704,11 +704,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:34:36 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -732,11 +732,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:34:58 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -760,11 +760,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:34:59 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -788,11 +788,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:35:00 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -816,11 +816,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:35:01 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -844,11 +844,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:36:28 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -872,11 +872,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:36:34 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -900,11 +900,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:36:35 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -928,11 +928,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:36:56 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -956,11 +956,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:36:57 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -984,11 +984,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:37:32 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1012,11 +1012,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:39:11 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1040,11 +1040,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:39:12 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1068,11 +1068,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:39:42 --> Unknown column 'cliente.nombre' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `medidas_clientes` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `medidas_clientes` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1096,11 +1096,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:39:58 --> Unknown column 'cliente.id' in 'on clause'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( medidas_clientes.nombre, " ", medidas_clientes.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( medidas_clientes.nombre, " ", medidas_clientes.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `medidas_clientes` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `medidas_clientes` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1124,9 +1124,9 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:40:32 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(28): CodeIgniter\BaseModel->findAll()
@@ -1150,11 +1150,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:41:32 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()
@@ -1178,11 +1178,11 @@ Stack trace:
 #11 {main}
 CRITICAL - 2024-08-30 00:42:01 --> Table 'bddsastreria1.cliente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pantalon`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `pantalon`.`largo`, `pantalon`.`entrepierna`, `pantalon`.`cintura`, `pantalon`.`cadera`, `pantalon`.`pierna`, `pantalon`.`rodilla`, `pantalon`.`bota`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `pantalon`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `pantalon`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(46): CodeIgniter\BaseModel->findAll()

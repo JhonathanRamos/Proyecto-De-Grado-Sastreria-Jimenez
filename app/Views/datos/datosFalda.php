@@ -117,17 +117,17 @@
             <tbody>
                 <?php foreach ($faldas as $Falda): ?>
                     <tr>
-                        <td><?= $Falda['cliente_id']; ?></td>
+                        <td><?= $Falda['idCliente']; ?></td>
                         <td><?= $Falda['nombre_completo']; ?></td> <!-- Acceder al nombre del cliente relacionado -->
                         <td><?= $Falda['largo']; ?></td>
                         <td><?= $Falda['cintura']; ?></td>
                         <td><?= $Falda['cadera']; ?></td>
                         <td>
                             <div class="btn-group">
-                                <a href="<?= base_url('editarFalda/' . $Falda['cliente_id']); ?>"
+                                <a href="<?= base_url('editarFalda/' . $Falda['idCliente']); ?>"
                                     class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
                                 <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
-                                    onclick="confirmDeleteDatos(event, '<?= base_url('borrarFalda/' . $Falda['cliente_id']); ?>');">Borrar</a>
+                                    onclick="confirmDeleteDatos(event, '<?= base_url('borrarFalda/' . $Falda['idCliente']); ?>');">Borrar</a>
                             </div>
                         </td>
                     </tr>
