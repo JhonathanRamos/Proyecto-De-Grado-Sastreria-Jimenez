@@ -1,0 +1,18 @@
+CRITICAL - 2024-09-27 17:26:15 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:26:18 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

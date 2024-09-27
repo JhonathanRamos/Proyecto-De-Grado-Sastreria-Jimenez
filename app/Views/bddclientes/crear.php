@@ -46,10 +46,17 @@
 
 
 
+<<<<<<< HEAD
             <div class="form-group">
                 <label for="adelanto">Monto Pagado:</label>
                 <input id="adelanto" value="<?= old('adelanto') ?>" class="form-control" type="text" name="adelanto">
             </div>
+=======
+                <div class="form-group">
+                    <label for="adelanto">Monto adelanto:</label>
+                    <input id="adelanto" value="<?=old('adelanto')?>"  class="form-control" type="text" name="adelanto">
+                </div>
+>>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
 
             <div class="form-group">
                 

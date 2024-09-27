@@ -39,6 +39,8 @@ class Productos extends Controller
                 $nuevoNombre=$imagen->getRandomName();
                 $imagen->move('../public/uploads/',$nuevoNombre);
 
+                $idUsuario = session()->get('user_id');
+
         $datos = [
             'nombreProducto' => $this->request->getVar('nombre'),
             'descripcion' => $this->request->getVar('descripcion'),
@@ -46,7 +48,8 @@ class Productos extends Controller
             'estado' => 1, // Establecer el estado en 1
             'fechaRegistro' => date('Y-m-d'),
             'fechaActualizacion' => date('Y-m-d'),
-            'imagen'=>$nuevoNombre
+            'imagen'=>$nuevoNombre,
+            'idUsuario' => $idUsuario
         ];
         $producto->insert($datos);
      }

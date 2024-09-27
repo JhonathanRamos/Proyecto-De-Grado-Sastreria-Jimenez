@@ -11,6 +11,7 @@
                 <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
                         alt="logo" /></a>
             </div>
+<<<<<<< HEAD
             <ul class="nav">
                 <li class="nav-item profile">
                     <div class="profile-desc">
@@ -18,6 +19,65 @@
                             <div class="count-indicator">
                                 <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
                                 <span class="count bg-success"></span>
+=======
+        </div>
+    <?php else: ?>
+        <p>No estás logueado.</p>
+    <?php endif; ?>
+</div>
+</div>
+
+</div>
+<main>
+    <nav>
+        <a class="btn btn-dark" href="<?= base_url('cliente') ?>">Cliente</a>
+        <a class="btn btn-dark" href="<?= base_url('datosFalda') ?>">Falda</a>
+        <a class="btn btn-dark" href="<?= base_url('datosTrajeMasculino') ?>">Traje Masculino</a>
+        <a class="btn btn-dark" href="<?= base_url('datosTrajeFemenino') ?>">Traje Femenino</a>
+        <a class="btn btn-dark" href="<?= base_url('datosPantalon') ?>">Pantalon</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Pantalon</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="search" class="form-control" placeholder="Buscar clientes...">
+        </div>
+
+        <table class="table table-light" id="clientesTable">
+            <thead class="thead-light">
+
+                <tr>
+                    <th>#</th>
+                    <th>Nombre Cliente</th>
+                    <th>Largo</th>
+                    <th>Entrepierna</th>
+                    <th>Cintura</th>
+                    <th>Cadera</th>
+                    <th>Pierna</th>
+                    <th>Rodilla</th>
+                    <th>Bota</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($pantalones as $Pantalon): ?>
+                    <tr>
+                        <td><?= $Pantalon['idCliente']; ?></td>
+                        <td><?= $Pantalon['nombre_completo']; ?></td> <!-- Acceder al nombre del cliente relacionado -->
+                        <td><?= $Pantalon['largo']; ?></td>
+                        <td><?= $Pantalon['entrepierna']; ?></td>
+                        <td><?= $Pantalon['cintura']; ?></td>
+                        <td><?= $Pantalon['cadera']; ?></td>
+                        <td><?= $Pantalon['pierna']; ?></td>
+                        <td><?= $Pantalon['rodilla']; ?></td>
+                        <td><?= $Pantalon['bota']; ?></td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="<?= base_url('editarPantalon/' . $Pantalon['idCliente']); ?>"
+                                    class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
+                                <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
+                                    onclick="confirmDeleteDatos(event, '<?= base_url('borrarPantalon/' . $Pantalon['idCliente']); ?>');">Borrar</a>
+>>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">Henry Klein</h5>

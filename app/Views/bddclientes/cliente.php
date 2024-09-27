@@ -149,6 +149,7 @@
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
               alt="logo" /></a>
         </div>
+<<<<<<< HEAD
         <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-menu"></span>
@@ -397,6 +398,40 @@
                             <td><?= $Cliente['fechaActualizacion']; ?></td>
                             <td>
                               <div class="btn-group">
+=======
+        <!-- Es el filtro para buscar a los clientes -->
+        <table class="table table-light mb-3" id="clientesTable">
+            <!-- agregamos id para buscar en la tabla con el filtro -->
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th>Celular</th>
+                    <th>adelanto</th>
+                    <th id="fechaRegistro" class="sortable" data-sort="fechaRegistro">Fecha Registro<span
+                            class="sort-icon"></span></th>
+                    <th>Fecha Actualizacion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($clientes as $Cliente): ?>
+                    <tr>
+                        <td><?= $Cliente['id']; ?></td>
+                        <td><?= $Cliente['nombre']; ?></td>
+                        <td><?= $Cliente['apellido']; ?></td>
+                        <td><?= ($Cliente['sexo'] === 'M') ? 'Masculino' : 'Femenino'; ?></td>
+                        <td><?= $Cliente['celular']; ?></td>
+                        <td id="adelantoCell">
+                            <?= ($Cliente['adelanto'] === null || $Cliente['adelanto'] === '0') ? '<span style="color: red;">Falta pagar</span>' : $Cliente['adelanto'] . ' Bs'; ?>
+                        </td>
+                        <td><?= $Cliente['fechaRegistro']; ?></td>
+                        <td><?= $Cliente['fechaActualizacion']; ?></td>
+                        <td>
+                            <div class="btn-group">
+>>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
                                 <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary"
                                   style="margin-right: 2px;">Editar</a>
                                 <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"

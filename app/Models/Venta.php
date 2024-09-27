@@ -11,7 +11,3 @@ class Venta extends Model{
     protected $allowedFields= ['fecha' , 'total' , 'estado' , 'fechaRegistro' , 'fechaActualizacion' , 'idUsuario' , 'idCliente'];
 
 }
-
-
-
-
