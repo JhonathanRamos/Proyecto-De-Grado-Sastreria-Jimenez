@@ -7,14 +7,14 @@ use CodeIgniter\Model;
 class TrajeMasculino extends Model {
     protected $table = 'traje_masculino';
 
-    protected $primaryKey = 'cliente_id';
-    protected $allowedFields = ['talle', 'largo', 'hombro', 'ancho', 'pecho', 'estomago', 'largoManga', 'cliente_id'];
+    protected $primaryKey = 'idCliente';
+    protected $allowedFields = ['talle', 'largo', 'hombro', 'ancho', 'pecho', 'estomago', 'largoManga', 'idCliente'];
 
     public function cliente() {
-        return $this->belongsTo(Cliente::class, 'cliente_id');
+        return $this->belongsTo(Cliente::class, 'idCliente');
     }
 
     public function clientes() {
-        return $this->hasMany(Cliente::class, 'cliente_id');
+        return $this->hasMany(Cliente::class, 'idCliente');
     }
 }

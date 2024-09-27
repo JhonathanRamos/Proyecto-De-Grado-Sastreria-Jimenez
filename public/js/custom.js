@@ -58,42 +58,42 @@ function change13() { document.getElementById('tr1').src = 'img/tr13.png'; }
 function change14() { document.getElementById('tr1').src = 'img/tr14.png'; }
 function change15() { document.getElementById('tr1').src = 'img/tr15.png'; }
 
-// Lateral - Menu
+// // Lateral - Menu
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Código para manejar la barra lateral y el menú
-    const cloud = document.getElementById("cloud");
-    const barraLateral = document.querySelector(".barra-lateral");
-    const spans = document.querySelectorAll("span");
-    const menu = document.querySelector(".menu");
-    const main = document.querySelector("main");
+// document.addEventListener("DOMContentLoaded", () => {
+//     // Código para manejar la barra lateral y el menú
+//     const cloud = document.getElementById("cloud");
+//     const barraLateral = document.querySelector(".barra-lateral");
+//     const spans = document.querySelectorAll("span");
+//     const menu = document.querySelector(".menu");
+//     const main = document.querySelector("main");
 
-    menu?.addEventListener("click", () => {
-        barraLateral.classList.toggle("max-barra-lateral");
-        if (barraLateral.classList.contains("max-barra-lateral")) {
-            menu.children[0].style.display = "none";
-            menu.children[1].style.display = "block";
-        } else {
-            menu.children[0].style.display = "block";
-            menu.children[1].style.display = "none";
-        }
-        if (window.innerWidth <= 320) {
-            barraLateral.classList.add("mini-barra-lateral");
-            main.classList.add("min-main");
-            spans.forEach((span) => {
-                span.classList.add("oculto");
-            });
-        }
-    });
+//     menu?.addEventListener("click", () => {
+//         barraLateral.classList.toggle("max-barra-lateral");
+//         if (barraLateral.classList.contains("max-barra-lateral")) {
+//             menu.children[0].style.display = "none";
+//             menu.children[1].style.display = "block";
+//         } else {
+//             menu.children[0].style.display = "block";
+//             menu.children[1].style.display = "none";
+//         }
+//         if (window.innerWidth <= 320) {
+//             barraLateral.classList.add("mini-barra-lateral");
+//             main.classList.add("min-main");
+//             spans.forEach((span) => {
+//                 span.classList.add("oculto");
+//             });
+//         }
+//     });
 
-    cloud?.addEventListener("click", () => {
-        barraLateral.classList.toggle("mini-barra-lateral");
-        main.classList.toggle("min-main");
-        spans.forEach((span) => {
-            span.classList.toggle("oculto");
-        });
-    });
-});
+//     cloud?.addEventListener("click", () => {
+//         barraLateral.classList.toggle("mini-barra-lateral");
+//         main.classList.toggle("min-main");
+//         spans.forEach((span) => {
+//             span.classList.toggle("oculto");
+//         });
+//     });
+// });
 
 
 // document.addEventListener("DOMContentLoaded", () => {
@@ -151,15 +151,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// /*Habilita la opcion de poner cuanto pago el cliente
+// /*Habilita la opcion de poner cuanto adelanto el cliente
 // REVISAR*/
 // document.addEventListener("DOMContentLoaded", function() {
-//     var pagoSelect = document.getElementById("pago");
+//     var adelantoSelect = document.getElementById("adelanto");
 //     var montoDiv = document.getElementById("montoDiv");
 //     var montoInput = document.getElementById("monto");
 
-//     pagoSelect.addEventListener("change", function() {
-//         if (pagoSelect.value === "1") {
+//     adelantoSelect.addEventListener("change", function() {
+//         if (adelantoSelect.value === "1") {
 //             montoDiv.style.display = "block";
 //             montoInput.setAttribute("required", "required");
 //         } else {

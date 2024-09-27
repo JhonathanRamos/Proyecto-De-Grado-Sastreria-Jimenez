@@ -24,7 +24,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-15 04:27:25 --> Duplicate entry '28' for key 'falda.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`cliente_id`, `largo`, `cintura`, `cadera`) VALUES (:cliente_id:, :largo:, :cintura:, :cadera:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `falda` (`idCliente`, `largo`, `cintura`, `cadera`) VALUES (:idCliente:, :largo:, :cintura:, :cadera:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

@@ -17,20 +17,20 @@ echo session('mensaje')
             <form method="post" action="<?=site_url('/guardarPantalon')?>" enctype="multipart/form-data">
 
             <div class="form-group">
-                    <label for="cliente_id">Cliente:</label>
-                    <select id="cliente_id" class="form-control" name="cliente_id" required>
+                    <label for="idCliente">Cliente:</label>
+                    <select id="idCliente" class="form-control" name="idCliente" class="js-example-basic-single"style="width: 100%; color: white;">
                         <?php foreach ($clientes as $Cliente): ?>
                             <?php
                             $clienteTienePantalon = false;
                             foreach ($pantalones as $pantalon) {
-                                if ($pantalon['cliente_id'] === $Cliente['cliente_id']) {
+                                if ($pantalon['idCliente'] === $Cliente['idCliente']) {
                                     $clienteTienePantalon = true;
                                     break;
                                 }
                             }
                             ?>
                             <?php if (!$clienteTienePantalon): ?>
-                                <option value="<?= $Cliente['cliente_id'] ?>">
+                                <option value="<?= $Cliente['idCliente'] ?>">
                                     <?= $Cliente['nombre_completo'] ?>
                                 </option>
                             <?php endif; ?>
@@ -74,8 +74,8 @@ echo session('mensaje')
                 </div>
 
 
-                <button id="BtnSuccess" class="btn btn-success" type="submit">Guardar</button>
-                <a href="<?=site_url('/cliente')?>" class="btn btn-danger">Cancelar</a>
+                <button id="BtnSuccess" class="btn btn-success btn-fw" type="submit">Guardar</button>
+                <a href="<?=site_url('/cliente')?>" class="btn btn-danger btn-fw">Cancelar</a>
             </form>
 
         </p>

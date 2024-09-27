@@ -21,7 +21,7 @@ class Faldas extends Controller{
 
     // public function falda() {
     //     $clienteModel = new Cliente();
-    //     $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo')
+    //     $clientes = $clienteModel->select('id AS idCliente, CONCAT(nombre, " ", apellido) AS nombre_completo')
     //                           ->where('estado', 1)
     //                           ->findAll();
     
@@ -34,7 +34,7 @@ class Faldas extends Controller{
 
     public function falda() {
         $clienteModel = new Cliente();
-        $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo')
+        $clientes = $clienteModel->select('id AS idCliente, CONCAT(nombre, " ", apellido) AS nombre_completo')
             ->where('estado', 1)
             ->where('sexo', 'F') 
             ->findAll();
@@ -45,8 +45,8 @@ class Faldas extends Controller{
     
         // Obtén los datos de las faldas y la relación 'cliente'
         $faldaModel = new Falda();
-        $faldas = $faldaModel->select('falda.cliente_id')
-            ->join('cliente', 'cliente.id = falda.cliente_id')
+        $faldas = $faldaModel->select('falda.idCliente')
+            ->join('cliente', 'cliente.id = falda.idCliente')
             ->findAll();
     
         $datos['faldas'] = $faldas; // Pasar la lista de faldas a la vista
@@ -63,9 +63,9 @@ class Faldas extends Controller{
         $faldaModel = new Falda();
     
         // Obtén los datos de las faldas y la relación 'cliente'
-        $faldas = $faldaModel->select('falda.cliente_id, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , falda.largo, falda.cintura, falda.cadera')
-            ->join('cliente', 'cliente.id = falda.cliente_id')
-            ->orderBy('cliente_id', 'ASC')
+        $faldas = $faldaModel->select('falda.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , falda.largo, falda.cintura, falda.cadera')
+            ->join('cliente', 'cliente.id = falda.idCliente')
+            ->orderBy('idCliente', 'ASC')
             ->where('estado', 1)
             ->findAll();
     
@@ -85,7 +85,7 @@ class Faldas extends Controller{
     
         $datos = [
             'clientes' => $clientes, // Pasa la lista de clientes a la vista
-            'cliente_id' => $this->request->getVar('cliente_id'),
+            'idCliente' => $this->request->getVar('idCliente'),
             'largo' => $this->request->getVar('largo'),
             'cintura' => $this->request->getVar('cintura'),
             'cadera' => $this->request->getVar('cadera')
@@ -100,16 +100,16 @@ class Faldas extends Controller{
     
     //SE PRUEBA DESDE AQUI EL EDITAR Y BORRAR AGREGASTE ESTADO EN MYSQL --> EL PROBLEMA ES CON EL ID A LO QUE VEO AGREGA EL GIT PTM XD WEY
     
-    public function borrarFalda($cliente_id = null)
+    public function borrarFalda($idCliente = null)
     {
         $faldaModel = new Falda();
         
-        // Busca la falda asociada al cliente_id
-        $falda = $faldaModel->where('cliente_id', $cliente_id)->first();
+        // Busca la falda asociada al idCliente
+        $falda = $faldaModel->where('idCliente', $idCliente)->first();
         
         if ($falda) {
             // Elimina la falda de la base de datos
-            $faldaModel->delete($falda['cliente_id']);
+            $faldaModel->delete($falda['idCliente']);
         }
         
         return redirect()->to(site_url('/datosFalda'));
@@ -118,14 +118,14 @@ class Faldas extends Controller{
     
 
 
-    public function editarFalda($cliente_id = null)
+    public function editarFalda($idCliente = null)
     {
         $faldaModel = new Falda();
         $clienteModel = new Cliente();
     
-        // Busca la falda asociada al cliente_id
-        $falda = $faldaModel->where('cliente_id', $cliente_id)->first();
-        $cliente = $clienteModel->where('id', $cliente_id)->first();
+        // Busca la falda asociada al idCliente
+        $falda = $faldaModel->where('idCliente', $idCliente)->first();
+        $cliente = $clienteModel->where('id', $idCliente)->first();
         
     
         if (!$falda) {
@@ -152,7 +152,7 @@ class Faldas extends Controller{
           
  
         ];
-        $id= $this->request->getVar('cliente_id');
+        $id= $this->request->getVar('idCliente');
 
         $validacion = $this->validate([
             'largo' => 'required|numeric|min_length[1]',

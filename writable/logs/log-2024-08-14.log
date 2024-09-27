@@ -114,7 +114,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-14 17:19:23 --> Duplicate entry '16' for key 'traje_masculino.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -140,7 +140,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-14 17:20:25 --> Duplicate entry '16' for key 'traje_masculino.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`cliente_id`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:cliente_id:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

@@ -19,7 +19,7 @@ echo session('mensaje')
         <p class="card-text">
             <form method="post" action="<?=site_url('/actualizartrajeMasculino')?>" enctype="multipart/form-data">
            
-                <input type="hidden" name="cliente_id" value="<?=$trajeMasculinos['cliente_id']?>">
+                <input type="hidden" name="idCliente" value="<?=$trajeMasculinos['idCliente']?>">
 
 
                 <div class="form-group">

@@ -15,7 +15,7 @@
         
         <p class="card-text">
             <form method="post" action="<?=site_url('/actualizarFalda')?>" enctype="multipart/form-data">
-                <input type="hidden" name="cliente_id" value="<?=$falda['cliente_id']?>">
+                <input type="hidden" name="idCliente" value="<?=$falda['idCliente']?>">
 
                 <div class="form-group">
                     <label for="largo">Largo:</label>

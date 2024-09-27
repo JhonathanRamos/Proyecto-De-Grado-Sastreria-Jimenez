@@ -7,14 +7,14 @@ use CodeIgniter\Model;
 class Falda extends Model {
     protected $table = 'falda';
 
-    protected $primaryKey = 'cliente_id';
-    protected $allowedFields = ['largo', 'cintura', 'cadera', 'estado' ,'cliente_id'];
+    protected $primaryKey = 'idCliente';
+    protected $allowedFields = ['largo', 'cintura', 'cadera', 'estado' ,'idCliente'];
 
     public function cliente() {
-        return $this->belongsTo(Cliente::class, 'cliente_id');
+        return $this->belongsTo(Cliente::class, 'idCliente');
     }
 
     public function clientes() {
-        return $this->hasMany(Cliente::class, 'cliente_id');
+        return $this->hasMany(Cliente::class, 'idCliente');
     }
 }

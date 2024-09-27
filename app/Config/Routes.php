@@ -71,6 +71,9 @@ $routes->get('editartrajeMasculino/(:num)', 'TrajeMasculinos::editartrajeMasculi
 $routes->post('actualizartrajeMasculino', 'TrajeMasculinos::actualizartrajeMasculino');
 
 /* ______________________________________________________________________ */
+
+$routes->get('venta', 'Ventas::index');
+
 });
 
 $routes->set404Override(function () {

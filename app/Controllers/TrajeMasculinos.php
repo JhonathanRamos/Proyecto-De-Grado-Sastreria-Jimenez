@@ -11,7 +11,7 @@ class TrajeMasculinos extends Controller {
     public function trajeMasculino(){
 
         $clienteModel = new Cliente();
-        $clientes = $clienteModel->select('id AS cliente_id, CONCAT(nombre, " ", apellido) AS nombre_completo ')
+        $clientes = $clienteModel->select('id AS idCliente, CONCAT(nombre, " ", apellido) AS nombre_completo ')
             ->where('estado', 1)
             ->where('sexo', 'M') 
             ->findAll();
@@ -22,8 +22,8 @@ class TrajeMasculinos extends Controller {
     
         // Obtén los datos de las faldas y la relación 'cliente'
         $trajeMasculinoModel = new TrajeMasculino();
-        $trajeMasculino = $trajeMasculinoModel->select('traje_masculino.cliente_id')
-            ->join('cliente', 'cliente.id = traje_masculino.cliente_id')
+        $trajeMasculino = $trajeMasculinoModel->select('traje_masculino.idCliente')
+            ->join('cliente', 'cliente.id = traje_masculino.idCliente')
             ->findAll();
     
         $datos['trajeMasculinos'] = $trajeMasculino; // Pasar la lista de faldas a la vista
@@ -36,10 +36,10 @@ class TrajeMasculinos extends Controller {
         $trajeMasculinoModel = new TrajeMasculino();
     
         // Obtén los datos de las faldas y la relación 'cliente'
-        $trajeMasculino = $trajeMasculinoModel->select('traje_masculino.cliente_id, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , traje_masculino.talle, traje_masculino.largo, 
+        $trajeMasculino = $trajeMasculinoModel->select('traje_masculino.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , traje_masculino.talle, traje_masculino.largo, 
         traje_masculino.hombro , traje_masculino.ancho , traje_masculino.pecho , traje_masculino.estomago , traje_masculino.largoManga')
-            ->join('cliente', 'cliente.id = traje_masculino.cliente_id')
-            ->orderBy('cliente_id', 'ASC')
+            ->join('cliente', 'cliente.id = traje_masculino.idCliente')
+            ->orderBy('idCliente', 'ASC')
             ->where('estado', 1)
             ->findAll();
     
@@ -61,7 +61,7 @@ class TrajeMasculinos extends Controller {
 
         $datos = [
             'clientes' => $clientes, 
-            'cliente_id' => $this->request->getVar('cliente_id'), 
+            'idCliente' => $this->request->getVar('idCliente'), 
             'talle' => $this->request->getVar('talle'),
             'largo' => $this->request->getVar('largo'),
             'hombro' => $this->request->getVar('hombro'),
@@ -77,16 +77,16 @@ class TrajeMasculinos extends Controller {
 
     //SE PRUEBA DESDE AQUI EL EDITAR Y BORRAR AGREGASTE ESTADO EN MYSQL --> EL PROBLEMA ES CON EL ID A LO QUE VEO AGREGA EL GIT PTM XD WEY
     
-    public function borrartrajeMasculino($cliente_id = null)
+    public function borrartrajeMasculino($idCliente = null)
     {
         $trajeMasculinoModel = new TrajeMasculino();
         
       
-        $trajeMasculino = $trajeMasculinoModel->where('cliente_id', $cliente_id)->first();
+        $trajeMasculino = $trajeMasculinoModel->where('idCliente', $idCliente)->first();
         
         if ($trajeMasculino) {
          
-            $trajeMasculinoModel->delete($trajeMasculino['cliente_id']);
+            $trajeMasculinoModel->delete($trajeMasculino['idCliente']);
         }
         
         return redirect()->to(site_url('/datosTrajeMasculino'));
@@ -96,14 +96,14 @@ class TrajeMasculinos extends Controller {
 
     
     
-    public function editartrajeMasculino($cliente_id = null)
+    public function editartrajeMasculino($idCliente = null)
     {
         $trajeMasculinoModel = new TrajeMasculino();
         $clienteModel = new Cliente();//Mostrar el nombre del cliente a la hora de editar
     
-        // Busca la falda asociada al cliente_id
-        $trajeMasculino = $trajeMasculinoModel->where('cliente_id', $cliente_id)->first();
-        $cliente = $clienteModel->where('id', $cliente_id)->first();//Mostrar el nombre del cliente a la hora de editar
+        // Busca la falda asociada al idCliente
+        $trajeMasculino = $trajeMasculinoModel->where('idCliente', $idCliente)->first();
+        $cliente = $clienteModel->where('id', $idCliente)->first();//Mostrar el nombre del cliente a la hora de editar
     
         if (!$trajeMasculino) {
             // Manejar la situación si no se encuentra la falda asociada al cliente
@@ -137,7 +137,7 @@ class TrajeMasculinos extends Controller {
           
  
         ];
-        $id= $this->request->getVar('cliente_id');
+        $id= $this->request->getVar('idCliente');
 
         $validacion = $this->validate([
             'talle' => 'required|numeric|min_length[1]',

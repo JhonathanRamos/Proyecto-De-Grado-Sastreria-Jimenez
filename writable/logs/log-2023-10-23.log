@@ -62,7 +62,7 @@ in APPPATH\Views\datos\datosPantalon.php on line 27.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:53:27 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:53:27 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -76,12 +76,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:53:27 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:53:27 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -89,7 +89,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:54:45 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:54:45 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -103,12 +103,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:54:45 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:54:45 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -116,7 +116,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:54:46 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:54:46 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -130,12 +130,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:54:46 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:54:46 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -143,7 +143,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:55:52 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:55:52 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -157,12 +157,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:55:52 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:55:52 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -170,7 +170,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:55:52 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:55:52 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -184,12 +184,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:55:52 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:55:52 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -197,7 +197,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:56:34 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:56:34 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -211,12 +211,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:56:34 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:56:34 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_masculino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -224,7 +224,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:57:57 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:57:57 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -238,12 +238,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:57:57 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:57:57 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -251,7 +251,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:57:58 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:57:58 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -265,12 +265,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:57:58 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:57:58 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -278,7 +278,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:57:59 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:57:59 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -292,12 +292,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:57:59 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:57:59 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -305,7 +305,7 @@ ORDER BY `cliente_id` ASC', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-23 05:58:00 --> mysqli_sql_exception: Unknown column 'traje_femenino.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-23 05:58:00 --> mysqli_sql_exception: Unknown column 'traje_femenino.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `traje_f...', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `traje_f...')
@@ -319,12 +319,12 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-23 05:58:00 --> Unknown column 'traje_femenino.cliente_id' in 'field list'
+CRITICAL - 2023-10-23 05:58:00 --> Unknown column 'traje_femenino.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `traje_femenino`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `traje_femenino`.`talle`, `traje_femenino`.`largo`, `traje_femenino`.`hombro`, `traje_femenino`.`ancho`, `traje_femenino`.`pecho`, `traje_femenino`.`cintura`, `traje_femenino`.`cadera`, `traje_femenino`.`largoManga`
 FROM `traje_masculino`
-JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`cliente_id`
-ORDER BY `cliente_id` ASC', [], false)
+JOIN `cliente` ON `cliente`.`id` = `traje_femenino`.`idCliente`
+ORDER BY `idCliente` ASC', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\TrajeFemeninos.php(29): CodeIgniter\BaseModel->findAll()
@@ -517,7 +517,7 @@ Stack trace:
 CRITICAL - 2023-10-23 19:26:36 --> Unknown column 'estado' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `falda` SET `largo` = :largo:, `cintura` = :cintura:, `cadera` = :cadera:, `estado` = :estado:
-WHERE `falda`.`cliente_id` IN :falda.cliente_id:', [...], false)
+WHERE `falda`.`idCliente` IN :falda.idCliente:', [...], false)
  2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
  3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
  4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
@@ -543,7 +543,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-23 20:42:58 --> Duplicate entry '1' for key 'pantalon.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`cliente_id`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`, `bota`) VALUES (:cliente_id:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:, :bota:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`idCliente`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`, `bota`) VALUES (:idCliente:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:, :bota:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -569,7 +569,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2023-10-23 20:45:30 --> Duplicate entry '1' for key 'pantalon.PRIMARY'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`cliente_id`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`, `bota`) VALUES (:cliente_id:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:, :bota:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pantalon` (`idCliente`, `largo`, `entrepierna`, `cintura`, `cadera`, `pierna`, `rodilla`, `bota`) VALUES (:idCliente:, :largo:, :entrepierna:, :cintura:, :cadera:, :pierna:, :rodilla:, :bota:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

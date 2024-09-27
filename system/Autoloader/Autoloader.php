@@ -12,8 +12,8 @@
 namespace CodeIgniter\Autoloader;
 
 use CodeIgniter\Exceptions\ConfigException;
-use Composer\Autoload\ClassLoader;
-use Composer\InstalledVersions;
+// use Composer\Autoload\ClassLoader;
+// use Composer\InstalledVersions;
 use Config\Autoload;
 use Config\Modules;
 use InvalidArgumentException;
@@ -121,30 +121,30 @@ class Autoloader
             $this->helpers = [...$this->helpers, ...$config->helpers];
         }
 
-        if (is_file(COMPOSER_PATH)) {
-            $this->loadComposerInfo($modules);
-        }
+        // if (is_file(COMPOSER_PATH)) {
+        //     $this->loadComposerInfo($modules);
+        // }
 
         return $this;
     }
 
-    private function loadComposerInfo(Modules $modules): void
-    {
-        /**
-         * @var ClassLoader $composer
-         */
-        $composer = include COMPOSER_PATH;
+    // private function loadComposerInfo(Modules $modules): void
+    // {
+    //     /**
+    //      * @var ClassLoader $composer
+    //      */
+    //     $composer = include COMPOSER_PATH;
 
-        $this->loadComposerClassmap($composer);
+    //     $this->loadComposerClassmap($composer);
 
-        // Should we load through Composer's namespaces, also?
-        if ($modules->discoverInComposer) {
-            // @phpstan-ignore-next-line
-            $this->loadComposerNamespaces($composer, $modules->composerPackages ?? []);
-        }
+    //     // Should we load through Composer's namespaces, also?
+    //     if ($modules->discoverInComposer) {
+    //         // @phpstan-ignore-next-line
+    //         $this->loadComposerNamespaces($composer, $modules->composerPackages ?? []);
+    //     }
 
-        unset($composer);
-    }
+    //     unset($composer);
+    // }
 
     /**
      * Register the loader with the SPL autoloader stack.
@@ -342,11 +342,8 @@ class Autoloader
         }
         if ($result === false) {
             if (version_compare(PHP_VERSION, '8.0.0', '>=')) {
-                $message = preg_last_error_msg();
-            } else {
-                $message = 'Regex error. error code: ' . preg_last_error();
-            }
-
+                $message ='Regex error. error code: ' . preg_last_error();
+            } 
             throw new RuntimeException($message . '. filename: "' . $filename . '"');
         }
 
@@ -360,82 +357,82 @@ class Autoloader
         return $cleanFilename;
     }
 
-    private function loadComposerNamespaces(ClassLoader $composer, array $composerPackages): void
-    {
-        $namespacePaths = $composer->getPrefixesPsr4();
+    // private function loadComposerNamespaces(ClassLoader $composer, array $composerPackages): void
+    // {
+    //     $namespacePaths = $composer->getPrefixesPsr4();
 
-        // Get rid of CodeIgniter so we don't have duplicates
-        if (isset($namespacePaths['CodeIgniter\\'])) {
-            unset($namespacePaths['CodeIgniter\\']);
-        }
+    //     // Get rid of CodeIgniter so we don't have duplicates
+    //     if (isset($namespacePaths['CodeIgniter\\'])) {
+    //         unset($namespacePaths['CodeIgniter\\']);
+    //     }
 
-        if (! method_exists(InstalledVersions::class, 'getAllRawData')) {
-            throw new RuntimeException(
-                'Your Composer version is too old.'
-                . ' Please update Composer (run `composer self-update`) to v2.0.14 or later'
-                . ' and remove your vendor/ directory, and run `composer update`.'
-            );
-        }
-        // This method requires Composer 2.0.14 or later.
-        $allData     = InstalledVersions::getAllRawData();
-        $packageList = [];
+    //     if (! method_exists(InstalledVersions::class, 'getAllRawData')) {
+    //         throw new RuntimeException(
+    //             'Your Composer version is too old.'
+    //             . ' Please update Composer (run `composer self-update`) to v2.0.14 or later'
+    //             . ' and remove your vendor/ directory, and run `composer update`.'
+    //         );
+    //     }
+    //     // This method requires Composer 2.0.14 or later.
+    //     $allData     = InstalledVersions::getAllRawData();
+    //     $packageList = [];
 
-        foreach ($allData as $list) {
-            $packageList = array_merge($packageList, $list['versions']);
-        }
+    //     foreach ($allData as $list) {
+    //         $packageList = array_merge($packageList, $list['versions']);
+    //     }
 
-        // Check config for $composerPackages.
-        $only    = $composerPackages['only'] ?? [];
-        $exclude = $composerPackages['exclude'] ?? [];
-        if ($only !== [] && $exclude !== []) {
-            throw new ConfigException('Cannot use "only" and "exclude" at the same time in "Config\Modules::$composerPackages".');
-        }
+    //     // Check config for $composerPackages.
+    //     $only    = $composerPackages['only'] ?? [];
+    //     $exclude = $composerPackages['exclude'] ?? [];
+    //     if ($only !== [] && $exclude !== []) {
+    //         throw new ConfigException('Cannot use "only" and "exclude" at the same time in "Config\Modules::$composerPackages".');
+    //     }
 
-        // Get install paths of packages to add namespace for auto-discovery.
-        $installPaths = [];
-        if ($only !== []) {
-            foreach ($packageList as $packageName => $data) {
-                if (in_array($packageName, $only, true) && isset($data['install_path'])) {
-                    $installPaths[] = $data['install_path'];
-                }
-            }
-        } else {
-            foreach ($packageList as $packageName => $data) {
-                if (! in_array($packageName, $exclude, true) && isset($data['install_path'])) {
-                    $installPaths[] = $data['install_path'];
-                }
-            }
-        }
+    //     // Get install paths of packages to add namespace for auto-discovery.
+    //     $installPaths = [];
+    //     if ($only !== []) {
+    //         foreach ($packageList as $packageName => $data) {
+    //             if (in_array($packageName, $only, true) && isset($data['install_path'])) {
+    //                 $installPaths[] = $data['install_path'];
+    //             }
+    //         }
+    //     } else {
+    //         foreach ($packageList as $packageName => $data) {
+    //             if (! in_array($packageName, $exclude, true) && isset($data['install_path'])) {
+    //                 $installPaths[] = $data['install_path'];
+    //             }
+    //         }
+    //     }
 
-        $newPaths = [];
+    //     $newPaths = [];
 
-        foreach ($namespacePaths as $namespace => $srcPaths) {
-            $add = false;
+    //     foreach ($namespacePaths as $namespace => $srcPaths) {
+    //         $add = false;
 
-            foreach ($srcPaths as $path) {
-                foreach ($installPaths as $installPath) {
-                    if ($installPath === substr($path, 0, strlen($installPath))) {
-                        $add = true;
-                        break 2;
-                    }
-                }
-            }
+    //         foreach ($srcPaths as $path) {
+    //             foreach ($installPaths as $installPath) {
+    //                 if ($installPath === substr($path, 0, strlen($installPath))) {
+    //                     $add = true;
+    //                     break 2;
+    //                 }
+    //             }
+    //         }
 
-            if ($add) {
-                // Composer stores namespaces with trailing slash. We don't.
-                $newPaths[rtrim($namespace, '\\ ')] = $srcPaths;
-            }
-        }
+    //         if ($add) {
+    //             // Composer stores namespaces with trailing slash. We don't.
+    //             $newPaths[rtrim($namespace, '\\ ')] = $srcPaths;
+    //         }
+    //     }
 
-        $this->addNamespace($newPaths);
-    }
+    //     $this->addNamespace($newPaths);
+    // }
 
-    private function loadComposerClassmap(ClassLoader $composer): void
-    {
-        $classes = $composer->getClassMap();
+    // private function loadComposerClassmap(ClassLoader $composer): void
+    // {
+    //     $classes = $composer->getClassMap();
 
-        $this->classmap = array_merge($this->classmap, $classes);
-    }
+    //     $this->classmap = array_merge($this->classmap, $classes);
+    // }
 
     /**
      * Locates autoload information from Composer, if available.
@@ -444,36 +441,36 @@ class Autoloader
      *
      * @return void
      */
-    protected function discoverComposerNamespaces()
-    {
-        if (! is_file(COMPOSER_PATH)) {
-            return;
-        }
+    // protected function discoverComposerNamespaces()
+    // {
+    //     if (! is_file(COMPOSER_PATH)) {
+    //         return;
+    //     }
 
-        /**
-         * @var ClassLoader $composer
-         */
-        $composer = include COMPOSER_PATH;
-        $paths    = $composer->getPrefixesPsr4();
-        $classes  = $composer->getClassMap();
+    //     /**
+    //      * @var ClassLoader $composer
+    //      */
+    //     $composer = include COMPOSER_PATH;
+    //     $paths    = $composer->getPrefixesPsr4();
+    //     $classes  = $composer->getClassMap();
 
-        unset($composer);
+    //     unset($composer);
 
-        // Get rid of CodeIgniter so we don't have duplicates
-        if (isset($paths['CodeIgniter\\'])) {
-            unset($paths['CodeIgniter\\']);
-        }
+    //     // Get rid of CodeIgniter so we don't have duplicates
+    //     if (isset($paths['CodeIgniter\\'])) {
+    //         unset($paths['CodeIgniter\\']);
+    //     }
 
-        $newPaths = [];
+    //     $newPaths = [];
 
-        foreach ($paths as $key => $value) {
-            // Composer stores namespaces with trailing slash. We don't.
-            $newPaths[rtrim($key, '\\ ')] = $value;
-        }
+    //     foreach ($paths as $key => $value) {
+    //         // Composer stores namespaces with trailing slash. We don't.
+    //         $newPaths[rtrim($key, '\\ ')] = $value;
+    //     }
 
-        $this->prefixes = array_merge($this->prefixes, $newPaths);
-        $this->classmap = array_merge($this->classmap, $classes);
-    }
+    //     $this->prefixes = array_merge($this->prefixes, $newPaths);
+    //     $this->classmap = array_merge($this->classmap, $classes);
+    // }
 
     /**
      * Loads helpers

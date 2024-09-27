@@ -1,4 +1,4 @@
-ERROR - 2023-10-25 00:00:55 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:00:55 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -12,11 +12,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:00:55 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:00:55 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -24,7 +24,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:00:55 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:00:55 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -38,11 +38,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:00:55 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:00:55 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -50,7 +50,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:23 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:23 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -64,11 +64,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:23 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:23 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -76,7 +76,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:23 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:23 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -90,11 +90,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:23 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:23 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -102,7 +102,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -116,11 +116,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -128,7 +128,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -142,11 +142,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -154,7 +154,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:24 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -168,11 +168,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:24 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -180,7 +180,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -194,11 +194,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -206,7 +206,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -220,11 +220,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -232,7 +232,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:25 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -246,11 +246,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:25 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -258,7 +258,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:26 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:26 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -272,11 +272,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:26 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:26 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -284,7 +284,7 @@ JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-10-25 00:01:26 --> mysqli_sql_exception: Unknown column 'falda.cliente_id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+ERROR - 2023-10-25 00:01:26 --> mysqli_sql_exception: Unknown column 'falda.idCliente' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `falda`....', 0)
 #1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `falda`....')
@@ -298,11 +298,11 @@ Stack trace:
 #9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-10-25 00:01:26 --> Unknown column 'falda.cliente_id' in 'field list'
+CRITICAL - 2023-10-25 00:01:26 --> Unknown column 'falda.idCliente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`
 FROM `pantalon`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`', [], false)
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`', [], false)
  2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  4 APPPATH\Controllers\Pantalons.php(27): CodeIgniter\BaseModel->findAll()
@@ -725,11 +725,11 @@ CRITICAL - 2023-10-25 04:58:45 --> Unable to connect to the database.
 Main connection [MySQLi]: Unknown database 'bddsastreria'
 in SYSTEMPATH\Database\BaseConnection.php on line 427.
  1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`cliente_id`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `falda`.`idCliente`, CONCAT( cliente.nombre, " ", cliente.apellido ) AS nombre_completo, `falda`.`largo`, `falda`.`cintura`, `falda`.`cadera`
 FROM `falda`
-JOIN `cliente` ON `cliente`.`id` = `falda`.`cliente_id`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
 WHERE `estado` = :estado:
-ORDER BY `cliente_id` ASC', [...], false)
+ORDER BY `idCliente` ASC', [...], false)
  3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
  4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
  5 APPPATH\Controllers\Faldas.php(69): CodeIgniter\BaseModel->findAll()
