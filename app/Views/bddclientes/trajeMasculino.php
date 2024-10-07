@@ -39,37 +39,9 @@
             </div>
 
             <div class="form-group">
-<<<<<<< HEAD
                 <label for="talle">Talle:</label>
                 <input id="talle" value="<?= old('talle') ?>" class="form-control" type="text" name="talle" required>
             </div>
-=======
-                    <label for="idCliente">Cliente:</label>
-                    <select id="idCliente" class="form-control" name="idCliente" required>
-                        <?php foreach ($clientes as $Cliente): ?>
-                            <?php
-                            $clienteTieneTrajeMasculino = false;
-                            foreach ($trajeMasculinos as $trajeMasculino) {
-                                if ($trajeMasculino['idCliente'] === $Cliente['idCliente']) {
-                                    $clienteTieneTrajeMasculino = true;
-                                    break;
-                                }
-                            }
-                            ?>
-                            <?php if (!$clienteTieneTrajeMasculino): ?>
-                                <option value="<?= $Cliente['idCliente'] ?>">
-                                    <?= $Cliente['nombre_completo'] ?>
-                                </option>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="talle">Talle:</label>
-                    <input id="talle" value="<?=old('talle')?>"  class="form-control" type="text" name="talle" required>
-                </div>
->>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
 
             <div class="form-group">
                 <label for="largo">Largo:</label>

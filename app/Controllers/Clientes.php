@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Cliente;
 use App\Models\TrajeMasculino;
+use App\Models\Confeccion;
 
 
 
@@ -12,9 +13,25 @@ class Clientes extends Controller{
     public function index()
     {
         $cliente = new Cliente();
-        
+        $confeccionModel = new Confeccion(); // Asegúrate de tener este modelo disponible
+    
         // Aplicar una condición para seleccionar solo clientes con estado igual a 1
         $datos['clientes'] = $cliente->where('estado', 1)->orderBy('id', 'ASC')->findAll();
+    
+        // Obtener el adelanto total por cada cliente
+        foreach ($datos['clientes'] as &$cliente) {
+            // Obtener las confecciones del cliente
+            $confecciones = $confeccionModel->where('idCliente', $cliente['id'])->findAll();
+            
+            // Sumar los adelantos
+            $totalAdelanto = 0;
+            foreach ($confecciones as $confeccion) {
+                $totalAdelanto += $confeccion['adelanto'];
+            }
+    
+            // Agregar el total de adelanto al cliente
+            $cliente['adelanto'] = $totalAdelanto;
+        }
     
         // Se está poniendo un nombre y dirigiendo donde están con $datos y la dirección con view
         $datos['cabecera'] = view('template/cabecera');
@@ -22,6 +39,22 @@ class Clientes extends Controller{
     
         return view('bddclientes/cliente', $datos);
     }
+
+    // public function index()
+    // {
+    //     $cliente = new Cliente();
+        
+    //     // Aplicar una condición para seleccionar solo clientes con estado igual a 1
+    //     $datos['clientes'] = $cliente->where('estado', 1)->orderBy('id', 'ASC')->findAll();
+    
+    //     // Se está poniendo un nombre y dirigiendo donde están con $datos y la dirección con view
+    //     $datos['cabecera'] = view('template/cabecera');
+    //     $datos['pie'] = view('template/piepagina');
+    
+    //     return view('bddclientes/cliente', $datos);
+    // }
+    
+    
     
 
 

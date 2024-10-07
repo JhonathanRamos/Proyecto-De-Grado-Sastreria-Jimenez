@@ -40,22 +40,10 @@
                     </select>
                 </div>
 
-<<<<<<< HEAD
                 <div class="form-group">
                     <label for="celular">Celular</label>
                     <input id="celular" value="<?= $cliente['celular'] ?>" class="form-control" type="text"
                         name="celular">
-=======
-
-        <div class="form-group">
-            <label for="adelanto">Monto adelanto:</label>
-            <input id="adelanto" value="<?=$cliente['adelanto']?>"  class="form-control" type="text" name="adelanto">
-        </div>
-
-        <div class="form-group">
-                    <label for="fechaActualizacion">Fecha de Actualizacion:</label>
-                    <input id="fechaActualizacion" class="form-control" type="text" name="fechaRegistro" value="<?= date('Y-m-d H:i:s'); ?>" disabled>
->>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
                 </div>
 
 

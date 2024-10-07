@@ -8,7 +8,7 @@ class Cliente extends Model{
     protected $table      = 'cliente';
     // Uncomment below if you want add primary key
     protected $primaryKey = 'id';
-    protected $allowedFields= ['nombre' , 'apellido' , 'celular' , 'sexo' , 'estado' , 'adelanto' , 'fechaRegistro' , 'fechaActualizacion'];
+    protected $allowedFields= ['nombre' , 'apellido' , 'celular' , 'sexo' , 'estado' , 'fechaRegistro' , 'fechaActualizacion'];
 
     
     public function faldas() {
@@ -25,6 +25,10 @@ class Cliente extends Model{
 
     public function trajeMasculino() {
         return $this->hasMany(TrajeMasculino::class, 'idCliente');
+    }
+
+    public function confecciones() {
+        return $this->hasMany(Confeccion::class, 'idCliente');
     }
 }
 

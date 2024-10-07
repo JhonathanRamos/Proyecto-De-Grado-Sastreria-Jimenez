@@ -16,3 +16,140 @@ in APPPATH\Views\bddclientes\cliente.php on line 475.
  5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
  6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:30:57 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:32:32 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:33:18 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:33:19 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 17:34:37 --> syntax error, unexpected end of file
+in APPPATH\Views\bddclientes\cliente.php on line 475.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 3 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 18:13:46 --> Undefined variable $clientes
+in APPPATH\Views\venta\venta.php on line 395.
+ 1 APPPATH\Views\venta\venta.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 395)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 18:14:00 --> Undefined variable $clientes
+in APPPATH\Views\venta\venta.php on line 395.
+ 1 APPPATH\Views\venta\venta.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 395)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 18:14:01 --> Undefined variable $clientes
+in APPPATH\Views\venta\venta.php on line 395.
+ 1 APPPATH\Views\venta\venta.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 395)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 18:58:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\bddclientes\editar.php on line 21.
+ 1 APPPATH\Views\bddclientes\editar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php', 21)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/editar', [], true)
+ 5 APPPATH\Controllers\Clientes.php(182): view('bddclientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 18:58:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\bddclientes\editar.php on line 21.
+ 1 APPPATH\Views\bddclientes\editar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php', 21)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/editar', [], true)
+ 5 APPPATH\Controllers\Clientes.php(182): view('bddclientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-27 20:50:38 --> Undefined array key "cliente_id"
+in APPPATH\Views\datos\datosTrajeMasculino.php on line 390.
+ 1 APPPATH\Views\datos\datosTrajeMasculino.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cliente_id"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeMasculino.php', 390)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeMasculino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeMasculino', [], true)
+ 5 APPPATH\Controllers\TrajeMasculinos.php(51): view('datos/datosTrajeMasculino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeMasculinos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-27 20:50:50 --> mysqli_sql_exception: Column 'idCliente' cannot be null in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\TrajeMasculinos.php(74): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\TrajeMasculinos->guardartrajeMasculino()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-27 20:50:50 --> Column 'idCliente' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `traje_masculino` (`idCliente`, `talle`, `largo`, `hombro`, `ancho`, `pecho`, `estomago`, `largoManga`) VALUES (:idCliente:, :talle:, :largo:, :hombro:, :ancho:, :pecho:, :estomago:, :largoManga:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\TrajeMasculinos.php(74): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeMasculinos->guardartrajeMasculino()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

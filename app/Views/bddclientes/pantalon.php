@@ -18,11 +18,7 @@ echo session('mensaje')
 
             <div class="form-group">
                     <label for="idCliente">Cliente:</label>
-<<<<<<< HEAD
                     <select id="idCliente" class="form-control" name="idCliente" class="js-example-basic-single"style="width: 100%; color: white;">
-=======
-                    <select id="idCliente" class="form-control" name="idCliente" required>
->>>>>>> 760834dfa50c831261f243373babb7b1e6ba6154
                         <?php foreach ($clientes as $Cliente): ?>
                             <?php
                             $clienteTienePantalon = false;
