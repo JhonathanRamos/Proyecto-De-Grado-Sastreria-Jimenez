@@ -1,0 +1,91 @@
+CRITICAL - 2024-10-07 13:57:05 --> Undefined array key "adelanto"
+in APPPATH\Views\venta\venta.php on line 401.
+ 1 APPPATH\Views\venta\venta.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 401)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:57:45 --> Undefined array key "adelanto"
+in APPPATH\Views\venta\venta.php on line 401.
+ 1 APPPATH\Views\venta\venta.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 401)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 14:09:21 --> Undefined array key "adelanto"
+in APPPATH\Views\bddclientes\editar.php on line 52.
+ 1 APPPATH\Views\bddclientes\editar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php', 52)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/editar', [], true)
+ 5 APPPATH\Controllers\Clientes.php(216): view('bddclientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->editar('52')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 14:22:09 --> Undefined array key "adelanto"
+in APPPATH\Views\bddclientes\editar.php on line 52.
+ 1 APPPATH\Views\bddclientes\editar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php', 52)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/editar', [], true)
+ 5 APPPATH\Controllers\Clientes.php(216): view('bddclientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->editar('52')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 14:44:05 --> Undefined array key "adelanto"
+in APPPATH\Views\venta\venta.php on line 401.
+ 1 APPPATH\Views\venta\venta.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 401)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(18): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 15:46:56 --> Invalid file: "confeccion/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('confeccion/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('confeccion/index', [], true)
+ 3 APPPATH\Controllers\Confeccions.php(29): view('confeccion/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 15:48:03 --> Invalid file: "confeccion/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('confeccion/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('confeccion/index', [], true)
+ 3 APPPATH\Controllers\Confeccions.php(29): view('confeccion/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 15:53:18 --> Invalid file: "confeccion/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('confeccion/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('confeccion/index', [], true)
+ 3 APPPATH\Controllers\Confeccions.php(29): view('confeccion/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 15:53:26 --> Invalid file: "confeccion/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('confeccion/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('confeccion/index', [], true)
+ 3 APPPATH\Controllers\Confeccions.php(29): view('confeccion/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

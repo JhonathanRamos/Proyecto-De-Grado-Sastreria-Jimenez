@@ -49,24 +49,25 @@
 
                 <div class="form-group">
                     <label for="adelanto">Monto Pagado:</label>
-                    <input id="adelanto" value="<?= $cliente['adelanto'] ?>" class="form-control" type="text"
-                        name="adelanto">
+                    <input id="adelanto" value="<?= isset($cliente['adelanto']) ? $cliente['adelanto'] : '' ?>"
+                        class="form-control" type="text" name="adelanto">
                 </div>
+
 
 
                 <button id="guardarBtn" class="btn btn-success btn-fw" type="button">Guardar</button>
                 <a href="<?= site_url('/cliente') ?>" class="btn btn-danger btn-fw">Cancelar</a>
-                
+
                 <div class="form-group">
                     <label for="fechaActualizacion"></label>
                     <input id="fechaActualizacion" class="form-control" type="text" name="fechaRegistro"
                         value="<?= date('Y-m-d H:i:s'); ?>" hidden>
                 </div>
 
-                
 
 
-            
+
+
             </form>
 
             </p>

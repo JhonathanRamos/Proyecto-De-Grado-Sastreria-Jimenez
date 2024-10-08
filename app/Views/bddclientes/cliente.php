@@ -110,23 +110,14 @@
 
 
 
+     
         <li class="nav-item menu-items">
-          <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <a class="nav-link" href="<?= base_url('confeccion') ?>">
             <span class="menu-icon">
-              <i class="mdi mdi-content-cut"></i>
+              <i class="mdi mdi-account-multiple-plus"></i>
             </span>
-            <span class="menu-title">Confeccion</span>
-            <i class="menu-arrow"></i>
+            <span class="menu-title"> Confeccion</span>
           </a>
-          <div class="collapse" id="ui-basic">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="<?= base_url('trajeMasculino') ?>">Traje Masculino</a>
-              </li>
-              <li class="nav-item"> <a class="nav-link" href="<?= base_url('trajeFemenino') ?>">Traje Femenino</a></li>
-              <li class="nav-item"> <a class="nav-link" href="<?= base_url('pantalon') ?>">Pantalon</a></li>
-              <li class="nav-item"> <a class="nav-link" href="<?= base_url('falda') ?>">Falda</a></li>
-            </ul>
-          </div>
         </li>
 
         <li class="nav-item menu-items">
@@ -174,48 +165,41 @@
 
 
             <li class="nav-item dropdown border-left">
-              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#"
+              <a class="nav-link count-indicator dropdown-toggle" id="confeccionDropdown" href="#"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="mdi mdi-hanger"></i>
                 <span class="count bg-success"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
-                aria-labelledby="messageDropdown">
-                <h6 class="p-3 mb-0">Messages</h6>
+                aria-labelledby="confeccionDropdown">
+                <h6 class="p-3 mb-0">Medidas Cliente</h6>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
+                <a class="dropdown-item preview-item" href="<?= base_url('trajeMasculino') ?>">
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
-                    <p class="text-muted mb-0"> 1 Minutes ago </p>
+                    <p class="preview-subject ellipsis mb-1">Traje Masculino</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
+                <a class="dropdown-item preview-item" href="<?= base_url('trajeFemenino') ?>">
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
-                    <p class="text-muted mb-0"> 15 Minutes ago </p>
+                    <p class="preview-subject ellipsis mb-1">Traje Femenino</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
+                <a class="dropdown-item preview-item" href="<?= base_url('pantalon') ?>">
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
-                    <p class="text-muted mb-0"> 18 Minutes ago </p>
+                    <p class="preview-subject ellipsis mb-1">Pantalón</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <p class="p-3 mb-0 text-center">4 new messages</p>
+                <a class="dropdown-item preview-item" href="<?= base_url('falda') ?>">
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1">Falda</p>
+                  </div>
+                </a>
               </div>
             </li>
+
 
             <li class="nav-item dropdown">
               <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
@@ -308,6 +292,7 @@
                             <td id="adelantoCell">
                               <?= ($Cliente['adelanto'] === null || $Cliente['adelanto'] === 0) ? '<span style="color: red;">No Dejo Adelanto</span>' : $Cliente['adelanto'] . ' Bs'; ?>
                             </td>
+
 
                             <td><?= $Cliente['fechaRegistro']; ?></td>
                             <td><?= $Cliente['fechaActualizacion']; ?></td>

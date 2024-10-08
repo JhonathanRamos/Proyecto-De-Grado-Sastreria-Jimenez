@@ -11,3 +11,5 @@ class Confeccion extends Model {
     protected $allowedFields = ['descripcion', 'precio', 'adelanto', 'unidadMedida' ,'idCliente'];
 
 }
+
+

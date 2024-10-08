@@ -23,12 +23,12 @@
                 <div class="profile-name">
                   <h5 class="mb-0 font-weight-normal"> <?= session()->get('user_name') ?></h5>
                   <span class="nombre">
-                        <?php if (session()->get('user_role') == 1): ?>
-                            Administrador:
-                        <?php else: ?>
-                            <?= session()->get('user_name') ?>
-                        <?php endif; ?>
-                    </span>
+                    <?php if (session()->get('user_role') == 1): ?>
+                      Administrador:
+                    <?php else: ?>
+                      <?= session()->get('user_name') ?>
+                    <?php endif; ?>
+                  </span>
                 </div>
               <?php else: ?>
                 <p>No estás logueado.</p>
@@ -365,65 +365,58 @@
 
 
 
-          <div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <h1 class="card-title">Ventas</h1>
-            <div class="input-group mb-3">
-                <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
-            </div>
-            <div class="table-responsive">
-                <table class="table table-dark" id="ventasTable">
-                    <thead>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Ventas</h1>
+                  <div class="input-group mb-3">
+                    <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-dark" id="ventasTable">
+                      <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Fecha</th>
-                            <th>Total</th>
-                            <th>Estado</th>
-                            <th>Fecha Registro</th>
-                            <th>Fecha Actualización</th>
-                            <th>Cliente</th>
-                            <th>Acciones</th>
+                          <th>#</th>
+                          <th>Fecha</th>
+                          <th>Total</th>
+                          <th>Estado</th>
+                          <th>Fecha Registro</th>
+                          <th>Fecha Actualización</th>
+                          <th>Cliente</th>
+                          <th>Acciones</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                      </thead>
+                      <tbody>
                         <?php foreach ($ventas as $venta): ?>
-                            <tr>
-                                <td><?= $venta['idVenta']; ?></td>
-                                <td><?= $venta['fecha']; ?></td>
-                                <td>
-                                    <?php
-                                    // Obtener el adelanto del cliente
-                                    $clienteModel = new \App\Models\Cliente();
-                                    $cliente = $clienteModel->find($venta['idCliente']);
-                                    
-                                    // Calcular el total después de restar el adelanto
-                                    $adelanto = isset($cliente) ? $cliente['adelanto'] : 0;
-                                    $totalFinal = $venta['total'] - $adelanto;
-
-                                    echo $totalFinal . ' Bs'; // Muestra el total final
-                                    ?>
-                                </td>
-                                <td><?= ($venta['estado'] === 1) ? 'Activo' : 'Inactivo'; ?></td>
-                                <td><?= $venta['fechaRegistro']; ?></td>
-                                <td><?= $venta['fechaActualizacion']; ?></td>
-                                <td>
-                                    <?= isset($cliente) ? $cliente['nombre'] . ' ' . $cliente['apellido'] : 'Cliente No Encontrado'; ?>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a href="<?= base_url('editar/' . $venta['idVenta']); ?>" class="btn btn-outline-primary" style="margin-right: 2px;">Editar</a>
-                                        <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;" onclick="confirmDelete(event, '<?= base_url('borrar/' . $venta['idVenta']); ?>');">Borrar</a>
-                                    </div>
-                                </td>
-                            </tr>
+                          <tr>
+                            <td><?= $venta['idVenta']; ?></td>
+                            <td><?= $venta['fecha']; ?></td>
+                            <td>
+                              <?= $venta['totalFinal'] . ' Bs'; // Muestra el total final ?>
+                            </td>
+                            <td><?= ($venta['estado'] === 1) ? 'Activo' : 'Inactivo'; ?></td>
+                            <td><?= $venta['fechaRegistro']; ?></td>
+                            <td><?= $venta['fechaActualizacion']; ?></td>
+                            <td>
+                              <?= isset($venta['cliente']) ? $venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido'] : 'Cliente No Encontrado'; ?>
+                            </td>
+                            <td>
+                              <div class="btn-group">
+                                <a href="<?= base_url('editar/' . $venta['idVenta']); ?>" class="btn btn-outline-primary"
+                                  style="margin-right: 2px;">Editar</a>
+                                <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
+                                  onclick="confirmDelete(event, '<?= base_url('borrar/' . $venta['idVenta']); ?>');">Borrar</a>
+                              </div>
+                            </td>
+                          </tr>
                         <?php endforeach; ?>
-                    </tbody>
-                </table>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
+
 
 
 
