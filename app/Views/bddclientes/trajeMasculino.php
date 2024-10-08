@@ -16,9 +16,10 @@
         <p class="card-text">
         <form method="post" action="<?= site_url('/guardartrajeMasculino') ?>" enctype="multipart/form-data">
 
-        <div class="form-group">
+            <div class="form-group">
                 <label for="idCliente">Cliente:</label>
-                <select id="idCliente" name="idCliente" class="js-example-basic-single"style="width: 100%; color: white;">
+                <select id="idCliente" name="idCliente" class="form-control" 
+                    style="width: 100%; max-height: 50px; overflow-y: auto;">
                     <?php foreach ($clientes as $Cliente): ?>
                         <?php
                         $clienteTieneTrajeMasculino = false;
@@ -37,6 +38,10 @@
                     <?php endforeach; ?>
                 </select>
             </div>
+
+            
+
+
 
             <div class="form-group">
                 <label for="talle">Talle:</label>
@@ -72,8 +77,8 @@
 
             <div class="form-group">
                 <label for="largoManga">LargoManga:</label>
-                <input id="largoManga" value="<?= old('largoManga') ?>" class="form-control" type="text" name="largoManga"
-                    required>
+                <input id="largoManga" value="<?= old('largoManga') ?>" class="form-control" type="text"
+                    name="largoManga" required>
             </div>
 
 

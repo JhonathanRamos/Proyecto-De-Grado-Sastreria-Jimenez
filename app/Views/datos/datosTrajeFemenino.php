@@ -6,24 +6,35 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="index.html"><img src="img/logo.png"
-                        alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="img/miniLogo.png"
-                        alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="img/logo.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="img/miniLogo.png" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
                     <div class="profile-desc">
+
                         <div class="profile-pic">
-                            <div class="count-indicator">
-                                <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-                                <span class="count bg-success"></span>
-                            </div>
-                            <div class="profile-name">
-                                <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                                <span>Gold Member</span>
-                            </div>
+                            <?php if (session()->has('user_id')): ?>
+                                <div class="count-indicator">
+                                    <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                                    <span class="count bg-success"></span>
+                                </div>
+                                <div class="profile-name">
+                                    <h5 class="mb-0 font-weight-normal"> <?= session()->get('user_name') ?></h5>
+                                    <span class="nombre">
+                                        <?php if (session()->get('user_role') == 1): ?>
+                                            Administrador:
+                                        <?php else: ?>
+                                            <?= session()->get('user_name') ?>
+                                        <?php endif; ?>
+                                    </span>
+                                </div>
+                            <?php else: ?>
+                                <p>No estás logueado.</p>
+                            <?php endif; ?>
                         </div>
+
+
                         <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i
                                 class="mdi mdi-dots-vertical"></i></a>
                         <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
@@ -64,13 +75,13 @@
                     </div>
                 </li>
                 <li class="nav-item nav-category">
-                    <span class="nav-link">Navigation</span>
+                    <span class="nav-link">Navegación</span>
                 </li>
 
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('cliente') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-speedometer"></i>
+                            <i class="mdi mdi-account"></i>
                         </span>
                         <span class="menu-title">Datos Cliente</span>
                     </a>
@@ -80,7 +91,7 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
                         aria-controls="auth">
                         <span class="menu-icon">
-                            <i class="mdi mdi-security"></i>
+                            <i class="mdi mdi-hanger"></i>
                         </span>
                         <span class="menu-title">Datos Medidas</span>
                         <i class="menu-arrow"></i>
@@ -90,9 +101,11 @@
                             <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('datosTrajeMasculino') ?>">Traje Masculino</a> </li>
+                                    href="<?= base_url('datosTrajeMasculino') ?>">Traje
+                                    Masculino</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosTrajeFemenino') ?>">Traje
-                                    Femenino</a> </li>
+                                    Femenino</a>
+                            </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('datosPantalon') ?>">Pantalon</a> </li>
 
@@ -100,37 +113,26 @@
                     </div>
                 </li>
 
-                <!-- <li class="nav-item menu-items">
-                    <a class="nav-link" href="<?= base_url('crear') ?>">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-speedometer"></i>
-                        </span>
-                        <span class="menu-title">Crear Cliente</span>
-                    </a>
-                </li> -->
+
+
 
 
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                        aria-controls="ui-basic">
+                    <a class="nav-link" href="<?= base_url('confeccion') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-laptop"></i>
+                            <i class="mdi mdi-account-multiple-plus"></i>
                         </span>
-                        <span class="menu-title">+ Confeccion</span>
-                        <i class="menu-arrow"></i>
+                        <span class="menu-title"> Confeccion</span>
                     </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('trajeMasculino') ?>">+Traje
-                                    Masculino</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('trajeFemenino') ?>">+Traje
-                                    Femenino</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('pantalon') ?>">+Pantalon</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('falda') ?>">+Falda</a></li>
-                        </ul>
-                    </div>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('venta') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-account-multiple-plus"></i>
+                        </span>
+                        <span class="menu-title"> Venta</span>
+                    </a>
                 </li>
 
 
@@ -141,127 +143,114 @@
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_navbar.html -->
             <nav class="navbar p-0 fixed-top d-flex flex-row">
-                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="img/miniLogo.png"
-                            alt="logo" /></a>
-                </div>
-                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
-                        data-toggle="minimize">
-                        <span class="mdi mdi-menu"></span>
-                    </button>
-                    <ul class="navbar-nav w-100">
-                        <!-- <li class="nav-item w-100">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="<?= base_url('cliente') ?>"><img src="img/logo.png"
+              alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <!-- <li class="nav-item w-100">
                 <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
                   <input type="text" class="form-control" placeholder="Search products">
                 </form>
               </li> -->
-                    </ul>
+          </ul>
 
-                    <ul class="navbar-nav navbar-nav-right">
-         
-         <li class="nav-item dropdown border-left">
-           <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crear') ?>">
-             <i class="mdi mdi-account-plus"></i>
-             <!-- <span class="count bg-success"></span> -->
-           </a>
+          <ul class="navbar-nav navbar-nav-right">
 
-         </li>
+            <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crear') ?>">
+                <i class="mdi mdi-account-plus"></i>
+                <!-- <span class="count bg-success"></span> -->
+              </a>
+
+            </li>
 
 
-         <li class="nav-item dropdown border-left">
-           <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
-             data-bs-toggle="dropdown">
-             <i class="mdi mdi-bell"></i>
-             <span class="count bg-danger"></span>
-           </a>
-           <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
-             aria-labelledby="notificationDropdown">
-             <h6 class="p-3 mb-0">Notifications</h6>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item preview-item">
-               <div class="preview-thumbnail">
-                 <div class="preview-icon bg-dark rounded-circle">
-                   <i class="mdi mdi-calendar text-success"></i>
-                 </div>
-               </div>
-               <div class="preview-item-content">
-                 <p class="preview-subject mb-1">Event today</p>
-                 <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>
-               </div>
-             </a>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item preview-item">
-               <div class="preview-thumbnail">
-                 <div class="preview-icon bg-dark rounded-circle">
-                   <i class="mdi mdi-cog text-danger"></i>
-                 </div>
-               </div>
-               <div class="preview-item-content">
-                 <p class="preview-subject mb-1">Settings</p>
-                 <p class="text-muted ellipsis mb-0"> Update dashboard </p>
-               </div>
-             </a>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item preview-item">
-               <div class="preview-thumbnail">
-                 <div class="preview-icon bg-dark rounded-circle">
-                   <i class="mdi mdi-link-variant text-warning"></i>
-                 </div>
-               </div>
-               <div class="preview-item-content">
-                 <p class="preview-subject mb-1">Launch Admin</p>
-                 <p class="text-muted ellipsis mb-0"> New admin wow! </p>
-               </div>
-             </a>
-             <div class="dropdown-divider"></div>
-             <p class="p-3 mb-0 text-center">See all notifications</p>
-           </div>
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
-             <div class="navbar-profile">
-               <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
-               <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
-               <i class="mdi mdi-menu-down d-none d-sm-block"></i>
-             </div>
-           </a>
-           <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
-             aria-labelledby="profileDropdown">
-             <h6 class="p-3 mb-0">Profile</h6>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item preview-item">
-               <div class="preview-thumbnail">
-                 <div class="preview-icon bg-dark rounded-circle">
-                   <i class="mdi mdi-cog text-success"></i>
-                 </div>
-               </div>
-               <div class="preview-item-content">
-                 <p class="preview-subject mb-1">Settings</p>
-               </div>
-             </a>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item preview-item">
-               <div class="preview-thumbnail">
-                 <div class="preview-icon bg-dark rounded-circle">
-                   <i class="mdi mdi-logout text-danger"></i>
-                 </div>
-               </div>
-               <div class="preview-item-content">
-                 <p class="preview-subject mb-1">Log out</p>
-               </div>
-             </a>
-             <div class="dropdown-divider"></div>
-             <p class="p-3 mb-0 text-center">Advanced settings</p>
-           </div>
-         </li>
-       </ul>
-                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                        data-toggle="offcanvas">
-                        <span class="mdi mdi-format-line-spacing"></span>
-                    </button>
+            <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" id="confeccionDropdown" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-hanger"></i>
+                <span class="count bg-success"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
+                aria-labelledby="confeccionDropdown">
+                <h6 class="p-3 mb-0">Medidas Cliente</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="<?= base_url('trajeMasculino') ?>">
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1">Traje Masculino</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="<?= base_url('trajeFemenino') ?>">
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1">Traje Femenino</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="<?= base_url('pantalon') ?>">
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1">Pantalón</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="<?= base_url('falda') ?>">
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1">Falda</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
-            </nav>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
+                aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-cog text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Log out</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">Advanced settings</p>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">

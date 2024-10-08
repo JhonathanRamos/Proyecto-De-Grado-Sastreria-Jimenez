@@ -8838,14 +8838,17 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+    -webkit-appearance: button; /* Para navegadores basados en WebKit */
+    appearance: button;         /* Propiedad estándar para otros navegadores */
 }
+
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 
 ::-moz-focus-inner {
   padding: 0;
@@ -8895,9 +8898,11 @@ legend + * {
 }
 
 [type=search] {
-  -webkit-appearance: textfield;
+  -webkit-appearance: textfield; /* Compatibilidad con navegadores WebKit */
+  appearance: textfield;         /* Propiedad estándar */
   outline-offset: -2px;
 }
+
 
 /* rtl:raw:
 [type="tel"],
@@ -8917,7 +8922,8 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
-  -webkit-appearance: button;
+  -webkit-appearance: button; /* Compatibilidad con navegadores WebKit */
+  appearance: button;         /* Propiedad estándar */
 }
 
 output {
@@ -20426,12 +20432,12 @@ body {
   overflow-x: hidden;
 }
 
-.form-control, .typeahead,
-.tt-query,
-.tt-hint, .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single,
-.form-control:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+.form-control:focus,
+.typeahead:focus,
+.tt-query:focus,
+.tt-hint:focus,
+.select2-container--default .select2-selection--single .select2-search__field:focus {
+    box-shadow: none;
 }
 
 .form-control, .typeahead,
@@ -23441,6 +23447,7 @@ dl li {
 }
 
 /* Select2 */
+
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background: #0090e7;
 }
@@ -25136,3 +25143,4 @@ dl li {
   height: 89vh;
 }
 /*# sourceMappingURL=maps/style.css.map */
+
