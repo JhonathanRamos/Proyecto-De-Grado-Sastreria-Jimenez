@@ -75,8 +75,11 @@ $routes->post('actualizartrajeMasculino', 'TrajeMasculinos::actualizartrajeMascu
 $routes->get('venta', 'Ventas::index');
 
 $routes->get('/confeccion', 'Confeccions::index');
+$routes->get('/crearConfeccion', 'Confeccions::crear');
+$routes->post('/guardarConfeccion', 'Confeccions::guardar');
 $routes->get('/editarConfeccion/(:num)', 'Confeccions::editar/$1');
-$routes->get('/borrarConfeccion/(:num)', 'Confeccions::borrar/$1');
+$routes->post('/actualizarConfeccion/(:num)', 'Confeccions::actualizar/$1');
+
 
 
 

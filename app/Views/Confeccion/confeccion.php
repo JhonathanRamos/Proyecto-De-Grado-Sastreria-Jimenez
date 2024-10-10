@@ -273,11 +273,11 @@
                                         <table class="table table-dark" id="confeccionesTable">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th>ID</th>
                                                     <th>Descripción</th>
                                                     <th>Precio</th>
-                                                    <th>Adelanto</th>
                                                     <th>Unidad de Medida</th>
+                                                    <th>Adelanto</th>
                                                     <th>Cliente</th>
                                                     <th>Acciones</th>
                                                 </tr>
@@ -286,22 +286,19 @@
                                                 <?php foreach ($confecciones as $confeccion): ?>
                                                     <tr>
                                                         <td><?= $confeccion['id']; ?></td>
-                                                        <td><?= $confeccion['descripcion']; ?></td>
-                                                        <td><?= $confeccion['precio'] . ' Bs'; ?></td>
-                                                        <td><?= $confeccion['adelanto'] . ' Bs'; ?></td>
-                                                        <td><?= $confeccion['unidadMedida']; ?></td>
+                                                        <td><?= isset($confeccion['descripcion']) ? $confeccion['descripcion'] : 'No disponible'; ?>
+                                                        </td>
+                                                        <td><?= isset($confeccion['precio']) ? $confeccion['precio'] . ' Bs' : '0 Bs'; ?>
+                                                        </td>
+                                                        <td><?= isset($confeccion['unidadMedida']) ? $confeccion['unidadMedida'] : 'No disponible'; ?>
+                                                        </td>
+                                                        <td><?= isset($confeccion['adelanto']) ? $confeccion['adelanto'] . ' Bs' : '0 Bs'; ?>
+                                                        </td>
                                                         <td>
                                                             <?= isset($confeccion['cliente']) ? $confeccion['cliente']['nombre'] . ' ' . $confeccion['cliente']['apellido'] : 'Cliente No Encontrado'; ?>
                                                         </td>
                                                         <td>
-                                                            <div class="btn-group">
-                                                                <a href="<?= base_url('editarConfeccion/' . $confeccion['id']); ?>"
-                                                                    class="btn btn-outline-primary"
-                                                                    style="margin-right: 2px;">Editar</a>
-                                                                <a href="#" class="btn btn-outline-danger"
-                                                                    style="margin-right: 2px;"
-                                                                    onclick="confirmDelete(event, '<?= base_url('borrarConfeccion/' . $confeccion['id']); ?>');">Borrar</a>
-                                                            </div>
+                                                            <!-- Acciones de editar, eliminar, etc. -->
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>

@@ -1,0 +1,76 @@
+CRITICAL - 2024-10-10 01:11:08 --> Undefined variable $clientes
+in APPPATH\Views\Confeccion\crearConfeccion.php on line 47.
+ 1 APPPATH\Views\Confeccion\crearConfeccion.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\crearConfeccion.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\crearConfeccion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/crearConfeccion', [], true)
+ 5 APPPATH\Controllers\Confeccions.php(40): view('Confeccion/crearConfeccion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:12:30 --> Undefined array key "descripcion"
+in APPPATH\Views\Confeccion\confeccion.php on line 289.
+ 1 APPPATH\Views\Confeccion\confeccion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php', 289)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/confeccion', [], true)
+ 5 APPPATH\Controllers\Confeccions.php(31): view('Confeccion/confeccion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:17:21 --> Undefined array key "descripcion"
+in APPPATH\Views\Confeccion\confeccion.php on line 289.
+ 1 APPPATH\Views\Confeccion\confeccion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php', 289)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/confeccion', [], true)
+ 5 APPPATH\Controllers\Confeccions.php(33): view('Confeccion/confeccion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:17:23 --> Undefined array key "descripcion"
+in APPPATH\Views\Confeccion\confeccion.php on line 289.
+ 1 APPPATH\Views\Confeccion\confeccion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php', 289)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/confeccion', [], true)
+ 5 APPPATH\Controllers\Confeccions.php(33): view('Confeccion/confeccion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:18:07 --> Undefined array key "descripcion"
+in APPPATH\Views\Confeccion\confeccion.php on line 289.
+ 1 APPPATH\Views\Confeccion\confeccion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php', 289)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\Confeccion\\confeccion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/confeccion', [], true)
+ 5 APPPATH\Controllers\Confeccions.php(33): view('Confeccion/confeccion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:23:25 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Clientes.php on line 30.
+ 1 APPPATH\Controllers\Clientes.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Clientes.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:23:27 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Clientes.php on line 30.
+ 1 APPPATH\Controllers\Clientes.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Clientes.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-10 01:24:09 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Clientes.php on line 30.
+ 1 APPPATH\Controllers\Clientes.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Clientes.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

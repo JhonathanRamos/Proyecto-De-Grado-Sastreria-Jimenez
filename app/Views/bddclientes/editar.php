@@ -47,11 +47,7 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label for="adelanto">Monto Pagado:</label>
-                    <input id="adelanto" value="<?= isset($cliente['adelanto']) ? $cliente['adelanto'] : '' ?>"
-                        class="form-control" type="text" name="adelanto">
-                </div>
+            
 
 
 

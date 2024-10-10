@@ -46,10 +46,6 @@
 
 
 
-            <div class="form-group">
-                <label for="adelanto">Monto Pagado:</label>
-                <input id="adelanto" value="<?= old('adelanto') ?>" class="form-control" type="text" name="adelanto">
-            </div>
 
             <div class="form-group">
                 
@@ -58,6 +54,7 @@
             </div>
 
 
+            
             <button id="guardarBtnUsuario" class="btn btn-success btn-fw" type="button">Guardar</button>
             <a href="<?= site_url('/cliente') ?>" class="btn btn-danger btn-fw">Cancelar</a>
         </form>
