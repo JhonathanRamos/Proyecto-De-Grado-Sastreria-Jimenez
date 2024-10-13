@@ -18,7 +18,10 @@
 <link rel="stylesheet" href="<?= base_url('assets/vendors/owl-carousel-2/owl.theme.default.min.css') ?>">
 
 <!-- Layout styles -->
+<link rel="stylesheet" href="<?= base_url('css/estilo2.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+
+
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.png') ?>">

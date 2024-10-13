@@ -3,21 +3,20 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\Cliente;
-use App\Models\Confeccion;
 
 class Clientes extends Controller
 {
-
     public function index()
     {
         $cliente = new Cliente();
-        $confeccionModel = new Confeccion();
 
-        // Seleccionar solo clientes activos
-        $datos['clientes'] = $cliente->where('estado', 1)->orderBy('id', 'ASC')->findAll();
+        // Seleccionar solo clientes activos, paginados de 10 en 10
+        $datos['clientes'] = $cliente->where('estado', 1)
+                                    ->orderBy('id', 'ASC')
+                                    ->paginate(10); // Mostrar 10 clientes por página
 
-        // No se añade el adelanto total por cliente
-        // Aquí se eliminó el código de adelanto
+        // Generar los enlaces de paginación
+        $datos['paginacion'] = $cliente->pager;
 
         // Añadir las vistas de cabecera y pie de página
         $datos['cabecera'] = view('template/cabecera');
@@ -26,7 +25,7 @@ class Clientes extends Controller
         return view('bddclientes/cliente', $datos);
     }
 
-    //Se está creando la vista de CREAR
+    // Se está creando la vista de CREAR
     public function crear()
     {
         $datos['cabecera'] = view('template/cabecera');
@@ -90,13 +89,9 @@ class Clientes extends Controller
     public function editar($id = null)
     {
         $clienteModel = new Cliente();
-        $confeccionModel = new Confeccion();
 
         // Obtener datos del cliente
         $datos['cliente'] = $clienteModel->where('id', $id)->first();
-
-        // Ya no se obtienen ni se suman los adelantos
-        // Aquí se eliminó el código de adelanto
 
         $datos['cabecera'] = view('template/cabecera');
         $datos['pie'] = view('template/piepagina');
@@ -107,10 +102,9 @@ class Clientes extends Controller
     public function actualizar()
     {
         $clienteModel = new Cliente();
-        $confeccionModel = new Confeccion();
-    
+
         date_default_timezone_set('America/La_Paz');
-        
+
         // Actualizar datos del cliente
         $datosCliente = [
             'nombre' => $this->request->getVar('nombre'),
@@ -120,28 +114,25 @@ class Clientes extends Controller
             'fechaActualizacion' => date('Y-m-d H:i:s'),
             'estado' => 1, // Estado activo
         ];
-        
+
         $id = $this->request->getVar('id');
-    
+
         // Validar los datos
         $validacion = $this->validate([
             'nombre' => 'required|min_length[3]',
             'apellido' => 'required|min_length[3]',
             'celular' => 'required|numeric|min_length[8]', // Validación para números
         ]);
-    
+
         if (!$validacion) {
             $session = session();
-            $session->setFlashdata('mensaje', 'Revise la informacion');
+            $session->setFlashdata('mensaje', 'Revise la información');
             return redirect()->back()->withInput();
         }
-    
+
         // Actualizar los datos del cliente
         $clienteModel->update($id, $datosCliente);
-    
-        // Ya no se actualiza ni crea el adelanto
-        // Aquí se eliminó el código de adelanto
-    
+
         return redirect()->to(site_url('/cliente'));
     }
 }

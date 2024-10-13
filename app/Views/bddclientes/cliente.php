@@ -106,14 +106,14 @@
             </ul>
           </div>
         </li>
-        
 
 
 
 
-     
+
+
         <li class="nav-item menu-items">
-        <a class="nav-link" href="<?= base_url('confeccion') ?>">
+          <a class="nav-link" href="<?= base_url('confeccion') ?>">
             <span class="menu-icon">
               <i class="mdi mdi-account-multiple-plus"></i>
             </span>
@@ -130,7 +130,7 @@
           </a>
         </li>
 
-        
+
 
 
 
@@ -285,11 +285,9 @@
                           <th>Celular</th>
                           <th id="fechaRegistro" class="sortable" data-sort="fechaRegistro">Fecha Registro<span
                               class="sort-icon"></span></th>
-                          <th>Fecha Actualizacion</th>
+                          <th>Fecha Actualización</th>
                           <th>Acciones</th>
                         </tr>
-
-                      </thead>
                       </thead>
                       <tbody>
                         <?php foreach ($clientes as $Cliente): ?>
@@ -299,9 +297,6 @@
                             <td><?= $Cliente['apellido']; ?></td>
                             <td><?= ($Cliente['sexo'] === 'M') ? 'Masculino' : 'Femenino'; ?></td>
                             <td><?= $Cliente['celular']; ?></td>
-                           
-
-
                             <td><?= $Cliente['fechaRegistro']; ?></td>
                             <td><?= $Cliente['fechaActualizacion']; ?></td>
                             <td>
@@ -310,15 +305,21 @@
                                   style="margin-right: 2px;">Editar</a>
                                 <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
                                   onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
-
-
                               </div>
                             </td>
                           </tr>
                         <?php endforeach; ?>
                       </tbody>
                     </table>
+
+                    
+
+                    <!-- Enlaces de paginación -->
+                    <div class="pagination-links">
+                      <?= $paginacion->links() ?> <!-- Mostrar los enlaces de paginación -->
+                    </div>
                   </div>
+
                 </div>
               </div>
             </div>

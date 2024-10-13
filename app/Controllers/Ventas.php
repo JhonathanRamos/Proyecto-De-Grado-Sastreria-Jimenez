@@ -1,33 +1,41 @@
 <?php
-
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\Venta;
 use App\Models\Cliente;
 use App\Models\Confeccion;
+use App\Models\DetalleConfeccion;
 
 class Ventas extends Controller {       
     public function index() {
         $ventaModel = new Venta();
         $clienteModel = new Cliente();
-        $confeccionModel = new Confeccion();
+        $confeccionModel = new Confeccion(); // Cambiamos a Confeccion
+        $detalleConfeccionModel = new DetalleConfeccion(); // Añadimos para acceder a los detalles de la confección
 
         // Obtiene todas las ventas
         $ventas = $ventaModel->findAll();
 
         // Añadir información adicional a cada venta
         foreach ($ventas as &$venta) {
-            // Obtener el cliente asociado a la venta
-            $cliente = $clienteModel->find($venta['idCliente']);
-            $venta['cliente'] = $cliente;
+            // Obtener la confección asociada a la venta
+            $confeccion = $confeccionModel->find($venta['idConfeccion']); // Usamos 'idConfeccion'
+            
+            // Verificar si existe la confección y obtener el cliente asociado
+            if ($confeccion) {
+                $cliente = $clienteModel->find($confeccion['idCliente']);
+                $venta['cliente'] = $cliente;
+            } else {
+                $venta['cliente'] = null;
+            }
 
-            // Obtener el adelanto del cliente desde la tabla `confeccion`
-            $confecciones = $confeccionModel->where('idCliente', $venta['idCliente'])->findAll();
+            // Obtener los detalles de la confección desde la tabla `detalleconfeccion`
+            $detallesConfeccion = $detalleConfeccionModel->where('idConfeccion', $venta['idConfeccion'])->findAll();
             $totalAdelanto = 0;
 
-            foreach ($confecciones as $confeccion) {
-                $totalAdelanto += $confeccion['adelanto'];
+            foreach ($detallesConfeccion as $detalle) {
+                $totalAdelanto += $detalle['adelanto'];
             }
 
             // Añadir el adelanto al array de datos de la venta
