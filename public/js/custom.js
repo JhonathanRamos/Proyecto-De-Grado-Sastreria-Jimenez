@@ -258,28 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
-
-
-    //PARA GUARDAR CON SWETALERT2
-    // document.getElementById('guardarBtn').addEventListener('click', function() {
-    //     Swal.fire({
-    //         title: '¿Estás seguro?',
-    //         text: "¡Asegúrate de que todos los datos son correctos antes de guardar!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Guardar',
-    //         cancelButtonText: 'Cancelar'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             // Envía el formulario si el usuario confirma
-    //             document.getElementById('miFormulario').submit();
-    //         }
-    //     });
-    // });
-    
     //GUARDAR EDITANDO
     document.addEventListener('DOMContentLoaded', function() {
         // Obtén la URL actual

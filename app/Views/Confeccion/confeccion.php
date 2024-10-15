@@ -170,6 +170,15 @@
 
                         </li>
 
+                        <li class="nav-item dropdown border-left">
+                            <a class="nav-link count-indicator dropdown-toggle"
+                                href="<?= base_url('crearConfeccion') ?>">
+                                <i class="mdi mdi-tie"></i>
+                                <!-- <span class="count bg-success"></span> -->
+                            </a>
+
+                        </li>
+
 
                         <li class="nav-item dropdown border-left">
                             <a class="nav-link count-indicator dropdown-toggle" id="confeccionDropdown" href="#"
@@ -270,6 +279,8 @@
                                             placeholder="Buscar Confecciones...">
                                     </div>
                                     <div class="table-responsive">
+
+
                                         <table class="table table-dark" id="confeccionesTable">
                                             <thead>
                                                 <tr>
@@ -277,8 +288,6 @@
                                                     <th>Descripción</th>
                                                     <th>Precio</th>
                                                     <th>Unidad de Medida</th>
-                                                    <th>Adelanto</th>
-                                                    <th>Cliente</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </thead>
@@ -292,18 +301,31 @@
                                                         </td>
                                                         <td><?= isset($confeccion['unidadMedida']) ? $confeccion['unidadMedida'] : 'No disponible'; ?>
                                                         </td>
-                                                        <td><?= isset($confeccion['adelanto']) ? $confeccion['adelanto'] . ' Bs' : '0 Bs'; ?>
-                                                        </td>
                                                         <td>
-                                                            <?= isset($confeccion['cliente']) ? $confeccion['cliente']['nombre'] . ' ' . $confeccion['cliente']['apellido'] : 'Cliente No Encontrado'; ?>
-                                                        </td>
-                                                        <td>
-                                                            <!-- Acciones de editar, eliminar, etc. -->
+                                                            <div class="btn-group">
+                                                                <a href="<?= base_url('confeccion/editar/' . $confeccion['id']); ?>"
+                                                                    class="btn btn-outline-primary">Editar</a>
+                                                                <a href="#" class="btn btn-outline-danger"
+                                                                    onclick="confirmDelete(event, '<?= base_url('confeccion/borrar/' . $confeccion['id']); ?>');">Borrar</a>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
+
+                                        <script>
+                                            function confirmDelete(event, url) {
+                                                event.preventDefault();
+                                                if (confirm('¿Estás seguro de que deseas eliminar esta confección?')) {
+                                                    window.location.href = url;
+                                                }
+                                            }
+                                        </script>
+
+
+
+
                                     </div>
                                 </div>
                             </div>

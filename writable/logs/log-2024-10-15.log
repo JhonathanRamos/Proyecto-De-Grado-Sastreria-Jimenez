@@ -1,0 +1,33 @@
+CRITICAL - 2024-10-15 00:56:02 --> Class "App\Models\DetalleConfeccion" not found
+in APPPATH\Controllers\Ventas.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 01:15:29 --> Undefined array key "idCliente"
+in APPPATH\Controllers\Ventas.php on line 25.
+ 1 APPPATH\Controllers\Ventas.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idCliente"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 01:47:30 --> Invalid file: "Confeccion/editarConfeccion.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Confeccion/editarConfeccion.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Confeccion/editarConfeccion', [], true)
+ 3 APPPATH\Controllers\Confeccions.php(83): view('Confeccion/editarConfeccion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 03:07:12 --> Undefined array key "totalFinal"
+in APPPATH\Views\venta\venta.php on line 288.
+ 1 APPPATH\Views\venta\venta.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "totalFinal"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 288)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(36): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

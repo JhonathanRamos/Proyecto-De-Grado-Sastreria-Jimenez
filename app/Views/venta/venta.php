@@ -110,9 +110,9 @@
 
 
 
-     
+
         <li class="nav-item menu-items">
-        <a class="nav-link" href="<?= base_url('confeccion') ?>">
+          <a class="nav-link" href="<?= base_url('confeccion') ?>">
             <span class="menu-icon">
               <i class="mdi mdi-account-multiple-plus"></i>
             </span>
@@ -263,16 +263,21 @@
                     <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
                   </div>
                   <div class="table-responsive">
+
+
                     <table class="table table-dark" id="ventasTable">
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>Fecha</th>
+                          <th>Cliente</th>
+                          <th>Descripción</th>
+                          <th>Unidad de Medida</th>
+                          <th>Fecha Entrega</th>
                           <th>Total</th>
                           <th>Estado</th>
                           <th>Fecha Registro</th>
                           <th>Fecha Actualización</th>
-                          <th>Cliente</th>
+
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -280,16 +285,17 @@
                         <?php foreach ($ventas as $venta): ?>
                           <tr>
                             <td><?= $venta['idVenta']; ?></td>
-                            <td><?= $venta['fecha']; ?></td>
-                            <td>
-                              <?= $venta['totalFinal'] . ' Bs'; // Muestra el total final ?>
-                            </td>
-                            <td><?= ($venta['estado'] === 1) ? 'Activo' : 'Inactivo'; ?></td>
-                            <td><?= $venta['fechaRegistro']; ?></td>
-                            <td><?= $venta['fechaActualizacion']; ?></td>
                             <td>
                               <?= isset($venta['cliente']) ? $venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido'] : 'Cliente No Encontrado'; ?>
                             </td>
+                            <td><?= $venta['descripcion']; ?></td>
+                            <td><?= $venta['unidadMedida']; ?></td>
+                            <td><?= $venta['fecha']; ?></td>
+                            <td><?= $venta['totalFinal'] . ' Bs'; ?></td>
+                            <td><?= ($venta['estado'] === 1) ? 'Completado' : 'Pendiente'; ?></td>
+                            <td><?= $venta['fechaRegistro']; ?></td>
+                            <td><?= $venta['fechaActualizacion']; ?></td>
+
                             <td>
                               <div class="btn-group">
                                 <a href="<?= base_url('editar/' . $venta['idVenta']); ?>" class="btn btn-outline-primary"
@@ -302,6 +308,10 @@
                         <?php endforeach; ?>
                       </tbody>
                     </table>
+
+
+
+
                   </div>
                 </div>
               </div>

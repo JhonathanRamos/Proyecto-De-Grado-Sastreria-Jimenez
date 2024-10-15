@@ -166,14 +166,6 @@
 
             </li>
 
-            <li class="nav-item dropdown border-left">
-              <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crearConfeccion') ?>">
-                <i class="mdi mdi-tie"></i>
-                <!-- <span class="count bg-success"></span> -->
-              </a>
-
-            </li>
-
 
             <li class="nav-item dropdown border-left">
               <a class="nav-link count-indicator dropdown-toggle" id="confeccionDropdown" href="#"
@@ -318,6 +310,7 @@
                     <div class="pagination-links">
                       <?= $paginacion->links() ?> <!-- Mostrar los enlaces de paginación -->
                     </div>
+
                   </div>
 
                 </div>

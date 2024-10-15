@@ -8,7 +8,7 @@ class Confeccion extends Model {
     protected $table = 'confeccion';
 
     protected $primaryKey = 'id';
-    protected $allowedFields = ['idCliente'];
+    protected $allowedFields = ['descripcion', 'precio', 'adelanto', 'unidadMedida' ,'idUsuario'];
 
 }
 

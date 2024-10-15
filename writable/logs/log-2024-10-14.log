@@ -1,0 +1,18 @@
+CRITICAL - 2024-10-14 18:42:12 --> Class "App\Models\DetalleConfeccion" not found
+in APPPATH\Controllers\Confeccions.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-14 18:48:35 --> Class "App\Models\DetalleConfeccion" not found
+in APPPATH\Controllers\Confeccions.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Confeccions->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Confeccions))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-14 18:50:50 --> Class "App\Models\DetalleConfeccion" not found
+in APPPATH\Controllers\Ventas.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

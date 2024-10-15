@@ -71,14 +71,18 @@ $routes->get('editartrajeMasculino/(:num)', 'TrajeMasculinos::editartrajeMasculi
 $routes->post('actualizartrajeMasculino', 'TrajeMasculinos::actualizartrajeMasculino');
 
 /* ______________________________________________________________________ */
+$routes->get('/venta', 'Ventas::index');
+$routes->get('/crearVenta', 'Ventas::crear');
+$routes->post('/guardarVenta', 'Ventas::guardarVenta');
 
-$routes->get('venta', 'Ventas::index');
 
-$routes->get('/confeccion', 'Confeccions::index');
-$routes->get('/crearConfeccion', 'Confeccions::crear');
-$routes->post('/guardarConfeccion', 'Confeccions::guardar');
-$routes->get('/editarConfeccion/(:num)', 'Confeccions::editar/$1');
-$routes->post('/actualizarConfeccion/(:num)', 'Confeccions::actualizar/$1');
+$routes->get('/confeccion', 'Confeccions::index');  // Mostrar lista de confecciones
+$routes->get('crearConfeccion', 'Confeccions::crear');
+$routes->post('/confeccion/guardar', 'Confeccions::guardar');  // Guardar la confección creada
+$routes->get('/confeccion/editar/(:num)', 'Confeccions::editar/$1');  // Mostrar formulario de edición
+$routes->post('/confeccion/actualizar/(:num)', 'Confeccions::actualizar/$1');  // Actualizar confección
+$routes->get('/confeccion/borrar/(:num)', 'Confeccions::borrar/$1');  // Borrar confección
+
 
 
 
