@@ -39,11 +39,13 @@
                 </div>
 
                 <!-- Campo para Fecha de Recolección -->
+                <!-- Campo para Fecha de Recolección con Fecha y Hora -->
                 <div class="form-group">
                     <label for="fechaRecoleccion">Fecha de Recolección:</label>
-                    <input id="fechaRecoleccion" value="<?= old('fechaRecoleccion') ?>" class="form-control" type="date"
-                        name="fechaRecoleccion" required>
+                    <input id="fechaRecoleccion" value="<?= old('fechaRecoleccion') ?>" class="form-control"
+                        type="datetime-local" name="fechaRecoleccion" required>
                 </div>
+
 
                 <!-- Campo para Estado (Estado de la venta) -->
                 <div class="form-group">
@@ -56,7 +58,7 @@
 
                 <!-- Botones de Guardar/Cancelar -->
                 <button id="guardarBtnVenta" class="btn btn-success btn-fw" type="submit">Guardar</button>
-                <a href="<?= site_url('/ventas') ?>" class="btn btn-danger btn-fw">Cancelar</a>
+                <a href="<?= site_url('/venta') ?>" class="btn btn-danger btn-fw">Cancelar</a>
             </form>
             </p>
         </div>

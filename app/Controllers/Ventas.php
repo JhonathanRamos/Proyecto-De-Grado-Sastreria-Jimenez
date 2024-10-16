@@ -77,48 +77,51 @@ class Ventas extends Controller {
 
     public function guardarVenta() {
         $ventaModel = new Venta();
-        $confeccionModel = new Confeccion();
-
+    
         // Validar los campos del formulario
         $validacion = $this->validate([
             'idCliente' => 'required',
             'idConfeccion' => 'required',
             'adelanto' => 'required|numeric',
-            'fechaRecoleccion' => 'required|valid_date',
+            'fechaRecoleccion' => 'required', // Asegúrate de validar el campo de fecha
             'estado' => 'required'
         ]);
-
+    
         if (!$validacion) {
-            session()->setFlashdata('mensaje', 'Por favor revise los campos del formulario');
+            session()->setFlashdata('mensaje', 'Revise la información proporcionada');
             return redirect()->back()->withInput();
         }
-
-        // Obtener los datos del formulario
-        $idConfeccion = $this->request->getVar('idConfeccion');
+    
+        // Obtener el id del usuario logueado
+        $idUsuario = session()->get('user_id');
+        if (!$idUsuario) {
+            session()->setFlashdata('mensaje', 'Usuario no identificado');
+            return redirect()->back()->withInput();
+        }
+    
+        // Calcular el total que falta por pagar
+        $confeccionModel = new Confeccion();
+        $confeccion = $confeccionModel->find($this->request->getVar('idConfeccion'));
         $adelanto = $this->request->getVar('adelanto');
-        $estado = $this->request->getVar('estado');
-
-        // Obtener los detalles de la confección para el total
-        $confeccion = $confeccionModel->find($idConfeccion);
-        $total = $confeccion['precio'];
-
-        // Registrar la venta
+        $total = $confeccion['precio'] - $adelanto;
+    
+        // Insertar la venta con la fecha especificada en el formulario
         $ventaData = [
             'idCliente' => $this->request->getVar('idCliente'),
-            'idConfeccion' => $idConfeccion,
-            'total' => $total,  // Total de la confección
+            'idConfeccion' => $this->request->getVar('idConfeccion'),
             'adelanto' => $adelanto,
-            'estado' => $estado, // 1 = Incompleta, 0 = Completada
-            'fecha' => date('Y-m-d H:i:s'),
-            'fechaRegistro' => date('Y-m-d H:i:s'),
-            'fechaActualizacion' => null,  // La puedes actualizar cuando se pague completo
-            'idUsuario' => session()->get('user_id')
+            'total' => $total,
+            'estado' => $this->request->getVar('estado'),
+            'fecha' => $this->request->getVar('fechaRecoleccion'), // Aquí tomamos la fecha del formulario
+            'idUsuario' => $idUsuario,
+            'fechaRegistro' => date('Y-m-d H:i:s') // Fecha de registro de la venta
         ];
-
+    
         $ventaModel->insert($ventaData);
-
-        // Redirigir al listado de ventas
+    
+        // Redirigir después de guardar
         session()->setFlashdata('mensaje', 'Venta registrada con éxito');
-        return redirect()->to(site_url('/ventas'));
+        return redirect()->to(site_url('/venta'));
     }
+    
 }

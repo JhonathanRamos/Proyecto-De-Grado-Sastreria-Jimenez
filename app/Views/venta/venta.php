@@ -77,6 +77,8 @@
           <span class="nav-link">Navegación</span>
         </li>
 
+        
+
         <li class="nav-item menu-items">
           <a class="nav-link" href="<?= base_url('cliente') ?>">
             <span class="menu-icon">
@@ -106,9 +108,6 @@
             </ul>
           </div>
         </li>
-
-
-
 
 
         <li class="nav-item menu-items">
@@ -158,6 +157,14 @@
             <li class="nav-item dropdown border-left">
               <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crear') ?>">
                 <i class="mdi mdi-account-plus"></i>
+                <!-- <span class="count bg-success"></span> -->
+              </a>
+
+            </li>
+
+            <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crearVenta') ?>">
+                <i class="mdi mdi-cash"></i>
                 <!-- <span class="count bg-success"></span> -->
               </a>
 
