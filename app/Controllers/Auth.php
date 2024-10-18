@@ -70,7 +70,7 @@ class Auth extends BaseController
                 if ($user['rol'] == 1) {
                     return redirect()->to('/cliente');
                 } elseif ($user['rol'] == 2) {
-                    return redirect()->to('/index.html');
+                    return redirect()->to('/');
                 }
             } else {
                 log_message('error', 'Credenciales inválidas para el usuario: ' . $email);

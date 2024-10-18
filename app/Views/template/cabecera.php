@@ -20,6 +20,12 @@
 <!-- Layout styles -->
 <link rel="stylesheet" href="<?= base_url('css/estilo2.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+<!-- Select2 CSS -->
+<link href="<?= base_url('assets/vendors/select2/select2.min.css'); ?>" rel="stylesheet" />
+<link href="<?= base_url('assets/vendors/select2/select2-bootstrap-theme.min.css'); ?>" rel="stylesheet" />
+
+
+
 
 
 

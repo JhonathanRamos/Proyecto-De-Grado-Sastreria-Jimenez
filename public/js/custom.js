@@ -6,11 +6,11 @@ if (window.location.href.includes('cliente') || window.location.href.includes('d
         var filter = input.value.toLowerCase();
         var table = document.getElementById('clientesTable');
         var tr = table.getElementsByTagName('tr');
-        
+
         for (var i = 1; i < tr.length; i++) {  // Empieza desde 1 para omitir el encabezado
             var td = tr[i].getElementsByTagName('td');
             var found = false;
-            
+
             for (var j = 0; j < td.length; j++) {
                 if (td[j]) {
                     var txtValue = td[j].textContent || td[j].innerText;
@@ -20,7 +20,7 @@ if (window.location.href.includes('cliente') || window.location.href.includes('d
                     }
                 }
             }
-            
+
             if (found) {
                 tr[i].style.display = '';
             } else {
@@ -33,7 +33,7 @@ if (window.location.href.includes('cliente') || window.location.href.includes('d
     document.getElementById('search').addEventListener('input', filterTable);
 
     // Agregar el evento keydown para la tecla Enter
-    document.getElementById('search').addEventListener('keydown', function(event) {
+    document.getElementById('search').addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             filterTable();
         }
@@ -172,7 +172,7 @@ function change15() { document.getElementById('tr1').src = 'img/tr15.png'; }
 
 //FECHA DE REGISTRO ORDEN 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const table = document.querySelector('#clientesTable');
     if (table) {
         const idHeader = table.querySelector('th:nth-child(1)'); // Asume que el ID está en la primera columna
@@ -185,12 +185,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sortedRows = rows.sort((a, b) => {
                     const aText = a.children[col].textContent.trim();
                     const bText = b.children[col].textContent.trim();
-                    
-                    return ascending 
+
+                    return ascending
                         ? aText.localeCompare(bText, undefined, { numeric: true })
                         : bText.localeCompare(aText, undefined, { numeric: true });
                 });
-                
+
                 sortedRows.forEach(row => table.querySelector('tbody').appendChild(row));
             }
 
@@ -218,61 +218,172 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // sweetalert2 PARA CLIENTES
-    function confirmDelete(event, deleteUrl) {
-        event.preventDefault(); // Previene la acción por defecto del enlace
-    
-        Swal.fire({
-            title: '¿Estás seguro de eliminar al usuario?',
-            text: "No podrás revertir esta acción",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, bórralo',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = deleteUrl;
-            }
+// sweetalert2 PARA CLIENTES
+function confirmDelete(event, deleteUrl) {
+    event.preventDefault(); // Previene la acción por defecto del enlace
+
+    Swal.fire({
+        title: '¿Estás seguro de eliminar al usuario?',
+        text: "No podrás revertir esta acción",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, bórralo',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
+    });
+}
+
+// BORRAR PERO PARA LOS DEMAS CON SWWETALERT2
+function confirmDeleteDatos(event, deleteUrl) {
+    event.preventDefault(); // Previene la acción por defecto del enlace
+
+    Swal.fire({
+        title: '¿Estás seguro de eliminar esta falda?',
+        text: "No podrás revertir esta acción",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, bórrala',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
+    });
+}
+
+//GUARDAR EDITANDO
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén la URL actual
+    var urlActual = window.location.href;
+    console.log(urlActual);
+
+    var guardarBtn = document.getElementById('guardarBtn');
+    var form = document.querySelector('form');
+
+    if (guardarBtn) {
+        guardarBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Previene el comportamiento por defecto del botón
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¿Deseas guardar los cambios?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, guardar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Muestra mensaje de carga
+                    Swal.fire({
+                        title: 'Guardando...',
+                        text: 'Por favor, espera mientras se guardan los cambios.',
+                        icon: 'info',
+                        allowOutsideClick: false,
+                        showConfirmButton: false
+                    });
+
+                    // Envía el formulario mediante una solicitud fetch
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    }).then(response => {
+                        if (response.ok) {
+                            Swal.fire({
+                                title: '¡Éxito!',
+                                text: 'Los cambios se han guardado correctamente.',
+                                icon: 'success',
+                                confirmButtonColor: '#3085d6',
+                                confirmButtonText: 'Aceptar'
+                            }).then(() => {
+                                // Redirige según la URL actual
+                                if (urlActual.includes('editartrajeFemenino')) {
+                                    window.location.href = 'http://localhost/code4/public/datosTrajeFemenino'; // URL para editar traje femenino
+                                } else if (urlActual.includes('editartrajeMasculino')) {
+                                    window.location.href = 'http://localhost/code4/public/datosTrajeMasculino'; // URL para editar traje masculino
+                                } else if (urlActual.includes('editarFalda')) {
+                                    window.location.href = 'http://localhost/code4/public/datosFalda'; // URL para editar falda
+                                } else if (urlActual.includes('editarPantalon')) {
+                                    window.location.href = 'http://localhost/code4/public/datosPantalon'; // URL para editar pantalón
+                                } else {
+                                    window.location.href = 'http://localhost/code4/public/cliente'; // URL para editar cliente
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: 'Error',
+                                text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
+                                icon: 'error',
+                                confirmButtonColor: '#3085d6',
+                                confirmButtonText: 'Aceptar'
+                            });
+                        }
+                    }).catch(() => {
+                        Swal.fire({
+                            title: 'Error',
+                            text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
+                            icon: 'error',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'Aceptar'
+                        });
+                    });
+                }
+            });
         });
     }
 
-    // BORRAR PERO PARA LOS DEMAS CON SWWETALERT2
-    function confirmDeleteDatos(event, deleteUrl) {
-        event.preventDefault(); // Previene la acción por defecto del enlace
-    
-        Swal.fire({
-            title: '¿Estás seguro de eliminar esta falda?',
-            text: "No podrás revertir esta acción",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, bórrala',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = deleteUrl;
-            }
-        });
-    }
+    // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+    if (urlActual.includes('editar') ||
+        urlActual.includes('editarFalda') ||
+        urlActual.includes('editarPantalon') ||
+        urlActual.includes('editarTrajeFemenino') ||
+        urlActual.includes('editarTrajeMasculino')) {
 
-    //GUARDAR EDITANDO
-    document.addEventListener('DOMContentLoaded', function() {
-        // Obtén la URL actual
-        var urlActual = window.location.href;
-        console.log(urlActual);
-    
-        var guardarBtn = document.getElementById('guardarBtn');
-        var form = document.querySelector('form');
-    
+        if (form) {
+            form.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    // Si el foco está en el botón "Guardar"
+                    if (document.activeElement === guardarBtn) {
+                        guardarBtn.click(); // Simula un clic en el botón
+                        event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                    } else {
+                        // Deja que 'Enter' funcione normalmente para campos de formulario
+                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                        const currentIndex = focusableElements.indexOf(event.target);
+                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                            focusableElements[currentIndex + 1].focus();
+                            event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
+                        }
+                    }
+                }
+            });
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén la URL actual
+    var urlActual = window.location.href;
+
+    // Verifica si la URL contiene 'crear'
+    if (urlActual.includes('crear')) {
+        const form = document.querySelector('form');
+        const guardarBtn = document.getElementById('guardarBtnUsuario');
+
         if (guardarBtn) {
-            guardarBtn.addEventListener('click', function(event) {
+            guardarBtn.addEventListener('click', function (event) {
                 event.preventDefault(); // Previene el comportamiento por defecto del botón
+
                 Swal.fire({
                     title: '¿Estás seguro?',
-                    text: "¿Deseas guardar los cambios?",
+                    text: "¿Deseas guardar los datos del cliente?",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -281,128 +392,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     cancelButtonText: 'Cancelar'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        // Muestra mensaje de carga
-                        Swal.fire({
-                            title: 'Guardando...',
-                            text: 'Por favor, espera mientras se guardan los cambios.',
-                            icon: 'info',
-                            allowOutsideClick: false,
-                            showConfirmButton: false
-                        });
-    
-                        // Envía el formulario mediante una solicitud fetch
+                        const formData = new FormData(form);
+
                         fetch(form.action, {
                             method: 'POST',
-                            body: new FormData(form)
-                        }).then(response => {
-                            if (response.ok) {
-                                Swal.fire({
-                                    title: '¡Éxito!',
-                                    text: 'Los cambios se han guardado correctamente.',
-                                    icon: 'success',
-                                    confirmButtonColor: '#3085d6',
-                                    confirmButtonText: 'Aceptar'
-                                }).then(() => {
-                                    // Redirige según la URL actual
-                                    if (urlActual.includes('editartrajeFemenino')) {
-                                        window.location.href = 'http://localhost/code4/public/datosTrajeFemenino'; // URL para editar traje femenino
-                                    } else if (urlActual.includes('editartrajeMasculino')) {
-                                        window.location.href = 'http://localhost/code4/public/datosTrajeMasculino'; // URL para editar traje masculino
-                                    } else if (urlActual.includes('editarFalda')) {
-                                        window.location.href = 'http://localhost/code4/public/datosFalda'; // URL para editar falda
-                                    } else if (urlActual.includes('editarPantalon')) {
-                                        window.location.href = 'http://localhost/code4/public/datosPantalon'; // URL para editar pantalón
-                                    } else {
-                                        window.location.href = 'http://localhost/code4/public/cliente'; // URL para editar cliente
-                                    }
-                                });
-                            } else {
-                                Swal.fire({
-                                    title: 'Error',
-                                    text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
-                                    icon: 'error',
-                                    confirmButtonColor: '#3085d6',
-                                    confirmButtonText: 'Aceptar'
-                                });
-                            }
-                        }).catch(() => {
-                            Swal.fire({
-                                title: 'Error',
-                                text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
-                                icon: 'error',
-                                confirmButtonColor: '#3085d6',
-                                confirmButtonText: 'Aceptar'
-                            });
-                        });
-                    }
-                });
-            });
-        }
-    
-        // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-        if (urlActual.includes('editar') || 
-            urlActual.includes('editarFalda') || 
-            urlActual.includes('editarPantalon') || 
-            urlActual.includes('editarTrajeFemenino') || 
-            urlActual.includes('editarTrajeMasculino')) {
-    
-            if (form) {
-                form.addEventListener('keydown', function(event) {
-                    if (event.key === 'Enter') {
-                        // Si el foco está en el botón "Guardar"
-                        if (document.activeElement === guardarBtn) {
-                            guardarBtn.click(); // Simula un clic en el botón
-                            event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
-                        } else {
-                            // Deja que 'Enter' funcione normalmente para campos de formulario
-                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                            const currentIndex = focusableElements.indexOf(event.target);
-                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                                focusableElements[currentIndex + 1].focus();
-                                event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
-                            }
-                        }
-                    }
-                });
-            }
-        }
-    });
-
-    
-    
-    
-    
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        // Obtén la URL actual
-        var urlActual = window.location.href;
-    
-        // Verifica si la URL contiene 'crear'
-        if (urlActual.includes('crear')) {
-            const form = document.querySelector('form');
-            const guardarBtn = document.getElementById('guardarBtnUsuario');
-    
-            if (guardarBtn) {
-                guardarBtn.addEventListener('click', function(event) {
-                    event.preventDefault(); // Previene el comportamiento por defecto del botón
-    
-                    Swal.fire({
-                        title: '¿Estás seguro?',
-                        text: "¿Deseas guardar los datos del cliente?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Sí, guardar',
-                        cancelButtonText: 'Cancelar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            const formData = new FormData(form);
-    
-                            fetch(form.action, {
-                                method: 'POST',
-                                body: formData
-                            })
+                            body: formData
+                        })
                             .then(response => response.json())
                             .then(data => {
                                 if (data.success) {
@@ -431,92 +426,102 @@ document.addEventListener('DOMContentLoaded', function() {
                                     confirmButtonText: 'Aceptar'
                                 });
                             });
-                        }
-                    });
-                });
-    
-                // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-                form.addEventListener('keydown', function(event) {
-                    if (event.key === 'Enter') {
-                        // Si el foco está en el botón "Guardar"
-                        if (document.activeElement === guardarBtn) {
-                            guardarBtn.click(); // Simula un clic en el botón
-                            event.preventDefault(); // Previene el envío del formulario
-                        } else {
-                            // Deja que 'Enter' funcione normalmente para campos de formulario
-                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                            const currentIndex = focusableElements.indexOf(event.target);
-                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                                focusableElements[currentIndex + 1].focus();
-                                event.preventDefault(); // Previene el envío del formulario
-                            }
-                        }
                     }
                 });
-            }
-        }
-    });
-    
-    
-    
-    //Crear falda , pantalon , trajeFemenino , TrajeMasculino
-    document.addEventListener('DOMContentLoaded', function() {
-        // Obtén la URL actual
-        var urlActual = window.location.href;
-    
-        // Verifica si la URL contiene alguna de las cadenas especificadas
-        if (urlActual.includes('falda') || 
-            urlActual.includes('pantalon') || 
-            urlActual.includes('trajeFemenino') || 
-            urlActual.includes('trajeMasculino')) {
-    
-            // Solo añade el event listener si la URL es válida
-            var BtnSuccess = document.getElementById('BtnSuccess');
-            var form = document.querySelector('form');
-    
-            if (BtnSuccess) {
-                // Maneja el clic en el botón "Guardar"
-                BtnSuccess.addEventListener('click', function(event) {
-                    event.preventDefault(); // Previene el comportamiento por defecto del botón
-                    Swal.fire({
-                        title: '¡Éxito!',
-                        text: "Medidas guardadas con éxito.",
-                        icon: 'success',
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'Aceptar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Envía el formulario si el usuario confirma
-                            form.submit();
-                        }
-                    });
-                });
-            }
-    
-            if (form) {
-                // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-                form.addEventListener('keydown', function(event) {
-                    if (event.key === 'Enter') {
-                        // Si el foco está en el botón "Guardar"
-                        if (document.activeElement === BtnSuccess) {
-                            BtnSuccess.click(); // Simula un clic en el botón
+            });
+
+            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+            form.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    // Si el foco está en el botón "Guardar"
+                    if (document.activeElement === guardarBtn) {
+                        guardarBtn.click(); // Simula un clic en el botón
+                        event.preventDefault(); // Previene el envío del formulario
+                    } else {
+                        // Deja que 'Enter' funcione normalmente para campos de formulario
+                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                        const currentIndex = focusableElements.indexOf(event.target);
+                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                            focusableElements[currentIndex + 1].focus();
                             event.preventDefault(); // Previene el envío del formulario
-                        } else {
-                            // Deja que 'Enter' funcione normalmente para campos de formulario
-                            const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                            const currentIndex = focusableElements.indexOf(event.target);
-                            if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                                focusableElements[currentIndex + 1].focus();
-                                event.preventDefault(); // Previene el envío del formulario
-                            }
                         }
                     }
-                });
-            }
+                }
+            });
         }
+    }
+});
+
+
+
+//Crear falda , pantalon , trajeFemenino , TrajeMasculino
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén la URL actual
+    var urlActual = window.location.href;
+
+    // Verifica si la URL contiene alguna de las cadenas especificadas
+    if (urlActual.includes('falda') ||
+        urlActual.includes('pantalon') ||
+        urlActual.includes('trajeFemenino') ||
+        urlActual.includes('trajeMasculino')) {
+
+        // Solo añade el event listener si la URL es válida
+        var BtnSuccess = document.getElementById('BtnSuccess');
+        var form = document.querySelector('form');
+
+        if (BtnSuccess) {
+            // Maneja el clic en el botón "Guardar"
+            BtnSuccess.addEventListener('click', function (event) {
+                event.preventDefault(); // Previene el comportamiento por defecto del botón
+                Swal.fire({
+                    title: '¡Éxito!',
+                    text: "Medidas guardadas con éxito.",
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'Aceptar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Envía el formulario si el usuario confirma
+                        form.submit();
+                    }
+                });
+            });
+        }
+
+        if (form) {
+            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
+            form.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    // Si el foco está en el botón "Guardar"
+                    if (document.activeElement === BtnSuccess) {
+                        BtnSuccess.click(); // Simula un clic en el botón
+                        event.preventDefault(); // Previene el envío del formulario
+                    } else {
+                        // Deja que 'Enter' funcione normalmente para campos de formulario
+                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
+                        const currentIndex = focusableElements.indexOf(event.target);
+                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
+                            focusableElements[currentIndex + 1].focus();
+                            event.preventDefault(); // Previene el envío del formulario
+                        }
+                    }
+                }
+            });
+        }
+    }
+});
+
+$(document).ready(function () {
+    // Inicializar Select2 en el campo de cliente sin tema Bootstrap
+    $('#idCliente').select2({
+        placeholder: "Seleccione un cliente",
+        allowClear: true  // Permite borrar la selección
     });
-    
-    
-    
-    
-    
+});
+
+
+
+
+
+
+

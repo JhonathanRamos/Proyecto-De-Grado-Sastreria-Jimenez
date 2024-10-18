@@ -77,7 +77,7 @@
           <span class="nav-link">Navegación</span>
         </li>
 
-        
+
 
         <li class="nav-item menu-items">
           <a class="nav-link" href="<?= base_url('cliente') ?>">
@@ -278,13 +278,12 @@
                           <th>#</th>
                           <th>Cliente</th>
                           <th>Descripción</th>
-                          <th>Unidad de Medida</th>
-                          <th>Fecha Entrega</th>
-                          <th>Total</th>
+                          <th>Adelanto</th>
+                          <th>Precio</th>
+                          <th>Total a Pagar</th>
                           <th>Estado</th>
                           <th>Fecha Registro</th>
-                          <th>Fecha Actualización</th>
-
+                          <th>Fecha Entrega</th> <!-- Nueva columna para Fecha de Entrega -->
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -292,29 +291,27 @@
                         <?php foreach ($ventas as $venta): ?>
                           <tr>
                             <td><?= $venta['idVenta']; ?></td>
-                            <td>
-                              <?= isset($venta['cliente']) ? $venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido'] : 'Cliente No Encontrado'; ?>
-                            </td>
+                            <td><?= $venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido']; ?></td>
                             <td><?= $venta['descripcion']; ?></td>
-                            <td><?= $venta['unidadMedida']; ?></td>
-                            <td><?= $venta['fecha']; ?></td>
-                            <td><?= $venta['totalFinal'] . ' Bs'; ?></td>
-                            <td><?= ($venta['estado'] === 1) ? 'Completado' : 'Pendiente'; ?></td>
+                            <td><?= $venta['adelanto'] . ' Bs'; ?></td>
+                            <td><?= $venta['precio'] . ' Bs'; ?></td>
+                            <td><?= $venta['totalPagar'] . ' Bs'; ?></td>
+                            <td><?= $venta['estado'] === 1 ? 'Completado' : 'Pendiente'; ?></td>
                             <td><?= $venta['fechaRegistro']; ?></td>
-                            <td><?= $venta['fechaActualizacion']; ?></td>
-
+                            <td><?= $venta['fecha']; ?></td> <!-- Mostrar la Fecha de Entrega -->
                             <td>
-                              <div class="btn-group">
-                                <a href="<?= base_url('editar/' . $venta['idVenta']); ?>" class="btn btn-outline-primary"
-                                  style="margin-right: 2px;">Editar</a>
-                                <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
-                                  onclick="confirmDelete(event, '<?= base_url('borrar/' . $venta['idVenta']); ?>');">Borrar</a>
-                              </div>
+                              <a href="<?= base_url('editar/' . $venta['idVenta']); ?>"
+                                class="btn btn-outline-primary">Editar</a>
+                              <a href="#"
+                                onclick="confirmDelete(event, '<?= base_url('borrar/' . $venta['idVenta']); ?>');"
+                                class="btn btn-outline-danger">Borrar</a>
                             </td>
                           </tr>
                         <?php endforeach; ?>
                       </tbody>
                     </table>
+
+
 
 
 

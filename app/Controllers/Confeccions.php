@@ -10,15 +10,13 @@ class Confeccions extends Controller
     {
         $confeccionModel = new Confeccion();
 
-        // Obtener todas las confecciones
-        $confecciones = $confeccionModel->findAll();
+        // Obtener solo las confecciones activas
+        $confecciones = $confeccionModel->where('estado', 1)->findAll();
 
-        // Preparar los datos para la vista
         $data['confecciones'] = $confecciones;
         $data['cabecera'] = view('template/cabecera');
         $data['pie'] = view('template/piepagina');
 
-        // Cargar la vista de confecciones
         return view('Confeccion/confeccion', $data);
     }
 
@@ -60,6 +58,7 @@ class Confeccions extends Controller
             'precio' => $this->request->getVar('precio'),
             'unidadMedida' => $this->request->getVar('unidadMedida'),
             'idUsuario' => $idUsuario,
+            'estado' => 1,  // Estado activo por defecto
             'created_at' => date('Y-m-d H:i:s')  // Fecha de creación
         ];
 
@@ -118,14 +117,29 @@ class Confeccions extends Controller
         return redirect()->to(site_url('/confeccion'));
     }
 
-    // Eliminar una confección
+    // Eliminar una confección (eliminación lógica)
     public function borrar($id)
     {
         $confeccionModel = new Confeccion();
-        $confeccionModel->delete($id);
 
-        // Redirigir después de eliminar
-        session()->setFlashdata('mensaje', 'Confección eliminada con éxito');
+        // Cambiar el estado a 0 para realizar una eliminación lógica
+        $confeccionModel->update($id, ['estado' => 0]);
+
+        session()->setFlashdata('mensaje', 'Confección desactivada con éxito');
         return redirect()->to(site_url('/confeccion'));
     }
+
+    // public function inactivas()
+    // {
+    //     $confeccionModel = new Confeccion();
+
+    //     // Obtener solo las confecciones inactivas
+    //     $confecciones = $confeccionModel->where('estado', 0)->findAll();
+
+    //     $data['confecciones'] = $confecciones;
+    //     $data['cabecera'] = view('template/cabecera');
+    //     $data['pie'] = view('template/piepagina');
+
+    //     return view('Confeccion/inactivas', $data);  // Crea la vista para mostrar las confecciones inactivas
+    // }
 }

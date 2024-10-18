@@ -31,7 +31,7 @@ class Autoload extends AutoloadConfig
      * to locate files the first time they have been instantiated.
      *
      * The '/app' and '/system' directories are already mapped for you.
-     * you may change the name of the 'App' namespace if you wish,
+     * You may change the name of the 'App' namespace if you wish,
      * but this should be done prior to creating any namespaced classes,
      * else you will need to modify all of those classes for this to work.
      *
@@ -90,6 +90,9 @@ class Autoload extends AutoloadConfig
      * -------------------------------------------------------------------
      * Helpers
      * -------------------------------------------------------------------
+     * Aquí agregamos los helpers que queremos cargar automáticamente.
+     * En este caso, estamos cargando el helper 'form'.
+     *
      * Prototype:
      *   $helpers = [
      *       'form',
@@ -98,5 +101,7 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = [];
+    public $helpers = [
+        'form', // Agregamos el helper 'form' para tener las funciones disponibles
+    ];
 }
