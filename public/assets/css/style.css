@@ -25192,4 +25192,20 @@ dl li {
   color: #6c757d; /* Color placeholder igual que el de los inputs */
 }
 
+/* Personaliza el color de fondo del mes cuando se despliega el selector */
+.flatpickr-monthDropdown-months {
+  background-color: #ffffff !important; /* Cambia el color de fondo del dropdown a blanco */
+  color: #000000 !important;            /* Cambia el color del texto a negro */
+}
+
+/* Ajustar el fondo cuando se selecciona un mes */
+.flatpickr-monthDropdown-months .flatpickr-monthDropdown-month:hover {
+  background-color: #e0e0e0 !important; /* Cambia el color de fondo al pasar el ratón (hover) */
+}
+
+/* Cuando un mes está seleccionado, cambia su color */
+.flatpickr-monthDropdown-months .flatpickr-monthDropdown-month.selected {
+  background-color: #cccccc !important; /* Cambia el fondo del mes seleccionado */
+  color: #000000 !important;            /* Asegura que el texto del mes seleccionado siga siendo legible */
+}
 

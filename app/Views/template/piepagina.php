@@ -28,9 +28,13 @@
 <!-- <script src="assets/js/proBanner.js"></script> -->
 <script src="assets/js/dashboard.js"></script>
 
-<script>var baseUrl = "<?= base_url('clientes'); ?>";</script>
 <script src="<?= base_url('js/custom.js') ?>"></script>
 <script src="<?= base_url('assets/vendors/select2/select2.min.js'); ?>"></script>
+
+
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
 
 <!-- End custom js for this page -->
 <!-- Buscador -->

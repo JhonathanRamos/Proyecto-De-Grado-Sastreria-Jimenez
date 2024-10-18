@@ -25,7 +25,8 @@
 <link href="<?= base_url('assets/vendors/select2/select2-bootstrap-theme.min.css'); ?>" rel="stylesheet" />
 
 
-
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 
 

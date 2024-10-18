@@ -519,6 +519,17 @@ $(document).ready(function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    flatpickr("#fechaRecoleccion", {
+        enableTime: true,           // Habilitar la selección de tiempo
+        dateFormat: "Y-m-d H:i",    // Formato de fecha y hora
+        time_24hr: true,            // Usar formato de 24 horas
+        locale: "es",               // Cambiar el idioma a español
+        minuteIncrement: 1          // Incremento de minutos
+    });
+});
+
+
 
 
 
