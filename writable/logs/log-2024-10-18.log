@@ -263,3 +263,14 @@ in APPPATH\Views\bddclientes\cliente.php on line 270.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-18 17:13:31 --> Undefined array key "id"
+in APPPATH\Views\venta\venta.php on line 302.
+ 1 APPPATH\Views\venta\venta.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 302)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(50): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

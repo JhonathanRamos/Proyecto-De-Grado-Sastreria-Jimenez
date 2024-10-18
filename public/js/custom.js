@@ -529,6 +529,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//PAGO
+
+document.addEventListener('DOMContentLoaded', function () {
+    const metodoPagoSelect = document.getElementById('metodo_pago');
+    const modalQR = document.getElementById('modalQR');
+    const pagoRealizadoSelect = document.getElementById('pagado');
+    const estadoSelect = document.getElementById('estado');
+
+    // Mostrar el modal si se selecciona QR como método de pago
+    metodoPagoSelect.addEventListener('change', function () {
+        if (metodoPagoSelect.value === 'QR') {
+            modalQR.style.display = 'block';
+        } else {
+            modalQR.style.display = 'none';
+        }
+    });
+
+    // Cambiar el estado basado en el pago realizado
+    pagoRealizadoSelect.addEventListener('change', function () {
+        if (pagoRealizadoSelect.value === '1') {
+            estadoSelect.value = '0'; // Completado
+        } else {
+            estadoSelect.value = '1'; // Pendiente
+        }
+    });
+});
+
+// Función para cerrar el modal QR
+function cerrarModal() {
+    document.getElementById('modalQR').style.display = 'none';
+}
+
+
+
+
 
 
 

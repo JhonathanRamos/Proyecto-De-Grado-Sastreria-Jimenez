@@ -74,6 +74,13 @@ $routes->post('actualizartrajeMasculino', 'TrajeMasculinos::actualizartrajeMascu
 $routes->get('/venta', 'Ventas::index');
 $routes->get('/crearVenta', 'Ventas::crear');
 $routes->post('/guardarVenta', 'Ventas::guardarVenta');
+$routes->get('ventas/editar/(:num)', 'Ventas::editar/$1');  // Editar venta
+$routes->post('actualizarVenta/(:num)', 'Ventas::actualizarVenta/$1');  // Actualizar venta
+$routes->get('ventas/borrar/(:num)', 'Ventas::borrar/$1');  // Borrar venta
+
+$routes->get('venta/confirmarPago', 'Ventas::confirmarPago'); // Para mostrar la vista de confirmación de pago
+
+
 
 
 $routes->get('/confeccion', 'Confeccions::index');  // Mostrar lista de confecciones

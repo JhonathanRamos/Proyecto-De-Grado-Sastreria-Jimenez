@@ -17,7 +17,7 @@ class Ventas extends Controller
         $confeccionModel = new Confeccion();
 
         // Obtener todas las ventas
-        $ventas = $ventaModel->findAll();
+        $ventas = $ventaModel->where('estado', 1)->findAll();
 
         // Añadir información adicional a cada venta
         foreach ($ventas as &$venta) {
@@ -77,7 +77,9 @@ class Ventas extends Controller
             'idConfeccion' => 'required',
             'adelanto' => 'required|numeric',
             'fechaRecoleccion' => 'required',
-            'estado' => 'required'
+            'estado' => 'required',
+            'metodo_pago' => 'required', // Validar el método de pago
+            'pagado' => 'required|in_list[1,0]' // Validar si el pago fue realizado
         ]);
 
         if (!$validacion) {
@@ -103,12 +105,14 @@ class Ventas extends Controller
         $ventaData = [
             'idCliente' => $this->request->getVar('idCliente'),
             'idConfeccion' => $this->request->getVar('idConfeccion'),
-            'adelanto' => $adelanto,  // Guardar el adelanto en la venta
-            'total' => $total,  // Total calculado
+            'adelanto' => $adelanto,
+            'total' => $total,
             'estado' => $this->request->getVar('estado'),
             'fecha' => $this->request->getVar('fechaRecoleccion'),
             'idUsuario' => $idUsuario,
-            'fechaRegistro' => date('Y-m-d H:i:s') // Fecha de registro de la venta
+            'fechaRegistro' => date('Y-m-d H:i:s'),
+            'metodo_pago' => $this->request->getVar('metodo_pago'), // Guardar método de pago
+            'pagado' => $this->request->getVar('pagado') // Guardar si el pago fue realizado
         ];
 
         $ventaModel->insert($ventaData);
@@ -117,4 +121,108 @@ class Ventas extends Controller
         session()->setFlashdata('mensaje', 'Venta registrada con éxito');
         return redirect()->to(site_url('/venta'));
     }
+
+
+
+    // Método para editar una venta
+    public function editar($id)
+    {
+        $ventaModel = new Venta();
+        $clienteModel = new Cliente();
+        $confeccionModel = new Confeccion();
+
+        // Obtener la venta a editar
+        $venta = $ventaModel->find($id);
+        if (!$venta) {
+            session()->setFlashdata('mensaje', 'Venta no encontrada');
+            return redirect()->to('/venta');
+        }
+
+        // Obtener todos los clientes y confecciones para el formulario
+        $data['clientes'] = $clienteModel->findAll();
+        $data['confecciones'] = $confeccionModel->findAll();
+        $data['venta'] = $venta;
+        $data['cabecera'] = view('template/cabecera');
+        $data['pie'] = view('template/piepagina');
+
+        return view('venta/editarVenta', $data); // Cargar vista de edición
+    }
+
+    // Método para actualizar una venta
+    public function actualizarVenta($id)
+    {
+        $ventaModel = new Venta();
+
+        // Validar los campos del formulario
+        $validacion = $this->validate([
+            'idCliente' => 'required',
+            'idConfeccion' => 'required',
+            'adelanto' => 'required|numeric',
+            'fechaRecoleccion' => 'required',
+            'estado' => 'required'
+        ]);
+
+        if (!$validacion) {
+            session()->setFlashdata('mensaje', 'Revise la información proporcionada');
+            return redirect()->back()->withInput();
+        }
+
+        // Obtener la confección para calcular el total
+        $confeccionModel = new Confeccion();
+        $confeccion = $confeccionModel->find($this->request->getVar('idConfeccion'));
+        $precio = $confeccion ? $confeccion['precio'] : 0;
+        $adelanto = $this->request->getVar('adelanto');
+        $total = $precio - $adelanto;
+
+        // Actualizar la venta
+        $ventaData = [
+            'idCliente' => $this->request->getVar('idCliente'),
+            'idConfeccion' => $this->request->getVar('idConfeccion'),
+            'adelanto' => $adelanto,
+            'total' => $total,
+            'estado' => $this->request->getVar('estado'),
+            'fecha' => $this->request->getVar('fechaRecoleccion')
+        ];
+
+        $ventaModel->update($id, $ventaData);
+
+        // Redirigir después de actualizar
+        session()->setFlashdata('mensaje', 'Venta actualizada con éxito');
+        return redirect()->to(site_url('/venta'));
+    }
+
+    // Método para borrar una venta
+    public function borrar($id)
+    {
+        $ventaModel = new Venta();  // Aquí estás manejando el modelo de Venta, no el de Usuario
+
+        // Buscar la venta según el id
+        $venta = $ventaModel->find($id);
+
+        if ($venta) {
+            // Actualizar el estado de la venta a 0 en lugar de eliminarla
+            $ventaModel->update($id, ['estado' => 0]);
+            session()->setFlashdata('mensaje', 'Venta marcada como eliminada con éxito.');
+        } else {
+            session()->setFlashdata('mensaje', 'Venta no encontrada.');
+        }
+
+        return redirect()->to(site_url('/venta'));
+    }
+
+    public function confirmarPago()
+    {
+        // Simula obtener el ID de una venta (por ahora lo dejaremos estático para pruebas)
+        $idVenta = 1;  // O puedes obtenerlo dinámicamente si ya lo tienes
+
+        // Pasar los datos necesarios a la vista
+        $data['idVenta'] = $idVenta;
+        $data['cabecera'] = view('template/cabecera'); // Incluye la cabecera
+        $data['pie'] = view('template/piepagina');     // Incluye el pie de página
+
+        // Cargar la vista de confirmación de pago
+        return view('venta/confirmarPago', $data);
+    }
+
+
 }

@@ -130,6 +130,15 @@
           </a>
         </li>
 
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="<?= base_url('venta/confirmarPago') ?>">
+            <span class="menu-icon">
+              <i class="mdi mdi-account-multiple-plus"></i>
+            </span>
+            <span class="menu-title">Pagar</span>
+          </a>
+        </li>
+
 
 
 

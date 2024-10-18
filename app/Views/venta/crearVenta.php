@@ -41,15 +41,42 @@
 
                 <!-- Campo para Fecha y Hora de Recolección usando Flatpickr -->
                 <div class="form-group">
-                    <label for="fechaRecoleccion">Fecha y Hora de Recolección:</label>
+                    <label for="fechaRecoleccion">Fecha y Hora de Entrega:</label>
                     <input id="fechaRecoleccion" value="<?= set_value('fechaRecoleccion') ?>" class="form-control"
                         type="text" name="fechaRecoleccion" required>
                 </div>
 
+                <!-- Método de Pago -->
+                <div class="form-group">
+                    <label for="metodo_pago">Método de Pago:</label>
+                    <select class="form-control" id="metodo_pago" name="metodo_pago" required>
+                        <option value="Contado">Contado</option>
+                        <option value="QR">QR</option>
+                    </select>
+                </div>
+
+                <!-- Modal para mostrar el QR -->
+                <div id="modalQR" class="modal" style="display:none;">
+                    <div class="modal-content">
+                        <span class="close" onclick="cerrarModal()">&times;</span>
+                        <h2>Escanea el siguiente QR para realizar el pago:</h2>
+                        <img src="img/Qr.jpg" alt="Código QR de pago" />
+                    </div>
+                </div>
+
+                <!-- Campo para Pago Realizado -->
+                <div class="form-group">
+                    <label for="pagado">¿Pago realizado?:</label>
+                    <select id="pagado" name="pagado" class="form-control" required>
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
                 <!-- Campo para Estado -->
                 <div class="form-group">
-                    <label for="estado">Estado:</label>
-                    <select id="estado" class="form-control" name="estado" required>
+                    <label for="estado"></label>
+                    <select id="estado" class="form-control" name="estado" hidden>
                         <option value="1" <?= set_select('estado', '1'); ?>>Pendiente</option>
                         <option value="0" <?= set_select('estado', '0'); ?>>Completado</option>
                     </select>

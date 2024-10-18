@@ -271,7 +271,6 @@
                   </div>
                   <div class="table-responsive">
 
-
                     <table class="table table-dark" id="ventasTable">
                       <thead>
                         <tr>
@@ -282,6 +281,7 @@
                           <th>Precio</th>
                           <th>Total a Pagar</th>
                           <th>Estado</th>
+                          <th>Método de Pago</th>
                           <th>Fecha Registro</th>
                           <th>Fecha Entrega</th> <!-- Nueva columna para Fecha de Entrega -->
                           <th>Acciones</th>
@@ -296,25 +296,22 @@
                             <td><?= $venta['adelanto'] . ' Bs'; ?></td>
                             <td><?= $venta['precio'] . ' Bs'; ?></td>
                             <td><?= $venta['totalPagar'] . ' Bs'; ?></td>
-                            <td><?= $venta['estado'] === 1 ? 'Completado' : 'Pendiente'; ?></td>
+                            <td><?= $venta['estado'] === 0 ? 'Completado' : 'Pendiente'; ?></td>
+                            <!-- Invertir la lógica -->
+                            <td><?= $venta['metodo_pago']; ?></td>
                             <td><?= $venta['fechaRegistro']; ?></td>
                             <td><?= $venta['fecha']; ?></td> <!-- Mostrar la Fecha de Entrega -->
                             <td>
-                              <a href="<?= base_url('editar/' . $venta['idVenta']); ?>"
-                                class="btn btn-outline-primary">Editar</a>
+                              <?php $editarUrl = base_url('ventas/editar/' . $venta['idVenta']); ?>
+                              <a href="<?= $editarUrl; ?>" class="btn btn-outline-primary">Editar</a>
                               <a href="#"
-                                onclick="confirmDelete(event, '<?= base_url('borrar/' . $venta['idVenta']); ?>');"
+                                onclick="confirmDelete(event, '<?= base_url('ventas/borrar/' . $venta['idVenta']); ?>');"
                                 class="btn btn-outline-danger">Borrar</a>
                             </td>
                           </tr>
                         <?php endforeach; ?>
                       </tbody>
                     </table>
-
-
-
-
-
 
                   </div>
                 </div>
