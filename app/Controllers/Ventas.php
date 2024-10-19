@@ -17,7 +17,7 @@ class Ventas extends Controller
         $confeccionModel = new Confeccion();
 
         // Obtener todas las ventas
-        $ventas = $ventaModel->where('estado', 1)->findAll();
+        $ventas = $ventaModel->where('estado', 0)->findAll();
 
         // Añadir información adicional a cada venta
         foreach ($ventas as &$venta) {
@@ -223,6 +223,8 @@ class Ventas extends Controller
         // Cargar la vista de confirmación de pago
         return view('venta/confirmarPago', $data);
     }
+
+    
 
 
 }

@@ -266,6 +266,15 @@
               <div class="card">
                 <div class="card-body">
                   <h1 class="card-title">Ventas</h1>
+
+                  <!-- Botones para Exportar PDF -->
+                  <!-- Botones para Exportar PDF -->
+                  <div class="mb-3">
+                    <a href="<?= site_url('/exportarPDF/completadas') ?>" class="btn btn-success"
+                      target="_blank">Exportar Ventas Completadas</a>
+                    <a href="<?= site_url('/exportarPDF/pendientes') ?>" class="btn btn-warning"
+                      target="_blank">Exportar Ventas Pendientes</a>
+                  </div>
                   <div class="input-group mb-3">
                     <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
                   </div>
@@ -296,7 +305,10 @@
                             <td><?= $venta['adelanto'] . ' Bs'; ?></td>
                             <td><?= $venta['precio'] . ' Bs'; ?></td>
                             <td><?= $venta['totalPagar'] . ' Bs'; ?></td>
-                            <td><?= $venta['estado'] === 0 ? 'Completado' : 'Pendiente'; ?></td>
+
+                            <!-- Aquí cambiamos la lógica para que 1 sea "Completado" y 0 "Pendiente" -->
+                            <td><?= $venta['estado'] === 1 ? 'Completado' : 'Pendiente'; ?></td>
+
                             <!-- Invertir la lógica -->
                             <td><?= $venta['metodo_pago']; ?></td>
                             <td><?= $venta['fechaRegistro']; ?></td>

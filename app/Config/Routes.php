@@ -90,7 +90,8 @@ $routes->get('/confeccion/editar/(:num)', 'Confeccions::editar/$1');  // Mostrar
 $routes->post('/confeccion/actualizar/(:num)', 'Confeccions::actualizar/$1');  // Actualizar confección
 $routes->get('/confeccion/borrar/(:num)', 'Confeccions::borrar/$1');  // Borrar confección
 
-
+$routes->get('exportarPDF/completadas', 'DompdfController::exportarCompletadasPDF');
+$routes->get('exportarPDF/pendientes', 'DompdfController::exportarPendientesPDF');
 
 
 
