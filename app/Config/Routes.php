@@ -98,6 +98,8 @@ $routes->get('reportes', 'ReportesController::index');
 
 
 $routes->get('/exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
+$routes->get('exportarPDF/ventasPorFecha', 'ReportesController::generarHtmlVentasPorFecha');
+
 
 
 });

@@ -282,8 +282,17 @@
                                     target="_blank">Exportar Total de la Deuda</a>
                                 <a href="<?= site_url('/exportarPDF/trabajosPendientes') ?>" class="btn btn-success"
                                     target="_blank">Exportar Trabajos Pendientes</a>
-                                <a href="<?= site_url('/exportarPDF/ventasPorFecha') ?>" class="btn btn-info"
-                                    target="_blank">Exportar Ventas por Fecha</a>
+                                <form action="<?= site_url('/exportarPDF/ventasPorFecha') ?>" method="get"
+                                    target="_blank">
+                                    <label for="fechaInicio">Fecha Inicio:</label>
+                                    <input type="date" id="fechaInicio" name="fechaInicio" required>
+
+                                    <label for="fechaFin">Fecha Fin:</label>
+                                    <input type="date" id="fechaFin" name="fechaFin" required>
+
+                                    <button type="submit" class="btn btn-info">Exportar Ventas por Rango de
+                                        Fechas</button>
+                                </form>
                             </div>
                             <div class="table-responsive">
                                 <!-- Aquí puedes incluir tablas similares a las de ventas, con los datos correspondientes a cada reporte -->

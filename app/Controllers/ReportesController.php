@@ -187,18 +187,27 @@ class ReportesController extends BaseController
     }
 
     // Generar HTML para ventas por fecha
-    private function generarHtmlVentasPorFecha()
+    public function generarHtmlVentasPorFecha()
     {
         $db = \Config\Database::connect();
+
+        // Validar si los parámetros GET existen
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        if (!$fechaInicio || !$fechaFin) {
+            return redirect()->back()->with('error', 'Debe seleccionar un rango de fechas válido.');
+        }
 
         $query = $db->query("SELECT venta.*, cliente.nombre, cliente.apellido, confeccion.descripcion
                              FROM venta
                              JOIN cliente ON venta.idCliente = cliente.id
-                             JOIN confeccion ON venta.idConfeccion = confeccion.id");
+                             JOIN confeccion ON venta.idConfeccion = confeccion.id
+                             WHERE venta.fechaRegistro BETWEEN '$fechaInicio' AND '$fechaFin'");
 
         $ventas = $query->getResultArray();
 
-        $html = "<h1>Ventas por Fecha</h1>";
+        $html = "<h1>Ventas del $fechaInicio al $fechaFin</h1>";
         $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
                     <tr>
                         <th>#</th>
@@ -212,20 +221,33 @@ class ReportesController extends BaseController
                     </tr>";
 
         foreach ($ventas as $venta) {
+            // Asegurar que totalPagar tiene un valor
+            $totalPagar = isset($venta['totalPagar']) ? $venta['totalPagar'] : 0;
             $estadoTexto = $venta['estado'] == 1 ? 'Completado' : 'Pendiente';
             $html .= "<tr>
-                        <td>{$venta['id']}</td>
-                        <td>{$venta['nombre']} {$venta['apellido']}</td>
-                        <td>{$venta['descripcion']}</td>
-                        <td>{$venta['adelanto']} Bs</td>
-                        <td>{$venta['totalPagar']} Bs</td>
-                        <td>{$estadoTexto}</td>
-                        <td>{$venta['fechaRegistro']}</td>
-                        <td>{$venta['fecha_entrega']}</td>
-                      </tr>";
+                                    <td>{$venta['idVenta']}</td>
+                                    <td>{$venta['nombre']} {$venta['apellido']}</td>
+                                    <td>{$venta['descripcion']}</td>
+                                    <td>{$venta['adelanto']} Bs</td>
+                                    <td>{$totalPagar} Bs</td>
+                                    <td>{$estadoTexto}</td>
+                                    <td>{$venta['fechaRegistro']}</td>
+                                    <td>{$venta['fecha']}</td>
+                                  </tr>";
         }
 
+
+
         $html .= "</table>";
-        return $html;
+
+        // Inicializar Dompdf y generar el PDF
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+
+        $dompdf->stream("reporte_ventas_por_fecha.pdf", ["Attachment" => 0]);
     }
+
+
 }

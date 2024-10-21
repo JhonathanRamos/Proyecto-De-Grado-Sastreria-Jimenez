@@ -20,3 +20,38 @@ in APPPATH\Views\datos\datosPantalon.php on line 322.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 12:10:47 --> Undefined array key "id"
+in APPPATH\Controllers\ReportesController.php on line 226.
+ 1 APPPATH\Controllers\ReportesController.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 226)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 12:13:08 --> Undefined array key "totalPagar"
+in APPPATH\Controllers\ReportesController.php on line 230.
+ 1 APPPATH\Controllers\ReportesController.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "totalPagar"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 230)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 12:15:56 --> Undefined array key "id"
+in APPPATH\Controllers\ReportesController.php on line 228.
+ 1 APPPATH\Controllers\ReportesController.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 12:16:22 --> Undefined array key "fecha_entrega"
+in APPPATH\Controllers\ReportesController.php on line 235.
+ 1 APPPATH\Controllers\ReportesController.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_entrega"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 235)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 12:18:11 --> Undefined array key "fecha_entrega"
+in APPPATH\Controllers\ReportesController.php on line 235.
+ 1 APPPATH\Controllers\ReportesController.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_entrega"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 235)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
