@@ -269,12 +269,13 @@
 
 
 
-                        <!-- reportes.php -->
                         <div class="container">
                             <h1 class="card-title">Reportes Generales</h1>
                             <div class="mb-3">
-                                <a href="<?= site_url('/exportarPDF/estadoClientes') ?>" class="btn btn-primary"
-                                    target="_blank">Exportar Estado de Clientes</a>
+                                <a href="<?= site_url('/exportarPDF/estadoClientes/activos') ?>" class="btn btn-primary"
+                                    target="_blank">Exportar Clientes Activos</a>
+                                <a href="<?= site_url('/exportarPDF/estadoClientes/inactivos') ?>"
+                                    class="btn btn-secondary" target="_blank">Exportar Clientes Inactivos</a>
                                 <a href="<?= site_url('/exportarPDF/deudores') ?>" class="btn btn-warning"
                                     target="_blank">Exportar Deudores</a>
                                 <a href="<?= site_url('/exportarPDF/totalDeuda') ?>" class="btn btn-danger"
@@ -288,6 +289,8 @@
                                 <!-- Aquí puedes incluir tablas similares a las de ventas, con los datos correspondientes a cada reporte -->
                             </div>
                         </div>
+
+
 
 
 

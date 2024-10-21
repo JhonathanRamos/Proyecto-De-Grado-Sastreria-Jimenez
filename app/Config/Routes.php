@@ -95,7 +95,9 @@ $routes->get('exportarPDF/pendientes', 'DompdfController::exportarPendientesPDF'
 
 
 $routes->get('reportes', 'ReportesController::index');
-$routes->get('exportarPDF/(:segment)', 'ReportesController::exportarPDF/$1');
+
+
+$routes->get('/exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
 
 
 });

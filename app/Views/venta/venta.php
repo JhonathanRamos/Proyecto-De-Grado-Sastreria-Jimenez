@@ -98,13 +98,12 @@
           </a>
           <div class="collapse" id="auth">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a> </li>
               <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosTrajeMasculino') ?>">Traje
                   Masculino</a> </li>
               <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosTrajeFemenino') ?>">Traje Femenino</a>
               </li>
               <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosPantalon') ?>">Pantalon</a> </li>
-
+              <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a> </li>
             </ul>
           </div>
         </li>
@@ -127,6 +126,17 @@
             <span class="menu-title"> Venta</span>
           </a>
         </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="<?= base_url('reportes') ?>">
+            <span class="menu-icon">
+              <i class="mdi mdi-account-multiple-plus"></i>
+            </span>
+            <span class="menu-title"> Reportes</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
 
 
@@ -266,15 +276,6 @@
               <div class="card">
                 <div class="card-body">
                   <h1 class="card-title">Ventas</h1>
-
-                  <!-- Botones para Exportar PDF -->
-                  <!-- Botones para Exportar PDF -->
-                  <div class="mb-3">
-                    <a href="<?= site_url('/exportarPDF/completadas') ?>" class="btn btn-success"
-                      target="_blank">Exportar Ventas Completadas</a>
-                    <a href="<?= site_url('/exportarPDF/pendientes') ?>" class="btn btn-warning"
-                      target="_blank">Exportar Ventas Pendientes</a>
-                  </div>
                   <div class="input-group mb-3">
                     <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
                   </div>

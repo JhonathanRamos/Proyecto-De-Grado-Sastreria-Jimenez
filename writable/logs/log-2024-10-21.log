@@ -9,3 +9,49 @@ in APPPATH\Views\reportes\reportes.php on line 1.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-21 03:25:50 --> Undefined array key "id"
+in APPPATH\Controllers\ReportesController.php on line 130.
+ 1 APPPATH\Controllers\ReportesController.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 130)
+ 2 APPPATH\Controllers\ReportesController.php(30): App\Controllers\ReportesController->generarHtmlDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDF('deudores')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-21 03:25:52 --> mysqli_sql_exception: Unknown column 'venta.totalPagar' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT SUM(vent...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(vent...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(vent...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(149): CodeIgniter\Database\BaseConnection->query('SELECT SUM(vent...')
+#4 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(33): App\Controllers\ReportesController->generarHtmlTotalDeuda()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDF('totalDeuda')
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-10-21 03:25:52 --> Unknown column 'venta.totalPagar' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(149): CodeIgniter\Database\BaseConnection->query('SELECT SUM(venta.totalPagar) as totalDeuda
+                             FROM venta
+                             WHERE venta.estado = 0')
+ 2 APPPATH\Controllers\ReportesController.php(33): App\Controllers\ReportesController->generarHtmlTotalDeuda()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDF('totalDeuda')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-21 03:25:54 --> Undefined array key "id"
+in APPPATH\Controllers\ReportesController.php on line 189.
+ 1 APPPATH\Controllers\ReportesController.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 189)
+ 2 APPPATH\Controllers\ReportesController.php(36): App\Controllers\ReportesController->generarHtmlTrabajosPendientes()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDF('trabajosPendientes')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-21 03:25:56 --> Undefined array key "id"
+in APPPATH\Controllers\ReportesController.php on line 231.
+ 1 APPPATH\Controllers\ReportesController.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\ReportesController.php', 231)
+ 2 APPPATH\Controllers\ReportesController.php(39): App\Controllers\ReportesController->generarHtmlVentasPorFecha()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDF('ventasPorFecha')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

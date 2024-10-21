@@ -98,8 +98,6 @@
                     </a>
                     <div class="collapse" id="auth">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a>
-                            </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('datosTrajeMasculino') ?>">Traje
                                     Masculino</a> </li>
@@ -108,7 +106,8 @@
                             </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('datosPantalon') ?>">Pantalon</a> </li>
-
+                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -132,6 +131,14 @@
                             <i class="mdi mdi-account-multiple-plus"></i>
                         </span>
                         <span class="menu-title"> Venta</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('reportes') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-account-multiple-plus"></i>
+                        </span>
+                        <span class="menu-title"> Reportes</span>
                     </a>
                 </li>
 
