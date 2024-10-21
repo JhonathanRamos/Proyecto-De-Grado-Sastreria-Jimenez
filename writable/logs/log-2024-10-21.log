@@ -1,0 +1,11 @@
+CRITICAL - 2024-10-21 01:54:55 --> Undefined variable $cabecera
+in APPPATH\Views\reportes\reportes.php on line 1.
+ 1 APPPATH\Views\reportes\reportes.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\reportes\\reportes.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\reportes\\reportes.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('reportes/reportes', [], true)
+ 5 APPPATH\Controllers\ReportesController.php(14): view('reportes/reportes')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
