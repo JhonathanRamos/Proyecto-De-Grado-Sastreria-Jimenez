@@ -7,6 +7,7 @@
             <p class="card-text">
             <form method="post" action="<?= site_url('/guardarVenta') ?>" enctype="multipart/form-data">
 
+
                 <!-- Campo para Cliente -->
                 <div class="form-group">
                     <label for="idCliente">Cliente:</label>
@@ -31,6 +32,7 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
+
 
                 <!-- Campo para Adelanto -->
                 <div class="form-group">
