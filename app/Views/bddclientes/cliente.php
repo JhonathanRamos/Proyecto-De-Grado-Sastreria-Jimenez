@@ -265,10 +265,17 @@
               <div class="card">
                 <div class="card-body">
                   <h1 class="card-title">Clientes</h1>
-                  <div class="input-group mb-3">
+                  <!-- Formulario para el buscador -->
+                  <form method="GET" action="<?= site_url('cliente'); ?>">
+                    <div class="input-group mb-3">
+                      <input type="text" id="search" name="search" class="form-control" placeholder="Buscar Clientes..."
+                        value="<?= set_value('search'); ?>">
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                      </div>
+                    </div>
+                  </form>
 
-                    <input type="text" id="search" class="form-control" placeholder="Buscar Clientes...">
-                  </div>
                   <div class="table-responsive">
                     <table class="table table-dark" id="clientesTable">
                       <thead>
@@ -278,46 +285,51 @@
                           <th>Apellido</th>
                           <th>Sexo</th>
                           <th>Celular</th>
-                          <th id="fechaRegistro" class="sortable" data-sort="fechaRegistro">Fecha Registro<span
-                              class="sort-icon"></span></th>
+                          <th>Fecha Registro</th>
                           <th>Fecha Actualización</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach ($clientes as $Cliente): ?>
+                        <?php if (!empty($clientes)): ?>
+                          <?php foreach ($clientes as $Cliente): ?>
+                            <tr>
+                              <td><?= $Cliente['id']; ?></td>
+                              <td><?= $Cliente['nombre']; ?></td>
+                              <td><?= $Cliente['apellido']; ?></td>
+                              <td><?= ($Cliente['sexo'] === 'M') ? 'Masculino' : 'Femenino'; ?></td>
+                              <td><?= $Cliente['celular']; ?></td>
+                              <td><?= $Cliente['fechaRegistro']; ?></td>
+                              <td><?= $Cliente['fechaActualizacion']; ?></td>
+                              <td>
+                                <div class="btn-group">
+                                  <a href="<?= base_url('editar/' . $Cliente['id']); ?>"
+                                    class="btn btn-outline-primary">Editar</a>
+                                  <a href="#" class="btn btn-outline-danger"
+                                    onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
+                                  <a href="<?= base_url('ventas/crear/' . $Cliente['id']); ?>"
+                                    class="btn btn-outline-success">Registrar Venta</a>
+                                </div>
+                              </td>
+                            </tr>
+                          <?php endforeach; ?>
+                        <?php else: ?>
                           <tr>
-                            <td><?= $Cliente['id']; ?></td>
-                            <td><?= $Cliente['nombre']; ?></td>
-                            <td><?= $Cliente['apellido']; ?></td>
-                            <td><?= ($Cliente['sexo'] === 'M') ? 'Masculino' : 'Femenino'; ?></td>
-                            <td><?= $Cliente['celular']; ?></td>
-                            <td><?= $Cliente['fechaRegistro']; ?></td>
-                            <td><?= $Cliente['fechaActualizacion']; ?></td>
-                            <td>
-                              <div class="btn-group">
-                                <a href="<?= base_url('editar/' . $Cliente['id']); ?>" class="btn btn-outline-primary"
-                                  style="margin-right: 2px;">Editar</a>
-                                <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
-                                  onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
-                                <!-- Agregar botón de Registrar Venta -->
-                                <a href="<?= base_url('ventas/crear/' . $Cliente['id']); ?>"
-                                  class="btn btn-outline-success">Registrar Venta</a>
-                              </div>
-                            </td>
+                            <td colspan="8">No se encontraron resultados</td>
                           </tr>
-                        <?php endforeach; ?>
+                        <?php endif; ?>
                       </tbody>
                     </table>
-
-
-
-                    <!-- Enlaces de paginación -->
-                    <div class="pagination-links">
-                      <?= $paginacion->links() ?> <!-- Mostrar los enlaces de paginación -->
-                    </div>
-
                   </div>
+
+                  <!-- Enlaces de paginación -->
+                  <div class="pagination-links">
+                    <?php if ($paginacion->getPageCount() > 1): ?>
+                      <?= $paginacion->only(['search'])->links() ?>
+                    <?php endif; ?>
+                  </div>
+
+
 
                 </div>
               </div>

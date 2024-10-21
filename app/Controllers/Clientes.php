@@ -10,20 +10,33 @@ class Clientes extends Controller
     {
         $cliente = new Cliente();
 
-        // Seleccionar solo clientes activos, paginados de 10 en 10
-        $datos['clientes'] = $cliente->where('estado', 1)
-                                    ->orderBy('id', 'ASC')
-                                    ->paginate(10); // Mostrar 10 clientes por página
+        // Obtener el término de búsqueda
+        $search = $this->request->getVar('search');
 
-        // Generar los enlaces de paginación
-        $datos['paginacion'] = $cliente->pager;
+        if ($search) {
+            $clientes = $cliente->like('nombre', $search)
+                ->orLike('apellido', $search)
+                ->where('estado', 1)
+                ->orderBy('id', 'ASC')
+                ->paginate(10);
+        } else {
+            $clientes = $cliente->where('estado', 1)
+                ->orderBy('id', 'ASC')
+                ->paginate(10);
+        }
 
-        // Añadir las vistas de cabecera y pie de página
-        $datos['cabecera'] = view('template/cabecera');
-        $datos['pie'] = view('template/piepagina');
+        // Pasar datos a la vista
+        $data['clientes'] = $clientes;
+        $data['paginacion'] = $cliente->pager;
+        $data['search'] = $search;  // Pasar el término de búsqueda
 
-        return view('bddclientes/cliente', $datos);
+        // Cargar la vista
+        $data['cabecera'] = view('template/cabecera');
+        $data['pie'] = view('template/piepagina');
+
+        return view('bddclientes/cliente', $data);
     }
+
 
     // Se está creando la vista de CREAR
     public function crear()
