@@ -1,0 +1,22 @@
+CRITICAL - 2024-10-23 04:07:37 --> Undefined array key "pago"
+in APPPATH\Views\bddclientes\cliente.php on line 124.
+ 1 APPPATH\Views\bddclientes\cliente.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pago"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\cliente.php', 124)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\cliente.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/cliente', [], true)
+ 5 APPPATH\Controllers\Clientes.php(23): view('bddclientes/cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:37:48 --> Undefined variable $Cliente
+in APPPATH\Views\datos\datosPantalon.php on line 322.
+ 1 APPPATH\Views\datos\datosPantalon.php(322): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Cliente', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosPantalon.php', 322)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosPantalon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosPantalon', [], true)
+ 5 APPPATH\Controllers\Pantalons.php(53): view('datos/datosPantalon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Pantalons->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

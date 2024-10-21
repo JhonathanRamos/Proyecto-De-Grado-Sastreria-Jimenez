@@ -13,7 +13,7 @@
                     <select id="idCliente" class="form-control" name="idCliente" required>
                         <option value="">Seleccione un cliente</option>
                         <?php foreach ($clientes as $cliente): ?>
-                            <option value="<?= esc($cliente['id']); ?>">
+                            <option value="<?= esc($cliente['id']); ?>" <?= isset($clienteSeleccionado) && $clienteSeleccionado['id'] == $cliente['id'] ? 'selected' : ''; ?>>
                                 <?= esc($cliente['nombre']) . ' ' . esc($cliente['apellido']); ?>
                             </option>
                         <?php endforeach; ?>
@@ -25,7 +25,7 @@
                     <label for="idConfeccion">Confección:</label>
                     <select id="idConfeccion" class="form-control" name="idConfeccion" required>
                         <?php foreach ($confecciones as $confeccion): ?>
-                            <option value="<?= esc($confeccion['id']); ?>" <?= set_select('idConfeccion', $confeccion['id']); ?>>
+                            <option value="<?= esc($confeccion['id']); ?>" <?= isset($confeccionSeleccionada) && strtolower($confeccion['descripcion']) == strtolower($confeccionSeleccionada) ? 'selected' : ''; ?>>
                                 <?= esc($confeccion['descripcion']); ?> (<?= esc($confeccion['precio']) . ' Bs'; ?>)
                             </option>
                         <?php endforeach; ?>
@@ -84,6 +84,8 @@
 
                 <button id="guardarBtnVenta" class="btn btn-success btn-fw" type="submit">Guardar</button>
                 <a href="<?= site_url('/venta') ?>" class="btn btn-danger btn-fw">Cancelar</a>
+
+
             </form>
 
             </p>

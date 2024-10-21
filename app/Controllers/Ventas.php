@@ -60,11 +60,30 @@ class Ventas extends Controller
         $data['clientes'] = $clienteModel->findAll();
         $data['confecciones'] = $confeccionModel->findAll();
 
+        // Detectar si se ha pasado un cliente y una confección en la URL
+        $idCliente = $this->request->getGet('cliente');
+        $confeccionSeleccionada = $this->request->getGet('confeccion');
+
+        // Si se ha pasado un cliente, buscar ese cliente y preseleccionarlo
+        if ($idCliente) {
+            $data['clienteSeleccionado'] = $clienteModel->find($idCliente);
+        } else {
+            $data['clienteSeleccionado'] = null;  // Ningún cliente preseleccionado
+        }
+
+        // Si se ha pasado una confección, buscar esa confección y preseleccionarla
+        if ($confeccionSeleccionada) {
+            $data['confeccionSeleccionada'] = $confeccionSeleccionada;
+        } else {
+            $data['confeccionSeleccionada'] = null;  // Ninguna confección preseleccionada
+        }
+
         $data['cabecera'] = view('template/cabecera');
         $data['pie'] = view('template/piepagina');
 
         return view('venta/crearVenta', $data); // Cargar vista de crear venta
     }
+
 
     // Método para guardar la venta
     public function guardarVenta()
@@ -224,7 +243,7 @@ class Ventas extends Controller
         return view('venta/confirmarPago', $data);
     }
 
-    
+
 
 
 }

@@ -300,6 +300,9 @@
                                   style="margin-right: 2px;">Editar</a>
                                 <a href="#" class="btn btn-outline-danger" style="margin-right: 2px;"
                                   onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
+                                <!-- Agregar botón de Registrar Venta -->
+                                <a href="<?= base_url('ventas/crear/' . $Cliente['id']); ?>"
+                                  class="btn btn-outline-success">Registrar Venta</a>
                               </div>
                             </td>
                           </tr>
