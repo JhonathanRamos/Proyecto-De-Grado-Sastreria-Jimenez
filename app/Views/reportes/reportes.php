@@ -278,6 +278,7 @@
                                     class="btn btn-secondary" target="_blank">Exportar Clientes Inactivos</a>
                                 <a href="<?= site_url('/exportarPDF/deudores') ?>" class="btn btn-warning"
                                     target="_blank">Exportar Deudores</a>
+
                                 <a href="<?= site_url('/exportarPDF/totalDeuda') ?>" class="btn btn-danger"
                                     target="_blank">Exportar Total de la Deuda</a>
                                 <a href="<?= site_url('/exportarPDF/trabajosPendientes') ?>" class="btn btn-success"

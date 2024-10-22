@@ -65,3 +65,213 @@ in APPPATH\Views\bddclientes\cliente.php on line 327.
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:23:01 --> Call to undefined method CodeIgniter\Pager\Pager::appends()
+in APPPATH\Views\datos\datosFalda.php on line 336.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 4 APPPATH\Controllers\Faldas.php(97): view('datos/datosFalda', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:24:51 --> "bootstrap_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 120.
+ 1 SYSTEMPATH\Pager\Pager.php(120): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 3 APPPATH\Views\datos\datosFalda.php(337): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 7 APPPATH\Controllers\Faldas.php(97): view('datos/datosFalda', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:25:17 --> "bootstrap_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 120.
+ 1 SYSTEMPATH\Pager\Pager.php(120): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 3 APPPATH\Views\datos\datosFalda.php(337): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 7 APPPATH\Controllers\Faldas.php(94): view('datos/datosFalda', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:25:34 --> "bootstrap_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 120.
+ 1 SYSTEMPATH\Pager\Pager.php(120): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 3 APPPATH\Views\datos\datosFalda.php(338): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 7 APPPATH\Controllers\Faldas.php(94): view('datos/datosFalda', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:28:49 --> Call to undefined method CodeIgniter\Pager\Pager::appends()
+in APPPATH\Views\datos\datosFalda.php on line 330.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 4 APPPATH\Controllers\Faldas.php(94): view('datos/datosFalda', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:31:58 --> Call to undefined method CodeIgniter\Pager\Pager::appends()
+in APPPATH\Views\datos\datosFalda.php on line 328.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 4 APPPATH\Controllers\Faldas.php(90): view('datos/datosFalda', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:33:29 --> "bootstrap_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 120.
+ 1 SYSTEMPATH\Pager\Pager.php(120): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 3 APPPATH\Views\datos\datosFalda.php(328): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 7 APPPATH\Controllers\Faldas.php(92): view('datos/datosFalda', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:34:30 --> "bootstrap_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 120.
+ 1 SYSTEMPATH\Pager\Pager.php(120): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 3 APPPATH\Views\datos\datosFalda.php(329): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 7 APPPATH\Controllers\Faldas.php(92): view('datos/datosFalda', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:35:58 --> Invalid file: "CodeIgniter\Pager\Views\bootstrap_full.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('CodeIgniter\\Pager\\Views\\bootstrap_full.php')
+ 2 SYSTEMPATH\Pager\Pager.php(126): CodeIgniter\View\View->render('CodeIgniter\\Pager\\Views\\bootstrap_full')
+ 3 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_pagination')
+ 4 APPPATH\Views\datos\datosFalda.php(329): CodeIgniter\Pager\Pager->links('default', 'bootstrap_pagination')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 8 APPPATH\Controllers\Faldas.php(92): view('datos/datosFalda', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:36:27 --> Invalid file: "CodeIgniter\Pager\Views\bootstrap_full.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('CodeIgniter\\Pager\\Views\\bootstrap_full.php')
+ 2 SYSTEMPATH\Pager\Pager.php(126): CodeIgniter\View\View->render('CodeIgniter\\Pager\\Views\\bootstrap_full')
+ 3 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('grupo', 'bootstrap_pagination')
+ 4 APPPATH\Views\datos\datosFalda.php(329): CodeIgniter\Pager\Pager->links('grupo', 'bootstrap_pagination')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 8 APPPATH\Controllers\Faldas.php(92): view('datos/datosFalda', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:36:27 --> Invalid file: "CodeIgniter\Pager\Views\bootstrap_full.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('CodeIgniter\\Pager\\Views\\bootstrap_full.php')
+ 2 SYSTEMPATH\Pager\Pager.php(126): CodeIgniter\View\View->render('CodeIgniter\\Pager\\Views\\bootstrap_full')
+ 3 SYSTEMPATH\Pager\Pager.php(83): CodeIgniter\Pager\Pager->displayLinks('grupo', 'bootstrap_pagination')
+ 4 APPPATH\Views\datos\datosFalda.php(329): CodeIgniter\Pager\Pager->links('grupo', 'bootstrap_pagination')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 8 APPPATH\Controllers\Faldas.php(92): view('datos/datosFalda', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-23 13:51:46 --> mysqli_sql_exception: Unknown column 'venta.id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT venta.id...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT venta.id...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT venta.id...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id...')
+#4 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(136): App\Controllers\ReportesController->generarHtmlDeudores()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-10-23 13:51:46 --> Unknown column 'venta.id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id AS idVenta, cliente.nombre, cliente.apellido, 
+                                venta.adelanto, venta.totalPagar, venta.metodo_pago, venta.fechaRegistro
+                         FROM venta
+                         JOIN cliente ON venta.idCliente = cliente.id
+                         WHERE venta.estado = 0 AND venta.totalPagar > 0')
+ 2 APPPATH\Controllers\ReportesController.php(136): App\Controllers\ReportesController->generarHtmlDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-23 13:52:40 --> mysqli_sql_exception: Unknown column 'venta.totalPagar' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT venta.id...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT venta.id...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT venta.id...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id...')
+#4 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(136): App\Controllers\ReportesController->generarHtmlDeudores()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-10-23 13:52:40 --> Unknown column 'venta.totalPagar' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.idVenta AS idVenta, cliente.nombre, cliente.apellido, 
+                                venta.adelanto, venta.totalPagar, venta.metodo_pago, venta.fechaRegistro
+                         FROM venta
+                         JOIN cliente ON venta.idCliente = cliente.id
+                         WHERE venta.estado = 0 AND venta.totalPagar > 0')
+ 2 APPPATH\Controllers\ReportesController.php(136): App\Controllers\ReportesController->generarHtmlDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-23 13:54:32 --> mysqli_sql_exception: Unknown column 'venta.id' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT venta.id...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT venta.id...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT venta.id...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id...')
+#4 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(137): App\Controllers\ReportesController->generarHtmlDeudores()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-10-23 13:54:32 --> Unknown column 'venta.id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id AS idVenta, cliente.nombre, cliente.apellido, 
+                                venta.adelanto, (venta.precio - venta.adelanto) AS totalPagar, 
+                                venta.metodo_pago, venta.fechaRegistro
+                         FROM venta
+                         JOIN cliente ON venta.idCliente = cliente.id
+                         WHERE venta.estado = 0 AND (venta.precio - venta.adelanto) > 0')
+ 2 APPPATH\Controllers\ReportesController.php(137): App\Controllers\ReportesController->generarHtmlDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

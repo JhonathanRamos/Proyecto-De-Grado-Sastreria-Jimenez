@@ -88,44 +88,68 @@ class ReportesController extends BaseController
 
 
     // Generar HTML para deudores
+    // Generar HTML para deudores
+    // Generar HTML para deudores
     private function generarHtmlDeudores()
     {
         $db = \Config\Database::connect();
 
-        $query = $db->query("SELECT venta.*, cliente.nombre, cliente.apellido
-                             FROM venta
-                             JOIN cliente ON venta.idCliente = cliente.id
-                             WHERE venta.estado = 0");
+        // Ajustar la consulta para que el total a pagar sea la diferencia entre precio y adelanto
+        $query = $db->query("SELECT venta.idVenta AS idVenta, cliente.nombre, cliente.apellido, 
+                                venta.adelanto, (confeccion.precio - venta.adelanto) AS totalPagar, 
+                                venta.metodo_pago, venta.fechaRegistro
+                         FROM venta
+                         JOIN cliente ON venta.idCliente = cliente.id
+                         JOIN confeccion ON venta.idConfeccion = confeccion.id
+                         WHERE venta.estado = 0 AND (confeccion.precio - venta.adelanto) > 0");
 
-        $deudores = $query->getResultArray();
+        // Resultados de la consulta
+        $ventas = $query->getResultArray();
 
+        // Inicio del HTML
         $html = "<h1>Deudores</h1>";
         $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
-                    <tr>
-                        <th>#</th>
-                        <th>Cliente</th>
-                        <th>Adelanto</th>
-                        <th>Total a Pagar</th>
-                        <th>Estado</th>
-                        <th>Método de Pago</th>
-                        <th>Fecha Registro</th>
-                    </tr>";
+                <tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>Adelanto</th>
+                    <th>Total a Pagar</th>
+                    <th>Método de Pago</th>
+                    <th>Fecha Registro</th>
+                </tr>";
 
-        foreach ($deudores as $deudor) {
+        // Recorrer las ventas para generar las filas de la tabla
+        foreach ($ventas as $venta) {
             $html .= "<tr>
-                        <td>{$deudor['id']}</td>
-                        <td>{$deudor['nombre']} {$deudor['apellido']}</td>
-                        <td>{$deudor['adelanto']} Bs</td>
-                        <td>{$deudor['totalPagar']} Bs</td>
-                        <td>Pendiente</td>
-                        <td>{$deudor['metodo_pago']}</td>
-                        <td>{$deudor['fechaRegistro']}</td>
-                      </tr>";
+                    <td>{$venta['idVenta']}</td>
+                    <td>{$venta['nombre']} {$venta['apellido']}</td>
+                    <td>{$venta['adelanto']} Bs</td>
+                    <td>{$venta['totalPagar']} Bs</td>
+                    <td>{$venta['metodo_pago']}</td>
+                    <td>{$venta['fechaRegistro']}</td>
+                  </tr>";
         }
 
         $html .= "</table>";
         return $html;
     }
+
+    public function exportarPDFDeudores()
+    {
+        // Generar el HTML para el reporte de deudores
+        $html = $this->generarHtmlDeudores();
+
+        // Inicializar Dompdf
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+
+        // Mostrar el PDF en el navegador
+        $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
+    }
+
+
 
     // Generar HTML para el total de la deuda
     private function generarHtmlTotalDeuda()

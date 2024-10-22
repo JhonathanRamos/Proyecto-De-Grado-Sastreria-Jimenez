@@ -17,11 +17,11 @@ class Clientes extends Controller
             $clientes = $cliente->like('nombre', $search)
                 ->orLike('apellido', $search)
                 ->where('estado', 1)
-                ->orderBy('id', 'ASC')
+                ->orderBy('id', 'DES')
                 ->paginate(10);
         } else {
             $clientes = $cliente->where('estado', 1)
-                ->orderBy('id', 'ASC')
+                ->orderBy('id', 'DES')
                 ->paginate(10);
         }
 
