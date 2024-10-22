@@ -151,23 +151,61 @@ class ReportesController extends BaseController
 
 
 
-    // Generar HTML para el total de la deuda
-    private function generarHtmlTotalDeuda()
+    // Generar HTML para el total de la deuda por cliente
+    private function generarHtmlDeudaPorCliente()
     {
         $db = \Config\Database::connect();
 
-        $query = $db->query("SELECT SUM(venta.totalPagar) as totalDeuda
-                             FROM venta
-                             WHERE venta.estado = 0");
+        // Consulta para obtener el total de la deuda por cliente
+        $query = $db->query("SELECT cliente.id, cliente.nombre, cliente.apellido, 
+                                SUM(confeccion.precio - venta.adelanto) AS totalDeuda
+                         FROM venta
+                         JOIN cliente ON venta.idCliente = cliente.id
+                         JOIN confeccion ON venta.idConfeccion = confeccion.id
+                         WHERE venta.estado = 0
+                         GROUP BY cliente.id
+                         HAVING totalDeuda > 0");  // Solo mostrar clientes con deuda pendiente
 
-        $result = $query->getRow();
-        $totalDeuda = $result->totalDeuda;
+        // Resultados de la consulta
+        $clientes = $query->getResultArray();
 
-        $html = "<h1>Total de la Deuda</h1>";
-        $html .= "<p>El total de la deuda acumulada por ventas pendientes es: <strong>{$totalDeuda} Bs</strong></p>";
+        // Generar el HTML
+        $html = "<h1>Total de Deuda por Cliente</h1>";
+        $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
+                <tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>Total Deuda</th>
+                </tr>";
 
+        foreach ($clientes as $cliente) {
+            $html .= "<tr>
+                    <td>{$cliente['id']}</td>
+                    <td>{$cliente['nombre']} {$cliente['apellido']}</td>
+                    <td>{$cliente['totalDeuda']} Bs</td>
+                  </tr>";
+        }
+
+        $html .= "</table>";
         return $html;
     }
+
+    // Exportar PDF para el total de deuda por cliente
+    public function exportarPDFDeudaPorCliente()
+    {
+        // Generar el HTML para el reporte de deuda por cliente
+        $html = $this->generarHtmlDeudaPorCliente();
+
+         // Inicializar Dompdf
+         $dompdf = new Dompdf();
+         $dompdf->loadHtml($html);
+         $dompdf->setPaper('A4', 'landscape');
+         $dompdf->render();
+ 
+         // Mostrar el PDF en el navegador
+         $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
+    }
+
 
     // Generar HTML para trabajos pendientes
     private function generarHtmlTrabajosPendientes()

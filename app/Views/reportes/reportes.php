@@ -274,15 +274,25 @@
                             <div class="mb-3">
                                 <a href="<?= site_url('/exportarPDF/estadoClientes/activos') ?>" class="btn btn-primary"
                                     target="_blank">Exportar Clientes Activos</a>
+
+
                                 <a href="<?= site_url('/exportarPDF/estadoClientes/inactivos') ?>"
                                     class="btn btn-secondary" target="_blank">Exportar Clientes Inactivos</a>
+
+
                                 <a href="<?= site_url('/exportarPDF/deudores') ?>" class="btn btn-warning"
                                     target="_blank">Exportar Deudores</a>
 
-                                <a href="<?= site_url('/exportarPDF/totalDeuda') ?>" class="btn btn-danger"
-                                    target="_blank">Exportar Total de la Deuda</a>
+                                <a href="<?= site_url('/exportarPDF/deudaPorCliente') ?>" class="btn btn-primary"
+                                    target="_blank">Exportar Deuda por Cliente</a>
+
+
+
+
                                 <a href="<?= site_url('/exportarPDF/trabajosPendientes') ?>" class="btn btn-success"
                                     target="_blank">Exportar Trabajos Pendientes</a>
+
+
                                 <form action="<?= site_url('/exportarPDF/ventasPorFecha') ?>" method="get"
                                     target="_blank">
                                     <label for="fechaInicio">Fecha Inicio:</label>

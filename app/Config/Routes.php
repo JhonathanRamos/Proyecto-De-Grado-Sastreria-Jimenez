@@ -100,6 +100,8 @@ $routes->get('reportes', 'ReportesController::index');
 $routes->get('/exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
 $routes->get('exportarPDF/ventasPorFecha', 'ReportesController::generarHtmlVentasPorFecha');
 $routes->get('/exportarPDF/deudores', 'ReportesController::exportarPDFDeudores');
+$routes->get('exportarPDF/deudaPorCliente', 'ReportesController::exportarPDFDeudaPorCliente');
+
 
 
 
