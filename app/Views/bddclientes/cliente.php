@@ -269,9 +269,10 @@
                   <form method="GET" action="<?= site_url('cliente'); ?>">
                     <div class="input-group mb-3">
                       <input type="text" id="search" name="search" class="form-control" placeholder="Buscar Clientes..."
-                        value="<?= set_value('search'); ?>">
+                        value="<?= esc($search) ?>">
                       <div class="input-group-append">
                         <button type="submit" class="btn btn-primary">Buscar</button>
+                        <a href="<?= site_url('cliente'); ?>" class="btn btn-secondary" onclick="document.getElementById('search').value = '';">Cancelar</a>
                       </div>
                     </div>
                   </form>
@@ -307,7 +308,7 @@
                                     class="btn btn-outline-primary">Editar</a>
                                   <a href="#" class="btn btn-outline-danger"
                                     onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
-                                  <a href="<?= base_url('ventas/crear/' . $Cliente['id']); ?>"
+                                    <a href="<?= base_url('crearVenta?cliente=' . $Cliente['id']); ?>"
                                     class="btn btn-outline-success">Registrar Venta</a>
                                 </div>
                               </td>
@@ -328,9 +329,6 @@
                       <?= $paginacion->only(['search'])->links() ?>
                     <?php endif; ?>
                   </div>
-
-
-
                 </div>
               </div>
             </div>

@@ -70,8 +70,8 @@
                 <div class="form-group">
                     <label for="pagado">¿Pago realizado?:</label>
                     <select id="pagado" name="pagado" class="form-control" required>
-                        <option value="0">Sí</option>
-                        <option value="1">No</option>
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
                     </select>
                 </div>
 
@@ -79,8 +79,8 @@
                 <div class="form-group">
                     <label for="estado"></label>
                     <select id="estado" class="form-control" name="estado" hidden>
-                        <option value="0" selected>Pendiente</option> <!-- "Pendiente" por defecto -->
-                        <option value="1">Completado</option> <!-- Completado, pero no se selecciona al inicio -->
+                        <option value="0" selected>Pendiente</option>
+                        <option value="1">Completado</option> 
                     </select>
                 </div>
 

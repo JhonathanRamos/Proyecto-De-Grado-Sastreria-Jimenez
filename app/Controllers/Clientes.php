@@ -10,32 +10,39 @@ class Clientes extends Controller
     {
         $cliente = new Cliente();
 
-        // Obtener el término de búsqueda
-        $search = $this->request->getVar('search');
+        // Detectar si se presionó "cancel"
+        $action = $this->request->getGet('action');
+        $search = $this->request->getGet('search');
 
-        if ($search) {
-            $clientes = $cliente->like('nombre', $search)
-                ->orLike('apellido', $search)
-                ->where('estado', 1)
-                ->orderBy('id', 'DES')
-                ->paginate(10);
-        } else {
-            $clientes = $cliente->where('estado', 1)
-                ->orderBy('id', 'DES')
-                ->paginate(10);
+        // Crear la consulta base
+        $query = $cliente->where('estado', 1);
+
+        // Aplicar la búsqueda si existe un término
+        if (!empty($search)) {
+            $query->groupStart()
+                ->like('nombre', $search, 'both')
+                ->orLike('apellido', $search, 'both')
+                ->orLike('celular', $search, 'both')
+                ->groupEnd();
         }
 
-        // Pasar datos a la vista
-        $data['clientes'] = $clientes;
-        $data['paginacion'] = $cliente->pager;
-        $data['search'] = $search;  // Pasar el término de búsqueda
+        // Configurar la paginación
+        $clientes = $query->orderBy('id', 'DESC')->paginate(10);
+        $paginacion = $cliente->pager;
 
-        // Cargar la vista
-        $data['cabecera'] = view('template/cabecera');
-        $data['pie'] = view('template/piepagina');
+        // Pasar los datos a la vista, incluyendo cabecera y pie de página
+        $data = [
+            'clientes' => $clientes,
+            'paginacion' => $paginacion,
+            'search' => $search,
+            'cabecera' => view('template/cabecera'),
+            'pie' => view('template/piepagina')
+        ];
 
         return view('bddclientes/cliente', $data);
     }
+
+
 
 
     // Se está creando la vista de CREAR
