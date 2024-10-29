@@ -309,3 +309,14 @@ in APPPATH\Views\datos\datosPantalon.php on line 282.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-29 15:06:01 --> Undefined variable $Pantalon
+in APPPATH\Views\datos\datosFalda.php on line 314.
+ 1 APPPATH\Views\datos\datosFalda.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Pantalon', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php', 314)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 5 APPPATH\Controllers\Faldas.php(77): view('datos/datosFalda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

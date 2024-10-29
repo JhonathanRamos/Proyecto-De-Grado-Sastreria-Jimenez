@@ -30,9 +30,11 @@
 
 
 
+
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.png') ?>">
 
+<link rel="stylesheet" href="<?= base_url('public/css/estilo.css') ?>">
 
     
     

@@ -103,6 +103,7 @@ $routes->get('exportarPDF/deudaPorCliente', 'ReportesController::exportarPDFDeud
 
 
 
+$routes->get('personalizar-traje', 'TrajeController::index');
 
 
 });
@@ -113,16 +114,16 @@ $routes->set404Override(function () {
 
 
 
-//HTML SASTRERIA
-$routes->get('comprar.html', 'Clientes::comprar');
-$routes->get('traje.html', 'Clientes::traje');
-$routes->get('diseno.html', 'Clientes::diseno');
-$routes->get('novedad.html', 'Clientes::novedad');
-$routes->get('sacoFemenino.html', 'Clientes::sacoFemenino');
-$routes->get('sacoMasculino.html', 'Clientes::sacoMasculino');
-$routes->get('index.html', 'Clientes::index1');
-$routes->get('nosotros.html', 'Clientes::nosotros');
-$routes->get('tienda', 'Clientes::tienda');
+// //HTML SASTRERIA
+// $routes->get('comprar.html', 'Clientes::comprar');
+// $routes->get('traje.html', 'Clientes::traje');
+// $routes->get('diseno.html', 'Clientes::diseno');
+// $routes->get('novedad.html', 'Clientes::novedad');
+// $routes->get('sacoFemenino.html', 'Clientes::sacoFemenino');
+// $routes->get('sacoMasculino.html', 'Clientes::sacoMasculino');
+// $routes->get('index.html', 'Clientes::index1');
+// $routes->get('nosotros.html', 'Clientes::nosotros');
+// $routes->get('tienda', 'Clientes::tienda');
 
 
 
