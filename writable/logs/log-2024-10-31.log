@@ -1,0 +1,110 @@
+ERROR - 2024-10-31 02:19:59 --> mysqli_sql_exception: Table 'bddsastreria.vista_deudores' doesn't exist in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(137): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-31 02:19:59 --> Table 'bddsastreria.vista_deudores' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(137): CodeIgniter\Database\BaseConnection->query('SELECT * FROM vista_deudores')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-31 02:21:22 --> mysqli_sql_exception: Table 'bddsastreria.vista_deudores' doesn't exist in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\code4\app\Controllers\ReportesController.php(137): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+#5 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+#6 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-31 02:21:22 --> Table 'bddsastreria.vista_deudores' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\ReportesController.php(137): CodeIgniter\Database\BaseConnection->query('SELECT * FROM vista_deudores')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->exportarPDFDeudores()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:06:42 --> Undefined array key "is_temp_password"
+in APPPATH\Models\Login.php on line 28.
+ 1 APPPATH\Models\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_temp_password"', 'C:\\xampp\\htdocs\\code4\\app\\Models\\Login.php', 28)
+ 2 APPPATH\Controllers\Auth.php(74): App\Models\Login->verifyUser('izaya65741131@gmail.com', 'f14019a4')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:12:59 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:34 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:35 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:35 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:36 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:36 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-31 16:46:45 --> Invalid file: "auth/change_password.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/change_password.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('auth/change_password', [], true)
+ 3 APPPATH\Controllers\Auth.php(124): view('auth/change_password')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->changePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-31 16:50:45 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
+ERROR - 2024-10-31 16:50:51 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
+ERROR - 2024-10-31 16:54:24 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
