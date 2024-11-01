@@ -6,8 +6,8 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = '';
-    public string $fromName   = '';
+    public string $fromEmail = 'laura65741113@gmail.com'; // Coloca aquí tu dirección de correo
+    public string $fromName = 'Sastreria Jimenez'; // Nombre que deseas que aparezca en el remitente
     public string $recipients = '';
 
     /**
@@ -16,106 +16,103 @@ class Email extends BaseConfig
     public string $userAgent = 'CodeIgniter';
 
     /**
-     * The mail sending protocol: mail, sendmail, smtp
+     * El protocolo de envío de correo: mail, sendmail, smtp
      */
-    public string $protocol = 'mail';
+    public string $protocol = 'smtp';
 
     /**
-     * The server path to Sendmail.
+     * Ruta del servidor Sendmail.
      */
     public string $mailPath = '/usr/sbin/sendmail';
 
     /**
-     * SMTP Server Address
+     * Dirección del servidor SMTP
      */
-    public string $SMTPHost = '';
+    public string $SMTPHost = 'smtp.gmail.com';
 
     /**
-     * SMTP Username
+     * Usuario SMTP
      */
-    public string $SMTPUser = '';
+    public string $SMTPUser = 'laura65741113@gmail.com';
 
     /**
-     * SMTP Password
+     * Contraseña SMTP (usa contraseña de aplicación si tienes 2FA activado)
      */
-    public string $SMTPPass = '';
+    public string $SMTPPass = 'sqnq bfjq iqhy afpo
+';
 
     /**
-     * SMTP Port
+     * Puerto SMTP
      */
-    public int $SMTPPort = 25;
+    public int $SMTPPort = 587;
 
     /**
-     * SMTP Timeout (in seconds)
+     * Tiempo de espera de SMTP (en segundos)
      */
-    public int $SMTPTimeout = 5;
+    public int $SMTPTimeout = 10;
 
     /**
-     * Enable persistent SMTP connections
+     * Mantener conexión persistente de SMTP
      */
     public bool $SMTPKeepAlive = false;
 
     /**
-     * SMTP Encryption.
-     *
-     * @var string '', 'tls' or 'ssl'. 'tls' will issue a STARTTLS command
-     *             to the server. 'ssl' means implicit SSL. Connection on port
-     *             465 should set this to ''.
+     * Encriptación SMTP
      */
     public string $SMTPCrypto = 'tls';
 
     /**
-     * Enable word-wrap
+     * Habilitar ajuste de línea
      */
     public bool $wordWrap = true;
 
     /**
-     * Character count to wrap at
+     * Número de caracteres antes de ajustar línea
      */
     public int $wrapChars = 76;
 
     /**
-     * Type of mail, either 'text' or 'html'
+     * Tipo de correo: 'text' o 'html'
      */
-    public string $mailType = 'text';
+    public string $mailType = 'html';
 
     /**
-     * Character set (utf-8, iso-8859-1, etc.)
+     * Conjunto de caracteres (utf-8, iso-8859-1, etc.)
      */
     public string $charset = 'UTF-8';
 
     /**
-     * Whether to validate the email address
+     * Validar la dirección de correo
      */
-    public bool $validate = false;
+    public bool $validate = true;
 
     /**
-     * Email Priority. 1 = highest. 5 = lowest. 3 = normal
+     * Prioridad del correo. 1 = más alta. 5 = más baja. 3 = normal
      */
     public int $priority = 3;
 
     /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
+     * Caracter de salto de línea
      */
     public string $CRLF = "\r\n";
 
     /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
+     * Caracter de salto de línea
      */
     public string $newline = "\r\n";
 
     /**
-     * Enable BCC Batch Mode.
+     * Habilitar el modo BCC Batch
      */
     public bool $BCCBatchMode = false;
 
     /**
-     * Number of emails in each BCC batch
+     * Número de correos en cada lote BCC
      */
     public int $BCCBatchSize = 200;
 
     /**
-     * Enable notify message from server
+     * Habilitar mensaje de notificación desde el servidor
      */
     public bool $DSN = false;
 }

@@ -155,4 +155,46 @@ class Clientes extends Controller
 
         return redirect()->to(site_url('/cliente'));
     }
+
+    public function comprar()
+    {
+        return view('sastreria/comprar.html');
+    }
+    public function traje()
+    {
+        return view('sastreria/traje.html');
+    }
+    public function diseno()
+    {
+        return view('sastreria/diseno.html');
+    }
+    public function novedad()
+    {
+        return view('sastreria/novedad.html');
+    }
+    public function sacoFemenino()
+    {
+        return view('sastreria/sacoFemenino.html');
+    }
+    public function sacoMasculino()
+    {
+        return view('sastreria/sacoMasculino.html');
+    }
+    public function index1()
+    {
+        return view('sastreria/index.html');
+    }
+    public function nosotros()
+    {
+        return view('sastreria/nosotros.html');
+    }
+    public function tienda()
+    {
+        return view('sastreria/tienda');
+    }
+    public function contacto()
+    {
+        return view('sastreria/contacto.html');
+    }
+
 }

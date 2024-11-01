@@ -103,6 +103,7 @@ $routes->get('exportarPDF/deudaPorCliente', 'ReportesController::exportarPDFDeud
 
 
 
+$routes->get('personalizar-traje', 'TrajeController::index');
 
 
 });
@@ -122,7 +123,9 @@ $routes->get('sacoFemenino.html', 'Clientes::sacoFemenino');
 $routes->get('sacoMasculino.html', 'Clientes::sacoMasculino');
 $routes->get('index.html', 'Clientes::index1');
 $routes->get('nosotros.html', 'Clientes::nosotros');
+$routes->get('contacto.html', 'Clientes::contacto');
 $routes->get('tienda', 'Clientes::tienda');
+
 
 
 
@@ -132,6 +135,19 @@ $routes->get('tienda', 'Clientes::tienda');
 $routes->get('/login', 'Auth::login');
 $routes->post('/auth/login', 'Auth::login'); // Asegúrate de que el formulario apunte a esta ruta
 $routes->post('/auth/register', 'Auth::register');
+
+// $routes->get('change-password', 'Auth::changePassword');
+// $routes->post('change-password', 'Auth::changePassword');
+
+$routes->get('mi-cuenta', 'Auth::miCuenta'); // Muestra la vista "Mi Cuenta"
+$routes->post('mi-cuenta/cambiar-contrasena', 'Auth::cambiarContrasena'); // Procesa el cambio de contraseña
+
+
+// CONTRASEÑA ERROR 
+$routes->get('mi-cuenta/olvidaste-tu-contrasena', 'Auth::olvidarContrasena');
+
+
+
 
 
 

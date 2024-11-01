@@ -97,7 +97,7 @@ class Ventas extends Controller
             'adelanto' => 'required|numeric',
             'fechaRecoleccion' => 'required',
             'estado' => 'required',
-            'metodo_pago' => 'required', // Validar el método de pago
+            'metodoPago' => 'required', // Validar el método de pago
             'pagado' => 'required|in_list[1,0]' // Validar si el pago fue realizado
         ]);
 
@@ -130,7 +130,7 @@ class Ventas extends Controller
             'fecha' => $this->request->getVar('fechaRecoleccion'),
             'idUsuario' => $idUsuario,
             'fechaRegistro' => date('Y-m-d H:i:s'),
-            'metodo_pago' => $this->request->getVar('metodo_pago'), // Guardar método de pago
+            'metodoPago' => $this->request->getVar('metodoPago'), // Guardar método de pago
             'pagado' => $this->request->getVar('pagado') // Guardar si el pago fue realizado
         ];
 

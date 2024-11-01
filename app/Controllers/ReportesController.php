@@ -87,9 +87,6 @@ class ReportesController extends BaseController
 
 
 
-    // Generar HTML para deudores
-    // Generar HTML para deudores
-    // Generar HTML para deudores
     private function generarHtmlDeudores()
     {
         $db = \Config\Database::connect();
@@ -97,7 +94,7 @@ class ReportesController extends BaseController
         // Ajustar la consulta para que el total a pagar sea la diferencia entre precio y adelanto
         $query = $db->query("SELECT venta.idVenta AS idVenta, cliente.nombre, cliente.apellido, 
                                 venta.adelanto, (confeccion.precio - venta.adelanto) AS totalPagar, 
-                                venta.metodo_pago, venta.fechaRegistro
+                                venta.metodoPago, venta.fechaRegistro
                          FROM venta
                          JOIN cliente ON venta.idCliente = cliente.id
                          JOIN confeccion ON venta.idConfeccion = confeccion.id
@@ -125,7 +122,7 @@ class ReportesController extends BaseController
                     <td>{$venta['nombre']} {$venta['apellido']}</td>
                     <td>{$venta['adelanto']} Bs</td>
                     <td>{$venta['totalPagar']} Bs</td>
-                    <td>{$venta['metodo_pago']}</td>
+                    <td>{$venta['metodoPago']}</td>
                     <td>{$venta['fechaRegistro']}</td>
                   </tr>";
         }
@@ -136,8 +133,33 @@ class ReportesController extends BaseController
 
     public function exportarPDFDeudores()
     {
-        // Generar el HTML para el reporte de deudores
-        $html = $this->generarHtmlDeudores();
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT * FROM vista_deudores");
+        $deudores = $query->getResultArray();
+
+        $html = "<h1>Deudores</h1>";
+        $html .= "<table border='1' width='100%' style='border-collapse: collapse;'>";
+        $html .= "<tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>Adelanto</th>
+                    <th>Total a Pagar</th>
+                    <th>Método de Pago</th>
+                    <th>Fecha Registro</th>
+                  </tr>";
+
+        foreach ($deudores as $deudor) {
+            $html .= "<tr>
+                        <td>{$deudor['id']}</td>
+                        <td>{$deudor['cliente']}</td>
+                        <td>{$deudor['adelanto']} Bs</td>
+                        <td>{$deudor['total_a_pagar']} Bs</td>
+                        <td>{$deudor['metodoPago']}</td>
+                        <td>{$deudor['fechaRegistro']}</td>
+                      </tr>";
+        }
+
+        $html .= "</table>";
 
         // Inicializar Dompdf
         $dompdf = new Dompdf();
@@ -146,7 +168,7 @@ class ReportesController extends BaseController
         $dompdf->render();
 
         // Mostrar el PDF en el navegador
-        $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
+        $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]);
     }
 
 
@@ -196,14 +218,14 @@ class ReportesController extends BaseController
         // Generar el HTML para el reporte de deuda por cliente
         $html = $this->generarHtmlDeudaPorCliente();
 
-         // Inicializar Dompdf
-         $dompdf = new Dompdf();
-         $dompdf->loadHtml($html);
-         $dompdf->setPaper('A4', 'landscape');
-         $dompdf->render();
- 
-         // Mostrar el PDF en el navegador
-         $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
+        // Inicializar Dompdf
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+
+        // Mostrar el PDF en el navegador
+        $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
     }
 
 

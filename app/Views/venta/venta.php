@@ -311,7 +311,7 @@
                             <td><?= $venta['estado'] === 1 ? 'Completado' : 'Pendiente'; ?></td>
 
                             <!-- Invertir la lógica -->
-                            <td><?= $venta['metodo_pago']; ?></td>
+                            <td><?= $venta['metodoPago']; ?></td>
                             <td><?= $venta['fechaRegistro']; ?></td>
                             <td><?= $venta['fecha']; ?></td> <!-- Mostrar la Fecha de Entrega -->
                             <td>

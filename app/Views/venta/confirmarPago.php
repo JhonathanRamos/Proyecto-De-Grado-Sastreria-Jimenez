@@ -4,8 +4,8 @@
     <h1>Confirmación de Pago</h1>
     <form action="<?= base_url('venta/confirmarPago'); ?>" method="post">
         <div class="form-group">
-            <label for="metodo_pago">Método de Pago:</label>
-            <select name="metodo_pago" id="metodo_pago" class="form-control" onchange="mostrarQR(this.value)">
+            <label for="metodoPago">Método de Pago:</label>
+            <select name="metodoPago" id="metodoPago" class="form-control" onchange="mostrarQR(this.value)">
                 <option value="Contado">Contado</option>
                 <option value="QR">QR</option>
             </select>

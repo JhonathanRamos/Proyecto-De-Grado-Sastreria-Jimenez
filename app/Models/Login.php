@@ -8,30 +8,33 @@ class Login extends Model
 {
     protected $table = 'usuario';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nombres', 'apellidos', 'email', 'password', 'celular', 'estado', 'rol'];
+    protected $allowedFields = ['nombres', 'apellidos', 'email', 'password', 'celular', 'estado', 'rol', 'is_temp_password'];
+
 
     public function registerClient($data)
     {
-        
+
         return $this->insert($data);
     }
     public function verifyUser($email, $password)
     {
-        $user = $this->where('email', $email)->first(); // Obtener el primer usuario que coincida con el email
+        $user = $this->where('email', $email)->first(); // Obtener el usuario por email
+
         if ($user) {
-            log_message('info', 'Password almacenada: ' . $user['password']); // Para verificar el hash almacenado
-            
-            // Verificar la contraseña con el hash de PHP
+            log_message('info', 'Password almacenada: ' . $user['password']);
+
+            // Verificar la contraseña con el hash
             if (password_verify($password, $user['password'])) {
-                return $user; // Retornar el usuario si las credenciales son válidas
-            }
-    
-            // Verificar la contraseña con el hash SHA-256 de MySQL
-            $hashedPassword = hash('sha256', $password);
-            if ($hashedPassword === $user['password']) {
-                return $user; // Retornar el usuario si las credenciales son válidas
+                // Verificar si es una contraseña temporal
+                if (!empty($user['is_temp_password']) && $user['is_temp_password']) {
+                    session()->set('is_temp_password', true); // Marcar la sesión como temporal
+                }
+                return $user;
             }
         }
+
         return null; // Retornar null si no coincide
-    }  
+    }
+
+
 }

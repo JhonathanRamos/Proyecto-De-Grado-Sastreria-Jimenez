@@ -50,8 +50,8 @@
 
                 <!-- Método de Pago -->
                 <div class="form-group">
-                    <label for="metodo_pago">Método de Pago:</label>
-                    <select class="form-control" id="metodo_pago" name="metodo_pago" required>
+                    <label for="metodoPago">Método de Pago:</label>
+                    <select class="form-control" id="metodoPago" name="metodoPago" required>
                         <option value="Contado">Contado</option>
                         <option value="QR">QR</option>
                     </select>

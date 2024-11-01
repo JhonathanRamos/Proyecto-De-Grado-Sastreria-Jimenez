@@ -217,7 +217,7 @@ Stack trace:
 CRITICAL - 2024-10-23 13:51:46 --> Unknown column 'venta.id' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id AS idVenta, cliente.nombre, cliente.apellido, 
-                                venta.adelanto, venta.totalPagar, venta.metodo_pago, venta.fechaRegistro
+                                venta.adelanto, venta.totalPagar, venta.metodoPago, venta.fechaRegistro
                          FROM venta
                          JOIN cliente ON venta.idCliente = cliente.id
                          WHERE venta.estado = 0 AND venta.totalPagar > 0')
@@ -241,7 +241,7 @@ Stack trace:
 CRITICAL - 2024-10-23 13:52:40 --> Unknown column 'venta.totalPagar' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.idVenta AS idVenta, cliente.nombre, cliente.apellido, 
-                                venta.adelanto, venta.totalPagar, venta.metodo_pago, venta.fechaRegistro
+                                venta.adelanto, venta.totalPagar, venta.metodoPago, venta.fechaRegistro
                          FROM venta
                          JOIN cliente ON venta.idCliente = cliente.id
                          WHERE venta.estado = 0 AND venta.totalPagar > 0')
@@ -266,7 +266,7 @@ CRITICAL - 2024-10-23 13:54:32 --> Unknown column 'venta.id' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
  1 APPPATH\Controllers\ReportesController.php(97): CodeIgniter\Database\BaseConnection->query('SELECT venta.id AS idVenta, cliente.nombre, cliente.apellido, 
                                 venta.adelanto, (venta.precio - venta.adelanto) AS totalPagar, 
-                                venta.metodo_pago, venta.fechaRegistro
+                                venta.metodoPago, venta.fechaRegistro
                          FROM venta
                          JOIN cliente ON venta.idCliente = cliente.id
                          WHERE venta.estado = 0 AND (venta.precio - venta.adelanto) > 0')

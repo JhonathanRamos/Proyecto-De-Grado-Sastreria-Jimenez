@@ -46,7 +46,7 @@
                         <td><?= $venta['adelanto'] . ' Bs'; ?></td>
                         <td><?= $venta['total'] . ' Bs'; ?></td>
                         <td><?= $venta['estado'] == 1 ? 'Completado' : 'Pendiente'; ?></td>
-                        <td><?= $venta['metodo_pago']; ?></td>
+                        <td><?= $venta['metodoPago']; ?></td>
                         <td><?= $venta['fechaRegistro']; ?></td>
                         <td><?= $venta['fecha']; ?></td>
                     </tr>

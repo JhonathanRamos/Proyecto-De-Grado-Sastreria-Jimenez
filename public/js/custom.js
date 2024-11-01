@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // PAGO
 document.addEventListener('DOMContentLoaded', function () {
-    const metodoPagoSelect = document.getElementById('metodo_pago');
+    const metodoPagoSelect = document.getElementById('metodoPago');
     const modalQR = document.getElementById('modalQR');
     const pagoRealizadoSelect = document.getElementById('pagado');
     const estadoSelect = document.getElementById('estado');
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Función para cerrar el modal QR
 function cerrarModal() {
     document.getElementById('modalQR').style.display = 'none';
-    document.getElementById("metodo_pago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
+    document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
 }
 
 

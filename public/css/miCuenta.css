@@ -1,0 +1,45 @@
+.mi-cuenta-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mi-cuenta-container h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mi-cuenta-container .user-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.mi-cuenta-container .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.mi-cuenta-container .toggle-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.mi-cuenta-container .forgot-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.mi-cuenta-container .back-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-bottom: 15px;
+    display: inline-block;
+}
