@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('sastreria/index.html');
+        return view('loginUsuario/login');
     }
 }

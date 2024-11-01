@@ -15,6 +15,11 @@ function change13() { document.getElementById('tr1').src = 'img/tr13.png'; }
 function change14() { document.getElementById('tr1').src = 'img/tr14.png'; }
 function change15() { document.getElementById('tr1').src = 'img/tr15.png'; }
 
+function cambiarTejido(ruta) {
+    document.getElementById("preview-tejido").src = ruta;
+}
+
+
 
 
 //FECHA DE REGISTRO ORDEN 

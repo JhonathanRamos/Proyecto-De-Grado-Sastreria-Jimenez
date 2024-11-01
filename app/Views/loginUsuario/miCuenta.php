@@ -9,6 +9,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/miCuenta.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Mi Cuenta</title>
 </head>
 
@@ -33,7 +34,7 @@
                         <a class="nav-link" href="diseno.html">Confección</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mi-cuenta.html">Mi Cuenta</a>
+                        <a class="nav-link active" aria-current="page" href="<?= base_url('mi-cuenta') ?>">Mi Cuenta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>

@@ -310,7 +310,9 @@
                                                                 <a href="#" class="btn btn-outline-danger"
                                                                     style="margin-right: 2px;"
                                                                     onclick="confirmDeleteDatos(event, '<?= base_url('borrarFalda/' . $Falda['idCliente']); ?>');">Borrar</a>
-                                                            </div>
+                                                                <!-- Botón para registrar la venta, pasando el idCliente y la confección 'pantalon' -->
+                                                                <a href="<?= base_url('crearVenta?cliente=' . $Falda['idCliente'] . '&confeccion=falda'); ?>"
+                                                                    class="btn btn-outline-success">Registrar Venta</a>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>
