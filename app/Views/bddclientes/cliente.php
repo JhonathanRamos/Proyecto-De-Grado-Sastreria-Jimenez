@@ -137,6 +137,15 @@
             <span class="menu-title"> Reportes</span>
           </a>
         </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="<?= base_url('telas') ?>">
+            <span class="menu-icon">
+              <i class="mdi mdi-account-multiple-plus"></i>
+            </span>
+            <span class="menu-title"> Reportes</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- partial -->
@@ -272,7 +281,8 @@
                         value="<?= esc($search) ?>">
                       <div class="input-group-append">
                         <button type="submit" class="btn btn-primary">Buscar</button>
-                        <a href="<?= site_url('cliente'); ?>" class="btn btn-secondary" onclick="document.getElementById('search').value = '';">Cancelar</a>
+                        <a href="<?= site_url('cliente'); ?>" class="btn btn-secondary"
+                          onclick="document.getElementById('search').value = '';">Cancelar</a>
                       </div>
                     </div>
                   </form>
@@ -308,7 +318,7 @@
                                     class="btn btn-outline-primary">Editar</a>
                                   <a href="#" class="btn btn-outline-danger"
                                     onclick="confirmDelete(event, '<?= base_url('borrar/' . $Cliente['id']); ?>');">Borrar</a>
-                                    <a href="<?= base_url('crearVenta?cliente=' . $Cliente['id']); ?>"
+                                  <a href="<?= base_url('crearVenta?cliente=' . $Cliente['id']); ?>"
                                     class="btn btn-outline-success">Registrar Venta</a>
                                 </div>
                               </td>

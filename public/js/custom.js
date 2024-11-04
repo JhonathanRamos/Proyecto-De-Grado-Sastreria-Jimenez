@@ -381,43 +381,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //PAGO
 
-// PAGO
-document.addEventListener('DOMContentLoaded', function () {
-    const metodoPagoSelect = document.getElementById('metodoPago');
-    const modalQR = document.getElementById('modalQR');
-    const pagoRealizadoSelect = document.getElementById('pagado');
-    const estadoSelect = document.getElementById('estado');
+// Verifica si la URL actual coincide con la página "crearVenta"
+if (window.location.href.includes('/crearVenta')) {
+    // PAGO
+    document.addEventListener('DOMContentLoaded', function () {
+        const metodoPagoSelect = document.getElementById('metodoPago');
+        const modalQR = document.getElementById('modalQR');
+        const pagoRealizadoSelect = document.getElementById('pagado');
+        const estadoSelect = document.getElementById('estado');
 
-    // Mostrar el modal si se selecciona QR como método de pago
-    metodoPagoSelect.addEventListener('change', function () {
-        if (metodoPagoSelect.value === 'QR') {
-            modalQR.style.display = 'block';
-        } else {
-            modalQR.style.display = 'none';
-        }
+        // Mostrar el modal si se selecciona QR como método de pago
+        metodoPagoSelect.addEventListener('change', function () {
+            if (metodoPagoSelect.value === 'QR') {
+                modalQR.style.display = 'block';
+            } else {
+                modalQR.style.display = 'none';
+            }
+        });
+
+        // Cambiar el estado basado en el pago realizado
+        pagoRealizadoSelect.addEventListener('change', function () {
+            if (pagoRealizadoSelect.value === '1') {
+                estadoSelect.value = '1'; // Completado
+            } else {
+                estadoSelect.value = '0'; // Pendiente
+            }
+        });
     });
 
-    // Cambiar el estado basado en el pago realizado
-    pagoRealizadoSelect.addEventListener('change', function () {
-        if (pagoRealizadoSelect.value === '1') {
-            estadoSelect.value = '1'; // Completado
-        } else {
-            estadoSelect.value = '0'; // Pendiente
-        }
-    });
-});
+    // Función para cerrar el modal QR
+    function cerrarModal() {
+        document.getElementById('modalQR').style.display = 'none';
+        document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
+    }
 
-// Función para cerrar el modal QR
-function cerrarModal() {
-    document.getElementById('modalQR').style.display = 'none';
-    document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
+    function togglePasswordForm() {
+        const passwordForm = document.getElementById('passwordForm');
+        if (passwordForm.style.display === 'none' || passwordForm.style.display === '') {
+            passwordForm.style.display = 'block';
+        } else {
+            passwordForm.style.display = 'none';
+        }
+    }
 }
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname === '/code4/public/telas') {
+        // Función para abrir el modal de imagen
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
 
+        // Función para cerrar el modal de imagen
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
 
-
+        // Asigna las funciones a la ventana global si es necesario
+        window.openModal = openModal;
+        window.closeModal = closeModal;
+    }
+});
 
 
 

@@ -84,7 +84,7 @@ class Auth extends BaseController
                 log_message('info', 'Inicio de sesión exitoso para el usuario: ' . $email);
 
                 if (session()->get('is_temp_password')) {
-                    return redirect()->to('/change-password');
+                    return redirect()->to('/mi-cuenta');
                 }
 
                 return ($user['rol'] == 1) ? redirect()->to('/cliente') : redirect()->to('/');
@@ -170,6 +170,12 @@ class Auth extends BaseController
 
         // Redirigir a la página de "Mi Cuenta"
         return redirect()->to('/mi-cuenta');
+    }
+
+    public function logout()
+    {
+        session()->destroy(); // Destruye la sesión actual del usuario
+        return redirect()->to('/login'); // Redirige al usuario a la página de inicio de sesión
     }
 
 

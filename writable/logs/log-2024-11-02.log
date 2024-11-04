@@ -1,0 +1,86 @@
+ERROR - 2024-11-02 00:28:14 --> Credenciales inválidas para el usuario: spledidblood@gmail.com
+CRITICAL - 2024-11-02 13:01:29 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:45 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:46 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:47 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:47 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:47 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:48 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:48 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 13:01:49 --> Invalid file: "sastreria/contacto.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sastreria/contacto.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/contacto.html', [], true)
+ 3 APPPATH\Controllers\Clientes.php(197): view('sastreria/contacto.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->contacto()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-02 13:24:22 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
+ERROR - 2024-11-02 13:24:47 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
+ERROR - 2024-11-02 13:25:06 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com
+ERROR - 2024-11-02 13:25:16 --> Credenciales inválidas para el usuario: izaya65741131@gmail.com

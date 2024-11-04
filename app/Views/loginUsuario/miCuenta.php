@@ -2,47 +2,72 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/miCuenta.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Mi Cuenta</title>
+    <title>Sastreria Jimenez</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets1/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets1/css/templatemo.css">
+    <link rel="stylesheet" href="assets1/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url('css/miCuenta.css') ?>">
+
+
+
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets1/css/fontawesome.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <img src="img/logo.png" alt="Descripción de la imagen" id="logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-dark logo h2 align-self-center" href="index.html">
+                Sastreria Jimenez
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="diseno.html">Confección</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= base_url('mi-cuenta') ?>">Mi Cuenta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Confeccion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('mi-cuenta') ?>">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark ">Login</span>
+                    </a>
+                </div>
             </div>
+
         </div>
     </nav>
+    <!-- Close Header -->
 
     <div class="mi-cuenta-contenedor">
         <div class="container my-5">
@@ -68,8 +93,9 @@
             <!-- Botones para cambiar y olvidar contraseña -->
             <div class="d-flex justify-content-between mb-4">
                 <button class="btn btn-primary" onclick="togglePasswordForm()">Cambiar Contraseña</button>
-                <button class="btn btn-outline-danger" onclick="sendResetRequest()">¿Olvidaste tu contraseña?</button>
+                <a href="<?= base_url('auth/logout') ?>" class="btn btn-danger">Cerrar Sesión</a>
             </div>
+
 
             <!-- Formulario para cambiar la contraseña -->
             <div id="passwordForm" class="password-form p-4 border rounded" style="display: none;">
@@ -93,58 +119,75 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white p-4 mt-5">
+
+    <!-- Start Footer -->
+    <footer class="bg-dark text-light pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <h3>Contacta con Nosotros</h3>
-                    <a href="https://www.facebook.com/profile.php?id=100054542077029" class="text-white me-2"
+                <!-- Contact Section -->
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-success">Contacta con Nosotros</h3>
+                    <div>
+                        <a href="https://wa.me/59177448360" class="text-success d-block mb-2" target="_blank">
+                            <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
+                                height="35px" width="35px">
+                            77448360
+                        </a>
+                        <a href="https://wa.me/59165741113" class="text-success d-block mb-2" target="_blank">
+                            <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
+                                height="35px" width="35px">
+                            65741113
+                        </a>
+                    </div>
+                    <a href="https://www.facebook.com/profile.php?id=100054542077029" class="text-success d-block mb-2"
                         target="_blank">
-                        <img src="img/facebook.png" height="35px" width="35px"> Sastrería Jimenez
-                    </a><br>
-                    <a href="https://wa.me/59177448360" class="text-white" target="_blank">
-                        <img src="img/whatsapp.png" height="35px" width="35px"> 77448360
-                    </a>
-                    <a href="https://wa.me/59165741113" class="text-white" target="_blank">
-                        <img src="img/whatsapp.png" height="35px" width="35px"> 65741113
+                        <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" height="35px"
+                            width="35px">
+                        Sastreria Jimenez
                     </a>
                 </div>
-                <div class="col-lg-4">
-                    <h3>Información de Contacto</h3>
-                    <address>
-                        <strong>Sastrería Jimenez</strong><br>
-                        Dirección: San Lorenzo - Av-D'Orbigny, Cochabamba<br>
-                        Correo Electrónico: lauraximena@gmail.com
-                    </address>
-                </div>
-                <div class="col-lg-3">
-                    <h3>Detalles Adicionales</h3>
-                    <ul>
-                        <li><a href="#" class="text-white">Términos y Condiciones</a></li>
-                        <li><a href="#" class="text-white">Detalles de Entrega</a></li>
+
+                <!-- Quick Links Section -->
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-success">Enlaces Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Confección</a></li>
+                        <li><a href="contacto.html" class="text-light text-decoration-none">Contacto</a></li>
                     </ul>
+                </div>
+
+                <!-- About Section -->
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-success">Sobre Nosotros</h3>
+                    <p class="small">Sastrería Jimenez es su lugar de confianza para confecciones de alta calidad y un
+                        servicio excepcional. Contáctenos para más información y servicios personalizados.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">Copyright &copy; | Sastreria Jimenez</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- End Footer -->
 
-    <script>
-        function togglePasswordForm() {
-            const form = document.getElementById('passwordForm');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-        }
 
-        function sendResetRequest() {
-            if (confirm("¿Quieres recibir una nueva contraseña en tu correo?")) {
-                window.location.href = "<?= base_url('mi-cuenta/olvidaste-tu-contrasena') ?>";
-            }
-        }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- Start Script -->
+    <script src="assets1/js/jquery-1.11.0.min.js"></script>
+    <script src="assets1/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets1/js/templatemo.js"></script>
+    <script src="assets1/js/custom.js"></script>
     <script src="js/custom.js"></script>
+    <!-- End Script -->
 </body>
 
 </html>

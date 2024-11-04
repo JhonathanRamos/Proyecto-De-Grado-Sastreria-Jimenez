@@ -1,28 +1,42 @@
-console.clear();
+   // Aquí va el JavaScript completo proporcionado
+   const sign_in_btn = document.querySelector("#sign-in-btn");
+   const sign_up_btn = document.querySelector("#sign-up-btn");
+   const container = document.querySelector(".container");
 
-const loginBtn = document.getElementById('login');
-const signupBtn = document.getElementById('signup');
+   sign_up_btn.addEventListener("click", () => {
+	   container.classList.add("sign-up-mode");
+   });
 
-loginBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode.parentNode;
-	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			signupBtn.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+   sign_in_btn.addEventListener("click", () => {
+	   container.classList.remove("sign-up-mode");
+   });
 
-signupBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode;
-	Array.from(e.target.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			loginBtn.parentNode.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+   const htmlEl = document.getElementsByTagName("html")[0];
+   const currentTheme = localStorage.getItem("theme")
+	   ? localStorage.getItem("theme")
+	   : null;
+   if (currentTheme) {
+	   htmlEl.dataset.theme = currentTheme;
+   }
+   const toggleTheme = (theme) => {
+	   htmlEl.dataset.theme = theme;
+	   localStorage.setItem("theme", theme);
+   };
+
+   const togglePassword = document.querySelector("#togglePassword");
+   const password = document.querySelector("#id_password");
+
+   togglePassword.addEventListener("click", function () {
+	   const type = password.getAttribute("type") === "password" ? "text" : "password";
+	   password.setAttribute("type", type);
+	   this.classList.toggle("fa-eye-slash");
+   });
+
+   const toggleReg = document.querySelector("#toggleReg");
+   const pass = document.querySelector("#id_reg");
+
+   toggleReg.addEventListener("click", function () {
+	   const type = pass.getAttribute("type") === "password" ? "text" : "password";
+	   pass.setAttribute("type", type);
+	   this.classList.toggle("fa-eye-slash");
+   });

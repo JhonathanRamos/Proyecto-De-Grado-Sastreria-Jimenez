@@ -1,0 +1,492 @@
+ERROR - 2024-11-03 03:59:52 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-11-03 14:59:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Ventas.php(137): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-03 14:59:55 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `venta` (`idCliente`, `idConfeccion`, `adelanto`, `total`, `estado`, `fecha`, `idUsuario`, `fechaRegistro`, `metodoPago`) VALUES (:idCliente:, :idConfeccion:, :adelanto:, :total:, :estado:, :fecha:, :idUsuario:, :fechaRegistro:, :metodoPago:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas.php(137): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 17:00:20 --> mysqli_sql_exception: Table 'bddsastreria.producto' doesn't exist in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Productos.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Productos->producto()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 17:00:20 --> Table 'bddsastreria.producto' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `producto`
+ORDER BY `id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Productos.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Productos->producto()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:23:22 --> Invalid file: "Telas/crearTelas.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Telas/crearTelas.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Telas/crearTelas', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('Telas/crearTelas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:25:35 --> Invalid file: "Telas/crearTelas.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Telas/crearTelas.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Telas/crearTelas', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('Telas/crearTelas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:20 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:21 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:21 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:38 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:39 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:40 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:26:41 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:28:18 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:28:19 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:28:37 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:28:51 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:28:52 --> Undefined variable $cabecera
+in APPPATH\Views\tela\crearTela.php on line 1.
+ 1 APPPATH\Views\tela\crearTela.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\tela\\crearTela.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tela/crearTela', [], true)
+ 5 APPPATH\Controllers\Telas.php(24): view('tela/crearTela')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 17:32:27 --> mysqli_sql_exception: Unknown column 'calidad' in 'field list' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Telas.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->guardar()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-03 17:32:27 --> Unknown column 'calidad' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tela` (`nombre`, `calidad`, `descripcion`, `precio`, `estado`, `fechaRegistro`, `imagenTela`, `imagenTraje`, `idUsuario`) VALUES (:nombre:, :calidad:, :descripcion:, :precio:, :estado:, :fechaRegistro:, :imagenTela:, :imagenTraje:, :idUsuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Telas.php(80): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->guardar()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:43:00 --> Invalid file: "Telas/mostrarTelas.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Telas/mostrarTelas.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Telas/mostrarTelas', [], true)
+ 3 APPPATH\Controllers\Telas.php(16): view('Telas/mostrarTelas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 17:48:55 --> Invalid file: "telas/tela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/tela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/tela', [], true)
+ 3 APPPATH\Controllers\Telas.php(16): view('telas/tela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:17:18 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:18:50 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:19:22 --> Invalid file: "telas/crear.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crear.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crear', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crear', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:21:37 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:05 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:06 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:06 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:07 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:07 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:24:07 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:26:53 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(24): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:29:35 --> Invalid file: "telas/crearTela.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('telas/crearTela.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('telas/crearTela', [], true)
+ 3 APPPATH\Controllers\Telas.php(23): view('telas/crearTela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:32:50 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 96.
+ 1 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-03 19:32:52 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 96.
+ 1 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 19:58:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 19:58:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tela`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 20:01:06 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 20:01:06 --> Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tela`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 20:01:07 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 20:01:07 --> Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tela`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 20:01:12 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 20:01:12 --> Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tela`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-03 20:17:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-03 20:17:29 --> Cannot delete or update a parent row: a foreign key constraint fails (`bddsastreria`.`venta`, CONSTRAINT `fk_venta_tela1` FOREIGN KEY (`idTela`) REFERENCES `tela` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tela`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Telas.php(94): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->borrar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
