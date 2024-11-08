@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 <label for="idCliente">Cliente:</label>
-                <select id="idCliente" name="idCliente" class="form-control" 
+                <select id="idCliente" name="idCliente" class="form-control"
                     style="width: 100%; max-height: 50px; overflow-y: auto;">
                     <?php foreach ($clientes as $Cliente): ?>
                         <?php
@@ -39,48 +39,53 @@
                 </select>
             </div>
 
-            
+
 
 
 
             <div class="form-group">
                 <label for="talle">Talle:</label>
-                <input id="talle" value="<?= old('talle') ?>" class="form-control" type="text" name="talle" required>
+                <input id="talle" value="<?= old('talle') ?>" class="form-control" type="number" name="talle" min="0"
+                    max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
+
 
             <div class="form-group">
                 <label for="largo">Largo:</label>
-                <input id="largo" value="<?= old('largo') ?>" class="form-control" type="text" name="largo" required>
+                <input id="largo" value="<?= old('largo') ?>" class="form-control" type="number" name="largo" min="0"
+                    max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
 
             <div class="form-group">
                 <label for="hombro">Hombro:</label>
-                <input id="hombro" value="<?= old('hombro') ?>" class="form-control" type="text" name="hombro" required>
+                <input id="hombro" value="<?= old('hombro') ?>" class="form-control" type="number" name="hombro" min="0"
+                    max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
 
             <div class="form-group">
                 <label for="ancho">Ancho:</label>
-                <input id="ancho" value="<?= old('ancho') ?>" class="form-control" type="text" name="ancho" required>
+                <input id="ancho" value="<?= old('ancho') ?>" class="form-control" type="number" name="ancho" min="0"
+                    max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
 
             <div class="form-group">
                 <label for="pecho">Pecho:</label>
-                <input id="pecho" pecho value="<?= old('pecho') ?>" class="form-control" type="text" name="pecho"
-                    required>
+                <input id="pecho" value="<?= old('pecho') ?>" class="form-control" type="number" name="pecho" min="0"
+                    max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
 
             <div class="form-group">
                 <label for="estomago">Estomago:</label>
-                <input id="estomago" value="<?= old('estomago') ?>" class="form-control" type="text" name="estomago"
-                    required>
+                <input id="estomago" value="<?= old('estomago') ?>" class="form-control" type="number" name="estomago"
+                    min="0" max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
 
             <div class="form-group">
                 <label for="largoManga">LargoManga:</label>
-                <input id="largoManga" value="<?= old('largoManga') ?>" class="form-control" type="text"
-                    name="largoManga" required>
+                <input id="largoManga" value="<?= old('largoManga') ?>" class="form-control" type="number"
+                    name="largoManga" min="0" max="999"
+                    oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
             </div>
-
 
             <button id="BtnSuccess" class="btn btn-success btn-fw" type="submit">Guardar</button>
             <a href="<?= site_url('/cliente') ?>" class="btn btn-danger btn-fw">Cancelar</a>

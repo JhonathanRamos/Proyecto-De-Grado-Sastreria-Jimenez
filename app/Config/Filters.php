@@ -19,35 +19,22 @@ class Filters extends BaseConfig
      * @phpstan-var array<string, class-string>
      */
 
-    //  AGREGAMOS EL AUTH PARA EL FILTRAR LAS PAGINAS Y DEJAR ENTRAR AL ADMINISTRADOR
     public array $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
+        'csrf' => CSRF::class,
+        'toolbar' => DebugToolbar::class,
+        'honeypot' => Honeypot::class,
+        'invalidchars' => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'auth'          => \App\Filters\AuthFilter::class, // Añade esta línea
+        'auth' => \App\Filters\AuthFilter::class, // Filtro de autenticación para roles
     ];
-    
-    // Aplica el filtro a todas las rutas bajo 'clientes'
-    public array $filters = [
-        'auth' => [
-            'before' => ['clientes/*'], // Modifica según tus rutas
-        ],
-    ];
-    
 
     /**
-     * List of filter aliases that are always
-     * applied before and after every request.
-     *
-     * @var array<string, array<string, array<string, string>>>|array<string, array<string>>
-     * @phpstan-var array<string, list<string>>|array<string, array<string, array<string, string>>>
+     * Global filters applied before and after every request.
+     * To apply `auth` globally, uncomment it in the `before` array.
      */
     public array $globals = [
         'before' => [
-            // Puedes añadir 'auth' aquí si deseas aplicar el filtro globalmente
-            // 'auth', 
+            // 'auth', // Puedes descomentar para aplicar el filtro `auth` a todas las rutas
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
@@ -60,24 +47,29 @@ class Filters extends BaseConfig
     ];
 
     /**
-     * List of filter aliases that works on a
-     * particular HTTP method (GET, POST, etc.).
-     *
-     * Example:
-     * 'post' => ['foo', 'bar']
-     *
-     * If you use this, you should disable auto-routing because auto-routing
-     * permits any HTTP method to access a controller. Accessing the controller
-     * with a method you don't expect could bypass the filter.
+     * Filters applied on specific HTTP methods (e.g., POST only).
      */
     public array $methods = [];
 
     /**
-     * List of filter aliases that should run on any
-     * before or after URI patterns.
-     *
-     * Example:
-     * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
+     * Filters applied based on specific URI patterns.
      */
-  
+    // Config/Filters.php
+
+    public array $filters = [
+        'auth' => [
+            'before' => [
+                'usuarios',       // Protege la administración de usuarios
+                'usuarios/*',
+                'cliente',       // Protege la administración de clientes
+                'cliente/*',
+                'config',         // Protege las rutas de configuración
+                'config/*',
+                'venta',          // Protege las rutas de ventas si es necesario
+                'venta/*',
+            ],
+        ],
+    ];
+
+
 }

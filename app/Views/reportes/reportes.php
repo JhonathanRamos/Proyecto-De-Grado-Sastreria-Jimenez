@@ -33,51 +33,20 @@
                                 <p>No estás logueado.</p>
                             <?php endif; ?>
                         </div>
-
-
-                        <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i
-                                class="mdi mdi-dots-vertical"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
-                            aria-labelledby="profile-dropdown">
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-cog text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-onepassword  text-info"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-calendar-today text-success"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </li>
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navegación</span>
                 </li>
 
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('confeccion') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-account-box-multiple"></i>
+                        </span>
+                        <span class="menu-title">Usuarios</span>
+                    </a>
+                </li>
 
 
                 <li class="nav-item menu-items">
@@ -100,8 +69,6 @@
                     </a>
                     <div class="collapse" id="auth">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a>
-                            </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('datosTrajeMasculino') ?>">Traje
                                     Masculino</a> </li>
@@ -110,16 +77,21 @@
                             </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('datosPantalon') ?>">Pantalon</a> </li>
-
+                            <li class="nav-item"> <a class="nav-link" href="<?= base_url('datosFalda') ?>">Falda</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
 
 
+
+
+
+
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('confeccion') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-account-multiple-plus"></i>
+                            <i class="mdi mdi-invoice-text-edit"></i>
                         </span>
                         <span class="menu-title"> Confeccion</span>
                     </a>
@@ -128,14 +100,29 @@
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('venta') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-account-multiple-plus"></i>
+                            <i class="mdi mdi-cash-register"></i>
                         </span>
                         <span class="menu-title"> Venta</span>
                     </a>
                 </li>
 
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('reportes') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-database-search"></i>
+                        </span>
+                        <span class="menu-title"> Reportes</span>
+                    </a>
+                </li>
 
-
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('telas') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-view-dashboard-edit"></i>
+                        </span>
+                        <span class="menu-title"> Telas Traje</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- partial -->
@@ -272,43 +259,26 @@
                         <div class="container">
                             <h1 class="card-title">Reportes Generales</h1>
                             <div class="mb-3">
+                                <!-- Botones para Exportar Clientes Activos e Inactivos -->
                                 <a href="<?= site_url('/exportarPDF/estadoClientes/activos') ?>" class="btn btn-primary"
                                     target="_blank">Exportar Clientes Activos</a>
-
-
                                 <a href="<?= site_url('/exportarPDF/estadoClientes/inactivos') ?>"
                                     class="btn btn-secondary" target="_blank">Exportar Clientes Inactivos</a>
 
-
+                                <!-- Botón para Exportar Deudores -->
                                 <a href="<?= site_url('/exportarPDF/deudores') ?>" class="btn btn-warning"
                                     target="_blank">Exportar Deudores</a>
 
+                                <!-- Botón para Exportar Deuda por Cliente -->
                                 <a href="<?= site_url('/exportarPDF/deudaPorCliente') ?>" class="btn btn-primary"
                                     target="_blank">Exportar Deuda por Cliente</a>
-
-
-
-
-                                <a href="<?= site_url('/exportarPDF/trabajosPendientes') ?>" class="btn btn-success"
-                                    target="_blank">Exportar Trabajos Pendientes</a>
-
-
-                                <form action="<?= site_url('/exportarPDF/ventasPorFecha') ?>" method="get"
-                                    target="_blank">
-                                    <label for="fechaInicio">Fecha Inicio:</label>
-                                    <input type="date" id="fechaInicio" name="fechaInicio" required>
-
-                                    <label for="fechaFin">Fecha Fin:</label>
-                                    <input type="date" id="fechaFin" name="fechaFin" required>
-
-                                    <button type="submit" class="btn btn-info">Exportar Ventas por Rango de
-                                        Fechas</button>
-                                </form>
                             </div>
+
                             <div class="table-responsive">
                                 <!-- Aquí puedes incluir tablas similares a las de ventas, con los datos correspondientes a cada reporte -->
                             </div>
                         </div>
+
 
 
 
@@ -323,13 +293,8 @@
                 <!-- partial:../../partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
-                                href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights
-                            reserved.</span>
-                        <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center"> <span
-                                class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted
-                                & made with <i class="mdi mdi-heart text-danger"></i></span> <i
-                                class="mdi mdi-heart text-danger"></i></span>
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©
+                            Sastreria Jimenez</span>
                     </div>
                 </footer>
                 <!-- partial -->

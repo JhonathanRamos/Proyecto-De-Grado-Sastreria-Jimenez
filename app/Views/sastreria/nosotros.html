@@ -24,7 +24,8 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-dark logo h2 align-self-center" href="index.html">Sastreria Jimenez
+            <a class="navbar-brand text-dark logo h2 align-self-center" href="index.html">
+                Sastreria Jimenez
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -44,7 +45,7 @@
                             <a class="nav-link" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Confeccion</a>
+                            <a class="nav-link" href="<?= base_url('/telaTraje') ?>">Confección</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contactos</a>
@@ -52,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('mi-cuenta') ?>">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span
                             class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark ">Login</span>

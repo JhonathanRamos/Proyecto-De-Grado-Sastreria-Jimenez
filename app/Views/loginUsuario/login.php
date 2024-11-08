@@ -10,7 +10,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/login.css') ?>">
 </head>
 
@@ -32,6 +33,8 @@
                         <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                     </div>
                     <button type="submit" class="btn solid">Iniciar Sesión</button>
+                    <!-- En el formulario de inicio de sesión -->
+                    <a href="<?= base_url('auth/olvidar-contrasenia') ?>">¿Olvidaste tu contraseña?</a>
                     <?php if (session()->getFlashdata('error')): ?>
                         <div class="error-message"><?= session()->getFlashdata('error') ?></div>
                     <?php endif; ?>
@@ -43,19 +46,21 @@
                     <h2 class="title">Registrarse</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="nombres" placeholder="Nombre" required >
+                        <input type="text" name="nombres" placeholder="Nombre" required value="<?= old('nombres') ?>">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="apellidos" placeholder="Apellido" required>
+                        <input type="text" name="apellidos" placeholder="Apellido" required
+                            value="<?= old('apellidos') ?>">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" name="email" placeholder="Correo Electrónico" required >
+                        <input type="email" name="email" placeholder="Correo Electrónico" required
+                            value="<?= old('email') ?>">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-phone"></i>
-                        <input type="text" name="celular" placeholder="Celular" required>
+                        <input type="text" name="celular" placeholder="Celular" required value="<?= old('celular') ?>">
                     </div>
                     <button type="submit" class="btn solid">Registrarse</button>
                     <?php if (session()->getFlashdata('success')): ?>
@@ -65,6 +70,7 @@
                         <div class="error-message"><?= session()->getFlashdata('error') ?></div>
                     <?php endif; ?>
                 </form>
+
             </div>
         </div>
 
@@ -72,7 +78,7 @@
             <div class="panel left-panel">
                 <div class="content">
                     <h3>¿No tienes una cuenta?</h3>
-                    <p>Crea tu cuenta ahora para seguir a otras personas y dar "me gusta" a publicaciones.</p>
+                    <p>Crea tu cuenta ahora para poder reservar nuestros trajes.</p>
                     <button class="btn transparent" id="sign-up-btn">Registrarse</button>
                 </div>
             </div>
@@ -80,12 +86,23 @@
             <div class="panel right-panel">
                 <div class="content">
                     <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesión para ver tus notificaciones y publicar tus fotos favoritas.</p>
+                    <p>Inicia sesión para poder reservar su traje.</p>
                     <button class="btn transparent" id="sign-in-btn">Iniciar Sesión</button>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            <?php if (session()->getFlashdata('error') && session()->get('activeTab') == 'register'): ?>
+                document.querySelector('.sign-up-form').style.display = 'block';
+                document.querySelector('.sign-in-form').style.display = 'none';
+                document.getElementById('sign-up-btn').click();
+            <?php endif; ?>
+        });
+    </script>
 
     <script src="js/login.js"></script>
 </body>

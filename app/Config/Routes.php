@@ -8,9 +8,25 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 
-//ruta FILTER CREADOR para filtrar y mostrar el sistema al administrador
+
+// $routes->group('usuarios', ['filter' => 'auth'], function ($routes) {
+//     $routes->get('/', 'Auth::index');          // Página de lista de usuarios
+//     $routes->get('crear', 'Auth::crear');      // Formulario para crear un usuario
+//     $routes->post('guardar', 'Auth::guardar'); // Acción para guardar un nuevo usuario
+//     $routes->get('editar/(:num)', 'Auth::editar/$1'); // Formulario para editar un usuario
+//     $routes->post('actualizar', 'Auth::actualizar');  // Acción para actualizar un usuario
+//     $routes->get('borrar/(:num)', 'Auth::borrar/$1'); // Acción para borrar un usuario
+// });
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
+
+
+    $routes->get('usuarios', 'Auth::index');              // Página de lista de usuarios
+    $routes->get('usuarios/crear', 'Auth::crear');        // Formulario para crear un usuario
+    $routes->post('usuarios/guardar', 'Auth::guardar');   // Acción para guardar un nuevo usuario
+    $routes->get('usuarios/editar/(:num)', 'Auth::editarUsuarios/$1'); // Formulario para editar un usuario
+    $routes->post('usuarios/actualizar', 'Auth::actualizar');  // Acción para actualizar un usuario
+    $routes->get('usuarios/borrar/(:num)', 'Auth::borrar/$1'); // Acción para borrar un usuario
     /* Tablas  */
     //Vista Cliente
     $routes->get('cliente', 'Clientes::index');
@@ -22,6 +38,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('actualizar', 'Clientes::actualizar');
 
     /* ______________________________________________________________________ */
+
 
     //Vista Falda
     $routes->get('datosFalda', 'Faldas::index');
@@ -94,23 +111,44 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
 
     $routes->get('reportes', 'ReportesController::index');
-
-
+    //REPORTE VISTA
     $routes->get('/exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
     $routes->get('exportarPDF/ventasPorFecha', 'ReportesController::generarHtmlVentasPorFecha');
+    //Reporte Procedural
     $routes->get('/exportarPDF/deudores', 'ReportesController::exportarPDFDeudores');
+    //Reporte estatico
     $routes->get('exportarPDF/deudaPorCliente', 'ReportesController::exportarPDFDeudaPorCliente');
 
-
-
-    $routes->get('/telas', 'Telas::index');
-    //CRUD
-    $routes->get('/crearTela', 'Telas::crear');
-    $routes->post('/guardarTela', 'Telas::guardar');
-    $routes->get('/telas/editar/(:num)', 'Telas::editar/$1');
-    $routes->post('/telas/actualizar/(:num)', 'Telas::actualizar/$1');
-    $routes->get('/telas/borrar/(:num)', 'Telas::borrar/$1');
 });
+
+$routes->get('/telas', 'Telas::index');
+//CRUD
+$routes->get('/crearTela', 'Telas::crear');
+$routes->post('/guardarTela', 'Telas::guardar');
+$routes->get('/telas/editar/(:num)', 'Telas::editar/$1');
+$routes->post('/telas/actualizar/(:num)', 'Telas::actualizar/$1');
+$routes->get('/telas/borrar/(:num)', 'Telas::borrar/$1');
+$routes->get('/telas/mostrar', 'Telas::mostrarTela');
+
+
+$routes->get('reservas/ver/(:num)', 'Reservas::ver/$1', ['as' => 'reservas.ver']);
+$routes->get('reservas/mis-reservas', 'Reservas::misReservas', ['as' => 'reservas.misReservas']);
+$routes->get('reservas/editar/(:num)', 'Reservas::editar/$1', ['as' => 'reservas.editar']);
+$routes->post('reservas/actualizar/(:num)', 'Reservas::actualizar/$1', ['as' => 'reservas.actualizar']);
+//CRUD
+$routes->get('reservas/seleccionarTela/(:num)', 'Reservas::seleccionarTela/$1');
+$routes->post('reservas/guardarReserva', 'Reservas::guardarReserva');
+$routes->get('reservas', 'Reservas::listarReservas');
+$routes->get('reservas/cancelar/(:num)', 'Reservas::cancelar/$1');
+
+
+
+
+$routes->get('/telaTraje', 'Telas::mostrarTelaTraje');
+
+
+$routes->get('auth/olvidar-contrasenia', 'Auth::olvidarContrasenia');
+$routes->post('auth/olvido_contrasenia', 'Auth::olvidoContrasenia');
 
 $routes->set404Override(function () {
     return (new \App\Controllers\ErrorController())->show404();
@@ -119,34 +157,22 @@ $routes->set404Override(function () {
 
 
 //HTML SASTRERIA
-$routes->get('comprar.html', 'Clientes::comprar');
-$routes->get('traje.html', 'Clientes::traje');
-$routes->get('diseno.html', 'Clientes::diseno');
-$routes->get('novedad.html', 'Clientes::novedad');
-$routes->get('sacoFemenino.html', 'Clientes::sacoFemenino');
-$routes->get('sacoMasculino.html', 'Clientes::sacoMasculino');
 $routes->get('index.html', 'Clientes::index1');
 $routes->get('nosotros.html', 'Clientes::nosotros');
 $routes->get('contacto.html', 'Clientes::contacto');
-$routes->get('tienda', 'Clientes::tienda');
-
-
-
 
 
 //Login
-
 $routes->get('/login', 'Auth::login');
 $routes->post('/auth/login', 'Auth::login'); // Asegúrate de que el formulario apunte a esta ruta
 $routes->post('/auth/register', 'Auth::register');
 
 
-
+//SALIR LOGIN
 $routes->get('auth/logout', 'Auth::logout');
 
-// $routes->get('change-password', 'Auth::changePassword');
-// $routes->post('change-password', 'Auth::changePassword');
 
+//MI-CUENTA
 $routes->get('mi-cuenta', 'Auth::miCuenta'); // Muestra la vista "Mi Cuenta"
 $routes->post('mi-cuenta/cambiar-contrasena', 'Auth::cambiarContrasena'); // Procesa el cambio de contraseña
 
@@ -155,17 +181,6 @@ $routes->post('mi-cuenta/cambiar-contrasena', 'Auth::cambiarContrasena'); // Pro
 $routes->get('mi-cuenta/olvidaste-tu-contrasena', 'Auth::olvidarContrasena');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-$routes->get('producto', 'Productos::producto');
-$routes->post('guardarProducto', 'Productos::guardar');
+// //SE USARA LUEGO 
+// $routes->get('producto', 'Productos::producto');
+// $routes->post('guardarProducto', 'Productos::guardar');

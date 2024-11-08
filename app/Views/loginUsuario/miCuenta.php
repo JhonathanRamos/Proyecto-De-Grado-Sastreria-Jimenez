@@ -96,7 +96,6 @@
                 <a href="<?= base_url('auth/logout') ?>" class="btn btn-danger">Cerrar Sesión</a>
             </div>
 
-
             <!-- Formulario para cambiar la contraseña -->
             <div id="passwordForm" class="password-form p-4 border rounded" style="display: none;">
                 <h2>Cambiar Contraseña</h2>
@@ -116,8 +115,51 @@
                     </div>
                 </form>
             </div>
+
+            <!-- Listado de Reservas -->
+            <div class="user-info mb-4 p-4 border rounded">
+                <h2>Mis Reservas</h2>
+                <?php if (empty($reservas)): ?>
+                    <p>No tienes reservas realizadas.</p>
+                <?php else: ?>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Fecha de Reserva</th>
+                                <th>Tela</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($reservas as $reserva): ?>
+                                <tr>
+                                    <td><?= $reserva['fechaReserva'] ?></td>
+                                    <td><?= $reserva['nombreTela'] ?></td>
+                                    <td><?= $reserva['precio'] ?></td>
+                                    <td>
+                                        <a href="<?= base_url('reservas/cancelar/' . $reserva['id']) ?>" class="btn btn-danger"
+                                            onclick="return confirm('¿Estás seguro de que deseas cancelar esta reserva?');">Cancelar</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php endif; ?>
+            </div>
+
+
+
         </div>
     </div>
+
+    <script>
+        function togglePasswordForm() {
+            const passwordForm = document.getElementById("passwordForm");
+            passwordForm.style.display = (passwordForm.style.display === "none") ? "block" : "none";
+        }
+    </script>
+
 
 
     <!-- Start Footer -->

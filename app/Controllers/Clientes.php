@@ -59,15 +59,36 @@ class Clientes extends Controller
         $cliente = new Cliente();
 
         $validacion = $this->validate([
-            'nombre' => 'required|min_length[3]',
-            'apellido' => 'required|min_length[3]',
-            'celular' => 'required|numeric|min_length[8]',
+            'nombre' => [
+                'rules' => 'required|min_length[3]',
+                'errors' => [
+                    'required' => 'El campo Nombre es obligatorio.',
+                    'min_length' => 'El Nombre debe tener al menos 3 caracteres.'
+                ]
+            ],
+            'apellido' => [
+                'rules' => 'required|min_length[3]',
+                'errors' => [
+                    'required' => 'El campo Apellido es obligatorio.',
+                    'min_length' => 'El Apellido debe tener al menos 3 caracteres.'
+                ]
+            ],
+            'celular' => [
+                'rules' => 'required|numeric|min_length[8]',
+                'errors' => [
+                    'required' => 'El campo Celular es obligatorio.',
+                    'numeric' => 'El campo Celular debe contener solo números.',
+                    'min_length' => 'El Celular debe tener al menos 8 dígitos.'
+                ]
+            ]
         ]);
 
         if (!$validacion) {
+            // Devolver los errores detallados
             return $this->response->setJSON([
                 'success' => false,
-                'message' => 'Revise la información',
+                'message' => 'Revise la información ingresada',
+                'errors' => $this->validator->getErrors() // Devuelve los errores detallados
             ]);
         }
 
@@ -88,6 +109,9 @@ class Clientes extends Controller
             'redirectUrl' => site_url('/cliente')
         ]);
     }
+
+
+
 
     public function borrar($id = null)
     {
@@ -125,61 +149,70 @@ class Clientes extends Controller
 
         date_default_timezone_set('America/La_Paz');
 
-        // Actualizar datos del cliente
+        // Capturar ID y datos de cliente desde la solicitud
+        $id = $this->request->getVar('id');
         $datosCliente = [
             'nombre' => $this->request->getVar('nombre'),
             'apellido' => $this->request->getVar('apellido'),
             'sexo' => $this->request->getVar('sexo'),
             'celular' => $this->request->getVar('celular'),
             'fechaActualizacion' => date('Y-m-d H:i:s'),
-            'estado' => 1, // Estado activo
+            'estado' => 1 // Estado activo
         ];
 
-        $id = $this->request->getVar('id');
-
-        // Validar los datos
+        // Validación de los datos de entrada
         $validacion = $this->validate([
-            'nombre' => 'required|min_length[3]',
-            'apellido' => 'required|min_length[3]',
-            'celular' => 'required|numeric|min_length[8]', // Validación para números
+            'nombre' => [
+                'rules' => 'required|min_length[3]|alpha_space',
+                'errors' => [
+                    'required' => 'El campo nombre es obligatorio.',
+                    'min_length' => 'El nombre debe tener al menos 3 caracteres.',
+                    'alpha_space' => 'El nombre solo debe contener letras y espacios.'
+                ]
+            ],
+            'apellido' => [
+                'rules' => 'required|min_length[3]|alpha_space',
+                'errors' => [
+                    'required' => 'El campo apellido es obligatorio.',
+                    'min_length' => 'El apellido debe tener al menos 3 caracteres.',
+                    'alpha_space' => 'El apellido solo debe contener letras y espacios.'
+                ]
+            ],
+            'celular' => [
+                'rules' => 'required|numeric|exact_length[8]',
+                'errors' => [
+                    'required' => 'El campo celular es obligatorio.',
+                    'numeric' => 'El celular debe contener solo números.',
+                    'exact_length' => 'El celular debe tener exactamente 8 dígitos.'
+                ]
+            ],
+            'sexo' => [
+                'rules' => 'in_list[M,F]',
+                'errors' => [
+                    'in_list' => 'El campo sexo debe ser "M" para masculino o "F" para femenino.'
+                ]
+            ]
         ]);
 
+        // Si la validación falla, devolver errores específicos en JSON
         if (!$validacion) {
-            $session = session();
-            $session->setFlashdata('mensaje', 'Revise la información');
-            return redirect()->back()->withInput();
+            return $this->response->setJSON([
+                'success' => false,
+                'errors' => $this->validator->getErrors()
+            ]);
         }
 
-        // Actualizar los datos del cliente
+        // Actualizar los datos del cliente en la base de datos
         $clienteModel->update($id, $datosCliente);
 
-        return redirect()->to(site_url('/cliente'));
+        // Redirigir a la lista de clientes con un mensaje de éxito
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Cliente actualizado exitosamente',
+            'redirectUrl' => site_url('/cliente')
+        ]);
     }
 
-    public function comprar()
-    {
-        return view('sastreria/comprar.html');
-    }
-    public function traje()
-    {
-        return view('sastreria/traje.html');
-    }
-    public function diseno()
-    {
-        return view('sastreria/diseno.html');
-    }
-    public function novedad()
-    {
-        return view('sastreria/novedad.html');
-    }
-    public function sacoFemenino()
-    {
-        return view('sastreria/sacoFemenino.html');
-    }
-    public function sacoMasculino()
-    {
-        return view('sastreria/sacoMasculino.html');
-    }
     public function index1()
     {
         return view('sastreria/index.html');
@@ -188,10 +221,7 @@ class Clientes extends Controller
     {
         return view('sastreria/nosotros.html');
     }
-    public function tienda()
-    {
-        return view('sastreria/tienda');
-    }
+
     public function contacto()
     {
         return view('sastreria/contacto.html');

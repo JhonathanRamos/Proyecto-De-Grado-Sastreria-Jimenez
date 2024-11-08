@@ -18,6 +18,7 @@ class Telas extends Controller
         return view('tela/tela', $datos); // Asegúrate de que esta ruta sea correcta
     }
 
+
     public function crear()
     {
         $datos['cabecera'] = view('template/cabecera');
@@ -175,4 +176,25 @@ class Telas extends Controller
     }
 
 
+    public function mostrarTela()
+    {
+        $telaModel = new Tela();
+        $datos['telas'] = $telaModel->where('estado', 1)->orderBy('id', 'ASC')->findAll();
+        $datos['cabecera'] = view('template/cabecera');
+        $datos['pie'] = view('template/piepagina');
+
+        return view('sastreria/telaTraje', $datos); // Verifica que esta ruta coincida con la ubicación del archivo
+
+    }
+
+    public function mostrarTelaTraje()
+    {
+        $telaModel = new Tela();
+        $datos['telas'] = $telaModel->where('estado', 1)->orderBy('id', 'ASC')->findAll();
+        $datos['cabecera'] = view('template/cabecera');
+        $datos['pie'] = view('template/piepagina');
+
+        return view('sastreria/telaTraje', $datos); // Verifica que esta ruta coincida con la ubicación del archivo
+
+    }
 }

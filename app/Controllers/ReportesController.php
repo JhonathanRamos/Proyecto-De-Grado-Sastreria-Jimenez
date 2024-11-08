@@ -40,16 +40,17 @@ class ReportesController extends BaseController
         $dompdf->stream("reporte_estadoClientes_$estado.pdf", ["Attachment" => 0]); // Abrir en el navegador
     }
 
-
-    // Generar HTML para el estado de clientes
+    // Generar HTML para el estado de clientes utilizando vistas de la base de datos
     private function generarHtmlEstadoClientes($estado)
     {
-        $clienteModel = new Cliente();
+        $db = \Config\Database::connect();
 
-        // Filtrar clientes por estado
-        $clientes = ($estado === 'activos')
-            ? $clienteModel->where('estado', 1)->findAll()
-            : $clienteModel->where('estado', 0)->findAll();
+        // Seleccionar la vista adecuada según el estado
+        $vista = ($estado === 'activos') ? 'clientesActivos' : 'clientesInactivos';
+
+        // Consultar la vista correspondiente
+        $query = $db->query("SELECT * FROM $vista");
+        $clientes = $query->getResultArray();
 
         // Título del reporte
         $titulo = $estado === 'activos' ? "Clientes Activos" : "Clientes Inactivos";
@@ -57,28 +58,28 @@ class ReportesController extends BaseController
         // Generar el HTML
         $html = "<h1>$titulo</h1>";
         $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Sexo</th> <!-- Nueva columna -->
-                        <th>Celular</th>
-                        <th>Estado</th>
-                        <th>Fecha de Registro</th>
-                    </tr>";
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th>Celular</th>
+                    <th>Estado</th>
+                    <th>Fecha de Registro</th>
+                </tr>";
 
         foreach ($clientes as $cliente) {
             $estadoTexto = $cliente['estado'] == 1 ? 'Activo' : 'Inactivo';
-            $sexoTexto = $cliente['sexo'] == 'M' ? 'Masculino' : 'Femenino'; // Asumiendo que 'M' y 'F' son los valores en la DB
+            $sexoTexto = $cliente['sexo'] == 'M' ? 'Masculino' : 'Femenino';
             $html .= "<tr>
-                        <td>{$cliente['id']}</td>
-                        <td>{$cliente['nombre']}</td>
-                        <td>{$cliente['apellido']}</td>
-                        <td>{$sexoTexto}</td> <!-- Mostrar el sexo del cliente -->
-                        <td>{$cliente['celular']}</td>
-                        <td>{$estadoTexto}</td>
-                        <td>{$cliente['fechaRegistro']}</td>
-                      </tr>";
+                    <td>{$cliente['id']}</td>
+                    <td>{$cliente['nombre']}</td>
+                    <td>{$cliente['apellido']}</td>
+                    <td>{$sexoTexto}</td>
+                    <td>{$cliente['celular']}</td>
+                    <td>{$estadoTexto}</td>
+                    <td>{$cliente['fechaRegistro']}</td>
+                  </tr>";
         }
 
         $html .= "</table>";
@@ -87,82 +88,48 @@ class ReportesController extends BaseController
 
 
 
-    private function generarHtmlDeudores()
+
+    public function exportarPDFDeudores()
     {
         $db = \Config\Database::connect();
 
-        // Ajustar la consulta para que el total a pagar sea la diferencia entre precio y adelanto
-        $query = $db->query("SELECT venta.idVenta AS idVenta, cliente.nombre, cliente.apellido, 
-                                venta.adelanto, (confeccion.precio - venta.adelanto) AS totalPagar, 
-                                venta.metodoPago, venta.fechaRegistro
-                         FROM venta
-                         JOIN cliente ON venta.idCliente = cliente.id
-                         JOIN confeccion ON venta.idConfeccion = confeccion.id
-                         WHERE venta.estado = 0 AND (confeccion.precio - venta.adelanto) > 0");
+        // Llamar al procedimiento almacenado que obtenga la información de deudores
+        $query = $db->query("CALL obtenerDeudores()");
+        $deudores = $query->getResultArray();
 
-        // Resultados de la consulta
-        $ventas = $query->getResultArray();
+        // Cerrar cualquier resultado adicional para liberar memoria
+        while ($db->connID->more_results() && $db->connID->next_result()) {
+        }
 
-        // Inicio del HTML
-        $html = "<h1>Deudores</h1>";
-        $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
+        // Generar HTML del reporte de deudores
+        $html = "<h1>Reporte de Deudores</h1>";
+        $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%' style='border-collapse: collapse;'>
                 <tr>
                     <th>#</th>
                     <th>Cliente</th>
                     <th>Adelanto</th>
+                    <th>Precio C o A</th>
                     <th>Total a Pagar</th>
                     <th>Método de Pago</th>
                     <th>Fecha Registro</th>
                 </tr>";
 
-        // Recorrer las ventas para generar las filas de la tabla
-        foreach ($ventas as $venta) {
-            $html .= "<tr>
-                    <td>{$venta['idVenta']}</td>
-                    <td>{$venta['nombre']} {$venta['apellido']}</td>
-                    <td>{$venta['adelanto']} Bs</td>
-                    <td>{$venta['totalPagar']} Bs</td>
-                    <td>{$venta['metodoPago']}</td>
-                    <td>{$venta['fechaRegistro']}</td>
-                  </tr>";
-        }
-
-        $html .= "</table>";
-        return $html;
-    }
-
-    public function exportarPDFDeudores()
-    {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT * FROM vista_deudores");
-        $deudores = $query->getResultArray();
-
-        $html = "<h1>Deudores</h1>";
-        $html .= "<table border='1' width='100%' style='border-collapse: collapse;'>";
-        $html .= "<tr>
-                    <th>#</th>
-                    <th>Cliente</th>
-                    <th>Adelanto</th>
-                    <th>Total a Pagar</th>
-                    <th>Método de Pago</th>
-                    <th>Fecha Registro</th>
-                  </tr>";
-
         foreach ($deudores as $deudor) {
             $html .= "<tr>
-                        <td>{$deudor['id']}</td>
-                        <td>{$deudor['cliente']}</td>
-                        <td>{$deudor['adelanto']} Bs</td>
-                        <td>{$deudor['total_a_pagar']} Bs</td>
-                        <td>{$deudor['metodoPago']}</td>
-                        <td>{$deudor['fechaRegistro']}</td>
-                      </tr>";
+                    <td>{$deudor['idVenta']}</td>
+                    <td>{$deudor['nombreCliente']} {$deudor['apellidoCliente']}</td>
+                    <td>{$deudor['adelanto']} Bs</td>
+                    <td>{$deudor['precioConfeccionArreglo']} Bs</td>
+                    <td>{$deudor['totalPagar']} Bs</td>
+                    <td>{$deudor['metodoPago']}</td>
+                    <td>{$deudor['fechaRegistro']}</td>
+                  </tr>";
         }
 
         $html .= "</table>";
 
         // Inicializar Dompdf
-        $dompdf = new Dompdf();
+        $dompdf = new \Dompdf\Dompdf();
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
@@ -173,46 +140,71 @@ class ReportesController extends BaseController
 
 
 
+
+
     // Generar HTML para el total de la deuda por cliente
     private function generarHtmlDeudaPorCliente()
     {
         $db = \Config\Database::connect();
 
-        // Consulta para obtener el total de la deuda por cliente
-        $query = $db->query("SELECT cliente.id, cliente.nombre, cliente.apellido, 
-                                SUM(confeccion.precio - venta.adelanto) AS totalDeuda
-                         FROM venta
-                         JOIN cliente ON venta.idCliente = cliente.id
-                         JOIN confeccion ON venta.idConfeccion = confeccion.id
-                         WHERE venta.estado = 0
-                         GROUP BY cliente.id
-                         HAVING totalDeuda > 0");  // Solo mostrar clientes con deuda pendiente
+        // Consulta para obtener la deuda detallada por cliente
+        $query = $db->query("SELECT cliente.id AS cliente_id, cliente.nombre, cliente.apellido, 
+                                    confeccion.descripcion AS confeccion, 
+                                    confeccion.precio AS precioConfeccion, 
+                                    venta.adelanto, 
+                                    (confeccion.precio - venta.adelanto) AS deuda
+                             FROM venta
+                             JOIN cliente ON venta.idCliente = cliente.id
+                             JOIN confeccion ON venta.idConfeccion = confeccion.id
+                             WHERE venta.estado = 0 AND (confeccion.precio - venta.adelanto) > 0
+                             ORDER BY cliente.id");
 
         // Resultados de la consulta
-        $clientes = $query->getResultArray();
+        $deudas = $query->getResultArray();
 
-        // Generar el HTML
-        $html = "<h1>Total de Deuda por Cliente</h1>";
-        $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
-                <tr>
-                    <th>#</th>
-                    <th>Cliente</th>
-                    <th>Total Deuda</th>
-                </tr>";
+        // Generar el HTML para el reporte
+        $html = "<h1>Detalle de Deuda por Cliente</h1>";
 
-        foreach ($clientes as $cliente) {
-            $html .= "<tr>
-                    <td>{$cliente['id']}</td>
-                    <td>{$cliente['nombre']} {$cliente['apellido']}</td>
-                    <td>{$cliente['totalDeuda']} Bs</td>
-                  </tr>";
+        // Agrupar deudas por cliente
+        $clientes = [];
+        foreach ($deudas as $deuda) {
+            $clientes[$deuda['cliente_id']]['nombre'] = $deuda['nombre'] . ' ' . $deuda['apellido'];
+            $clientes[$deuda['cliente_id']]['deudas'][] = $deuda;
         }
 
-        $html .= "</table>";
+        // Generar la tabla de deuda por cliente
+        foreach ($clientes as $cliente_id => $cliente) {
+            $html .= "<h2>Cliente: {$cliente['nombre']}</h2>";
+            $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
+                        <tr>
+                            <th>Confección</th>
+                            <th>Precio Confección</th>
+                            <th>Adelanto</th>
+                            <th>Deuda</th>
+                        </tr>";
+
+            $totalDeuda = 0;
+            foreach ($cliente['deudas'] as $deuda) {
+                $totalDeuda += $deuda['deuda'];
+                $html .= "<tr>
+                            <td>{$deuda['confeccion']}</td>
+                            <td>{$deuda['precioConfeccion']} Bs</td>
+                            <td>{$deuda['adelanto']} Bs</td>
+                            <td>{$deuda['deuda']} Bs</td>
+                          </tr>";
+            }
+
+            $html .= "<tr>
+                        <td colspan='3'><strong>Total Deuda</strong></td>
+                        <td><strong>{$totalDeuda} Bs</strong></td>
+                      </tr>";
+            $html .= "</table><br>";
+        }
+
         return $html;
     }
 
-    // Exportar PDF para el total de deuda por cliente
+    // Exportar PDF para el reporte detallado de deuda por cliente
     public function exportarPDFDeudaPorCliente()
     {
         // Generar el HTML para el reporte de deuda por cliente
@@ -221,11 +213,11 @@ class ReportesController extends BaseController
         // Inicializar Dompdf
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
 
         // Mostrar el PDF en el navegador
-        $dompdf->stream("reporte_deudores.pdf", ["Attachment" => 0]); // Abrir en el navegador
+        $dompdf->stream("reporte_deuda_detallado_por_cliente.pdf", ["Attachment" => 0]);
     }
 
 
@@ -234,7 +226,13 @@ class ReportesController extends BaseController
     {
         $db = \Config\Database::connect();
 
-        $query = $db->query("SELECT venta.*, cliente.nombre, cliente.apellido, confeccion.descripcion
+        // Consulta para obtener los trabajos pendientes junto con el cálculo del total a pagar
+        $query = $db->query("SELECT venta.id AS idVenta, cliente.nombre, cliente.apellido, 
+                                    confeccion.descripcion AS descripcionConfeccion,
+                                    confeccion.precio AS precioConfeccion, 
+                                    venta.adelanto, 
+                                    (confeccion.precio - venta.adelanto) AS totalPagar, 
+                                    venta.fechaRegistro
                              FROM venta
                              JOIN cliente ON venta.idCliente = cliente.id
                              JOIN confeccion ON venta.idConfeccion = confeccion.id
@@ -242,6 +240,7 @@ class ReportesController extends BaseController
 
         $trabajosPendientes = $query->getResultArray();
 
+        // Generar HTML para el reporte de trabajos pendientes
         $html = "<h1>Trabajos Pendientes</h1>";
         $html .= "<table border='1' cellpadding='10' cellspacing='0' width='100%'>
                     <tr>
@@ -254,11 +253,12 @@ class ReportesController extends BaseController
                         <th>Fecha de Registro</th>
                     </tr>";
 
+        // Llenar la tabla con los trabajos pendientes
         foreach ($trabajosPendientes as $trabajo) {
             $html .= "<tr>
-                        <td>{$trabajo['id']}</td>
+                        <td>{$trabajo['idVenta']}</td>
                         <td>{$trabajo['nombre']} {$trabajo['apellido']}</td>
-                        <td>{$trabajo['descripcion']}</td>
+                        <td>{$trabajo['descripcionConfeccion']}</td>
                         <td>{$trabajo['adelanto']} Bs</td>
                         <td>{$trabajo['totalPagar']} Bs</td>
                         <td>Pendiente</td>
@@ -269,6 +269,7 @@ class ReportesController extends BaseController
         $html .= "</table>";
         return $html;
     }
+
 
     // Generar HTML para ventas por fecha
     public function generarHtmlVentasPorFecha()

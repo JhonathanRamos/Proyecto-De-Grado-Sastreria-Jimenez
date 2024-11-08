@@ -88,6 +88,7 @@ function confirmDelete(event, deleteUrl) {
     });
 }
 
+
 // BORRAR PERO PARA LOS DEMAS CON SWWETALERT2
 function confirmDeleteDatos(event, deleteUrl) {
     event.preventDefault(); // Previene la acción por defecto del enlace
@@ -108,18 +109,14 @@ function confirmDeleteDatos(event, deleteUrl) {
     });
 }
 
-//GUARDAR EDITANDO
+//EDITAR FUNCIONA PARA GUARDAR BTN -- CRUD -- P - F - TM -TF - C
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtén la URL actual
-    var urlActual = window.location.href;
-    console.log(urlActual);
-
     var guardarBtn = document.getElementById('guardarBtn');
     var form = document.querySelector('form');
 
     if (guardarBtn) {
         guardarBtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Previene el comportamiento por defecto del botón
+            event.preventDefault();
             Swal.fire({
                 title: '¿Estás seguro?',
                 text: "¿Deseas guardar los cambios?",
@@ -131,105 +128,64 @@ document.addEventListener('DOMContentLoaded', function () {
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // Muestra mensaje de carga
-                    Swal.fire({
-                        title: 'Guardando...',
-                        text: 'Por favor, espera mientras se guardan los cambios.',
-                        icon: 'info',
-                        allowOutsideClick: false,
-                        showConfirmButton: false
-                    });
-
-                    // Envía el formulario mediante una solicitud fetch
                     fetch(form.action, {
                         method: 'POST',
                         body: new FormData(form)
-                    }).then(response => {
-                        if (response.ok) {
-                            Swal.fire({
-                                title: '¡Éxito!',
-                                text: 'Los cambios se han guardado correctamente.',
-                                icon: 'success',
-                                confirmButtonColor: '#3085d6',
-                                confirmButtonText: 'Aceptar'
-                            }).then(() => {
-                                // Redirige según la URL actual
-                                if (urlActual.includes('editartrajeFemenino')) {
-                                    window.location.href = 'http://localhost/code4/public/datosTrajeFemenino'; // URL para editar traje femenino
-                                } else if (urlActual.includes('editartrajeMasculino')) {
-                                    window.location.href = 'http://localhost/code4/public/datosTrajeMasculino'; // URL para editar traje masculino
-                                } else if (urlActual.includes('editarFalda')) {
-                                    window.location.href = 'http://localhost/code4/public/datosFalda'; // URL para editar falda
-                                } else if (urlActual.includes('editarPantalon')) {
-                                    window.location.href = 'http://localhost/code4/public/datosPantalon'; // URL para editar pantalón
-                                } else {
-                                    window.location.href = 'http://localhost/code4/public/cliente'; // URL para editar cliente
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                Swal.fire({
+                                    title: '¡Éxito!',
+                                    text: data.message,
+                                    icon: 'success',
+                                    confirmButtonText: 'Aceptar'
+                                }).then(() => {
+                                    window.location.href = data.redirectUrl;
+                                });
+                            } else {
+                                // Muestra errores específicos en SweetAlert
+                                let mensajeError = "Revise la información ingresada:\n";
+                                for (const [campo, error] of Object.entries(data.errors)) {
+                                    mensajeError += `${campo}: ${error}\n`;
                                 }
-                            });
-                        } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: mensajeError,
+                                    icon: 'error',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            }
+                        })
+                        .catch(() => {
                             Swal.fire({
                                 title: 'Error',
-                                text: 'Hubo un problema al guardar los cambios. Inténtalo de nuevo.',
+                                text: 'Hubo un problema con la solicitud.',
                                 icon: 'error',
-                                confirmButtonColor: '#3085d6',
                                 confirmButtonText: 'Aceptar'
                             });
-                        }
-                    }).catch(() => {
-                        Swal.fire({
-                            title: 'Error',
-                            text: 'Hubo un problema al conectar con el servidor. Inténtalo de nuevo.',
-                            icon: 'error',
-                            confirmButtonColor: '#3085d6',
-                            confirmButtonText: 'Aceptar'
                         });
-                    });
                 }
             });
         });
     }
-
-    // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-    if (urlActual.includes('editar') ||
-        urlActual.includes('editarFalda') ||
-        urlActual.includes('editarPantalon') ||
-        urlActual.includes('editarTrajeFemenino') ||
-        urlActual.includes('editarTrajeMasculino')) {
-
-        if (form) {
-            form.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter') {
-                    // Si el foco está en el botón "Guardar"
-                    if (document.activeElement === guardarBtn) {
-                        guardarBtn.click(); // Simula un clic en el botón
-                        event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
-                    } else {
-                        // Deja que 'Enter' funcione normalmente para campos de formulario
-                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                        const currentIndex = focusableElements.indexOf(event.target);
-                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                            focusableElements[currentIndex + 1].focus();
-                            event.preventDefault(); // Previene el comportamiento por defecto del 'Enter'
-                        }
-                    }
-                }
-            });
-        }
-    }
 });
 
+
+
+
+
+//CREAR CLIENTE
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtén la URL actual
     var urlActual = window.location.href;
 
-    // Verifica si la URL contiene 'crear'
     if (urlActual.includes('crear')) {
         const form = document.querySelector('form');
         const guardarBtn = document.getElementById('guardarBtnUsuario');
 
         if (guardarBtn) {
             guardarBtn.addEventListener('click', function (event) {
-                event.preventDefault(); // Previene el comportamiento por defecto del botón
+                event.preventDefault();
 
                 Swal.fire({
                     title: '¿Estás seguro?',
@@ -257,12 +213,22 @@ document.addEventListener('DOMContentLoaded', function () {
                                         icon: 'success',
                                         confirmButtonText: 'Aceptar'
                                     }).then(() => {
-                                        window.location.href = data.redirectUrl; // Redirige a la página deseada
+                                        window.location.href = data.redirectUrl;
                                     });
                                 } else {
+                                    // Procesar errores detallados y mostrarlos
+                                    let errorMessages = '';
+                                    if (data.errors) {
+                                        for (const [field, message] of Object.entries(data.errors)) {
+                                            errorMessages += `${message}<br>`;
+                                        }
+                                    } else {
+                                        errorMessages = data.message;
+                                    }
+
                                     Swal.fire({
                                         title: 'Error',
-                                        text: data.message,
+                                        html: errorMessages, // Muestra los mensajes de error en HTML
                                         icon: 'error',
                                         confirmButtonText: 'Aceptar'
                                     });
@@ -279,87 +245,74 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             });
-
-            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-            form.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter') {
-                    // Si el foco está en el botón "Guardar"
-                    if (document.activeElement === guardarBtn) {
-                        guardarBtn.click(); // Simula un clic en el botón
-                        event.preventDefault(); // Previene el envío del formulario
-                    } else {
-                        // Deja que 'Enter' funcione normalmente para campos de formulario
-                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                        const currentIndex = focusableElements.indexOf(event.target);
-                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                            focusableElements[currentIndex + 1].focus();
-                            event.preventDefault(); // Previene el envío del formulario
-                        }
-                    }
-                }
-            });
         }
     }
 });
 
 
-
-//Crear falda , pantalon , trajeFemenino , TrajeMasculino
+//CREAR F - P - TM - TF
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtén la URL actual
     var urlActual = window.location.href;
 
-    // Verifica si la URL contiene alguna de las cadenas especificadas
     if (urlActual.includes('falda') ||
         urlActual.includes('pantalon') ||
         urlActual.includes('trajeFemenino') ||
         urlActual.includes('trajeMasculino')) {
 
-        // Solo añade el event listener si la URL es válida
         var BtnSuccess = document.getElementById('BtnSuccess');
         var form = document.querySelector('form');
 
         if (BtnSuccess) {
-            // Maneja el clic en el botón "Guardar"
             BtnSuccess.addEventListener('click', function (event) {
-                event.preventDefault(); // Previene el comportamiento por defecto del botón
-                Swal.fire({
-                    title: '¡Éxito!',
-                    text: "Medidas guardadas con éxito.",
-                    icon: 'success',
-                    confirmButtonColor: '#3085d6',
-                    confirmButtonText: 'Aceptar'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // Envía el formulario si el usuario confirma
-                        form.submit();
-                    }
-                });
-            });
-        }
+                event.preventDefault();
 
-        if (form) {
-            // Permite que 'Enter' funcione como tabulador y en el botón "Guardar"
-            form.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter') {
-                    // Si el foco está en el botón "Guardar"
-                    if (document.activeElement === BtnSuccess) {
-                        BtnSuccess.click(); // Simula un clic en el botón
-                        event.preventDefault(); // Previene el envío del formulario
-                    } else {
-                        // Deja que 'Enter' funcione normalmente para campos de formulario
-                        const focusableElements = Array.from(form.querySelectorAll('input, select, textarea, button')).filter(el => !el.disabled);
-                        const currentIndex = focusableElements.indexOf(event.target);
-                        if (currentIndex > -1 && currentIndex < focusableElements.length - 1) {
-                            focusableElements[currentIndex + 1].focus();
-                            event.preventDefault(); // Previene el envío del formulario
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Swal.fire({
+                                title: '¡Éxito!',
+                                text: data.message,
+                                icon: 'success',
+                                confirmButtonText: 'Aceptar'
+                            }).then(() => {
+                                window.location.href = data.redirectUrl;
+                            });
+                        } else {
+                            // Mostrar errores específicos
+                            let mensajeError = "Revise la información ingresada:\n";
+                            for (const [campo, error] of Object.entries(data.errors)) {
+                                mensajeError += `${campo}: ${error}\n`;
+                            }
+
+                            Swal.fire({
+                                title: 'Error',
+                                text: mensajeError,
+                                icon: 'error',
+                                confirmButtonText: 'Aceptar'
+                            });
                         }
-                    }
-                }
+                    })
+                    .catch(error => {
+                        Swal.fire({
+                            title: 'Error',
+                            text: 'Hubo un problema con la solicitud.',
+                            icon: 'error',
+                            confirmButtonText: 'Aceptar'
+                        });
+                    });
             });
         }
     }
 });
+
+
+
 
 $(document).ready(function () {
     // Inicializar Select2 en el campo de cliente sin tema Bootstrap
@@ -378,6 +331,8 @@ document.addEventListener('DOMContentLoaded', function () {
         minuteIncrement: 1          // Incremento de minutos
     });
 });
+
+
 
 //PAGO
 
@@ -414,19 +369,19 @@ if (window.location.href.includes('/crearVenta')) {
         document.getElementById('modalQR').style.display = 'none';
         document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
     }
-
-    function togglePasswordForm() {
-        const passwordForm = document.getElementById('passwordForm');
-        if (passwordForm.style.display === 'none' || passwordForm.style.display === '') {
-            passwordForm.style.display = 'block';
-        } else {
-            passwordForm.style.display = 'none';
-        }
+}
+function togglePasswordForm() {
+    const passwordForm = document.getElementById('passwordForm');
+    if (passwordForm.style.display === 'none' || passwordForm.style.display === '') {
+        passwordForm.style.display = 'block';
+    } else {
+        passwordForm.style.display = 'none';
     }
 }
 
 
 
+//TELA IMAGEN
 document.addEventListener('DOMContentLoaded', function () {
     if (window.location.pathname === '/code4/public/telas') {
         // Función para abrir el modal de imagen
@@ -445,6 +400,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.closeModal = closeModal;
     }
 });
+
+
+
 
 
 

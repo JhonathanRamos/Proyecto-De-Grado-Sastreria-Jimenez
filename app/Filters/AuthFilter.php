@@ -1,6 +1,5 @@
 <?php
 
-//CREADO PARA FILTRAR Y MOSTRAR EL SISTEMA AL ADMINISTRADOR
 namespace App\Filters;
 
 use CodeIgniter\HTTP\RequestInterface;
@@ -11,16 +10,19 @@ class AuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        // Verifica si el usuario está autenticado
-        if (!session()->has('user_id')) {
-            // Redirige a la página de inicio de sesión
-            return redirect()->to('/login');
+        // Verificar si el usuario está autenticado
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'Debes iniciar sesión para acceder a esta sección.');
+        }
+
+        // Verificar si el usuario tiene el rol adecuado
+        if (session()->get('user_role') == 2) { // 2 es el rol de cliente
+            return redirect()->to('/')->with('error', 'No tienes permisos para acceder a esta sección.');
         }
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
-        // No se necesita lógica aquí para este caso
+        // No hacer nada después de ejecutar el filtro
     }
 }
-

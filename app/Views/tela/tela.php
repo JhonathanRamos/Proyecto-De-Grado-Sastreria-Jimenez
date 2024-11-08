@@ -33,50 +33,21 @@
                                 <p>No estás logueado.</p>
                             <?php endif; ?>
                         </div>
-
-
-                        <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i
-                                class="mdi mdi-dots-vertical"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
-                            aria-labelledby="profile-dropdown">
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-cog text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-onepassword  text-info"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-calendar-today text-success"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </li>
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navegación</span>
                 </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('confeccion') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-account-box-multiple"></i>
+                        </span>
+                        <span class="menu-title">Usuarios</span>
+                    </a>
+                </li>
+
 
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('cliente') ?>">
@@ -116,10 +87,11 @@
 
 
 
+
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('confeccion') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-account-multiple-plus"></i>
+                            <i class="mdi mdi-invoice-text-edit"></i>
                         </span>
                         <span class="menu-title"> Confeccion</span>
                     </a>
@@ -128,22 +100,29 @@
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('venta') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-account-multiple-plus"></i>
+                            <i class="mdi mdi-cash-register"></i>
                         </span>
                         <span class="menu-title"> Venta</span>
                     </a>
                 </li>
+
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="<?= base_url('reportes') ?>">
                         <span class="menu-icon">
-                            <i class="mdi mdi-account-multiple-plus"></i>
+                            <i class="mdi mdi-database-search"></i>
                         </span>
                         <span class="menu-title"> Reportes</span>
                     </a>
                 </li>
 
-
-
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="<?= base_url('telas') ?>">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-view-dashboard-edit"></i>
+                        </span>
+                        <span class="menu-title"> Telas Traje</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- partial -->
@@ -170,8 +149,8 @@
                     <ul class="navbar-nav navbar-nav-right">
 
                         <li class="nav-item dropdown border-left">
-                            <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crear') ?>">
-                                <i class="mdi mdi-account-plus"></i>
+                            <a class="nav-link count-indicator dropdown-toggle" href="<?= base_url('crearTela') ?>">
+                                <i class="mdi mdi-tshirt-crew"></i>
                                 <!-- <span class="count bg-success"></span> -->
                             </a>
 
@@ -377,13 +356,8 @@
                 <!-- partial:../../partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
-                                href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights
-                            reserved.</span>
-                        <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center"> <span
-                                class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted
-                                & made with <i class="mdi mdi-heart text-danger"></i></span> <i
-                                class="mdi mdi-heart text-danger"></i></span>
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©
+                            Sastreria Jimenez</span>
                     </div>
                 </footer>
                 <!-- partial -->

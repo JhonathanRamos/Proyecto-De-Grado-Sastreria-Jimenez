@@ -1,41 +1,44 @@
-<?php 
+<?php
 namespace App\Controllers;
 
 use App\Models\TrajeFemenino;
 use App\Models\Cliente;
 use CodeIgniter\Controller;
 
-class TrajeFemeninos extends Controller{
+class TrajeFemeninos extends Controller
+{
 
 
 
-    public function trajeFemenino(){
+    public function trajeFemenino()
+    {
 
         $clienteModel = new Cliente();
         $clientes = $clienteModel->select('id AS idCliente, CONCAT(nombre, " ", apellido) AS nombre_completo')
             ->where('estado', 1)
-            ->where('sexo','F') 
+            ->where('sexo', 'F')
             ->findAll();
-    
+
         $datos['cabecera'] = view('template/cabecera');
         $datos['pie'] = view('template/piepagina');
         $datos['clientes'] = $clientes; // Pasar la lista de clientes a la vista
-    
+
         // Obtén los datos de las faldas y la relación 'cliente'
         $trajeFemeninoModel = new TrajeFemenino();
         $trajeFemenino = $trajeFemeninoModel->select('traje_femenino.idCliente')
             ->join('cliente', 'cliente.id = traje_femenino.idCliente')
             ->findAll();
-    
+
         $datos['trajeFemeninos'] = $trajeFemenino; // Pasar la lista de faldas a la vista
-    
+
         return view('bddclientes/trajeFemenino', $datos);
-      
+
     }
 
-    public function index() {
+    public function index()
+    {
         $trajeFemeninoModel = new TrajeFemenino();
-    
+
         // Obtén los datos de las faldas y la relación 'cliente'
         $trajeFemenino = $trajeFemeninoModel->select('traje_femenino.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , traje_femenino.talle, traje_femenino.largo, 
         traje_femenino.hombro , traje_femenino.ancho , traje_femenino.pecho , traje_femenino.cintura , traje_femenino.cadera ,traje_femenino.largoManga')
@@ -43,27 +46,43 @@ class TrajeFemeninos extends Controller{
             ->orderBy('idCliente', 'ASC')
             ->where('estado', 1)
             ->findAll();
-    
+
         $datos['trajeFemeninos'] = $trajeFemenino;
-    
+
         $datos['cabecera'] = view('template/cabecera');
         $datos['pie'] = view('template/piepagina');
-    
+
         return view('datos/datosTrajeFemenino', $datos);
     }
-   
 
-    public function guardartrajeFemenino() {
 
+    public function guardarTrajeFemenino()
+    {
         $trajeFemeninoModel = new TrajeFemenino();
 
-        $clienteModel = new Cliente(); // Asegúrate de importar el modelo de Cliente
-    
-        // Obtén la lista de clientes activos
-        $clientes = $clienteModel->where('estado', 1)->findAll();
+        // Reglas de validación
+        $validacion = $this->validate([
+            'idCliente' => 'required|integer',
+            'talle' => 'required|numeric|min_length[2]|max_length[3]',
+            'largo' => 'required|numeric|min_length[2]|max_length[3]',
+            'hombro' => 'required|numeric|min_length[2]|max_length[3]',
+            'ancho' => 'required|numeric|min_length[2]|max_length[3]',
+            'pecho' => 'required|numeric|min_length[2]|max_length[3]',
+            'cintura' => 'required|numeric|min_length[2]|max_length[3]',
+            'cadera' => 'required|numeric|min_length[2]|max_length[3]',
+            'largoManga' => 'required|numeric|min_length[2]|max_length[3]'
+        ]);
 
+        if (!$validacion) {
+            // Retorna los errores de validación en JSON
+            return $this->response->setJSON([
+                'success' => false,
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
+        // Si la validación es exitosa, guarda los datos
         $datos = [
-            'clientes' => $clientes, 
             'idCliente' => $this->request->getVar('idCliente'),
             'talle' => $this->request->getVar('talle'),
             'largo' => $this->request->getVar('largo'),
@@ -76,63 +95,65 @@ class TrajeFemeninos extends Controller{
         ];
 
         $trajeFemeninoModel->insert($datos);
-        return redirect()->to(site_url('datosTrajeFemenino'));
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Datos del traje femenino guardados exitosamente',
+            'redirectUrl' => site_url('datosTrajeFemenino')
+        ]);
     }
 
-     //SE PRUEBA DESDE AQUI EL EDITAR Y BORRAR AGREGASTE ESTADO EN MYSQL --> EL PROBLEMA ES CON EL ID A LO QUE VEO AGREGA EL GIT PTM XD WEY
-    
-     public function borrartrajeFemenino($idCliente = null)
-     {
-         $trajeFemeninoModel = new TrajeFemenino();
-         
-       
-         $trajeFemenino = $trajeFemeninoModel->where('idCliente', $idCliente)->first();
-         
-         if ($trajeFemenino) {
-          
-             $trajeFemeninoModel->delete($trajeFemenino['idCliente']);
-         }
-         
-         return redirect()->to(site_url('/datosTrajeFemenino'));
-     }
-     
 
- 
-     
-     
-     public function editartrajeFemenino($idCliente = null)
-     {
-         $trajeFemeninoModel = new TrajeFemenino();
-         $clienteModel = new Cliente();//Mostrar el nombre del cliente a la hora de editar
-     
-         // Busca la falda asociada al idCliente
-         $trajeFemenino = $trajeFemeninoModel->where('idCliente', $idCliente)->first();
-         $cliente = $clienteModel->where('id', $idCliente)->first();//Mostrar el nombre del cliente a la hora de editar
-     
-         if (!$trajeFemenino) {
-             // Manejar la situación si no se encuentra la falda asociada al cliente
-             return redirect()->to(site_url('/datosTrajeFemenino'));
-         }
-     
-         $datos['trajeFemeninos'] = $trajeFemenino;
-         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
-         $datos['cabecera'] = view('template/cabecera');
-         $datos['pie'] = view('template/piepagina');
-         return view('datos/editarTrajeFemenino', $datos);
 
- 
-        
-      
-      
-     }
-     
- 
-     public function actualizartrajeFemenino(){
+    public function borrartrajeFemenino($idCliente = null)
+    {
+        $trajeFemeninoModel = new TrajeFemenino();
 
-         $trajeFemenino = new TrajeFemenino();
- 
-         $datos=[
-         
+
+        $trajeFemenino = $trajeFemeninoModel->where('idCliente', $idCliente)->first();
+
+        if ($trajeFemenino) {
+
+            $trajeFemeninoModel->delete($trajeFemenino['idCliente']);
+        }
+
+        return redirect()->to(site_url('/datosTrajeFemenino'));
+    }
+
+
+
+
+
+    public function editartrajeFemenino($idCliente = null)
+    {
+        $trajeFemeninoModel = new TrajeFemenino();
+        $clienteModel = new Cliente();//Mostrar el nombre del cliente a la hora de editar
+
+        // Busca la falda asociada al idCliente
+        $trajeFemenino = $trajeFemeninoModel->where('idCliente', $idCliente)->first();
+        $cliente = $clienteModel->where('id', $idCliente)->first();//Mostrar el nombre del cliente a la hora de editar
+
+        if (!$trajeFemenino) {
+            // Manejar la situación si no se encuentra la falda asociada al cliente
+            return redirect()->to(site_url('/datosTrajeFemenino'));
+        }
+
+        $datos['trajeFemeninos'] = $trajeFemenino;
+        $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
+        $datos['cabecera'] = view('template/cabecera');
+        $datos['pie'] = view('template/piepagina');
+        return view('datos/editarTrajeFemenino', $datos);
+
+
+
+
+
+    }
+
+    public function actualizartrajeFemenino()
+    {
+        $trajeFemenino = new TrajeFemenino();
+
+        $datos = [
             'talle' => $this->request->getVar('talle'),
             'largo' => $this->request->getVar('largo'),
             'hombro' => $this->request->getVar('hombro'),
@@ -141,35 +162,96 @@ class TrajeFemeninos extends Controller{
             'cintura' => $this->request->getVar('cintura'),
             'cadera' => $this->request->getVar('cadera'),
             'largoManga' => $this->request->getVar('largoManga')
-           
-  
-         ];
-         $id= $this->request->getVar('idCliente');
- 
-         $validacion = $this->validate([
-             'talle' => 'required|numeric|min_length[1]',
-             'largo' => 'required|numeric|min_length[1]',
-             'hombro' => 'required|numeric|min_length[1]',
-             'ancho' => 'required|numeric|min_length[1]',
-             'pecho' => 'required|numeric|min_length[1]',
-             'cintura' => 'required|numeric|min_length[1]',
-             'cadera' => 'required|numeric|min_length[1]',
-             'largoManga' => 'required|numeric|min_length[1]'
-         ]);
-     
-         if (!$validacion) {
-             $session= session();
-             $session->setFlashdata('mensaje','Revise la informacion ');
- 
- 
-             return redirect()->back()->withInput();
-       
-         }
- 
- 
-         $trajeFemenino->update($id,$datos);
- 
-         return redirect()->to(site_url('/datosTrajeFemenino'));
-     }
-     
+        ];
+
+        $id = $this->request->getVar('idCliente');
+
+        // Validación de los datos de entrada con mensajes personalizados
+        $validacion = $this->validate([
+            'talle' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo talle es obligatorio.',
+                    'numeric' => 'El talle debe ser un número.',
+                    'min_length' => 'El talle debe tener al menos 2 dígito.'
+                ]
+            ],
+            'largo' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo largo es obligatorio.',
+                    'numeric' => 'El largo debe ser un número.',
+                    'min_length' => 'El largo debe tener al menos 2 dígito.'
+                ]
+            ],
+            'hombro' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo hombro es obligatorio.',
+                    'numeric' => 'El hombro debe ser un número.',
+                    'min_length' => 'El hombro debe tener al menos 2 dígito.'
+                ]
+            ],
+            'ancho' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo ancho es obligatorio.',
+                    'numeric' => 'El ancho debe ser un número.',
+                    'min_length' => 'El ancho debe tener al menos 2 dígito.'
+                ]
+            ],
+            'pecho' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo pecho es obligatorio.',
+                    'numeric' => 'El pecho debe ser un número.',
+                    'min_length' => 'El pecho debe tener al menos 2 dígito.'
+                ]
+            ],
+            'cintura' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo cintura es obligatorio.',
+                    'numeric' => 'La cintura debe ser un número.',
+                    'min_length' => 'La cintura debe tener al menos 2 dígito.'
+                ]
+            ],
+            'cadera' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo cadera es obligatorio.',
+                    'numeric' => 'La cadera debe ser un número.',
+                    'min_length' => 'La cadera debe tener al menos 2 dígito.'
+                ]
+            ],
+            'largoManga' => [
+                'rules' => 'required|numeric|min_length[2]',
+                'errors' => [
+                    'required' => 'El campo largo de manga es obligatorio.',
+                    'numeric' => 'El largo de manga debe ser un número.',
+                    'min_length' => 'El largo de manga debe tener al menos 2 dígito.'
+                ]
+            ]
+        ]);
+
+        if (!$validacion) {
+            // Retornar JSON con los errores específicos para ser manejados en el JS
+            return $this->response->setJSON([
+                'success' => false,
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
+        // Actualizar los datos del traje femenino
+        $trajeFemenino->update($id, $datos);
+
+        // Respuesta de éxito
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Traje femenino actualizado exitosamente.',
+            'redirectUrl' => site_url('/datosTrajeFemenino')
+        ]);
+    }
+
+
 }
