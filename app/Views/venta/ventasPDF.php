@@ -48,7 +48,7 @@
                         <td><?= $venta['estado'] == 1 ? 'Completado' : 'Pendiente'; ?></td>
                         <td><?= $venta['metodoPago']; ?></td>
                         <td><?= $venta['fechaRegistro']; ?></td>
-                        <td><?= $venta['fecha']; ?></td>
+                        <td><?= $venta['fechaEntrega']; ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

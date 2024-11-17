@@ -1,0 +1,1086 @@
+CRITICAL - 2024-11-16 02:26:17 --> Undefined array key "fecha"
+in APPPATH\Views\venta\venta.php on line 294.
+ 1 APPPATH\Views\venta\venta.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 294)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(50): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:42:29 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:42:29 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-16 02:42:42 --> Undefined array key 0
+in APPPATH\Views\sastreria\telaTraje.php on line 96.
+ 1 APPPATH\Views\sastreria\telaTraje.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\code4\\app\\Views\\sastreria\\telaTraje.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\sastreria\\telaTraje.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('sastreria/telaTraje', [], true)
+ 5 APPPATH\Controllers\Telas.php(197): view('sastreria/telaTraje', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Telas->mostrarTelaTraje()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Telas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:43:23 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:43:23 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:44:48 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:44:48 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:45:15 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:45:15 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:48:38 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:48:38 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:49:08 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:49:08 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:49:25 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:49:25 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:06 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:06 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:23 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:23 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:24 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:24 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:24 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:24 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:25 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:25 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:52:33 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:52:33 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:53:14 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:53:14 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:56:56 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:56:56 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:56:57 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:56:57 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:56:58 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:56:58 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:56:59 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:56:59 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:01 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:01 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:06 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:06 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:07 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:07 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:08 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:08 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:11 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:11 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:12 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:12 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 02:57:36 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 02:57:36 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`, `usuario`.`nombres` as `nombreUsuario`, `usuario`.`apellidos` as `apellidoUsuario`
+FROM `reserva`
+JOIN `usuario` ON `usuario`.`id` = `reserva`.`idUsuario`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(174): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:06 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:06 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:11 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:11 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:12 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:12 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:13 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:13 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:14 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:14 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:14 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:14 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:15 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:15 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:16 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:16 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:17 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:17 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:18 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:18 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:18 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:18 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:01:40 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:01:40 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:13:32 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:13:32 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-16 03:14:39 --> mysqli_sql_exception: Unknown column 'reserva.idTela' in 'on clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-16 03:14:39 --> Unknown column 'reserva.idTela' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.`id`, `reserva`.`fechaReserva`, `tela`.`nombre` as `nombreTela`, `tela`.`precio`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `reserva`.`idUsuario` = :reserva.idUsuario:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Auth.php(173): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -8,6 +8,6 @@ class Venta extends Model{
     protected $table      = 'venta';
     // Uncomment below if you want add primary key
     protected $primaryKey = 'idVenta';
-    protected $allowedFields= ['fecha' , 'total' , 'estado','metodoPago' ,'adelanto', 'fechaRegistro' , 'fechaActualizacion' , 'idUsuario' , 'idCliente','idConfeccion','idTela'];
+    protected $allowedFields= ['fechaEntrega','fechaPrueba' , 'total' , 'estado','metodoPago' ,'adelanto', 'fechaRegistro' , 'fechaActualizacion' , 'idUsuario' , 'idCliente','idConfeccion','idTela'];
 
 }

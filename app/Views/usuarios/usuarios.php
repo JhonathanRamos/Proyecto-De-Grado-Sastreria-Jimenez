@@ -40,7 +40,7 @@
         </li>
 
         <li class="nav-item menu-items">
-          <a class="nav-link" href="<?= base_url('confeccion') ?>">
+          <a class="nav-link" href="<?= base_url('usuarios') ?>">
             <span class="menu-icon">
               <i class="mdi mdi-account-box-multiple"></i>
             </span>
@@ -247,7 +247,7 @@
                 <div class="card-body">
                   <h1 class="card-title">Usuarios</h1>
                   <!-- Formulario para el buscador -->
-                  <form method="GET" action="<?= site_url('usuario'); ?>">
+                  <form method="GET" action="<?= site_url('usuarios'); ?>">
                     <div class="input-group mb-3">
                       <input type="text" id="search" name="search" class="form-control" placeholder="Buscar Usuarios..."
                         value="<?= esc($search) ?>">
@@ -268,6 +268,7 @@
                           <th>Apellidos</th>
                           <th>Email</th>
                           <th>Celular</th>
+                          <th>Fecha Registro</th>
                           <th>Rol</th>
                           <th>Acciones</th>
                         </tr>
@@ -281,6 +282,7 @@
                               <td><?= $usuario['apellidos']; ?></td>
                               <td><?= $usuario['email']; ?></td>
                               <td><?= $usuario['celular']; ?></td>
+                              <td><?= $usuario['fechaRegistro']; ?></td>
                               <td><?= ($usuario['rol'] == 2) ? 'Cliente' : 'Otro'; ?></td>
                               <td>
                                 <div class="btn-group">

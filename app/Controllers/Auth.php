@@ -323,6 +323,7 @@ class Auth extends BaseController
                 ->orLike('apellidos', $search)
                 ->orLike('email', $search)
                 ->orLike('celular', $search)
+                ->orLike('fechaRegistro', $search)
                 ->groupEnd();
         }
 

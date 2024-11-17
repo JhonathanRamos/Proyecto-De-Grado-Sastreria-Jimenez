@@ -111,7 +111,7 @@
 
             // Actualizar el enlace del botón "Hacer Reserva" con el ID de la tela seleccionada
             document.getElementById('reserveButton').onclick = function () {
-                window.location.href = '<?= base_url('reservas/seleccionarTela') ?>/' + telaId;
+                window.location.href = '<?= base_url('reservas/crearReserva') ?>/' + telaId;
             };
         }
     </script>

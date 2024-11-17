@@ -141,10 +141,11 @@ $routes->post('reservas/guardarReserva', 'Reservas::guardarReserva');
 $routes->get('reservas', 'Reservas::listarReservas');
 $routes->get('reservas/cancelar/(:num)', 'Reservas::cancelar/$1');
 
-
-
-
 $routes->get('/telaTraje', 'Telas::mostrarTelaTraje');
+
+$routes->get('reservas/crear/(:num)', 'Reservas::crear/$1', ['as' => 'reservas.crear']);
+$routes->post('reservas/guardar', 'Reservas::guardar', ['as' => 'reservas.guardar']);
+
 
 
 $routes->get('auth/olvidar-contrasenia', 'Auth::olvidarContrasenia');

@@ -200,37 +200,37 @@
               <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                 <div class="navbar-profile">
                   <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
-                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                  <div class="d-none d-sm-block">
+                    <?php if (session()->has('user_id')): ?>
+                      <p class="mb-0 navbar-profile-name"><?= session()->get('user_name') ?></p>
+                      <small>
+                        <?php if (session()->get('user_role') == 1): ?>
+                        <?php else: ?>
+                        <?php endif; ?>
+                      </small>
+                    <?php else: ?>
+                      <p>No estás logueado.</p>
+                    <?php endif; ?>
+                  </div>
                   <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
               </a>
+
               <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
                 aria-labelledby="profileDropdown">
-                <h6 class="p-3 mb-0">Profile</h6>
+                <h6 class="p-3 mb-0">Ajuste</h6>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-cog text-success"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Settings</p>
-                  </div>
-                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
+                <a href="<?= base_url('auth/logout') ?>" class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
                       <i class="mdi mdi-logout text-danger"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Log out</p>
+                    <p class="preview-subject mb-1">Cerrar Sesión</p>
                   </div>
                 </a>
-                <div class="dropdown-divider"></div>
-                <p class="p-3 mb-0 text-center">Advanced settings</p>
               </div>
             </li>
           </ul>
@@ -291,7 +291,7 @@
                             <!-- Invertir la lógica -->
                             <td><?= $venta['metodoPago']; ?></td>
                             <td><?= $venta['fechaRegistro']; ?></td>
-                            <td><?= $venta['fecha']; ?></td> <!-- Mostrar la Fecha de Entrega -->
+                            <td><?= $venta['fechaEntrega']; ?></td> <!-- Mostrar la Fecha de Entrega -->
                             <td>
                               <?php $editarUrl = base_url('ventas/editar/' . $venta['idVenta']); ?>
                               <a href="<?= $editarUrl; ?>" class="btn btn-outline-primary">Editar</a>

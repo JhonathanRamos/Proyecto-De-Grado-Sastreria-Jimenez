@@ -49,7 +49,7 @@
                             <a class="nav-link" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Confeccion</a>
+                            <a class="nav-link" href="<?= base_url('/telaTraje') ?>">Confección</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contactos</a>
@@ -116,7 +116,7 @@
                 </form>
             </div>
 
-            <!-- Listado de Reservas -->
+            Listado de Reservas
             <div class="user-info mb-4 p-4 border rounded">
                 <h2>Mis Reservas</h2>
                 <?php if (empty($reservas)): ?>

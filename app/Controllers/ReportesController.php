@@ -317,7 +317,7 @@ class ReportesController extends BaseController
                                     <td>{$totalPagar} Bs</td>
                                     <td>{$estadoTexto}</td>
                                     <td>{$venta['fechaRegistro']}</td>
-                                    <td>{$venta['fecha']}</td>
+                                    <td>{$venta['fechaEntrega']}</td>
                                   </tr>";
         }
 

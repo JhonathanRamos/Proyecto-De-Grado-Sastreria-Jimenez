@@ -44,7 +44,7 @@
                 <!-- Campo para Fecha de Recolección -->
                 <div class="form-group">
                     <label for="fechaRecoleccion">Fecha y Hora de Recolección:</label>
-                    <input id="fechaRecoleccion" value="<?= set_value('fechaRecoleccion', $venta['fecha']) ?>"
+                    <input id="fechaRecoleccion" value="<?= set_value('fechaRecoleccion', $venta['fechaEntrega']) ?>"
                         class="form-control" type="datetime-local" name="fechaRecoleccion" required>
                 </div>
 

@@ -127,7 +127,7 @@ class Ventas extends Controller
             'adelanto' => $adelanto,
             'total' => $total,
             'estado' => $this->request->getVar('estado'),
-            'fecha' => $this->request->getVar('fechaRecoleccion'),
+            'fechaEntrega' => $this->request->getVar('fechaRecoleccion'),
             'idUsuario' => $idUsuario,
             'fechaRegistro' => date('Y-m-d H:i:s'),
             'metodoPago' => $this->request->getVar('metodoPago'), // Guardar método de pago
@@ -200,7 +200,7 @@ class Ventas extends Controller
             'adelanto' => $adelanto,
             'total' => $total,
             'estado' => $this->request->getVar('estado'),
-            'fecha' => $this->request->getVar('fechaRecoleccion')
+            'fechaEntrega' => $this->request->getVar('fechaRecoleccion')
         ];
 
         $ventaModel->update($id, $ventaData);

@@ -8,7 +8,7 @@ class Login extends Model
 {
     protected $table = 'usuario';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nombres', 'apellidos', 'email', 'password', 'celular', 'estado', 'rol', 'is_temp_password'];
+    protected $allowedFields = ['nombres', 'apellidos', 'email', 'password', 'celular', 'estado', 'rol', 'is_temp_password' , 'fechaRegistro'];
 
 
     public function registerClient($data)
