@@ -18,87 +18,96 @@ class Reservas extends Controller
         helper(['form', 'url', 'session']);
     }
 
-    /**
-     * Selecciona una tela específica para la reserva y verifica si el usuario está autenticado.
-     *
-     * @param int $idTela El ID de la tela seleccionada
-     * @return \CodeIgniter\HTTP\RedirectResponse|void
-     */
-    public function seleccionarTela($idTela)
-    {
-        // Obtener el ID del usuario
-        $cliente_id = session()->get('user_id');
 
-        // Verificar que el ID de tela exista
+    /**
+     * Muestra el formulario para confirmar la reserva con la tela seleccionada.
+     */
+    public function crear($idTela)
+    {
+        $this->verificarReservasVencidas(); // Verificar y actualizar reservas vencidas
+
         $tela = $this->telaModel->find($idTela);
+
         if (!$tela) {
-            return redirect()->back()->with('error', 'Tela no encontrada.');
+            return redirect()->to('/telaTraje')->with('error', 'Tela no encontrada.');
         }
 
-        // Crear una nueva reserva
-        $data = [
-            'fechaReserva' => date('Y-m-d H:i:s'), // Fecha y hora actual como ejemplo
-            'idUsuario' => $cliente_id,
-            'idTela' => $idTela,
-        ];
+        $cliente_id = session()->get('user_id');
 
-        // Guardar la reserva
-        $this->reservaModel->insert($data);
-
-        // Redirigir a "Mi Cuenta" con un mensaje de éxito
-        return redirect()->to(base_url('mi-cuenta'))->with('success', 'Reserva creada exitosamente.');
+        return view('reservaCliente/crearReserva', [
+            'tela' => $tela,
+            'cliente_id' => $cliente_id,
+        ]);
     }
-
-
-
-
-
 
     /**
      * Guarda la reserva en la base de datos.
      */
-    public function guardarReserva()
+    public function guardar()
     {
+        $this->verificarReservasVencidas(); // Verificar y actualizar reservas vencidas
+
         $cliente_id = session()->get('user_id');
 
-        // Verifica si ya existe una reserva para el cliente
-        $reservaExistente = $this->reservaModel->where('idUsuario', $cliente_id)->first();
+        // Verificar si existe una reserva vencida o activa
+        $reservaExistente = $this->reservaModel
+            ->where('idUsuario', $cliente_id)
+            ->whereIn('estado', [0, 1]) // Buscar tanto activas como canceladas
+            ->first();
 
-        if ($reservaExistente) {
-            return redirect()->to(base_url('mi-cuenta'))->with('error', 'Ya tienes una reserva activa.');
+        // Validar la fecha de reserva
+        $fechaReserva = $this->request->getPost('fechaReserva');
+        if (empty($fechaReserva)) {
+            return redirect()->back()->with('error', 'Por favor, selecciona una fecha válida.');
         }
 
-        // Guardar la nueva reserva
+        if (strtotime($fechaReserva) < strtotime(date('Y-m-d H:i'))) {
+            return redirect()->back()->with('error', 'La fecha de reserva no puede ser en el pasado.');
+        }
+
         $data = [
-            'fechaReserva' => $this->request->getPost('fechaReserva'),
+            'fechaReserva' => $fechaReserva,
             'idUsuario' => $cliente_id,
             'idTela' => $this->request->getPost('tela_id'),
+            'estado' => 1, // Activa por defecto
         ];
 
-        if ($this->reservaModel->insert($data)) {
-            return redirect()->to(base_url('mi-cuenta'))->with('success', 'Reserva creada exitosamente');
+        if ($reservaExistente) {
+            // Reutilizar la fila existente
+            $this->reservaModel->update($reservaExistente['id'], $data);
         } else {
-            return redirect()->back()->with('error', 'Hubo un problema al crear la reserva');
+            // Crear una nueva reserva
+            $this->reservaModel->insert($data);
         }
-    }
 
+        return redirect()->to('mi-cuenta')->with('success', 'Reserva creada exitosamente.');
+    }
 
     public function cancelar($id)
     {
-        // Verifica que la reserva existe antes de intentar eliminarla
-        if ($this->reservaModel->find($id)) {
-            // Elimina la reserva completamente
-            $this->reservaModel->delete($id);
-            return redirect()->to(base_url('mi-cuenta'))->with('success', 'Reserva cancelada exitosamente');
+        // Buscar la reserva por ID
+        $reserva = $this->reservaModel->find($id);
+
+        if (!$reserva) {
+            return redirect()->to('mi-cuenta')->with('error', 'Reserva no encontrada.');
         }
 
-        return redirect()->back()->with('error', 'No se encontró la reserva');
+        // Cambiar el estado de la reserva a cancelado (0)
+        $this->reservaModel->update($id, ['estado' => 0]);
+
+        return redirect()->to('mi-cuenta')->with('success', 'Reserva cancelada correctamente.');
     }
 
-    // app/Controllers/Reservas.php
 
+    private function verificarReservasVencidas()
+    {
+        $reservasVencidas = $this->reservaModel
+            ->where('fechaReserva <', date('Y-m-d H:i:s'))
+            ->where('estado', 1) // Solo reservas activas
+            ->findAll();
 
-
-
-
+        foreach ($reservasVencidas as $reserva) {
+            $this->reservaModel->update($reserva['id'], ['estado' => 0]); // Actualizar el estado a vencido
+        }
+    }
 }

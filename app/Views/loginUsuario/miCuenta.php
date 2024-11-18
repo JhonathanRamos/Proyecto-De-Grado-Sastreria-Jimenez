@@ -116,7 +116,7 @@
                 </form>
             </div>
 
-            Listado de Reservas
+
             <div class="user-info mb-4 p-4 border rounded">
                 <h2>Mis Reservas</h2>
                 <?php if (empty($reservas)): ?>
@@ -127,16 +127,14 @@
                             <tr>
                                 <th>Fecha de Reserva</th>
                                 <th>Tela</th>
-                                <th>Precio</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($reservas as $reserva): ?>
                                 <tr>
-                                    <td><?= $reserva['fechaReserva'] ?></td>
-                                    <td><?= $reserva['nombreTela'] ?></td>
-                                    <td><?= $reserva['precio'] ?></td>
+                                    <td><?= esc($reserva['fechaReserva']) ?></td>
+                                    <td><?= esc($reserva['nombreTela']) ?></td>
                                     <td>
                                         <a href="<?= base_url('reservas/cancelar/' . $reserva['id']) ?>" class="btn btn-danger"
                                             onclick="return confirm('¿Estás seguro de que deseas cancelar esta reserva?');">Cancelar</a>
@@ -150,86 +148,93 @@
 
 
 
-        </div>
-    </div>
-
-    <script>
-        function togglePasswordForm() {
-            const passwordForm = document.getElementById("passwordForm");
-            passwordForm.style.display = (passwordForm.style.display === "none") ? "block" : "none";
-        }
-    </script>
 
 
 
-    <!-- Start Footer -->
-    <footer class="bg-dark text-light pt-5">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Section -->
-                <div class="col-md-4 mb-3">
-                    <h3 class="text-success">Contacta con Nosotros</h3>
-                    <div>
-                        <a href="https://wa.me/59177448360" class="text-success d-block mb-2" target="_blank">
-                            <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
-                                height="35px" width="35px">
-                            77448360
-                        </a>
-                        <a href="https://wa.me/59165741113" class="text-success d-block mb-2" target="_blank">
-                            <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
-                                height="35px" width="35px">
-                            65741113
-                        </a>
-                    </div>
-                    <a href="https://www.facebook.com/profile.php?id=100054542077029" class="text-success d-block mb-2"
-                        target="_blank">
-                        <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" height="35px"
-                            width="35px">
-                        Sastreria Jimenez
-                    </a>
-                </div>
 
-                <!-- Quick Links Section -->
-                <div class="col-md-4 mb-3">
-                    <h3 class="text-success">Enlaces Rápidos</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
-                        <li><a href="nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
-                        <li><a href="shop.html" class="text-light text-decoration-none">Confección</a></li>
-                        <li><a href="contacto.html" class="text-light text-decoration-none">Contacto</a></li>
-                    </ul>
-                </div>
 
-                <!-- About Section -->
-                <div class="col-md-4 mb-3">
-                    <h3 class="text-success">Sobre Nosotros</h3>
-                    <p class="small">Sastrería Jimenez es su lugar de confianza para confecciones de alta calidad y un
-                        servicio excepcional. Contáctenos para más información y servicios personalizados.</p>
-                </div>
-            </div>
+
+
         </div>
 
-        <div class="bg-black py-3">
+        <script>
+            function togglePasswordForm() {
+                const passwordForm = document.getElementById("passwordForm");
+                passwordForm.style.display = (passwordForm.style.display === "none") ? "block" : "none";
+            }
+        </script>
+
+
+
+        <!-- Start Footer -->
+        <footer class="bg-dark text-light pt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <p class="mb-0">Copyright &copy; | Sastreria Jimenez</p>
+                    <!-- Contact Section -->
+                    <div class="col-md-4 mb-3">
+                        <h3 class="text-success">Contacta con Nosotros</h3>
+                        <div>
+                            <a href="https://wa.me/59177448360" class="text-success d-block mb-2" target="_blank">
+                                <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
+                                    height="35px" width="35px">
+                                77448360
+                            </a>
+                            <a href="https://wa.me/59165741113" class="text-success d-block mb-2" target="_blank">
+                                <img src="https://img.icons8.com/?size=100&id=d5ntEsf0JRhM&format=png&color=000000"
+                                    height="35px" width="35px">
+                                65741113
+                            </a>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=100054542077029"
+                            class="text-success d-block mb-2" target="_blank">
+                            <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" height="35px"
+                                width="35px">
+                            Sastreria Jimenez
+                        </a>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div class="col-md-4 mb-3">
+                        <h3 class="text-success">Enlaces Rápidos</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                            <li><a href="nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
+                            <li><a href="shop.html" class="text-light text-decoration-none">Confección</a></li>
+                            <li><a href="contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="col-md-4 mb-3">
+                        <h3 class="text-success">Sobre Nosotros</h3>
+                        <p class="small">Sastrería Jimenez es su lugar de confianza para confecciones de alta calidad y
+                            un
+                            servicio excepcional. Contáctenos para más información y servicios personalizados.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
+
+            <div class="bg-black py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">Copyright &copy; | Sastreria Jimenez</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
 
 
-    <!-- Start Script -->
-    <script src="assets1/js/jquery-1.11.0.min.js"></script>
-    <script src="assets1/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets1/js/templatemo.js"></script>
-    <script src="assets1/js/custom.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- End Script -->
+        <!-- Start Script -->
+        <script src="assets1/js/jquery-1.11.0.min.js"></script>
+        <script src="assets1/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets1/js/bootstrap.bundle.min.js"></script>
+        <script src="assets1/js/templatemo.js"></script>
+        <script src="assets1/js/custom.js"></script>
+        <script src="js/custom.js"></script>
+        <!-- End Script -->
 </body>
 
 </html>

@@ -9,23 +9,19 @@ $routes->get('/', 'Home::index');
 
 
 
-// $routes->group('usuarios', ['filter' => 'auth'], function ($routes) {
-//     $routes->get('/', 'Auth::index');          // Página de lista de usuarios
-//     $routes->get('crear', 'Auth::crear');      // Formulario para crear un usuario
-//     $routes->post('guardar', 'Auth::guardar'); // Acción para guardar un nuevo usuario
-//     $routes->get('editar/(:num)', 'Auth::editar/$1'); // Formulario para editar un usuario
-//     $routes->post('actualizar', 'Auth::actualizar');  // Acción para actualizar un usuario
-//     $routes->get('borrar/(:num)', 'Auth::borrar/$1'); // Acción para borrar un usuario
-// });
-
 $routes->group('', ['filter' => 'auth'], function ($routes) {
 
 
     $routes->get('usuarios', 'Auth::index');              // Página de lista de usuarios
     $routes->get('usuarios/crear', 'Auth::crear');        // Formulario para crear un usuario
     $routes->post('usuarios/guardar', 'Auth::guardar');   // Acción para guardar un nuevo usuario
-    $routes->get('usuarios/editar/(:num)', 'Auth::editarUsuarios/$1'); // Formulario para editar un usuario
-    $routes->post('usuarios/actualizar', 'Auth::actualizar');  // Acción para actualizar un usuario
+   
+
+    $routes->get('/usuarios/editar/(:num)', 'Auth::editar/$1');
+    $routes->post('/usuarios/actualizar', 'Auth::actualizar');
+
+
+
     $routes->get('usuarios/borrar/(:num)', 'Auth::borrar/$1'); // Acción para borrar un usuario
     /* Tablas  */
     //Vista Cliente
@@ -121,6 +117,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
 });
 
+/*_______________________________________________TELAS___________________________________________________________________________ */
 $routes->get('/telas', 'Telas::index');
 //CRUD
 $routes->get('/crearTela', 'Telas::crear');
@@ -129,27 +126,19 @@ $routes->get('/telas/editar/(:num)', 'Telas::editar/$1');
 $routes->post('/telas/actualizar/(:num)', 'Telas::actualizar/$1');
 $routes->get('/telas/borrar/(:num)', 'Telas::borrar/$1');
 $routes->get('/telas/mostrar', 'Telas::mostrarTela');
+/*__________________________________________________________________________________________________________________________ */
+
+/*_________________________________________RESERVAS_________________________________________________________________________________ */
+$routes->get('/telaTraje', 'Telas::mostrarTelaTraje'); // Página para mostrar las telas
+$routes->get('/reservas/crear/(:num)', 'Reservas::crear/$1', ['as' => 'reservas.crear']); // Crear reserva
+$routes->post('/reservas/guardar', 'Reservas::guardar', ['as' => 'reservas.guardar']); // Guardar reserva
+$routes->get('/reservas/editar/(:num)', 'Reservas::editar/$1', ['as' => 'reservas.editar']); // Editar reserva
+$routes->post('/reservas/actualizar/(:num)', 'Reservas::actualizar/$1', ['as' => 'reservas.actualizar']); // Actualizar reserva
+$routes->get('/reservas/cancelar/(:num)', 'Reservas::cancelar/$1', ['as' => 'reservas.cancelar']); // Cancelar reserva
 
 
-$routes->get('reservas/ver/(:num)', 'Reservas::ver/$1', ['as' => 'reservas.ver']);
-$routes->get('reservas/mis-reservas', 'Reservas::misReservas', ['as' => 'reservas.misReservas']);
-$routes->get('reservas/editar/(:num)', 'Reservas::editar/$1', ['as' => 'reservas.editar']);
-$routes->post('reservas/actualizar/(:num)', 'Reservas::actualizar/$1', ['as' => 'reservas.actualizar']);
-//CRUD
-$routes->get('reservas/seleccionarTela/(:num)', 'Reservas::seleccionarTela/$1');
-$routes->post('reservas/guardarReserva', 'Reservas::guardarReserva');
-$routes->get('reservas', 'Reservas::listarReservas');
-$routes->get('reservas/cancelar/(:num)', 'Reservas::cancelar/$1');
+/*__________________________________________________________________________________________________________________________ */
 
-$routes->get('/telaTraje', 'Telas::mostrarTelaTraje');
-
-$routes->get('reservas/crear/(:num)', 'Reservas::crear/$1', ['as' => 'reservas.crear']);
-$routes->post('reservas/guardar', 'Reservas::guardar', ['as' => 'reservas.guardar']);
-
-
-
-$routes->get('auth/olvidar-contrasenia', 'Auth::olvidarContrasenia');
-$routes->post('auth/olvido_contrasenia', 'Auth::olvidoContrasenia');
 
 $routes->set404Override(function () {
     return (new \App\Controllers\ErrorController())->show404();
@@ -163,24 +152,26 @@ $routes->get('nosotros.html', 'Clientes::nosotros');
 $routes->get('contacto.html', 'Clientes::contacto');
 
 
+
 //Login
+/*__________________________________________________________________________________________________________________________ */
 $routes->get('/login', 'Auth::login');
 $routes->post('/auth/login', 'Auth::login'); // Asegúrate de que el formulario apunte a esta ruta
 $routes->post('/auth/register', 'Auth::register');
 
-
 //SALIR LOGIN
 $routes->get('auth/logout', 'Auth::logout');
 
-
 //MI-CUENTA
-$routes->get('mi-cuenta', 'Auth::miCuenta'); // Muestra la vista "Mi Cuenta"
+$routes->get('mi-cuenta', 'Auth::miCuenta'); // Muestra la vista "Mi Cuenta" con la reserva
 $routes->post('mi-cuenta/cambiar-contrasena', 'Auth::cambiarContrasena'); // Procesa el cambio de contraseña
-
 
 // CONTRASEÑA ERROR 
 $routes->get('mi-cuenta/olvidaste-tu-contrasena', 'Auth::olvidarContrasena');
 
+$routes->get('auth/olvidar-contrasenia', 'Auth::olvidarContrasenia');
+$routes->post('auth/olvido_contrasenia', 'Auth::olvidoContrasenia');
+/*__________________________________________________________________________________________________________________________ */
 
 // //SE USARA LUEGO 
 // $routes->get('producto', 'Productos::producto');

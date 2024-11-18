@@ -64,6 +64,7 @@
 
     <!-- Main Content -->
 
+    <!-- Main Content -->
     <div class="container mt-5">
         <h2 class="text-center">Confirmar Reserva</h2>
         <p class="text-center">Revise los detalles de la tela seleccionada y elija la fecha para su reserva.</p>
@@ -71,38 +72,38 @@
         <!-- Detalles de la Tela Seleccionada -->
         <div class="card mb-4">
             <div class="card-body">
-                <h5 class="card-title">Tela Seleccionada: <?= $tela['nombre'] ?></h5>
-                <p class="card-text"><strong>Descripción:</strong> <?= $tela['descripcion'] ?></p>
-                <p class="card-text"><strong>Precio:</strong> Bs <?= $tela['precio'] ?></p>
+                <h5 class="card-title">Tela Seleccionada: <?= esc($tela['nombre']) ?></h5>
+                <p class="card-text"><strong>Descripción:</strong> <?= esc($tela['descripcion']) ?></p>
+                <p class="card-text"><strong>Precio:</strong> Bs <?= esc($tela['precio']) ?></p>
             </div>
         </div>
 
         <!-- Formulario de Confirmación de Reserva -->
-        <form action="<?= base_url('reservas/guardarReserva') ?>" method="post">
-            <input type="hidden" name="tela_id" value="<?= $tela['id'] ?>">
-            <input type="hidden" name="cliente_id" value="<?= $cliente_id ?>">
+        <form action="<?= base_url('reservas/guardar') ?>" method="post">
+            <?= csrf_field() ?>
+            <input type="hidden" name="tela_id" value="<?= esc($tela['id']) ?>">
 
             <div class="mb-3">
                 <label for="fechaReserva" class="form-label">Fecha de Reserva</label>
                 <input type="text" id="fechaReserva" name="fechaReserva" class="form-control"
-                    placeholder="Selecciona la fecha y hora">
+                    placeholder="Selecciona la fecha y hora" required>
             </div>
 
             <button type="submit" class="btn btn-success w-100">Confirmar Reserva</button>
         </form>
 
-
         <!-- Inicializar Flatpickr -->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script>
             flatpickr("#fechaReserva", {
-                enableTime: false,
+                enableTime: true,
                 dateFormat: "Y-m-d H:i",
+                time_24hr: true,
                 minDate: "today" // Impide seleccionar fechas pasadas
             });
         </script>
-
     </div>
+
 
 
     <!-- Footer -->

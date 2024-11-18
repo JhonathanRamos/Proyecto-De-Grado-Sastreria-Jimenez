@@ -1,1 +1,576 @@
 ERROR - 2024-11-17 15:42:00 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+ERROR - 2024-11-17 17:20:45 --> mysqli_sql_exception: Unknown column 'estado' in 'where clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\code4\app\Controllers\Reservas.php(48): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Reservas->guardar()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-17 17:20:45 --> Unknown column 'estado' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `reserva`
+WHERE `idUsuario` = :idUsuario:
+AND `estado` = :estado:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Reservas.php(48): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Reservas->guardar()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-17 17:24:09 --> mysqli_sql_exception: Unknown column 'estado' in 'where clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\code4\app\Controllers\Reservas.php(48): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Reservas->guardar()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-17 17:24:09 --> Unknown column 'estado' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `reserva`
+WHERE `idUsuario` = :idUsuario:
+AND `estado` = :estado:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Reservas.php(48): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Reservas->guardar()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-17 17:26:48 --> mysqli_sql_exception: Column 'idUsuario' in where clause is ambiguous in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-17 17:26:48 --> Column 'idUsuario' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.*, `tela`.`nombre` as `nombreTela`, `tela`.`imagenTela`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `idUsuario` = :idUsuario:
+AND `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-17 17:27:16 --> mysqli_sql_exception: Column 'idUsuario' in where clause is ambiguous in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-17 17:27:16 --> Column 'idUsuario' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.*, `tela`.`nombre` as `nombreTela`, `tela`.`imagenTela`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `idUsuario` = :idUsuario:
+AND `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-17 17:30:31 --> mysqli_sql_exception: Column 'idUsuario' in where clause is ambiguous in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\code4\app\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-17 17:30:31 --> Column 'idUsuario' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva`.*, `tela`.`nombre` as `nombreTela`, `tela`.`imagenTela`
+FROM `reserva`
+JOIN `tela` ON `tela`.`id` = `reserva`.`idTela`
+WHERE `idUsuario` = :idUsuario:
+AND `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Reservas.php(106): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Reservas->misReservas()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-17 20:42:31 --> Credenciales inválidas para el usuario: ramos.jhonathan.951@gmai.com
+ERROR - 2024-11-17 20:42:45 --> Credenciales inválidas para el usuario: ramos.jhonathan.951@gmail.com
+ERROR - 2024-11-17 20:42:51 --> Credenciales inválidas para el usuario: ramos.jhonathan.951@gmail.com
+CRITICAL - 2024-11-17 20:46:05 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:46:06 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:49:06 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:49:19 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:49:20 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:49:23 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 135.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:57:13 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:57:14 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:57:26 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:57:33 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:57:34 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:58:23 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 20:58:27 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 125.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 125)
+ 2 [internal function]: CodeIgniter\View\View->{closure}([...])
+ 3 APPPATH\Views\loginUsuario\miCuenta.php(126): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 7 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:17 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:18 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:37 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:38 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:38 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:38 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:47 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:48 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:48 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:48 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:48 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:49 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:50 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:50 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:50 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:51 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:51 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:51 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:51 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-17 21:18:52 --> Undefined array key "estado"
+in APPPATH\Views\loginUsuario\miCuenta.php on line 134.
+ 1 APPPATH\Views\loginUsuario\miCuenta.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php', 134)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\loginUsuario\\miCuenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('loginUsuario/miCuenta', [], true)
+ 5 APPPATH\Controllers\Auth.php(176): view('loginUsuario/miCuenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->miCuenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

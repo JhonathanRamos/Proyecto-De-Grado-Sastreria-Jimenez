@@ -285,13 +285,12 @@
                               <td><?= $usuario['fechaRegistro']; ?></td>
                               <td><?= ($usuario['rol'] == 2) ? 'Cliente' : 'Otro'; ?></td>
                               <td>
-                                <div class="btn-group">
-                                  <a href="<?= base_url('editar/' . $usuario['id']); ?>"
-                                    class="btn btn-outline-primary">Editar</a>
-                                  <a href="#" class="btn btn-outline-danger"
-                                    onclick="confirmDelete(event, '<?= base_url('borrar/' . $usuario['id']); ?>');">Borrar</a>
-                                </div>
+                                <a href="<?= base_url('usuarios/editar/' . $usuario['id']) ?>"
+                                  class="btn btn-primary">Editar</a>
+                                <a href="<?= base_url('usuarios/eliminar/' . $usuario['id']) ?>" class="btn btn-danger"
+                                  onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">Borrar</a>
                               </td>
+
                             </tr>
                           <?php endforeach; ?>
                         <?php else: ?>

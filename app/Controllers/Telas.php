@@ -36,14 +36,14 @@ class Telas extends Controller
             'imagenTela' => [
                 'uploaded[imagenTela]',
                 'mime_in[imagenTela,image/jpg,image/jpeg,image/png]',
-                'max_size[imagenTela,16384]', // 16 MB en kilobytes
+                'max_size[imagenTela,16384]', // 16 MB
             ],
             'imagenTraje' => [
-                'uploaded[imagenTraje]',
-                'mime_in[imagenTraje,image/jpg,image/jpeg,image/png]',
-                'max_size[imagenTraje,16384]', // 16 MB en kilobytes
-            ]
+                'mime_in[imagenTraje,image/jpg,image/jpeg,image/png]', // Solo válida si se sube
+                'max_size[imagenTraje,16384]', // 16 MB
+            ],
         ]);
+
 
 
         if (!$validacion) {

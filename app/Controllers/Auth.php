@@ -165,11 +165,12 @@ class Auth extends BaseController
 
         $cliente_id = session()->get('user_id');
 
-        // Obtener las reservas del usuario junto con el nombre y precio de la tela
+        // Obtener solo las reservas activas del usuario (estado = 1)
         $reservas = $this->reservaModel
             ->select('reserva.id, reserva.fechaReserva, tela.nombre as nombreTela, tela.precio')
             ->join('tela', 'tela.id = reserva.idTela')
             ->where('reserva.idUsuario', $cliente_id)
+            ->where('reserva.estado', 1) // Solo mostrar reservas activas
             ->findAll();
 
         return view('loginUsuario/miCuenta', [
@@ -467,22 +468,38 @@ class Auth extends BaseController
     // Método para eliminar un usuario (cambia su estado a 0)
     public function borrar($id = null)
     {
+        // Verificar si el usuario existe
         $usuario = $this->loginModel->find($id);
         if (!$usuario) {
+            session()->setFlashdata('error', 'Usuario no encontrado.');
             return redirect()->to('/usuarios');
         }
 
+        // Cambiar el estado del usuario a 0 (eliminado)
         $this->loginModel->update($id, ['estado' => 0]);
 
-        return redirect()->to('/usuarios')->with('mensaje', 'Usuario eliminado exitosamente');
+        session()->setFlashdata('success', 'Usuario eliminado exitosamente.');
+        return redirect()->to('/usuarios');
     }
 
 
+
     // Método para cargar la vista de edición de usuario
+
+
     public function editar($id = null)
     {
+        // Buscar usuario por ID
+        $usuario = $this->loginModel->find($id);
+
+        if (!$usuario) {
+            session()->setFlashdata('error', 'Usuario no encontrado.');
+            return redirect()->to('/usuarios');
+        }
+
+        // Pasar datos del usuario a la vista
         $data = [
-            'usuario' => $this->loginModel->find($id),
+            'usuario' => $usuario,
             'cabecera' => view('template/cabecera'),
             'pie' => view('template/piepagina')
         ];
@@ -490,36 +507,49 @@ class Auth extends BaseController
         return view('usuarios/editarUsuarios', $data);
     }
 
-
     // Método para actualizar un usuario
     public function actualizar()
     {
-        $id = $this->request->getVar('id');
+        $id = $this->request->getPost('id');
 
+        if (!$id) {
+            session()->setFlashdata('error', 'ID del usuario no encontrado.');
+            return redirect()->to('/usuarios');
+        }
+
+        // Validar los datos
         $validacion = $this->validate([
             'nombres' => 'required|min_length[3]',
             'apellidos' => 'required|min_length[3]',
-            'email' => "required|valid_email|is_unique[usuario.email,id,{$id}]",
-            'celular' => 'required|numeric|min_length[8]',
-            'rol' => 'required|in_list[1,2,3]',
+            'email' => "required|valid_email",
+            'celular' => 'required|numeric|min_length[8]|max_length[8]',
         ]);
 
         if (!$validacion) {
-            return redirect()->back()->withInput()->with('mensaje', 'Revise la información ingresada');
+            session()->setFlashdata('error', 'Por favor, revisa los datos ingresados.');
+            return redirect()->back()->withInput();
         }
 
+        // Preparar los datos
         $data = [
-            'nombres' => strtolower($this->request->getVar('nombres')),
-            'apellidos' => strtolower($this->request->getVar('apellidos')),
-            'email' => strtolower(trim($this->request->getVar('email'))),
-            'celular' => $this->request->getVar('celular'),
-            'rol' => $this->request->getVar('rol'),
-            'estado' => $this->request->getVar('estado')
+            'nombres' => strtolower(trim($this->request->getPost('nombres'))),
+            'apellidos' => strtolower(trim($this->request->getPost('apellidos'))),
+            'email' => strtolower(trim($this->request->getPost('email'))),
+            'celular' => $this->request->getPost('celular'),
+            'estado' => $this->request->getPost('estado')
         ];
 
-        $this->loginModel->update($id, $data);
-
-        return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado exitosamente');
+        // Actualizar el usuario
+        if ($this->loginModel->update($id, $data)) {
+            session()->setFlashdata('success', 'Usuario actualizado correctamente.');
+            return redirect()->to('/usuarios');
+        } else {
+            session()->setFlashdata('error', 'No se pudo actualizar el usuario.');
+            return redirect()->back()->withInput();
+        }
     }
+
+
+
 
 }
