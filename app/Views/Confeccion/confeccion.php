@@ -273,7 +273,7 @@
                                                     <th>ID</th>
                                                     <th>Descripción</th>
                                                     <th>Precio</th>
-                                                    <th>Unidad de Medida</th>
+                                                    <th>Categoria</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </thead>
@@ -285,7 +285,7 @@
                                                         </td>
                                                         <td><?= isset($confeccion['precio']) ? $confeccion['precio'] . ' Bs' : '0 Bs'; ?>
                                                         </td>
-                                                        <td><?= isset($confeccion['unidadMedida']) ? $confeccion['unidadMedida'] : 'No disponible'; ?>
+                                                        <td><?= isset($confeccion['categoria']) ? $confeccion['categoria'] : 'No disponible'; ?>
                                                         </td>
                                                         <td>
                                                             <div class="btn-group">

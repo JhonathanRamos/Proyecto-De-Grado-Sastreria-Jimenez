@@ -246,7 +246,6 @@
               <div class="card">
                 <div class="card-body">
                   <h1 class="card-title">Usuarios</h1>
-                  <!-- Formulario para el buscador -->
                   <form method="GET" action="<?= site_url('usuarios'); ?>">
                     <div class="input-group mb-3">
                       <input type="text" id="search" name="search" class="form-control" placeholder="Buscar Usuarios..."
@@ -270,6 +269,9 @@
                           <th>Celular</th>
                           <th>Fecha Registro</th>
                           <th>Rol</th>
+                          <th>Fecha Reserva</th>
+                          <th>Tela</th>
+                          <th>Precio</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -277,32 +279,51 @@
                         <?php if (!empty($usuarios)): ?>
                           <?php foreach ($usuarios as $usuario): ?>
                             <tr>
-                              <td><?= $usuario['id']; ?></td>
-                              <td><?= $usuario['nombres']; ?></td>
-                              <td><?= $usuario['apellidos']; ?></td>
-                              <td><?= $usuario['email']; ?></td>
-                              <td><?= $usuario['celular']; ?></td>
-                              <td><?= $usuario['fechaRegistro']; ?></td>
+                              <td><?= esc($usuario['id']); ?></td>
+                              <td><?= esc($usuario['nombres']); ?></td>
+                              <td><?= esc($usuario['apellidos']); ?></td>
+                              <td><?= esc($usuario['email']); ?></td>
+                              <td><?= esc($usuario['celular']); ?></td>
+                              <td><?= esc($usuario['fechaRegistro']); ?></td>
                               <td><?= ($usuario['rol'] == 2) ? 'Cliente' : 'Otro'; ?></td>
+                              <?php if (!empty($usuario['reservas'])): ?>
+                                <!-- Si hay reservas, mostramos los datos -->
+                                <td>
+                                  <?php foreach ($usuario['reservas'] as $reserva): ?>
+                                    <div><?= esc($reserva['fechaReserva']); ?></div>
+                                  <?php endforeach; ?>
+                                </td>
+                                <td>
+                                  <?php foreach ($usuario['reservas'] as $reserva): ?>
+                                    <div>(<?= esc($reserva['idTela']); ?>) <?= esc($reserva['nombreTela']); ?></div>
+                                  <?php endforeach; ?>
+                                </td>
+                                <td>
+                                  <?php foreach ($usuario['reservas'] as $reserva): ?>
+                                    <div><?= esc($reserva['precio']); ?> Bs</div>
+                                  <?php endforeach; ?>
+                                </td>
+                              <?php else: ?>
+                                <!-- Si no hay reservas, mostramos "Sin reservas" -->
+                                <td colspan="3">Sin reservas</td>
+                              <?php endif; ?>
                               <td>
                                 <a href="<?= base_url('usuarios/editar/' . $usuario['id']) ?>"
                                   class="btn btn-primary">Editar</a>
                                 <a href="<?= base_url('usuarios/eliminar/' . $usuario['id']) ?>" class="btn btn-danger"
                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">Borrar</a>
                               </td>
-
                             </tr>
                           <?php endforeach; ?>
                         <?php else: ?>
                           <tr>
-                            <td colspan="7">No se encontraron resultados</td>
+                            <td colspan="11">No se encontraron resultados</td>
                           </tr>
                         <?php endif; ?>
                       </tbody>
                     </table>
                   </div>
 
-                  <!-- Enlaces de paginación -->
                   <div class="pagination-links">
                     <?php if ($paginacion->getPageCount() > 1): ?>
                       <?= $paginacion->only(['search'])->links() ?>
@@ -311,6 +332,10 @@
                 </div>
               </div>
             </div>
+
+
+
+
 
 
 

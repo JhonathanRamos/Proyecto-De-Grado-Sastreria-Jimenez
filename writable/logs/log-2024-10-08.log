@@ -15,7 +15,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-10-08 17:36:53 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastrerias`.`confeccion`, CONSTRAINT `fk_Confeccion_cliente1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`) VALUES (:descripcion:, :precio:, :unidadMedida:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`) VALUES (:descripcion:, :precio:, :categoria:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -41,7 +41,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-10-08 17:50:26 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `adelanto`, `idCliente`) VALUES (:descripcion:, :precio:, :unidadMedida:, :adelanto:, :idCliente:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `adelanto`, `idCliente`) VALUES (:descripcion:, :precio:, :categoria:, :adelanto:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -67,7 +67,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-10-08 17:56:06 --> Column 'idCliente' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `adelanto`, `idCliente`) VALUES (:descripcion:, :precio:, :unidadMedida:, :adelanto:, :idCliente:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `adelanto`, `idCliente`) VALUES (:descripcion:, :precio:, :categoria:, :adelanto:, :idCliente:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

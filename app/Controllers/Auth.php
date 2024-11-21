@@ -328,11 +328,27 @@ class Auth extends BaseController
                 ->groupEnd();
         }
 
+        // Obtener usuarios y sus reservas activas
         $usuarios = $query->orderBy('id', 'DESC')->paginate(10);
+        $usuariosConReservas = [];
+
+        foreach ($usuarios as $usuario) {
+            $reservas = $this->reservaModel
+                ->select('reserva.fechaReserva, tela.nombre as nombreTela, tela.precio, tela.id as idTela')
+                ->join('tela', 'tela.id = reserva.idTela')
+                ->where('reserva.idUsuario', $usuario['id'])
+                ->where('reserva.estado', 1) // Solo mostrar reservas activas
+                ->findAll();
+
+
+            $usuario['reservas'] = $reservas;
+            $usuariosConReservas[] = $usuario;
+        }
+
         $paginacion = $this->loginModel->pager;
 
         $data = [
-            'usuarios' => $usuarios,
+            'usuarios' => $usuariosConReservas,
             'paginacion' => $paginacion,
             'search' => $search,
             'cabecera' => view('template/cabecera'),
@@ -341,6 +357,8 @@ class Auth extends BaseController
 
         return view('usuarios/usuarios', $data);
     }
+
+
 
 
 

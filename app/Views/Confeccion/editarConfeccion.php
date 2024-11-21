@@ -29,10 +29,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="unidadMedida">Unidad de Medida:</label>
-                    <select id="unidadMedida" class="form-control" name="unidadMedida" required>
-                        <option value="Confeccion" <?= ($confeccion['unidadMedida'] === 'Confeccion') ? 'selected' : '' ?>>Confección</option>
-                        <option value="Arreglo" <?= ($confeccion['unidadMedida'] === 'Arreglo') ? 'selected' : '' ?>>Arreglo</option>
+                    <label for="categoria">Unidad de Medida:</label>
+                    <select id="categoria" class="form-control" name="categoria" required>
+                        <option value="Confeccion" <?= ($confeccion['categoria'] === 'Confeccion') ? 'selected' : '' ?>>Confección</option>
+                        <option value="Arreglo" <?= ($confeccion['categoria'] === 'Arreglo') ? 'selected' : '' ?>>Arreglo</option>
                     </select>
                 </div>
 

@@ -182,7 +182,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-11-01 01:06:10 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`confeccion`, CONSTRAINT `fk_confeccion_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :unidadMedida:, :idUsuario:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :categoria:, :idUsuario:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -208,7 +208,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-11-01 01:07:39 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`confeccion`, CONSTRAINT `fk_confeccion_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :unidadMedida:, :idUsuario:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :categoria:, :idUsuario:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -234,7 +234,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-11-01 01:07:47 --> Cannot add or update a child row: a foreign key constraint fails (`bddsastreria`.`confeccion`, CONSTRAINT `fk_confeccion_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`))
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :unidadMedida:, :idUsuario:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `idUsuario`, `estado`) VALUES (:descripcion:, :precio:, :categoria:, :idUsuario:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

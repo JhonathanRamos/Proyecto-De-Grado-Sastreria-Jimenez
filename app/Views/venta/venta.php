@@ -40,7 +40,7 @@
         </li>
 
         <li class="nav-item menu-items">
-          <a class="nav-link" href="<?= base_url('confeccion') ?>">
+          <a class="nav-link" href="<?= base_url('usuarios') ?>">
             <span class="menu-icon">
               <i class="mdi mdi-account-box-multiple"></i>
             </span>
@@ -250,64 +250,78 @@
 
 
 
+
+
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h1 class="card-title">Ventas</h1>
-                  <div class="input-group mb-3">
-                    <input type="text" id="search" class="form-control" placeholder="Buscar Ventas...">
-                  </div>
-                  <div class="table-responsive">
 
+                  <!-- Formulario de búsqueda -->
+                  <form method="GET" action="<?= site_url('venta'); ?>">
+                    <div class="input-group mb-3">
+                      <input type="text" id="search" name="search" class="form-control" placeholder="Buscar Ventas..."
+                        value="<?= esc($search ?? '') ?>">
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <a href="<?= site_url('venta'); ?>" class="btn btn-secondary">Cancelar</a>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="table-responsive">
                     <table class="table table-dark" id="ventasTable">
                       <thead>
                         <tr>
                           <th>#</th>
                           <th>Cliente</th>
-                          <th>Descripción</th>
-                          <th>Adelanto</th>
-                          <th>Precio</th>
-                          <th>Total a Pagar</th>
-                          <th>Estado</th>
+                          <th>Total</th>
                           <th>Método de Pago</th>
-                          <th>Fecha Registro</th>
-                          <th>Fecha Entrega</th> <!-- Nueva columna para Fecha de Entrega -->
+                          <th>Faltante</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach ($ventas as $venta): ?>
+                        <?php if (!empty($ventas)): ?>
+                          <?php foreach ($ventas as $venta): ?>
+                            <tr>
+                              <td><?= esc($venta['idVenta']); ?></td>
+                              <td><?= esc($venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido']); ?></td>
+                              <td><?= esc($venta['total']) . ' Bs'; ?></td>
+                              <td><?= esc($venta['metodoPago']); ?></td>
+                              <td><?= esc($venta['faltante']) . ' Bs'; ?></td>
+                              <td>
+                                <a href="<?= base_url('ventas/ver/' . $venta['idVenta']); ?>"
+                                  class="btn btn-outline-info">Ver</a>
+                                <a href="<?= base_url('ventas/editar/' . $venta['idVenta']); ?>"
+                                  class="btn btn-outline-primary">Editar</a>
+                                <a href="<?= base_url('venta/borrar/' . $venta['idVenta']); ?>"
+                                  class="btn btn-outline-danger"
+                                  onclick="return confirm('¿Estás seguro de que deseas borrar esta venta?');">
+                                  Borrar
+                                </a>
+                              </td>
+                            </tr>
+                          <?php endforeach; ?>
+                        <?php else: ?>
                           <tr>
-                            <td><?= $venta['idVenta']; ?></td>
-                            <td><?= $venta['cliente']['nombre'] . ' ' . $venta['cliente']['apellido']; ?></td>
-                            <td><?= $venta['descripcion']; ?></td>
-                            <td><?= $venta['adelanto'] . ' Bs'; ?></td>
-                            <td><?= $venta['precio'] . ' Bs'; ?></td>
-                            <td><?= $venta['totalPagar'] . ' Bs'; ?></td>
-
-                            <!-- Aquí cambiamos la lógica para que 1 sea "Completado" y 0 "Pendiente" -->
-                            <td><?= $venta['estado'] === 1 ? 'Completado' : 'Pendiente'; ?></td>
-
-                            <!-- Invertir la lógica -->
-                            <td><?= $venta['metodoPago']; ?></td>
-                            <td><?= $venta['fechaRegistro']; ?></td>
-                            <td><?= $venta['fechaEntrega']; ?></td> <!-- Mostrar la Fecha de Entrega -->
-                            <td>
-                              <?php $editarUrl = base_url('ventas/editar/' . $venta['idVenta']); ?>
-                              <a href="<?= $editarUrl; ?>" class="btn btn-outline-primary">Editar</a>
-                              <a href="#"
-                                onclick="confirmDelete(event, '<?= base_url('ventas/borrar/' . $venta['idVenta']); ?>');"
-                                class="btn btn-outline-danger">Borrar</a>
-                            </td>
+                            <td colspan="6">No se encontraron resultados</td>
                           </tr>
-                        <?php endforeach; ?>
+                        <?php endif; ?>
                       </tbody>
                     </table>
+                  </div>
 
+                  <!-- Enlaces de paginación -->
+                  <div class="pagination-links mt-3">
+                    <?= $paginacion->only(['search'])->links(); ?>
                   </div>
                 </div>
               </div>
             </div>
+
+
+
 
 
 

@@ -37,7 +37,7 @@ class Confeccions extends Controller
         $validacion = $this->validate([
             'descripcion' => 'required|min_length[3]',
             'precio' => 'required|numeric',
-            'unidadMedida' => 'required|min_length[1]',
+            'categoria' => 'required|min_length[1]',
         ]);
 
         if (!$validacion) {
@@ -56,7 +56,7 @@ class Confeccions extends Controller
         $confeccionData = [
             'descripcion' => $this->request->getVar('descripcion'),
             'precio' => $this->request->getVar('precio'),
-            'unidadMedida' => $this->request->getVar('unidadMedida'),
+            'categoria' => $this->request->getVar('categoria'),
             'idUsuario' => $idUsuario,
             'estado' => 1,  // Estado activo por defecto
             'created_at' => date('Y-m-d H:i:s')  // Fecha de creación
@@ -95,7 +95,7 @@ class Confeccions extends Controller
         $validacion = $this->validate([
             'descripcion' => 'required|min_length[3]',
             'precio' => 'required|numeric',
-            'unidadMedida' => 'required|min_length[1]',
+            'categoria' => 'required|min_length[1]',
         ]);
 
         if (!$validacion) {
@@ -107,7 +107,7 @@ class Confeccions extends Controller
         $confeccionData = [
             'descripcion' => $this->request->getVar('descripcion'),
             'precio' => $this->request->getVar('precio'),
-            'unidadMedida' => $this->request->getVar('unidadMedida'),
+            'categoria' => $this->request->getVar('categoria'),
         ];
 
         $confeccionModel->update($id, $confeccionData);

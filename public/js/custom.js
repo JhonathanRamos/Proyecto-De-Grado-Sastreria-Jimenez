@@ -336,40 +336,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //PAGO
 
-// Verifica si la URL actual coincide con la página "crearVenta"
-if (window.location.href.includes('/crearVenta')) {
-    // PAGO
-    document.addEventListener('DOMContentLoaded', function () {
-        const metodoPagoSelect = document.getElementById('metodoPago');
-        const modalQR = document.getElementById('modalQR');
-        const pagoRealizadoSelect = document.getElementById('pagado');
-        const estadoSelect = document.getElementById('estado');
+// // Verifica si la URL actual coincide con la página "crearVenta"
+// if (window.location.href.includes('/crearVenta')) {
+//     // PAGO
+//     document.addEventListener('DOMContentLoaded', function () {
+//         const metodoPagoSelect = document.getElementById('metodoPago');
+//         const modalQR = document.getElementById('modalQR');
+//         const pagoRealizadoSelect = document.getElementById('pagado');
+//         const estadoSelect = document.getElementById('estado');
 
-        // Mostrar el modal si se selecciona QR como método de pago
-        metodoPagoSelect.addEventListener('change', function () {
-            if (metodoPagoSelect.value === 'QR') {
-                modalQR.style.display = 'block';
-            } else {
-                modalQR.style.display = 'none';
-            }
-        });
+//         // Mostrar el modal si se selecciona QR como método de pago
+//         metodoPagoSelect.addEventListener('change', function () {
+//             if (metodoPagoSelect.value === 'QR') {
+//                 modalQR.style.display = 'block';
+//             } else {
+//                 modalQR.style.display = 'none';
+//             }
+//         });
 
-        // Cambiar el estado basado en el pago realizado
-        pagoRealizadoSelect.addEventListener('change', function () {
-            if (pagoRealizadoSelect.value === '1') {
-                estadoSelect.value = '1'; // Completado
-            } else {
-                estadoSelect.value = '0'; // Pendiente
-            }
-        });
-    });
+//         // Cambiar el estado basado en el pago realizado
+//         pagoRealizadoSelect.addEventListener('change', function () {
+//             if (pagoRealizadoSelect.value === '1') {
+//                 estadoSelect.value = '1'; // Completado
+//             } else {
+//                 estadoSelect.value = '0'; // Pendiente
+//             }
+//         });
+//     });
 
-    // Función para cerrar el modal QR
-    function cerrarModal() {
-        document.getElementById('modalQR').style.display = 'none';
-        document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
-    }
-}
+//     // Función para cerrar el modal QR
+//     function cerrarModal() {
+//         document.getElementById('modalQR').style.display = 'none';
+//         document.getElementById("metodoPago").value = "Contado"; // Restablece a "Contado" si se cierra el modal
+//     }
+// }
 function togglePasswordForm() {
     const passwordForm = document.getElementById('passwordForm');
     if (passwordForm.style.display === 'none' || passwordForm.style.display === '') {

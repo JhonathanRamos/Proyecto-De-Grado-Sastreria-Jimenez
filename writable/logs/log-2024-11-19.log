@@ -1,0 +1,712 @@
+CRITICAL - 2024-11-19 14:26:02 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:26:03 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:26:22 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:28:09 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:38 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:39 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:39 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:40 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:40 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:40 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:45 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:45 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:46 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:29:47 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:04 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:15 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:16 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:16 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:16 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:17 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:17 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:17 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:18 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:19 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:23 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:23 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:23 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:30:37 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:32:13 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:32:13 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:32:14 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 14:32:14 --> Undefined array key "adelanto"
+in APPPATH\Controllers\Ventas.php on line 43.
+ 1 APPPATH\Controllers\Ventas.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "adelanto"', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:01:55 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:03:58 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:03:59 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:04:19 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:04:36 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:38 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:39 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:39 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:40 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:41 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:41 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:06:42 --> Undefined variable $idVenta
+in APPPATH\Views\venta\crearVenta.php on line 10.
+ 1 APPPATH\Views\venta\crearVenta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idVenta', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:12:58 --> Undefined variable $telas
+in APPPATH\Views\venta\crearVenta.php on line 43.
+ 1 APPPATH\Views\venta\crearVenta.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $telas', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:14:50 --> Undefined variable $telas
+in APPPATH\Views\venta\crearVenta.php on line 43.
+ 1 APPPATH\Views\venta\crearVenta.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $telas', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:23:27 --> Undefined variable $telas
+in APPPATH\Views\venta\crearVenta.php on line 42.
+ 1 APPPATH\Views\venta\crearVenta.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $telas', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(84): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:26:07 --> Undefined variable $confecciones
+in APPPATH\Views\venta\crearVenta.php on line 28.
+ 1 APPPATH\Views\venta\crearVenta.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $confecciones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(54): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:26:08 --> Undefined variable $confecciones
+in APPPATH\Views\venta\crearVenta.php on line 28.
+ 1 APPPATH\Views\venta\crearVenta.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $confecciones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(54): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:26:09 --> Undefined variable $confecciones
+in APPPATH\Views\venta\crearVenta.php on line 28.
+ 1 APPPATH\Views\venta\crearVenta.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $confecciones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(54): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:26:09 --> Undefined variable $confecciones
+in APPPATH\Views\venta\crearVenta.php on line 28.
+ 1 APPPATH\Views\venta\crearVenta.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $confecciones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(54): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 16:29:12 --> Undefined variable $confecciones
+in APPPATH\Views\venta\crearVenta.php on line 28.
+ 1 APPPATH\Views\venta\crearVenta.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $confecciones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\crearVenta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/crearVenta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(54): view('venta/crearVenta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 19:46:47 --> "json" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('json')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('detalles', 'detalles', '[{"idConfeccion":"Jeans (25 Bs)","cantidad":"1","precioUnitario":"25.00 Bs","subtotal":"25.00 Bs","adelanto":"10.00 Bs","restante":"15.00 Bs","fechaPrueba":"N/A","fechaEntrega":"2024-12-12T15:30"}]', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Ventas.php(50): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 19:49:35 --> A non-numeric value encountered
+in APPPATH\Controllers\Ventas.php on line 97.
+ 1 APPPATH\Controllers\Ventas.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 19:49:59 --> A non-numeric value encountered
+in APPPATH\Controllers\Ventas.php on line 97.
+ 1 APPPATH\Controllers\Ventas.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Ventas.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-19 21:09:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Ventas.php(123): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 21:09:38 --> Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`idVenta`, `idConfeccion`, `idTela`, `cantidad`, `precio_unitario`, `subtotal`, `adelanto`, `restante`, `fechaPrueba`, `fechaEntrega`) VALUES (:idVenta:, :idConfeccion:, :idTela:, :cantidad:, :precio_unitario:, :subtotal:, :adelanto:, :restante:, :fechaPrueba:, :fechaEntrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas.php(123): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-19 21:13:48 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Ventas.php(123): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 21:13:48 --> Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`idVenta`, `idConfeccion`, `idTela`, `cantidad`, `precio_unitario`, `subtotal`, `adelanto`, `restante`, `fechaPrueba`, `fechaEntrega`) VALUES (:idVenta:, :idConfeccion:, :idTela:, :cantidad:, :precio_unitario:, :subtotal:, :adelanto:, :restante:, :fechaPrueba:, :fechaEntrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas.php(123): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-19 21:13:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`)) in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Ventas.php(123): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 21:13:49 --> Cannot add or update a child row: a foreign key constraint fails (`bddproyecto`.`detalle_venta`, CONSTRAINT `fk_detalle_venta_confeccion1` FOREIGN KEY (`idConfeccion`) REFERENCES `confeccion` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`idVenta`, `idConfeccion`, `idTela`, `cantidad`, `precio_unitario`, `subtotal`, `adelanto`, `restante`, `fechaPrueba`, `fechaEntrega`) VALUES (:idVenta:, :idConfeccion:, :idTela:, :cantidad:, :precio_unitario:, :subtotal:, :adelanto:, :restante:, :fechaPrueba:, :fechaEntrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas.php(123): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-19 21:16:25 --> mysqli_sql_exception: Duplicate entry '0' for key 'detalle_venta.PRIMARY' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\code4\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\code4\app\Controllers\Ventas.php(122): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+#10 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 21:16:25 --> Duplicate entry '0' for key 'detalle_venta.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`idVenta`, `idConfeccion`, `idTela`, `cantidad`, `precio_unitario`, `subtotal`, `adelanto`, `restante`, `fechaPrueba`, `fechaEntrega`) VALUES (:idVenta:, :idConfeccion:, :idTela:, :cantidad:, :precio_unitario:, :subtotal:, :adelanto:, :restante:, :fechaPrueba:, :fechaEntrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas.php(122): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->guardarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:06:52 --> Invalid file: "ventas/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ventas/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('ventas/index', [], true)
+ 3 APPPATH\Controllers\Ventas.php(150): view('ventas/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:07:32 --> Invalid file: "ventas/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ventas/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('ventas/index', [], true)
+ 3 APPPATH\Controllers\Ventas.php(150): view('ventas/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:08:11 --> Invalid file: "ventas/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ventas/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('ventas/index', [], true)
+ 3 APPPATH\Controllers\Ventas.php(150): view('ventas/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:10:22 --> Undefined array key "descripcion"
+in APPPATH\Views\venta\venta.php on line 278.
+ 1 APPPATH\Views\venta\venta.php(278): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 278)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(148): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:12:06 --> Undefined array key "precio"
+in APPPATH\Views\venta\venta.php on line 279.
+ 1 APPPATH\Views\venta\venta.php(279): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 279)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(152): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:20:37 --> Undefined array key "faltante"
+in APPPATH\Views\venta\venta.php on line 281.
+ 1 APPPATH\Views\venta\venta.php(281): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "faltante"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php', 281)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\venta\\venta.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/venta', [], true)
+ 5 APPPATH\Controllers\Ventas.php(153): view('venta/venta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:22:01 --> Invalid file: "venta/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('venta/editar.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/editar', [], true)
+ 3 APPPATH\Controllers\Ventas.php(175): view('venta/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:22:27 --> Invalid file: "venta/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('venta/editar.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/editar', [], true)
+ 3 APPPATH\Controllers\Ventas.php(175): view('venta/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:22:32 --> Invalid file: "venta/ver.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('venta/ver.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/ver', [], true)
+ 3 APPPATH\Controllers\Ventas.php(202): view('venta/ver', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->ver('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:23:14 --> Invalid file: "venta/ver.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('venta/ver.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/ver', [], true)
+ 3 APPPATH\Controllers\Ventas.php(202): view('venta/ver', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->ver('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 23:24:18 --> Invalid file: "venta/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('venta/editar.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('venta/editar', [], true)
+ 3 APPPATH\Controllers\Ventas.php(175): view('venta/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Ventas->editar('2')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

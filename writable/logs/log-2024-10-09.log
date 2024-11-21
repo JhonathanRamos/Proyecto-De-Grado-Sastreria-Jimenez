@@ -780,7 +780,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-10-09 13:42:39 --> Column 'idUsuario' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `idCliente`, `idUsuario`) VALUES (:descripcion:, :precio:, :unidadMedida:, :idCliente:, :idUsuario:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `idCliente`, `idUsuario`) VALUES (:descripcion:, :precio:, :categoria:, :idCliente:, :idUsuario:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
@@ -806,7 +806,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-10-09 13:57:15 --> Unknown column 'descripcion' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 646.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `unidadMedida`, `idCliente`, `idUsuario`) VALUES (:descripcion:, :precio:, :unidadMedida:, :idCliente:, :idUsuario:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `confeccion` (`descripcion`, `precio`, `categoria`, `idCliente`, `idUsuario`) VALUES (:descripcion:, :precio:, :categoria:, :idCliente:, :idUsuario:)', [...], false)
  2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)

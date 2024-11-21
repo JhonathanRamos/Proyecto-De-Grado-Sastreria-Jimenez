@@ -15,7 +15,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('usuarios', 'Auth::index');              // Página de lista de usuarios
     $routes->get('usuarios/crear', 'Auth::crear');        // Formulario para crear un usuario
     $routes->post('usuarios/guardar', 'Auth::guardar');   // Acción para guardar un nuevo usuario
-   
+
 
     $routes->get('/usuarios/editar/(:num)', 'Auth::editar/$1');
     $routes->post('/usuarios/actualizar', 'Auth::actualizar');
@@ -86,11 +86,17 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     /* ______________________________________________________________________ */
     $routes->get('/venta', 'Ventas::index');
     $routes->get('/crearVenta', 'Ventas::crear');
-    $routes->post('/guardarVenta', 'Ventas::guardarVenta');
-    $routes->get('ventas/editar/(:num)', 'Ventas::editar/$1');  // Editar venta
-    $routes->post('actualizarVenta/(:num)', 'Ventas::actualizarVenta/$1');  // Actualizar venta
-    $routes->get('ventas/borrar/(:num)', 'Ventas::borrar/$1');  // Borrar venta
-    $routes->get('venta/confirmarPago', 'Ventas::confirmarPago'); // Para mostrar la vista de confirmación de pago
+    $routes->post('/ventas/guardarVenta', 'Ventas::guardarVenta');
+    $routes->get('/ventas/editar/(:num)', 'Ventas::editar/$1');
+    $routes->get('/venta/borrar/(:num)', 'Ventas::borrar/$1');
+
+
+    $routes->post('actualizarVenta/(:num)', 'Ventas::actualizarVenta/$1');
+    $routes->post('/ventas/confirmarPago', 'Ventas::confirmarPago');
+
+
+    $routes->get('/ventas/ver/(:num)', 'Ventas::ver/$1');
+
 
 
 

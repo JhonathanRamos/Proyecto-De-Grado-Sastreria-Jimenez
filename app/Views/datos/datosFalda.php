@@ -40,7 +40,7 @@
                 </li>
 
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="<?= base_url('confeccion') ?>">
+                    <a class="nav-link" href="<?= base_url('usuarios') ?>">
                         <span class="menu-icon">
                             <i class="mdi mdi-account-box-multiple"></i>
                         </span>

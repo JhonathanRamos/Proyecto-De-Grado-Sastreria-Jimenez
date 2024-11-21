@@ -30,10 +30,10 @@
 
                 <!-- Campo para Unidad de Medida  -->
                 <div class="form-group">
-                    <label for="unidadMedida">Unidad de Medida:</label>
-                    <select id="unidadMedida" class="form-control" name="unidadMedida" required>
-                        <option value="Confeccion" <?= old('unidadMedida') == 'Confeccion' ? 'selected' : '' ?>>Confección</option>
-                        <option value="Arreglo" <?= old('unidadMedida') == 'Arreglo' ? 'selected' : '' ?>>Arreglo</option>
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" class="form-control" name="categoria" required>
+                        <option value="Confeccion" <?= old('categoria') == 'Confeccion' ? 'selected' : '' ?>>Confección</option>
+                        <option value="Arreglo" <?= old('categoria') == 'Arreglo' ? 'selected' : '' ?>>Arreglo</option>
                     </select>
                 </div>
 
