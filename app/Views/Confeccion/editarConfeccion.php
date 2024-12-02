@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <?php if (session('mensaje')) { ?>
     <div class="alert alert-danger" role="alert">
@@ -49,5 +49,59 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form'); // Selecciona el formulario
+    const focusableElements = Array.from(form.querySelectorAll('input, select, button')); // Todos los campos interactivos
+
+    form.addEventListener('keydown', function (event) {
+        const currentIndex = focusableElements.indexOf(document.activeElement); // Índice del campo actual
+
+        if (event.key === 'Enter') {
+            // Mover al siguiente campo al presionar Enter
+            event.preventDefault();
+            if (currentIndex >= 0 && currentIndex < focusableElements.length - 1) {
+                focusableElements[currentIndex + 1].focus(); // Ir al siguiente
+            } else if (currentIndex === focusableElements.length - 1) {
+                // Si es el último, envía el formulario
+                form.submit(); // Enviar el formulario directamente
+            }
+        } else if (event.key === 'ArrowDown') {
+            // Mover al siguiente campo con ArrowDown
+            event.preventDefault();
+            if (currentIndex >= 0 && currentIndex < focusableElements.length - 1) {
+                focusableElements[currentIndex + 1].focus();
+            }
+        } else if (event.key === 'ArrowUp') {
+            // Mover al campo anterior con ArrowUp
+            event.preventDefault();
+            if (currentIndex > 0) {
+                focusableElements[currentIndex - 1].focus();
+            }
+        }
+    });
+
+    // Deshabilitar flechas para campos numéricos (para evitar que suban/bajen el valor)
+    form.querySelectorAll('input[type="number"]').forEach(input => {
+        input.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+                event.preventDefault();
+            }
+        });
+    });
+
+    // Resaltar el campo actualmente enfocado
+    form.querySelectorAll('input, select, button').forEach(element => {
+        element.addEventListener('focus', function () {
+            this.style.outline = '2px solid #00ff00'; // Agrega un borde verde al enfocar
+        });
+        element.addEventListener('blur', function () {
+            this.style.outline = 'none'; // Elimina el borde al desenfocar
+        });
+    });
+});
+</script>
+
 
 <?= $pie ?>

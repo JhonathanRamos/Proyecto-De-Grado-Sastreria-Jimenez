@@ -1,0 +1,28 @@
+CRITICAL - 2024-11-29 22:13:48 --> Undefined property: App\Controllers\Auth::$db
+in APPPATH\Controllers\Auth.php on line 327.
+ 1 APPPATH\Controllers\Auth.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Auth::$db', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-29 22:14:18 --> Undefined property: App\Controllers\Auth::$db
+in APPPATH\Controllers\Auth.php on line 330.
+ 1 APPPATH\Controllers\Auth.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Auth::$db', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 330)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-29 22:14:54 --> Undefined property: App\Controllers\Auth::$db
+in APPPATH\Controllers\Auth.php on line 330.
+ 1 APPPATH\Controllers\Auth.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Auth::$db', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 330)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-29 22:14:54 --> Undefined property: App\Controllers\Auth::$db
+in APPPATH\Controllers\Auth.php on line 330.
+ 1 APPPATH\Controllers\Auth.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Auth::$db', 'C:\\xampp\\htdocs\\code4\\app\\Controllers\\Auth.php', 330)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

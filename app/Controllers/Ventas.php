@@ -26,19 +26,41 @@ class Ventas extends BaseController
         helper(['form', 'url']);
     }
 
-    /**
-     * Muestra el formulario para crear una nueva venta
-     */
+   
+
     public function crear()
     {
+        $clienteSeleccionado = $this->request->getGet('cliente');
+        $confeccionSeleccionada = $this->request->getGet('confeccion');
+
+        // Mapear texto de confección a IDs
+        $mapConfecciones = [
+            'pantalon' => 3,
+            'traje_masculino' => 1,
+            'traje_femenino' => 2,
+            'falda' => 4
+        ];
+
+        // Si se pasa texto como confección, traducirlo a ID
+        if (isset($mapConfecciones[$confeccionSeleccionada])) {
+            $confeccionSeleccionada = $mapConfecciones[$confeccionSeleccionada];
+        }
+
         $data['clientes'] = $this->clienteModel->findAll();
         $data['confecciones'] = $this->confeccionModel->findAll();
         $data['telas'] = $this->telaModel->findAll();
-        $data['cabecera'] = view('template/cabecera');
+
+        // Pasar los valores seleccionados a la vista
+        $data['clienteSeleccionado'] = $clienteSeleccionado;
+        $data['confeccionSeleccionada'] = $confeccionSeleccionada;
+
+        $data['cabeceraEditar'] = view('template/cabeceraEditar');
         $data['pie'] = view('template/piepagina');
 
         return view('venta/crearVenta', $data);
     }
+
+
 
 
 
@@ -189,33 +211,6 @@ class Ventas extends BaseController
 
 
 
-
-
-    public function editar($idVenta)
-    {
-        $venta = $this->ventaModel->find($idVenta);
-        if (!$venta) {
-            return redirect()->to('/venta')->with('error', 'Venta no encontrada.');
-        }
-
-        $clientes = $this->clienteModel->findAll();
-
-        $data = [
-            'venta' => $venta,
-            'clientes' => $clientes,
-            'cabecera' => view('template/cabecera'),
-            'pie' => view('template/piepagina'),
-        ];
-
-        return view('venta/editar', $data);
-    }
-
-    // public function cancelarVenta($idVenta)
-    // {
-    //     $this->ventaModel->update($idVenta, ['estado' => 0]);
-    //     return redirect()->to('/venta')->with('success', 'Venta cancelada correctamente.');
-    // }
-
     public function realizarVenta($idVenta)
     {
         $this->ventaModel->update($idVenta, ['estado' => 2]);
@@ -263,10 +258,17 @@ class Ventas extends BaseController
             $detalle['tela'] = $detalle['tela'] ?? 'No uso de tela';
             $detalle['precio_tela'] = $detalle['precio_tela'] ?? 0;
             $detalle['metros'] = $detalle['metros'] ?? 0;
+
+            // Calcular subtotal con descuento aplicado
+            $detalle['subtotalConDescuento'] = $detalle['subtotal'] - $detalle['descuento'];
+
+            // Calcular total restante después del adelanto y descuento
+            $detalle['totalPagar'] = $detalle['subtotalConDescuento'] - $detalle['adelanto'];
         }
 
+
         $data = [
-            'cabecera' => view('template/cabecera'),
+            'cabeceraEditar' => view('template/cabeceraEditar'),
             'pie' => view('template/piepagina'),
             'venta' => $venta,
             'detalles' => $detalles,
@@ -274,6 +276,9 @@ class Ventas extends BaseController
 
         return view('venta/verVenta', $data);
     }
+
+
+
 
 
     // Método para confirmar el pago completo
@@ -312,11 +317,68 @@ class Ventas extends BaseController
     }
 
 
+    public function editar($idVenta)
+    {
+        // Recuperar la venta con los detalles necesarios
+        $venta = $this->ventaModel
+            ->select('venta.*, detalle_venta.adelanto, detalle_venta.idConfeccion, detalle_venta.fechaEntrega')
+            ->join('detalle_venta', 'detalle_venta.idVenta = venta.idVenta', 'left')
+            ->where('venta.idVenta', $idVenta)
+            ->first();
+
+        if (!$venta) {
+            return redirect()->to('/venta')->with('error', 'Venta no encontrada.');
+        }
+
+        $clientes = $this->clienteModel->findAll();
+        $confecciones = $this->confeccionModel->findAll();
+
+        $data = [
+            'venta' => $venta,
+            'clientes' => $clientes,
+            'confecciones' => $confecciones,
+            'cabeceraEditar' => view('template/cabeceraEditar'),
+            'pie' => view('template/piepagina'),
+        ];
+
+        return view('venta/editarVenta', $data);
+    }
 
 
 
+    public function actualizarVenta($idVenta)
+    {
+        $venta = $this->ventaModel->find($idVenta);
+        if (!$venta) {
+            return redirect()->to('/venta')->with('error', 'Venta no encontrada.');
+        }
 
+        $validation = $this->validate([
+            'idCliente' => 'required|integer',
+            'idConfeccion' => 'required|integer',
+            'adelanto' => 'required|numeric',
+            'fechaRecoleccion' => 'required|valid_date[Y-m-d H:i:s]',
+            'estado' => 'required|integer',
+        ]);
 
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
+        }
 
+        $ventaData = [
+            'idCliente' => $this->request->getPost('idCliente'),
+            'idConfeccion' => $this->request->getPost('idConfeccion'),
+            'adelanto' => $this->request->getPost('adelanto'),
+            'fechaEntrega' => $this->request->getPost('fechaRecoleccion'),
+            'estado' => $this->request->getPost('estado'),
+            'fechaActualizacion' => date('Y-m-d H:i:s'),
+        ];
+
+        if ($this->ventaModel->update($idVenta, $ventaData)) {
+            return redirect()->to('/venta')->with('success', 'Venta actualizada correctamente.');
+        }
+
+        return redirect()->back()->withInput()->with('error', 'Error al actualizar la venta.');
+    }
 
 }

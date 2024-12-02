@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <?php if (session('mensaje')) { ?>
     <div class="alert alert-danger" role="alert">
@@ -32,7 +32,8 @@
                 <div class="form-group">
                     <label for="categoria">Categoria:</label>
                     <select id="categoria" class="form-control" name="categoria" required>
-                        <option value="Confeccion" <?= old('categoria') == 'Confeccion' ? 'selected' : '' ?>>Confección</option>
+                        <option value="Confeccion" <?= old('categoria') == 'Confeccion' ? 'selected' : '' ?>>Confección
+                        </option>
                         <option value="Arreglo" <?= old('categoria') == 'Arreglo' ? 'selected' : '' ?>>Arreglo</option>
                     </select>
                 </div>
@@ -46,5 +47,56 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form'); // Seleccionar el formulario
+        const inputs = Array.from(form.querySelectorAll('input, select, button')); // Todos los campos interactivos
+
+        // Enfocar automáticamente el primer campo del formulario
+        const firstInput = inputs.find(input => input.tagName === 'INPUT' || input.tagName === 'SELECT');
+        if (firstInput) {
+            firstInput.focus();
+        }
+
+        // Agregar eventos para manejar la movilidad con flechas y Enter
+        form.addEventListener('keydown', function (event) {
+            const currentIndex = inputs.indexOf(document.activeElement); // Índice del campo actualmente enfocado
+
+            if (event.key === 'Enter') {
+                // Prevenir el comportamiento por defecto del Enter (enviar formulario)
+                event.preventDefault();
+                if (currentIndex >= 0 && currentIndex < inputs.length - 1) {
+                    inputs[currentIndex + 1].focus(); // Enfocar el siguiente campo
+                } else if (currentIndex === inputs.length - 1) {
+                    inputs[currentIndex].click(); // Si es el último campo (botón), hacer clic
+                }
+            } else if (event.key === 'ArrowDown') {
+                // Mover al siguiente campo con flecha abajo
+                event.preventDefault();
+                if (currentIndex >= 0 && currentIndex < inputs.length - 1) {
+                    inputs[currentIndex + 1].focus();
+                }
+            } else if (event.key === 'ArrowUp') {
+                // Mover al campo anterior con flecha arriba
+                event.preventDefault();
+                if (currentIndex > 0) {
+                    inputs[currentIndex - 1].focus();
+                }
+            }
+        });
+
+        // Opcional: Agregar un resaltado visual para el campo enfocado
+        inputs.forEach(input => {
+            input.addEventListener('focus', function () {
+                this.style.outline = '2px solid #00ff00'; // Agregar borde verde al enfocar
+            });
+            input.addEventListener('blur', function () {
+                this.style.outline = 'none'; // Quitar el borde al desenfocar
+            });
+        });
+    });
+</script>
+
 
 <?= $pie ?>

@@ -21,7 +21,7 @@ class Telas extends Controller
 
     public function crear()
     {
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
 
         return view('tela/crearTela', $datos);
@@ -95,7 +95,7 @@ class Telas extends Controller
 
         if ($tela) {
             $datos['tela'] = $tela;
-            $datos['cabecera'] = view('template/cabecera');
+            $datos['cabeceraEditar'] = view('template/cabeceraEditar');
             $datos['pie'] = view('template/piepagina');
             return view('tela/editarTela', $datos);
         } else {

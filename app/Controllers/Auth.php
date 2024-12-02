@@ -319,12 +319,15 @@ class Auth extends BaseController
         $query = $this->loginModel->where('estado', 1)->where('rol', 2); // Filtrar solo usuarios con rol de cliente
 
         if (!empty($search)) {
+            // Si el término de búsqueda incluye un '@', extraer la parte antes del '@'
+            $emailPart = explode('@', $search)[0];
+
             $query->groupStart()
-                ->like('nombres', $search)
-                ->orLike('apellidos', $search)
-                ->orLike('email', $search)
-                ->orLike('celular', $search)
-                ->orLike('fechaRegistro', $search)
+                ->like('nombres', $search) // Buscar en nombres
+                ->orLike('apellidos', $search) // Buscar en apellidos
+                ->orLike('celular', $search) // Buscar en celular
+                ->orLike('fechaRegistro', $search) // Buscar en fecha de registro
+                ->orLike('email', $emailPart) // Buscar en la parte antes del @ en el email
                 ->groupEnd();
         }
 
@@ -339,7 +342,6 @@ class Auth extends BaseController
                 ->where('reserva.idUsuario', $usuario['id'])
                 ->where('reserva.estado', 1) // Solo mostrar reservas activas
                 ->findAll();
-
 
             $usuario['reservas'] = $reservas;
             $usuariosConReservas[] = $usuario;
@@ -357,6 +359,8 @@ class Auth extends BaseController
 
         return view('usuarios/usuarios', $data);
     }
+
+
 
 
 
@@ -518,7 +522,7 @@ class Auth extends BaseController
         // Pasar datos del usuario a la vista
         $data = [
             'usuario' => $usuario,
-            'cabecera' => view('template/cabecera'),
+            'cabeceraEditar' => view('template/cabeceraEditar'),
             'pie' => view('template/piepagina')
         ];
 

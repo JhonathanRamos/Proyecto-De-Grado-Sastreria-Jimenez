@@ -18,7 +18,7 @@ class TrajeMasculinos extends Controller
             ->where('sexo', 'M')
             ->findAll();
 
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         $datos['clientes'] = $clientes; // Pasar la lista de clientes a la vista
 
@@ -37,22 +37,64 @@ class TrajeMasculinos extends Controller
     public function index()
     {
         $trajeMasculinoModel = new TrajeMasculino();
+        $perPage = 10; // Número de elementos por página
 
-        // Obtén los datos de las faldas y la relación 'cliente'
-        $trajeMasculino = $trajeMasculinoModel->select('traje_masculino.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , traje_masculino.talle, traje_masculino.largo, 
-        traje_masculino.hombro , traje_masculino.ancho , traje_masculino.pecho , traje_masculino.estomago , traje_masculino.largoManga')
+        // Obtener parámetros de búsqueda, orden y paginación desde el request
+        $search = $this->request->getGet('search');
+        $orden = $this->request->getGet('orden');
+        $page = $this->request->getGet('page') ?: 1;
+
+        // Crear la consulta base
+        $query = $trajeMasculinoModel->select('traje_masculino.idCliente, CONCAT(cliente.nombre, " ", cliente.apellido) AS nombre_completo, traje_masculino.talle, traje_masculino.largo, 
+        traje_masculino.hombro, traje_masculino.ancho, traje_masculino.pecho, traje_masculino.estomago, traje_masculino.largoManga')
             ->join('cliente', 'cliente.id = traje_masculino.idCliente')
-            ->orderBy('idCliente', 'ASC')
-            ->where('estado', 1)
-            ->findAll();
+            ->where('cliente.estado', 1); // Solo clientes activos
 
-        $datos['trajeMasculinos'] = $trajeMasculino;
+        // Aplicar filtro de búsqueda si existe
+        if (!empty($search)) {
+            $query->groupStart()
+                ->like('cliente.nombre', $search)
+                ->orLike('cliente.apellido', $search)
+                ->groupEnd();
+        }
 
-        $datos['cabecera'] = view('template/cabecera');
-        $datos['pie'] = view('template/piepagina');
+        // Aplicar el orden según el filtro
+        switch ($orden) {
+            case 'recientes':
+                $query->orderBy('traje_masculino.idCliente', 'DESC'); // Recientes primero
+                break;
+            case 'antiguos':
+                $query->orderBy('traje_masculino.idCliente', 'ASC'); // Antiguos primero
+                break;
+            case 'nombre_asc':
+                $query->orderBy('cliente.nombre', 'ASC'); // Nombre A-Z
+                break;
+            case 'nombre_desc':
+                $query->orderBy('cliente.nombre', 'DESC'); // Nombre Z-A
+                break;
+            default:
+                $query->orderBy('cliente.nombre', 'ASC'); // Por defecto: Nombre A-Z
+                break;
+        }
+
+        // Obtener resultados paginados
+        $trajeMasculino = $query->paginate($perPage, 'default', $page);
+        $pager = $trajeMasculinoModel->pager;
+
+        // Pasar datos a la vista
+        $datos = [
+            'trajeMasculinos' => $trajeMasculino,
+            'pager' => $pager,
+            'search' => $search,
+            'orden' => $orden,
+            'cabecera' => view('template/cabecera'),
+            'pie' => view('template/piepagina'),
+        ];
 
         return view('datos/datosTrajeMasculino', $datos);
     }
+
+
 
     public function guardartrajeMasculino()
     {
@@ -145,7 +187,7 @@ class TrajeMasculinos extends Controller
 
         $datos['trajeMasculinos'] = $trajeMasculino;
         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         return view('datos/editarTrajeMasculino', $datos);
 

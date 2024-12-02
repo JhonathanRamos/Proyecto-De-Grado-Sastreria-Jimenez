@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
@@ -9,7 +9,8 @@
             <div class="mb-4">
                 <h4>Información General</h4>
                 <p><strong>ID Venta:</strong> <?= esc($venta['idVenta']); ?></p>
-                <p><strong>Cliente:</strong> <?= esc($venta['cliente_nombre'] . ' ' . $venta['cliente_apellido']); ?></p>
+                <p><strong>Cliente:</strong> <?= esc($venta['cliente_nombre'] . ' ' . $venta['cliente_apellido']); ?>
+                </p>
                 <p><strong>Fecha de Registro:</strong> <?= esc($venta['fechaRegistro']); ?></p>
                 <p><strong>Total:</strong> <?= esc($venta['total']) . ' Bs'; ?></p>
                 <p><strong>Método de Pago:</strong> <?= esc($venta['metodoPago']); ?></p>
@@ -24,8 +25,10 @@
                         <tr>
                             <th>#</th>
                             <th>Confección (Categoría)</th>
+                            <th>Cantidad</th>
                             <th>Precio Unitario</th>
                             <th>Tela (Metros)</th>
+                            <th>Subtotal</th>
                             <th>Descuento</th>
                             <th>Adelanto</th>
                             <th>Total a Pagar</th>
@@ -42,17 +45,19 @@
                                     <?= esc($detalle['confeccion']); ?>
                                     (<?= esc($detalle['categoria']); ?>)
                                 </td>
+                                <td><?= esc($detalle['cantidad']); ?></td>
                                 <td><?= esc($detalle['precio_unitario']) . ' Bs'; ?></td>
                                 <td>
                                     <?= $detalle['idTela'] ? esc($detalle['metros']) . ' metros' : 'No uso de tela'; ?>
                                 </td>
+                                <td><?= esc($detalle['subtotal']) . ' Bs'; ?></td>
                                 <td><?= esc($detalle['descuento']) . ' Bs'; ?></td>
                                 <td><?= esc($detalle['adelanto']) . ' Bs'; ?></td>
                                 <td><?= esc($detalle['restante']) . ' Bs'; ?></td>
                                 <td><?= esc($detalle['fechaEntrega']); ?></td>
                                 <td><?= esc($detalle['fechaPrueba'] ?: 'N/A'); ?></td>
                                 <td>
-                                    <!-- Botón para pagar -->
+                                    <!-- Botón para pagar o mostrar "Pagado" -->
                                     <?php if ($detalle['restante'] > 0): ?>
                                         <form method="post" action="<?= site_url('/ventas/confirmarPago') ?>">
                                             <input type="hidden" name="idDetalle" value="<?= $detalle['idDetalleVenta']; ?>">
@@ -67,6 +72,7 @@
                                 </td>
                             </tr>
                         <?php endforeach; ?>
+
                     </tbody>
                 </table>
             </div>

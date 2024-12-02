@@ -22,7 +22,7 @@ class Confeccions extends Controller
 
     public function crear()
     {
-        $data['cabecera'] = view('template/cabecera');
+        $data['cabeceraEditar'] = view('template/cabeceraEditar');
         $data['pie'] = view('template/piepagina');
 
         return view('Confeccion/crearConfeccion', $data);
@@ -77,7 +77,7 @@ class Confeccions extends Controller
 
         if ($confeccion) {
             $data['confeccion'] = $confeccion;
-            $data['cabecera'] = view('template/cabecera');
+            $data['cabeceraEditar'] = view('template/cabeceraEditar');
             $data['pie'] = view('template/piepagina');
             return view('Confeccion/editarConfeccion', $data);
         } else {

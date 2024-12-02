@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
@@ -14,15 +14,18 @@
                 <!-- Selección del Cliente -->
                 <div class="form-group">
                     <label for="idCliente">Cliente:</label>
-                    <select id="idCliente" class="form-control" name="idCliente" required>
+                    <select id="idCliente" name="idCliente" class="form-control" required>
                         <option value="">Seleccione un cliente</option>
                         <?php foreach ($clientes as $cliente): ?>
-                            <option value="<?= esc($cliente['id']); ?>">
+                            <option value="<?= esc($cliente['id']); ?>" <?= (isset($clienteSeleccionado) && $clienteSeleccionado == $cliente['id']) ? 'selected' : ''; ?>>
                                 <?= esc($cliente['nombre']) . ' ' . esc($cliente['apellido']); ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
+
+
+
 
                 <!-- Selección de Confección -->
                 <div class="form-group">
@@ -37,7 +40,7 @@
                                 <?php if ($confeccion['categoria'] === 'Confeccion'): ?>
                                     <option value="<?= esc($confeccion['id']); ?>"
                                         data-categoria="<?= esc($confeccion['categoria']); ?>"
-                                        data-precio="<?= esc($confeccion['precio']); ?>">
+                                        data-precio="<?= esc($confeccion['precio']); ?>" <?= (isset($confeccionSeleccionada) && $confeccion['id'] == $confeccionSeleccionada) ? 'selected' : ''; ?>>
                                         <?= esc($confeccion['descripcion']); ?> (<?= esc($confeccion['precio']) . ' Bs'; ?>)
                                     </option>
                                 <?php endif; ?>
@@ -50,7 +53,7 @@
                                 <?php if ($confeccion['categoria'] === 'Arreglo'): ?>
                                     <option value="<?= esc($confeccion['id']); ?>"
                                         data-categoria="<?= esc($confeccion['categoria']); ?>"
-                                        data-precio="<?= esc($confeccion['precio']); ?>">
+                                        data-precio="<?= esc($confeccion['precio']); ?>" <?= (isset($confeccionSeleccionada) && $confeccion['id'] == $confeccionSeleccionada) ? 'selected' : ''; ?>>
                                         <?= esc($confeccion['descripcion']); ?> (<?= esc($confeccion['precio']) . ' Bs'; ?>)
                                     </option>
                                 <?php endif; ?>
@@ -60,8 +63,9 @@
                 </div>
 
 
+
                 <!-- Selección de Tela (opcional para confección) -->
-                <div class="form-group" id="telaOpciones" style="display: none;">
+                <!-- <div class="form-group" id="telaOpciones" style="display: none;">
                     <label for="idTela">Tela:</label>
                     <select id="idTela" class="form-control" name="idTela">
                         <option value="">Seleccione una tela</option>
@@ -73,7 +77,21 @@
                     </select>
                     <label for="metrosTela">Metros de Tela:</label>
                     <input type="number" step="0.01" id="metrosTela" name="metrosTela" class="form-control">
+                </div> -->
+                <div class="form-group" id="telaOpciones" style="display: none;">
+                    <label for="idTela">Tela:</label>
+                    <select id="idTela" class="form-control" name="idTela" style="max-height: 150px; overflow-y: auto;">
+                        <option value="">Seleccione una tela</option>
+                        <?php foreach ($telas as $tela): ?>
+                            <option value="<?= esc($tela['id']); ?>" data-precio="<?= esc($tela['precio']); ?>">
+                                <?= esc($tela['nombre']) . ' (' . esc($tela['precio']) . ' Bs por metro)'; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label for="metrosTela">Metros de Tela:</label>
+                    <input type="number" step="0.01" id="metrosTela" name="metrosTela" class="form-control">
                 </div>
+
 
                 <!-- Campo para Cantidad -->
                 <div class="form-group">

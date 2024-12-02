@@ -19,7 +19,7 @@ class TrajeFemeninos extends Controller
             ->where('sexo', 'F')
             ->findAll();
 
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         $datos['clientes'] = $clientes; // Pasar la lista de clientes a la vista
 
@@ -38,22 +38,63 @@ class TrajeFemeninos extends Controller
     public function index()
     {
         $trajeFemeninoModel = new TrajeFemenino();
+        $perPage = 10; // Elementos por página
 
-        // Obtén los datos de las faldas y la relación 'cliente'
-        $trajeFemenino = $trajeFemeninoModel->select('traje_femenino.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , traje_femenino.talle, traje_femenino.largo, 
-        traje_femenino.hombro , traje_femenino.ancho , traje_femenino.pecho , traje_femenino.cintura , traje_femenino.cadera ,traje_femenino.largoManga')
+        // Obtener parámetros desde la URL
+        $search = $this->request->getGet('search');
+        $orden = $this->request->getGet('orden');
+        $page = $this->request->getGet('page') ?: 1;
+
+        // Crear la consulta base
+        $query = $trajeFemeninoModel->select('traje_femenino.idCliente, CONCAT(cliente.nombre, " ", cliente.apellido) AS nombre_completo, traje_femenino.talle, traje_femenino.largo, 
+            traje_femenino.hombro, traje_femenino.ancho, traje_femenino.pecho, traje_femenino.cintura, traje_femenino.cadera, traje_femenino.largoManga')
             ->join('cliente', 'cliente.id = traje_femenino.idCliente')
-            ->orderBy('idCliente', 'ASC')
-            ->where('estado', 1)
-            ->findAll();
+            ->where('cliente.estado', 1); // Solo clientes activos
 
-        $datos['trajeFemeninos'] = $trajeFemenino;
+        // Aplicar filtro de búsqueda
+        if (!empty($search)) {
+            $query->groupStart()
+                ->like('cliente.nombre', $search)
+                ->orLike('cliente.apellido', $search)
+                ->groupEnd();
+        }
 
-        $datos['cabecera'] = view('template/cabecera');
-        $datos['pie'] = view('template/piepagina');
+        // Aplicar orden según la selección
+        switch ($orden) {
+            case 'recientes':
+                $query->orderBy('traje_femenino.idCliente', 'DESC'); // Recientes primero
+                break;
+            case 'antiguos':
+                $query->orderBy('traje_femenino.idCliente', 'ASC'); // Antiguos primero
+                break;
+            case 'nombre_asc':
+                $query->orderBy('cliente.nombre', 'ASC'); // Nombre A-Z
+                break;
+            case 'nombre_desc':
+                $query->orderBy('cliente.nombre', 'DESC'); // Nombre Z-A
+                break;
+            default:
+                $query->orderBy('cliente.nombre', 'ASC'); // Por defecto: Nombre A-Z
+                break;
+        }
+
+        // Obtener resultados paginados
+        $trajeFemenino = $query->paginate($perPage, 'default', $page);
+        $pager = $trajeFemeninoModel->pager;
+
+        // Pasar los datos a la vista
+        $datos = [
+            'trajeFemeninos' => $trajeFemenino,
+            'pager' => $pager,
+            'search' => $search,
+            'orden' => $orden,
+            'cabecera' => view('template/cabecera'),
+            'pie' => view('template/piepagina'),
+        ];
 
         return view('datos/datosTrajeFemenino', $datos);
     }
+
 
 
     public function guardarTrajeFemenino()
@@ -139,7 +180,7 @@ class TrajeFemeninos extends Controller
 
         $datos['trajeFemeninos'] = $trajeFemenino;
         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         return view('datos/editarTrajeFemenino', $datos);
 

@@ -18,7 +18,7 @@ class Pantalons extends Controller
             ->where('estado', 1)
             ->findAll();
 
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         $datos['clientes'] = $clientes; // Pasar la lista de clientes a la vista
 
@@ -38,22 +38,62 @@ class Pantalons extends Controller
     public function index()
     {
         $pantalonModel = new Pantalon();
+        $search = $this->request->getGet('search'); // Obtener el término de búsqueda
+        $orden = $this->request->getGet('orden');  // Obtener el criterio de orden
 
-        // Obtén los datos de las faldas y la relación 'cliente'
-        $pantalon = $pantalonModel->select('pantalon.idCliente, CONCAT( cliente.nombre ," ", cliente.apellido ) AS nombre_completo , pantalon.largo, pantalon.entrepierna, 
-        pantalon.cintura , pantalon.cadera , pantalon.pierna , pantalon.rodilla , pantalon.bota')
-            ->join('cliente', 'cliente.id = pantalon.idCliente')
-            ->orderBy('idCliente', 'ASC')
-            ->where('estado', 1)
-            ->findAll();
+        // Crear la consulta base
+        $query = $pantalonModel->select(
+            'pantalon.idCliente, CONCAT(cliente.nombre, " ", cliente.apellido) AS nombre_completo, pantalon.largo, pantalon.entrepierna, pantalon.cintura, pantalon.cadera, pantalon.pierna, pantalon.rodilla, pantalon.bota'
+        )->join('cliente', 'cliente.id = pantalon.idCliente')
+            ->where('cliente.estado', 1); // Mostrar solo clientes activos
 
-        $datos['pantalones'] = $pantalon;
+        // Agregar el filtro de búsqueda
+        if (!empty($search)) {
+            $query->groupStart()
+                ->like('cliente.nombre', $search, 'both')
+                ->orLike('cliente.apellido', $search, 'both')
+                ->groupEnd();
+        }
 
-        $datos['cabecera'] = view('template/cabecera');
-        $datos['pie'] = view('template/piepagina');
+        // Aplicar el orden
+        switch ($orden) {
+            case 'recientes':
+                $query->orderBy('pantalon.idCliente', 'DESC'); // Más recientes
+                break;
+            case 'antiguos':
+                $query->orderBy('pantalon.idCliente', 'ASC'); // Más antiguos
+                break;
+            case 'nombre_asc':
+                $query->orderBy('cliente.nombre', 'ASC'); // Nombre A-Z
+                break;
+            case 'nombre_desc':
+                $query->orderBy('cliente.nombre', 'DESC'); // Nombre Z-A
+                break;
+            default:
+                $query->orderBy('cliente.nombre', 'ASC'); // Orden por defecto
+                break;
+        }
+
+        // Paginación
+        $pantalones = $query->paginate(10); // Mostrar 10 resultados por página
+        $pager = $pantalonModel->pager;
+
+        // Pasar los datos a la vista
+        $datos = [
+            'pantalones' => $pantalones,
+            'pager' => $pager,
+            'search' => $search,
+            'orden' => $orden,
+            'cabecera' => view('template/cabecera'),
+            'pie' => view('template/piepagina'),
+        ];
 
         return view('datos/datosPantalon', $datos);
     }
+
+
+
+
 
     public function guardarPantalon()
     {
@@ -137,7 +177,7 @@ class Pantalons extends Controller
 
         $datos['pantalon'] = $pantalon;
         $datos['cliente'] = $cliente; //Mostrar el nombre del cliente a la hora de editar
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
         return view('datos/editarPantalon', $datos);
 

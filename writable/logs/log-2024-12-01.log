@@ -1,0 +1,21 @@
+CRITICAL - 2024-12-01 02:40:02 --> Undefined variable $Cliente
+in APPPATH\Views\datos\datosPantalon.php on line 175.
+ 1 APPPATH\Views\datos\datosPantalon.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Cliente', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosPantalon.php', 175)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosPantalon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosPantalon', [], true)
+ 5 APPPATH\Controllers\Pantalons.php(55): view('datos/datosPantalon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Pantalons->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pantalons))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 02:50:06 --> Division by zero
+in APPPATH\Views\reportes\reporte5.php on line 140.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('reportes/reporte5', [], true)
+ 4 APPPATH\Controllers\ReportesController.php(76): view('reportes/reporte5', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->reporte5()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -10,33 +10,71 @@ class Clientes extends Controller
     {
         $cliente = new Cliente();
 
-        // Detectar si se presionó "cancel"
-        $action = $this->request->getGet('action');
         $search = $this->request->getGet('search');
+        $sexo = $this->request->getGet('sexo');
+        $estado = $this->request->getGet('estado');
+        $ordenar = $this->request->getGet('ordenar');
 
-        // Crear la consulta base
-        $query = $cliente->where('estado', 1);
+        // Consulta base
+        $query = $cliente;
 
-        // Aplicar la búsqueda si existe un término
-        if (!empty($search)) {
+        // Filtro por estado (activos o eliminados)
+        if ($estado !== null && $estado !== '') {
+            $query->where('estado', $estado);
+        }
+
+        // Filtro por búsqueda
+        if ($search) {
             $query->groupStart()
-                ->like('nombre', $search, 'both')
-                ->orLike('apellido', $search, 'both')
-                ->orLike('celular', $search, 'both')
+                ->like('nombre', $search)
+                ->orLike('apellido', $search)
+                ->orLike('celular', $search)
                 ->groupEnd();
         }
 
-        // Configurar la paginación
-        $clientes = $query->orderBy('id', 'DESC')->paginate(10);
+        // Filtro por sexo
+        if ($sexo) {
+            $query->where('sexo', $sexo);
+        }
+
+        // Ordenar por fechas o nombres
+        if ($ordenar) {
+            switch ($ordenar) {
+                case 'fechaRegistro_desc':
+                    $query->orderBy('fechaRegistro', 'DESC');
+                    break;
+                case 'fechaRegistro_asc':
+                    $query->orderBy('fechaRegistro', 'ASC');
+                    break;
+                case 'fechaActualizacion_desc':
+                    $query->orderBy('fechaActualizacion', 'DESC');
+                    break;
+                case 'fechaActualizacion_asc':
+                    $query->orderBy('fechaActualizacion', 'ASC');
+                    break;
+                case 'nombre_asc': // Ordenar por nombre A-Z
+                    $query->orderBy('nombre', 'ASC');
+                    break;
+                case 'nombre_desc': // Ordenar por nombre Z-A
+                    $query->orderBy('nombre', 'DESC');
+                    break;
+            }
+        }
+
+        // Paginación
+        $clientes = $query->paginate(10);
         $paginacion = $cliente->pager;
 
-        // Pasar los datos a la vista, incluyendo cabecera y pie de página
+        // Pasar datos a la vista
         $data = [
             'clientes' => $clientes,
             'paginacion' => $paginacion,
             'search' => $search,
+            'sexo' => $sexo,
+            'estado' => $estado,
+            'ordenar' => $ordenar,
             'cabecera' => view('template/cabecera'),
-            'pie' => view('template/piepagina')
+            'pie' => view('template/piepagina'),
         ];
 
         return view('bddclientes/cliente', $data);
@@ -45,19 +83,94 @@ class Clientes extends Controller
 
 
 
+
     // Se está creando la vista de CREAR
     public function crear()
     {
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
 
         return view('bddclientes/crear', $datos);
     }
 
+    // public function guardar()
+    // {
+    //     $cliente = new Cliente();
+
+    //     $validacion = $this->validate([
+    //         'nombre' => [
+    //             'rules' => 'required|min_length[3]',
+    //             'errors' => [
+    //                 'required' => 'El campo Nombre es obligatorio.',
+    //                 'min_length' => 'El Nombre debe tener al menos 3 caracteres.'
+    //             ]
+    //         ],
+    //         'apellido' => [
+    //             'rules' => 'required|min_length[3]',
+    //             'errors' => [
+    //                 'required' => 'El campo Apellido es obligatorio.',
+    //                 'min_length' => 'El Apellido debe tener al menos 3 caracteres.'
+    //             ]
+    //         ],
+    //         'celular' => [
+    //             'rules' => 'permit_empty|numeric|min_length[8]',
+    //             'errors' => [
+    //                 'numeric' => 'El campo Celular debe contener solo números.',
+    //                 'min_length' => 'El Celular debe tener al menos 8 dígitos.'
+    //             ]
+    //         ]
+    //     ]);
+
+
+    //     if (!$validacion) {
+    //         // Devolver los errores detallados
+    //         return $this->response->setJSON([
+    //             'success' => false,
+    //             'message' => 'Revise la información ingresada',
+    //             'errors' => $this->validator->getErrors() // Devuelve los errores detallados
+    //         ]);
+    //     }
+
+    //     $datos = [
+    //         'nombre' => $this->request->getVar('nombre'),
+    //         'apellido' => $this->request->getVar('apellido'),
+    //         'sexo' => $this->request->getVar('sexo'),
+    //         'celular' => $this->request->getVar('celular'),
+    //         'fechaRegistro' => date('Y-m-d H:i:s'),
+    //         'estado' => 1,
+    //     ];
+
+    //     $cliente->insert($datos);
+
+    //     return $this->response->setJSON([
+    //         'success' => true,
+    //         'message' => 'Cliente creado exitosamente',
+    //         'redirectUrl' => site_url('/cliente')
+    //     ]);
+    // }
+
     public function guardar()
     {
         $cliente = new Cliente();
 
+        // Normalizar datos
+        $nombre = strtolower(trim($this->request->getVar('nombre')));
+        $apellido = strtolower(trim($this->request->getVar('apellido')));
+
+        // Validar duplicados: Nombre y Apellido juntos
+        $duplicado = $cliente->where('LOWER(nombre)', $nombre)
+            ->where('LOWER(apellido)', $apellido)
+            ->first();
+
+        if ($duplicado) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Ya existe un cliente con el mismo nombre y apellido.',
+                'errors' => ['duplicado' => 'Este cliente ya está registrado.']
+            ]);
+        }
+
+        // Validar campos requeridos
         $validacion = $this->validate([
             'nombre' => [
                 'rules' => 'required|min_length[3]',
@@ -74,9 +187,8 @@ class Clientes extends Controller
                 ]
             ],
             'celular' => [
-                'rules' => 'required|numeric|min_length[8]',
+                'rules' => 'permit_empty|numeric|min_length[8]',
                 'errors' => [
-                    'required' => 'El campo Celular es obligatorio.',
                     'numeric' => 'El campo Celular debe contener solo números.',
                     'min_length' => 'El Celular debe tener al menos 8 dígitos.'
                 ]
@@ -84,19 +196,19 @@ class Clientes extends Controller
         ]);
 
         if (!$validacion) {
-            // Devolver los errores detallados
             return $this->response->setJSON([
                 'success' => false,
-                'message' => 'Revise la información ingresada',
-                'errors' => $this->validator->getErrors() // Devuelve los errores detallados
+                'message' => 'Revise la información ingresada.',
+                'errors' => $this->validator->getErrors()
             ]);
         }
 
+        // Insertar cliente nuevo
         $datos = [
-            'nombre' => $this->request->getVar('nombre'),
-            'apellido' => $this->request->getVar('apellido'),
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'celular' => trim($this->request->getVar('celular')),
             'sexo' => $this->request->getVar('sexo'),
-            'celular' => $this->request->getVar('celular'),
             'fechaRegistro' => date('Y-m-d H:i:s'),
             'estado' => 1,
         ];
@@ -105,10 +217,12 @@ class Clientes extends Controller
 
         return $this->response->setJSON([
             'success' => true,
-            'message' => 'Cliente creado exitosamente',
+            'message' => 'Cliente creado exitosamente.',
             'redirectUrl' => site_url('/cliente')
         ]);
     }
+
+
 
 
 
@@ -137,7 +251,7 @@ class Clientes extends Controller
         // Obtener datos del cliente
         $datos['cliente'] = $clienteModel->where('id', $id)->first();
 
-        $datos['cabecera'] = view('template/cabecera');
+        $datos['cabeceraEditar'] = view('template/cabeceraEditar');
         $datos['pie'] = view('template/piepagina');
 
         return view('bddclientes/editar', $datos);
@@ -152,8 +266,8 @@ class Clientes extends Controller
         // Capturar ID y datos de cliente desde la solicitud
         $id = $this->request->getVar('id');
         $datosCliente = [
-            'nombre' => $this->request->getVar('nombre'),
-            'apellido' => $this->request->getVar('apellido'),
+            'nombre' => strtolower($this->request->getVar('nombre')),
+            'apellido' => strtolower($this->request->getVar('apellido')),
             'sexo' => $this->request->getVar('sexo'),
             'celular' => $this->request->getVar('celular'),
             'fechaActualizacion' => date('Y-m-d H:i:s'),
@@ -179,7 +293,7 @@ class Clientes extends Controller
                 ]
             ],
             'celular' => [
-                'rules' => 'required|numeric|exact_length[8]',
+                'rules' => 'permit_empty|numeric|min_length[8]',
                 'errors' => [
                     'required' => 'El campo celular es obligatorio.',
                     'numeric' => 'El celular debe contener solo números.',

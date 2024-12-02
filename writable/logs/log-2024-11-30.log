@@ -1,0 +1,48 @@
+ERROR - 2024-11-30 19:23:51 --> Credenciales inválidas para el usuario: rubick1717@gmail.com
+CRITICAL - 2024-11-30 19:50:59 --> Division by zero
+in APPPATH\Views\reportes\reporte5.php on line 140.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('reportes/reporte5', [], true)
+ 4 APPPATH\Controllers\ReportesController.php(76): view('reportes/reporte5', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->reporte5()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-30 19:51:04 --> Division by zero
+in APPPATH\Views\reportes\reporte5.php on line 140.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('reportes/reporte5', [], true)
+ 4 APPPATH\Controllers\ReportesController.php(76): view('reportes/reporte5', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ReportesController->reporte5()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportesController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-30 22:52:06 --> The placeholder field cannot use placeholder: nombre
+in SYSTEMPATH\Validation\Validation.php on line 775.
+ 1 SYSTEMPATH\Validation\Validation.php(154): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 3 APPPATH\Controllers\Clientes.php(129): CodeIgniter\Controller->validate([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->guardar()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-30 22:53:09 --> The placeholder field cannot use placeholder: nombre
+in SYSTEMPATH\Validation\Validation.php on line 775.
+ 1 SYSTEMPATH\Validation\Validation.php(154): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 3 APPPATH\Controllers\Clientes.php(129): CodeIgniter\Controller->validate([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->guardar()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-30 22:54:01 --> The placeholder field cannot use placeholder: nombre
+in SYSTEMPATH\Validation\Validation.php on line 775.
+ 1 SYSTEMPATH\Validation\Validation.php(154): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 3 APPPATH\Controllers\Clientes.php(129): CodeIgniter\Controller->validate([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Clientes->guardar()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

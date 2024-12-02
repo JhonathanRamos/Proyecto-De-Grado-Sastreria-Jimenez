@@ -29352,3 +29352,9 @@ dl li {
   max-width: 100%;
   height: auto;
 }
+
+/* codigo de venta */
+
+.form-group#telaOpciones {
+  margin-bottom: 20px; /* Agregar espacio entre Tela y Metros de Tela */
+}

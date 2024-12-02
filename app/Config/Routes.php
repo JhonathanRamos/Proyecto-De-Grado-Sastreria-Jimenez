@@ -87,15 +87,12 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/venta', 'Ventas::index');
     $routes->get('/crearVenta', 'Ventas::crear');
     $routes->post('/ventas/guardarVenta', 'Ventas::guardarVenta');
-    $routes->get('/ventas/editar/(:num)', 'Ventas::editar/$1');
+    $routes->get('/ventas/editar/(:num)', 'Ventas::editar/$1'); // Cargar vista de edición
+    $routes->post('/ventas/actualizarVenta/(:num)', 'Ventas::actualizarVenta/$1'); // Procesar edición
     $routes->get('/venta/borrar/(:num)', 'Ventas::borrar/$1');
-
-
-    $routes->post('actualizarVenta/(:num)', 'Ventas::actualizarVenta/$1');
     $routes->post('/ventas/confirmarPago', 'Ventas::confirmarPago');
-
-
     $routes->get('/ventas/ver/(:num)', 'Ventas::ver/$1');
+
 
 
 
@@ -112,13 +109,21 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('exportarPDF/pendientes', 'DompdfController::exportarPendientesPDF');
 
 
+    // Ruta para la página principal de reportes
     $routes->get('reportes', 'ReportesController::index');
-    //REPORTE VISTA
-    $routes->get('/exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
+
+    // Rutas para mostrar las vistas de cada reporte
+    $routes->get('reporte1', 'ReportesController::reporte1');
+    $routes->get('reporte2', 'ReportesController::reporte2');
+    $routes->get('reporte3', 'ReportesController::reporte3');
+    $routes->get('reporte4', 'ReportesController::reporte4');
+    $routes->get('reporte5', 'ReportesController::reporte5');
+
+
+    // Rutas para exportar los reportes
+    $routes->get('exportarPDF/estadoClientes/(:segment)', 'ReportesController::exportarPDF/$1');
     $routes->get('exportarPDF/ventasPorFecha', 'ReportesController::generarHtmlVentasPorFecha');
-    //Reporte Procedural
-    $routes->get('/exportarPDF/deudores', 'ReportesController::exportarPDFDeudores');
-    //Reporte estatico
+    $routes->get('exportarPDF/deudores', 'ReportesController::exportarPDFDeudores');
     $routes->get('exportarPDF/deudaPorCliente', 'ReportesController::exportarPDFDeudaPorCliente');
 
 });

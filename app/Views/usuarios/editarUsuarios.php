@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <?php if (session('mensaje')) { ?>
 

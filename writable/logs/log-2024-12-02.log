@@ -1,0 +1,171 @@
+CRITICAL - 2024-12-02 00:38:40 --> Undefined variable $pantalones
+in APPPATH\Views\bddclientes\falda.php on line 24.
+ 1 APPPATH\Views\bddclientes\falda.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pantalones', 'C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\falda.php', 24)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\bddclientes\\falda.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('bddclientes/falda', [], true)
+ 5 APPPATH\Controllers\Faldas.php(56): view('bddclientes/falda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->falda()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 01:00:08 --> Undefined array key "idConfeccion"
+in APPPATH\Views\datos\datosTrajeMasculino.php on line 176.
+ 1 APPPATH\Views\datos\datosTrajeMasculino.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idConfeccion"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeMasculino.php', 176)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeMasculino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeMasculino', [], true)
+ 5 APPPATH\Controllers\TrajeMasculinos.php(54): view('datos/datosTrajeMasculino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeMasculinos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeMasculinos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 01:50:46 --> mysqli_sql_exception: Unknown column 'falda.estado' in 'where clause' in C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\code4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\code4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\code4\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\code4\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\code4\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\code4\app\Controllers\Faldas.php(85): CodeIgniter\BaseModel->paginate(10)
+#7 C:\xampp\htdocs\code4\system\CodeIgniter.php(919): App\Controllers\Faldas->index()
+#8 C:\xampp\htdocs\code4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+#9 C:\xampp\htdocs\code4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\code4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-02 01:50:46 --> Unknown column 'falda.estado' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `falda`
+JOIN `cliente` ON `cliente`.`id` = `falda`.`idCliente`
+WHERE `falda`.`estado` = :falda.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Faldas.php(85): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 01:59:41 --> Invalid file: "cliente/lista.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/lista.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cliente/lista', [], true)
+ 3 APPPATH\Controllers\Faldas.php(82): view('cliente/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 01:59:44 --> Invalid file: "cliente/lista.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/lista.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cliente/lista', [], true)
+ 3 APPPATH\Controllers\Faldas.php(82): view('cliente/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 01:59:47 --> Invalid file: "cliente/lista.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/lista.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cliente/lista', [], true)
+ 3 APPPATH\Controllers\Faldas.php(82): view('cliente/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 01:59:49 --> Invalid file: "cliente/lista.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/lista.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cliente/lista', [], true)
+ 3 APPPATH\Controllers\Faldas.php(82): view('cliente/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:00:04 --> Invalid file: "cliente/lista.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/lista.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cliente/lista', [], true)
+ 3 APPPATH\Controllers\Faldas.php(82): view('cliente/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:01:24 --> Undefined array key "nombre_completo"
+in APPPATH\Views\datos\datosFalda.php on line 162.
+ 1 APPPATH\Views\datos\datosFalda.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_completo"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php', 162)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 5 APPPATH\Controllers\Faldas.php(99): view('datos/datosFalda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:01:25 --> Undefined array key "nombre_completo"
+in APPPATH\Views\datos\datosFalda.php on line 162.
+ 1 APPPATH\Views\datos\datosFalda.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_completo"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php', 162)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 5 APPPATH\Controllers\Faldas.php(99): view('datos/datosFalda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:04:40 --> Undefined array key "nombre_completo"
+in APPPATH\Views\datos\datosFalda.php on line 151.
+ 1 APPPATH\Views\datos\datosFalda.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_completo"', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php', 151)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosFalda.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosFalda', [], true)
+ 5 APPPATH\Controllers\Faldas.php(99): view('datos/datosFalda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Faldas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Faldas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:27:59 --> Undefined variable $search
+in APPPATH\Views\datos\datosTrajeFemenino.php on line 135.
+ 1 APPPATH\Views\datos\datosTrajeFemenino.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeFemenino', [], true)
+ 5 APPPATH\Controllers\TrajeFemeninos.php(71): view('datos/datosTrajeFemenino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeFemeninos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:28:21 --> Undefined variable $search
+in APPPATH\Views\datos\datosTrajeFemenino.php on line 135.
+ 1 APPPATH\Views\datos\datosTrajeFemenino.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeFemenino', [], true)
+ 5 APPPATH\Controllers\TrajeFemeninos.php(71): view('datos/datosTrajeFemenino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeFemeninos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:28:22 --> Undefined variable $search
+in APPPATH\Views\datos\datosTrajeFemenino.php on line 135.
+ 1 APPPATH\Views\datos\datosTrajeFemenino.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php', 135)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeFemenino', [], true)
+ 5 APPPATH\Controllers\TrajeFemeninos.php(71): view('datos/datosTrajeFemenino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeFemeninos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 02:29:35 --> Undefined variable $paginacion
+in APPPATH\Views\datos\datosTrajeFemenino.php on line 199.
+ 1 APPPATH\Views\datos\datosTrajeFemenino.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginacion', 'C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php', 199)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\code4\\app\\Views\\datos\\datosTrajeFemenino.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos/datosTrajeFemenino', [], true)
+ 5 APPPATH\Controllers\TrajeFemeninos.php(72): view('datos/datosTrajeFemenino', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TrajeFemeninos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrajeFemeninos))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

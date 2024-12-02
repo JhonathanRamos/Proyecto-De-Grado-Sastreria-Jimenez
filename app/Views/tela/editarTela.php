@@ -1,4 +1,4 @@
-<?= $cabecera ?>
+<?= $cabeceraEditar ?>
 
 <?php if (session('mensaje')): ?>
     <div class="alert alert-success" role="alert">
